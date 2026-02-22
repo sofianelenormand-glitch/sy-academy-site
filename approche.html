@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notre approche — SY Academy | Management, Organisation & IA</title>
+    <meta name="description" content="Découvrez l'approche SY Academy : management structuré, organisation des process et intégration concrète de l'IA. Fondée par Sofiane Lenormand, expert pédagogie et technologie IA.">
+    <link rel="canonical" href="https://syacademy.fr/approche">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy:#0a1628;--blue-accent:#2563eb;--blue-bright:#3b82f6;--blue-gradient-start:#1e3a8a;--blue-gradient-end:#2563eb;--cyan:#06b6d4;--white:#ffffff;--gray-50:#f8fafc;--gray-100:#f1f5f9;--gray-200:#e2e8f0;--gray-400:#94a3b8;--gray-500:#64748b;--gray-600:#475569;--text-primary:#0f172a;--text-secondary:#475569;--orange-accent:#f59e0b;--green-accent:#10b981;--font-display:'Outfit',sans-serif;--font-body:'DM Sans',sans-serif;--shadow-md:0 4px 12px rgba(0,0,0,0.08);--shadow-lg:0 8px 30px rgba(0,0,0,0.12);--shadow-xl:0 20px 50px rgba(0,0,0,0.15);--radius-md:12px;--radius-lg:20px;
+        }
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth}body{font-family:var(--font-body);color:var(--text-primary);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}img{max-width:100%;height:auto;display:block}a{text-decoration:none;color:inherit;transition:all .3s}h1,h2,h3,h4,h5,h6{font-family:var(--font-display);font-weight:700;line-height:1.2}.container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+        /* BANNER + NAV (same as other pages) */
+        .top-banner{background:linear-gradient(135deg,var(--blue-gradient-start),var(--blue-gradient-end));color:var(--white);text-align:center;padding:10px 24px;font-size:.85rem;font-weight:500}.top-banner strong{color:var(--orange-accent)}
+        .navbar{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--gray-200);transition:box-shadow .3s}.navbar.scrolled{box-shadow:var(--shadow-md)}.navbar .container{display:flex;align-items:center;justify-content:space-between;height:72px}.navbar-logo img{height:48px}.nav-links{display:flex;align-items:center;gap:32px;list-style:none}.nav-links a{font-family:var(--font-display);font-size:.9rem;font-weight:500;color:var(--text-secondary);padding:4px 0;position:relative}.nav-links a::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:linear-gradient(90deg,var(--blue-gradient-start),var(--blue-gradient-end));border-radius:2px;transition:width .3s}.nav-links a:hover{color:var(--text-primary)}.nav-links a:hover::after{width:100%}.nav-links a.active{color:var(--blue-accent);font-weight:600}.nav-links a.active::after{width:100%}.nav-cta{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--blue-gradient-start),var(--blue-gradient-end));color:var(--white)!important;padding:10px 22px;border-radius:50px;font-weight:600;font-size:.85rem}.nav-cta:hover{transform:translateY(-1px);box-shadow:0 4px 15px rgba(37,99,235,.4)}.nav-cta::after{display:none!important}.mobile-menu-btn{display:none;background:none;border:none;cursor:pointer;padding:8px}.mobile-menu-btn span{display:block;width:24px;height:2px;background:var(--navy);margin:6px 0;border-radius:2px;transition:.3s}
+
+        /* HERO */
+        .hero-approche{padding:80px 0 60px;background:var(--navy);position:relative;overflow:hidden}
+        .hero-approche::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 30%,rgba(37,99,235,.15) 0%,transparent 60%)}
+        .hero-approche .container{position:relative;z-index:1;text-align:center;max-width:800px}
+        .hero-approche h1{font-size:clamp(2rem,4vw,2.8rem);color:var(--white);margin-bottom:20px}
+        .hero-approche h1 .highlight{background:linear-gradient(135deg,var(--blue-bright),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+        .hero-approche p{font-size:1.1rem;color:var(--gray-400);line-height:1.7;max-width:650px;margin:0 auto}
+
+        /* SECTION UTILS */
+        .section-header{text-align:center;margin-bottom:48px}
+        .section-label{display:inline-block;font-family:var(--font-display);font-size:.8rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--blue-accent);margin-bottom:12px}
+        .section-header h2{font-size:clamp(1.8rem,3vw,2.4rem);color:var(--navy);margin-bottom:12px}
+        .section-header p{font-size:1rem;color:var(--text-secondary);max-width:600px;margin:0 auto}
+
+        /* FONDATEUR */
+        .fondateur-section{padding:80px 0;background:var(--white)}
+        .fondateur-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:60px;align-items:center}
+        .fondateur-photo{background:var(--gray-100);border-radius:var(--radius-lg);aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;font-size:1rem;color:var(--gray-500);text-align:center;padding:40px;border:2px dashed var(--gray-200)}
+        .fondateur-content h2{font-size:1.8rem;color:var(--navy);margin-bottom:8px}
+        .fondateur-content .role{font-size:1rem;color:var(--blue-accent);font-weight:600;margin-bottom:20px}
+        .fondateur-content p{font-size:.95rem;color:var(--text-secondary);line-height:1.7;margin-bottom:16px}
+        .fondateur-diplomes{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+        .diplome-tag{padding:6px 14px;border-radius:50px;font-size:.75rem;font-weight:600;background:var(--gray-50);border:1px solid var(--gray-200);color:var(--text-secondary)}
+        .diplome-tag.tech{background:rgba(6,182,212,.06);border-color:rgba(6,182,212,.2);color:var(--cyan)}
+
+        /* PHILOSOPHIE */
+        .philo-section{padding:80px 0;background:var(--gray-50)}
+        .philo-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px}
+        .philo-card{background:var(--white);border-radius:var(--radius-lg);padding:36px 32px;border:1px solid var(--gray-200)}
+        .philo-card h3{font-size:1.1rem;color:var(--navy);margin-bottom:10px}
+        .philo-card p{font-size:.9rem;color:var(--text-secondary);line-height:1.7}
+        .philo-icon{font-size:2rem;margin-bottom:16px}
+
+        /* 3 PILIERS */
+        .piliers-section{padding:80px 0;background:var(--navy);position:relative;overflow:hidden}
+        .piliers-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 50%,rgba(37,99,235,.15) 0%,transparent 50%),radial-gradient(ellipse at 80% 50%,rgba(6,182,212,.1) 0%,transparent 50%)}
+        .piliers-section .container{position:relative;z-index:1}
+        .piliers-section .section-header h2{color:var(--white)}
+        .piliers-section .section-header p{color:var(--gray-400)}
+        .piliers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+        .pilier-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius-lg);padding:40px 32px;transition:all .4s}
+        .pilier-card:hover{background:rgba(255,255,255,.08);transform:translateY(-4px)}
+        .pilier-num{font-family:var(--font-display);font-size:3rem;font-weight:800;background:linear-gradient(135deg,var(--blue-bright),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:16px;line-height:1}
+        .pilier-card h3{color:var(--white);font-size:1.2rem;margin-bottom:12px}
+        .pilier-card p{color:var(--gray-400);font-size:.9rem;line-height:1.6;margin-bottom:16px}
+        .pilier-list{list-style:none}
+        .pilier-list li{padding:5px 0 5px 20px;position:relative;font-size:.82rem;color:var(--gray-400);line-height:1.5}
+        .pilier-list li::before{content:'→';position:absolute;left:0;color:var(--blue-bright);font-weight:600}
+
+        /* ECOSYSTÈME */
+        .eco-section{padding:80px 0;background:var(--white)}
+        .eco-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;max-width:900px;margin:0 auto}
+        .eco-card{border-radius:var(--radius-lg);padding:40px;text-align:center}
+        .eco-card.academy{background:linear-gradient(135deg,rgba(30,58,138,.04),rgba(37,99,235,.06));border:1px solid rgba(37,99,235,.12)}
+        .eco-card.sole{background:linear-gradient(135deg,rgba(6,182,212,.04),rgba(6,182,212,.06));border:1px solid rgba(6,182,212,.12)}
+        .eco-card h3{font-size:1.2rem;color:var(--navy);margin-bottom:8px}
+        .eco-card .eco-type{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
+        .eco-card.academy .eco-type{color:var(--blue-accent)}
+        .eco-card.sole .eco-type{color:var(--cyan)}
+        .eco-card p{font-size:.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:16px}
+        .eco-list{list-style:none;text-align:left}
+        .eco-list li{padding:5px 0 5px 20px;position:relative;font-size:.85rem;color:var(--text-secondary)}
+        .eco-list li::before{content:'✓';position:absolute;left:0;color:var(--green-accent);font-weight:700;font-size:.8rem}
+        .eco-arrow{display:flex;align-items:center;justify-content:center;font-size:2rem;color:var(--gray-400);align-self:center}
+
+        /* CERTIFICATIONS */
+        .certif-section{padding:80px 0;background:var(--gray-50)}
+        .certif-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+        .certif-card{background:var(--white);border-radius:var(--radius-md);padding:28px 24px;text-align:center;border:1px solid var(--gray-200)}
+        .certif-icon{font-size:2.5rem;margin-bottom:12px}
+        .certif-card h4{font-size:.95rem;color:var(--navy);margin-bottom:6px}
+        .certif-card p{font-size:.8rem;color:var(--text-secondary);line-height:1.5}
+
+        /* VALEURS */
+        .valeurs-section{padding:80px 0;background:var(--white)}
+        .valeurs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+        .valeur-card{text-align:center;padding:32px 24px}
+        .valeur-icon{font-size:2.5rem;margin-bottom:16px}
+        .valeur-card h3{font-size:1.05rem;color:var(--navy);margin-bottom:8px}
+        .valeur-card p{font-size:.88rem;color:var(--text-secondary);line-height:1.6}
+
+        /* CTA */
+        .cta-section{padding:80px 0;background:var(--navy);position:relative;overflow:hidden}
+        .cta-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(37,99,235,.2) 0%,transparent 60%)}
+        .cta-section .container{position:relative;z-index:1;text-align:center}
+        .cta-section h2{font-size:clamp(1.8rem,3vw,2.4rem);color:var(--white);margin-bottom:16px}
+        .cta-section p{font-size:1rem;color:var(--gray-400);margin-bottom:36px;max-width:500px;margin-left:auto;margin-right:auto}
+        .cta-buttons{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
+        .btn-cta-light{display:inline-flex;align-items:center;gap:10px;background:var(--white);color:var(--navy);padding:16px 32px;border-radius:50px;font-family:var(--font-display);font-weight:700;font-size:1rem;transition:all .3s;box-shadow:0 4px 15px rgba(0,0,0,.1)}
+        .btn-cta-light:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,.15)}
+        .btn-cta-outline{display:inline-flex;align-items:center;gap:10px;background:transparent;color:var(--white);padding:14px 32px;border-radius:50px;font-family:var(--font-display);font-weight:600;font-size:1rem;border:2px solid rgba(255,255,255,.25);transition:all .3s}
+        .btn-cta-outline:hover{border-color:var(--white);transform:translateY(-2px)}
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        .footer {
+            background: #060e1a;
+            padding: 64px 0 0;
+            color: var(--gray-400);
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 48px;
+            padding-bottom: 48px;
+        }
+        .footer-brand img {
+            height: 40px;
+            filter: brightness(0) invert(1);
+            opacity: 0.8;
+            margin-bottom: 16px;
+        }
+        .footer-brand > p {
+            font-size: 0.88rem;
+            line-height: 1.6;
+            color: var(--gray-500);
+            margin-bottom: 20px;
+        }
+        .footer-contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .footer-contact-info span {
+            font-size: 0.8rem;
+            color: var(--gray-500);
+        }
+        .footer-col {}
+        .footer h4,
+        .footer-col h4 {
+            color: var(--white);
+            font-family: var(--font-display);
+            font-size: 0.82rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: 20px;
+        }
+        .footer-links {
+            list-style: none;
+        }
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        .footer-links a {
+            font-size: 0.85rem;
+            color: var(--gray-500);
+            transition: color 0.2s;
+        }
+        .footer-links a:hover {
+            color: var(--white);
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding: 24px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            color: var(--gray-600);
+        }
+        .footer-bottom-right {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .qualiopi-badge-footer {
+            background: rgba(255,255,255,0.08);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--gray-400);
+        }
+
+        /* ANIMATIONS */
+        .fade-in{opacity:0;transform:translateY(30px);transition:all .7s ease-out}.fade-in.visible{opacity:1;transform:translateY(0)}
+
+        /* RESPONSIVE */
+        @media (max-width: 1024px) {
+            .fondateur-grid { grid-template-columns: 1fr; }
+            .fondateur-photo { max-width: 300px; margin: 0 auto; }
+            .piliers-grid { grid-template-columns: 1fr 1fr; }
+            .eco-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; position: absolute; top: 72px; left: 0; right: 0; background: var(--white); flex-direction: column; padding: 24px; gap: 16px; border-bottom: 1px solid var(--gray-200); box-shadow: var(--shadow-lg); }
+            .nav-links.active { display: flex; }
+            .mobile-menu-btn { display: block; }
+            .philo-grid, .piliers-grid, .valeurs-grid { grid-template-columns: 1fr; }
+            .certif-grid { grid-template-columns: 1fr 1fr; }
+            .cta-buttons { flex-direction: column; align-items: center; }
+        }
+        @media (max-width: 500px) {
+            .certif-grid { grid-template-columns: 1fr; }
+        }
+
+        /* Footer responsive */
+        @media (max-width: 900px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 32px;
+            }
+        }
+        @media (max-width: 600px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+            }
+            .footer-bottom-right {
+                justify-content: center;
+            }
+        }
+        </style>
+</head>
+<body>
+
+    <div class="top-banner">🎓 <strong>Formations finançables à 100%</strong> par votre OPCO ou le CNFPT — Certification Qualiopi</div>
+
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-logo"><img src="logo-sy-academy.png" alt="SY Academy"></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="collectivites.html">Collectivités</a></li>
+                <li><a href="pme.html">PME / TPE</a></li>
+                <li><a href="approche.html" class="active">Notre approche</a></li>
+                <li><a href="financement.html">Financement</a></li>
+                <li><a href="contact.html" class="nav-cta">Demander un devis →</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero-approche">
+        <div class="container">
+            <h1>Pas une formation IA de plus.<br><span class="highlight">Une transformation complète.</span></h1>
+            <p>SY Academy ne vous apprend pas à utiliser un outil. Nous transformons le fonctionnement de votre organisation en combinant trois leviers : le management, l'organisation et l'intelligence artificielle.</p>
+        </div>
+    </section>
+
+    <!-- FONDATEUR -->
+    <section class="fondateur-section">
+        <div class="container">
+            <div class="fondateur-grid">
+                <div class="fondateur-photo">
+                    📷<br><br>Photo professionnelle<br>de Sofiane Lenormand<br><br><em style="font-size:.8rem">(À remplacer par la vraie photo)</em>
+                </div>
+                <div class="fondateur-content fade-in">
+                    <span class="section-label">Le fondateur</span>
+                    <h2>Sofiane Lenormand</h2>
+                    <div class="role">Fondateur & Président — SY Academy</div>
+                    <p>15 ans sur le terrain des collectivités territoriales et des organisations publiques et privées. Sofiane a dirigé des équipes, structuré des services et accompagné des organisations dans leur transformation.</p>
+                    <p>Passionné de technologie, il maîtrise les outils d'IA générative (Mistral, ChatGPT, Claude, Gemini) et les plateformes d'automatisation (n8n, workflows IA). Il a fondé SOLE SOLUTION, une plateforme d'automatisation IA pour les artisans du BTP et les collectivités.</p>
+                    <p>SY Academy est née d'un constat simple : les organisations qui veulent intégrer l'IA échouent si elles n'ont pas d'abord structuré leur management et leurs process. La technologie seule ne suffit pas.</p>
+                    <div class="fondateur-diplomes">
+                        <span class="diplome-tag tech">Mistral / ChatGPT / Claude</span>
+                        <span class="diplome-tag tech">n8n / Automatisations IA</span>
+                        <span class="diplome-tag tech">Prompting avancé</span>
+                        <span class="diplome-tag">Formateur +15 ans</span>
+                        <span class="diplome-tag">Collectivités territoriales</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHILOSOPHIE -->
+    <section class="philo-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Notre philosophie</span>
+                <h2>Ce qui nous différencie</h2>
+            </div>
+            <div class="philo-grid">
+                <div class="philo-card fade-in">
+                    <div class="philo-icon">🎯</div>
+                    <h3>Pas une "formation ChatGPT"</h3>
+                    <p>On ne vous apprend pas à taper des prompts. On transforme votre organisation : process clarifiés, management structuré, IA intégrée là où elle a un vrai impact. L'outil vient en dernier, pas en premier.</p>
+                </div>
+                <div class="philo-card fade-in">
+                    <div class="philo-icon">🔧</div>
+                    <h3>70% de pratique, 30% de théorie</h3>
+                    <p>Chaque participant travaille sur ses vrais documents, ses vrais process, ses vrais problèmes. Pas de cas fictifs. Pas de slides interminables. Des résultats opérationnels dès le lendemain.</p>
+                </div>
+                <div class="philo-card fade-in">
+                    <div class="philo-icon">📊</div>
+                    <h3>Des résultats mesurables</h3>
+                    <p>Chaque formation produit des livrables concrets : tableaux de bord, bibliothèques de prompts, plans d'action chiffrés, automatisations fonctionnelles. Pas du PowerPoint, du concret.</p>
+                </div>
+                <div class="philo-card fade-in">
+                    <div class="philo-icon">🏛️</div>
+                    <h3>Ancré dans le terrain</h3>
+                    <p>15 ans dans les collectivités, le sport, l'éducation. On connaît le quotidien d'un chef de service, les contraintes d'un DGS, la réalité d'un dirigeant de PME. On parle votre langage.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3 PILIERS -->
+    <section class="piliers-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label" style="color:var(--cyan)">La méthode</span>
+                <h2>Trois leviers, une transformation</h2>
+                <p>L'IA sans management structuré et sans process clairs, ça ne marche pas. C'est pour ça qu'on combine les trois.</p>
+            </div>
+            <div class="piliers-grid">
+                <div class="pilier-card fade-in">
+                    <div class="pilier-num">01</div>
+                    <h3>Management structuré</h3>
+                    <p>Avant de parler d'IA, on s'assure que le pilotage est clair : objectifs, indicateurs, rituels, décisions.</p>
+                    <ul class="pilier-list">
+                        <li>Tableaux de bord décisionnels</li>
+                        <li>Rituels managériaux efficaces</li>
+                        <li>Indicateurs de performance clairs</li>
+                        <li>Pilotage par objectifs mesurables</li>
+                    </ul>
+                </div>
+                <div class="pilier-card fade-in">
+                    <div class="pilier-num">02</div>
+                    <h3>Organisation des process</h3>
+                    <p>On cartographie, on simplifie, on standardise. Automatiser un mauvais process, c'est automatiser le bordel.</p>
+                    <ul class="pilier-list">
+                        <li>Cartographie des processus clés</li>
+                        <li>Identification des goulots d'étranglement</li>
+                        <li>Standardisation des pratiques</li>
+                        <li>Gains de temps mesurables</li>
+                    </ul>
+                </div>
+                <div class="pilier-card fade-in">
+                    <div class="pilier-num">03</div>
+                    <h3>IA concrète</h3>
+                    <p>Là, et seulement là, on intègre l'IA : sur les bons process, avec les bons outils, pour les bons usages.</p>
+                    <ul class="pilier-list">
+                        <li>Mistral pour les collectivités (RGPD)</li>
+                        <li>ChatGPT, Claude, Gemini pour les PME</li>
+                        <li>Automatisations sur mesure (n8n)</li>
+                        <li>Prompting avancé par métier</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ÉCOSYSTÈME -->
+    <section class="eco-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">L'écosystème</span>
+                <h2>Formation + Outils = Accompagnement complet</h2>
+                <p>SY Academy forme. SOLE SOLUTION déploie. Deux entités complémentaires, un parcours cohérent.</p>
+            </div>
+            <div class="eco-grid">
+                <div class="eco-card academy fade-in">
+                    <h3>SY Academy</h3>
+                    <div class="eco-type">Formation</div>
+                    <p>Organisme de formation (certification Qualiopi — actions de formation). Formations en management, organisation et IA.</p>
+                    <ul class="eco-list">
+                        <li>9 programmes de formation</li>
+                        <li>Audit Performance & IA</li>
+                        <li>Finançable OPCO / CNFPT / CPF</li>
+                        <li>Convention de formation</li>
+                        <li>Certification Qualiopi — actions de formation</li>
+                    </ul>
+                </div>
+                <div class="eco-card sole fade-in">
+                    <h3>SOLE SOLUTION</h3>
+                    <div class="eco-type">Outils & Déploiement</div>
+                    <p>Plateforme d'automatisation IA. Chatbots, workflows, tableaux de bord connectés, sur mesure.</p>
+                    <ul class="eco-list">
+                        <li>Chatbots municipaux et entreprise</li>
+                        <li>SOLE SOLUTION URBA (urbanisme)</li>
+                        <li>Workflows automatisés (n8n)</li>
+                        <li>Tableaux de bord connectés</li>
+                        <li>Prestation de service / licence</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section class="certif-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Certifications</span>
+                <h2>Nos garanties de qualité</h2>
+            </div>
+            <div class="certif-grid">
+                <div class="certif-card fade-in">
+                    <div class="certif-icon">🏅</div>
+                    <h4>Certification Qualiopi</h4>
+                    <p>La certification qualité a été délivrée au titre de la catégorie d'action suivante : <strong>actions de formation</strong>.</p>
+                </div>
+                <div class="certif-card fade-in">
+                    <div class="certif-icon">🎓</div>
+                    <h4>+15 ans d'expérience</h4>
+                    <p>Formateur expérimenté, 15 ans d'accompagnement d'organisations publiques et privées.</p>
+                </div>
+                <div class="certif-card fade-in">
+                    <div class="certif-icon">🏗️</div>
+                    <h4>SOLE SOLUTION</h4>
+                    <p>Plateforme propriétaire d'automatisation IA. Expertise technique prouvée par des déploiements concrets.</p>
+                </div>
+                <div class="certif-card fade-in">
+                    <div class="certif-icon">🔒</div>
+                    <h4>RGPD</h4>
+                    <p>Toutes nos formations intègrent les bonnes pratiques RGPD. IA souveraine (Mistral) pour les collectivités.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VALEURS -->
+    <section class="valeurs-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Nos valeurs</span>
+                <h2>Ce en quoi nous croyons</h2>
+            </div>
+            <div class="valeurs-grid">
+                <div class="valeur-card fade-in">
+                    <div class="valeur-icon">🎯</div>
+                    <h3>Concret</h3>
+                    <p>Pas de blabla. Chaque formation produit des livrables utilisables dès le lendemain. On mesure les résultats, on ne les promet pas.</p>
+                </div>
+                <div class="valeur-card fade-in">
+                    <div class="valeur-icon">📏</div>
+                    <h3>Mesurable</h3>
+                    <p>Heures gagnées, coûts réduits, process accélérés. Chaque intervention s'accompagne d'indicateurs de succès chiffrés.</p>
+                </div>
+                <div class="valeur-card fade-in">
+                    <div class="valeur-icon">🌍</div>
+                    <h3>Adapté au terrain</h3>
+                    <p>On ne plaque pas une méthode générique. Chaque programme est adapté à votre réalité : taille, secteur, maturité, contraintes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Prêt à transformer votre organisation ?</h2>
+            <p>Commencez par un audit gratuit. En 1 à 2 jours, nous identifions vos leviers de performance.</p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn-cta-light">Demander un audit →</a>
+                <a href="collectivites.html" class="btn-cta-outline">Collectivités →</a>
+                <a href="pme.html" class="btn-cta-outline">PME / TPE →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+
+                <!-- Bloc 1 : Marque -->
+                <div class="footer-brand">
+                    <img src="logo-sy-academy.png" alt="SY Academy">
+                    <p>SY Academy améliore la performance des organisations en combinant management structuré, organisation des process et l'intégration concrète de l'IA.</p>
+                    <div class="footer-contact-info">
+                        <span>📍 13 Villa du Breuil, 78280 Guyancourt</span>
+                        <span>🏢 Centre : SDCL CENTER, Maurepas (78)</span>
+                        <span>📧 contact@syacademy.fr</span>
+                    </div>
+                </div>
+
+                <!-- Bloc 2 : Formations -->
+                <div class="footer-col">
+                    <h4>Formations</h4>
+                    <ul class="footer-links">
+                        <li><a href="collectivites.html">Collectivités territoriales</a></li>
+                        <li><a href="pme.html">PME / TPE</a></li>
+                        <li><a href="contact.html">Audit Performance &amp; IA</a></li>
+                        <li><a href="#">Catalogue complet (PDF)</a></li>
+                    </ul>
+                </div>
+
+                <!-- Bloc 3 : Financement -->
+                <div class="footer-col">
+                    <h4>Financement</h4>
+                    <ul class="footer-links">
+                        <li><a href="financement.html">OPCO — PME / TPE</a></li>
+                        <li><a href="financement.html">CNFPT — Collectivités</a></li>
+                        <li><a href="financement.html">Plan de formation</a></li>
+                        <li><a href="financement.html">DIF Élus</a></li>
+                    </ul>
+                </div>
+
+                <!-- Bloc 4 : SY Academy -->
+                <div class="footer-col">
+                    <h4>SY Academy</h4>
+                    <ul class="footer-links">
+                        <li><a href="approche.html">Notre approche</a></li>
+                        <li><a href="contact.html">Contact / Devis</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Mentions légales</a></li>
+                        <li><a href="#">CGV</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Barre du bas -->
+            <div class="footer-bottom">
+                <span>© 2026 SY Academy — Tous droits réservés</span>
+                <div class="footer-bottom-right">
+                    <span class="qualiopi-badge-footer">QUALIOPI</span>
+                    <span>La certification qualité a été délivrée au titre de la catégorie d'action suivante : actions de formation</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const navbar=document.getElementById('navbar');window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',window.scrollY>20));
+        const mb=document.getElementById('mobileMenuBtn'),nl=document.getElementById('navLinks');mb.addEventListener('click',()=>nl.classList.toggle('active'));nl.querySelectorAll('a').forEach(l=>l.addEventListener('click',()=>nl.classList.remove('active')));
+        const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible')})},{threshold:.1,rootMargin:'0px 0px -50px 0px'});document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+    </script>
+</body>
+</html>

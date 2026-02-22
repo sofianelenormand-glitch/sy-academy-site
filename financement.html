@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financement de votre formation IA — OPCO, CNFPT, CPF | SY Academy</title>
+    <meta name="description" content="Comment financer votre formation IA à 100%. OPCO pour les PME, CNFPT pour les collectivités, DIF pour les élus. SY Academy monte votre dossier gratuitement.">
+    <meta name="keywords" content="financement formation IA OPCO, formation IA prise en charge OPCO, formation gratuite OPCO, CNFPT formation IA, DIF élus formation">
+    <link rel="canonical" href="https://syacademy.fr/financement">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root{--navy:#0a1628;--blue-accent:#2563eb;--blue-bright:#3b82f6;--blue-gradient-start:#1e3a8a;--blue-gradient-end:#2563eb;--cyan:#06b6d4;--white:#ffffff;--gray-50:#f8fafc;--gray-100:#f1f5f9;--gray-200:#e2e8f0;--gray-400:#94a3b8;--gray-500:#64748b;--gray-600:#475569;--text-primary:#0f172a;--text-secondary:#475569;--orange-accent:#f59e0b;--green-accent:#10b981;--font-display:'Outfit',sans-serif;--font-body:'DM Sans',sans-serif;--shadow-md:0 4px 12px rgba(0,0,0,.08);--shadow-lg:0 8px 30px rgba(0,0,0,.12);--shadow-xl:0 20px 50px rgba(0,0,0,.15);--radius-md:12px;--radius-lg:20px}
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:var(--font-body);color:var(--text-primary);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}img{max-width:100%;height:auto;display:block}a{text-decoration:none;color:inherit;transition:all .3s}h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.2}.container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+        .top-banner{background:linear-gradient(135deg,var(--blue-gradient-start),var(--blue-gradient-end));color:var(--white);text-align:center;padding:10px 24px;font-size:.85rem;font-weight:500}.top-banner strong{color:var(--orange-accent)}
+        .navbar{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--gray-200);transition:box-shadow .3s}.navbar.scrolled{box-shadow:var(--shadow-md)}.navbar .container{display:flex;align-items:center;justify-content:space-between;height:72px}.navbar-logo img{height:48px}.nav-links{display:flex;align-items:center;gap:32px;list-style:none}.nav-links a{font-family:var(--font-display);font-size:.9rem;font-weight:500;color:var(--text-secondary);padding:4px 0;position:relative}.nav-links a::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:linear-gradient(90deg,var(--blue-gradient-start),var(--blue-gradient-end));border-radius:2px;transition:width .3s}.nav-links a:hover{color:var(--text-primary)}.nav-links a:hover::after{width:100%}.nav-links a.active{color:var(--blue-accent);font-weight:600}.nav-links a.active::after{width:100%}.nav-cta{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--blue-gradient-start),var(--blue-gradient-end));color:var(--white)!important;padding:10px 22px;border-radius:50px;font-weight:600;font-size:.85rem}.nav-cta:hover{transform:translateY(-1px);box-shadow:0 4px 15px rgba(37,99,235,.4)}.nav-cta::after{display:none!important}.mobile-menu-btn{display:none;background:none;border:none;cursor:pointer;padding:8px}.mobile-menu-btn span{display:block;width:24px;height:2px;background:var(--navy);margin:6px 0;border-radius:2px}
+
+        /* HERO */
+        .hero-fin{padding:80px 0 60px;background:var(--navy);position:relative;overflow:hidden}
+        .hero-fin::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 30%,rgba(16,185,129,.12) 0%,transparent 60%)}
+        .hero-fin .container{position:relative;z-index:1;text-align:center;max-width:800px}
+        .hero-fin h1{font-size:clamp(2rem,4vw,2.8rem);color:var(--white);margin-bottom:20px}
+        .hero-fin h1 .highlight{color:var(--green-accent)}
+        .hero-fin p{font-size:1.1rem;color:var(--gray-400);line-height:1.7}
+
+        .section-header{text-align:center;margin-bottom:48px}
+        .section-label{display:inline-block;font-family:var(--font-display);font-size:.8rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--blue-accent);margin-bottom:12px}
+        .section-header h2{font-size:clamp(1.8rem,3vw,2.4rem);color:var(--navy);margin-bottom:12px}
+        .section-header p{font-size:1rem;color:var(--text-secondary);max-width:600px;margin:0 auto}
+
+        /* TABLEAU SYNTHÈSE */
+        .synthese-section{padding:80px 0;background:var(--white)}
+        .synthese-table-wrapper{overflow-x:auto;border-radius:var(--radius-lg);box-shadow:var(--shadow-lg)}
+        .synthese-table{width:100%;border-collapse:collapse;min-width:700px}
+        .synthese-table thead th{background:var(--navy);color:var(--white);padding:16px 20px;font-family:var(--font-display);font-size:.82rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;text-align:left}
+        .synthese-table tbody tr{border-bottom:1px solid var(--gray-100);transition:background .2s}
+        .synthese-table tbody tr:hover{background:var(--gray-50)}
+        .synthese-table td{padding:18px 20px;font-size:.9rem;vertical-align:top}
+        .synthese-table td:first-child{font-weight:600;color:var(--navy)}
+        .prise-en-charge{display:inline-block;padding:4px 12px;border-radius:50px;font-size:.75rem;font-weight:700}
+        .prise-100{background:rgba(16,185,129,.08);color:var(--green-accent)}
+        .prise-variable{background:rgba(249,115,22,.08);color:var(--orange-accent)}
+
+        /* DETAIL SECTIONS */
+        .detail-section{padding:80px 0}
+        .detail-section:nth-child(even){background:var(--gray-50)}
+        .detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+        .detail-content h3{font-size:1.4rem;color:var(--navy);margin-bottom:16px}
+        .detail-content p{font-size:.95rem;color:var(--text-secondary);line-height:1.7;margin-bottom:12px}
+        .detail-steps{list-style:none;margin:24px 0}
+        .detail-steps li{padding:14px 0 14px 48px;position:relative;font-size:.9rem;color:var(--text-secondary);border-bottom:1px solid var(--gray-100)}
+        .detail-steps li::before{position:absolute;left:0;font-family:var(--font-display);font-size:1.3rem;font-weight:800}
+        .detail-steps li:nth-child(1)::before{content:'1';color:var(--blue-accent)}
+        .detail-steps li:nth-child(2)::before{content:'2';color:var(--blue-accent)}
+        .detail-steps li:nth-child(3)::before{content:'3';color:var(--blue-accent)}
+        .detail-steps li:nth-child(4)::before{content:'4';color:var(--green-accent)}
+
+        .detail-card{border-radius:var(--radius-lg);padding:40px;text-align:center}
+        .detail-card.opco-card{background:linear-gradient(135deg,rgba(6,182,212,.04),rgba(6,182,212,.08));border:2px solid var(--cyan)}
+        .detail-card.cnfpt-card{background:linear-gradient(135deg,rgba(30,58,138,.04),rgba(37,99,235,.06));border:2px solid var(--blue-accent)}
+        .detail-card.elus-card{background:linear-gradient(135deg,rgba(249,115,22,.04),rgba(249,115,22,.06));border:2px solid var(--orange-accent)}
+        .detail-card .big-number{font-family:var(--font-display);font-size:3.5rem;font-weight:800;color:var(--navy);line-height:1}
+        .detail-card .big-number span{color:var(--green-accent)}
+        .detail-card p{font-size:.9rem;color:var(--text-secondary);margin-top:12px;line-height:1.6}
+        .detail-card .card-label{display:inline-block;padding:6px 16px;border-radius:50px;font-size:.78rem;font-weight:700;margin-bottom:20px}
+        .opco-card .card-label{background:rgba(6,182,212,.08);color:var(--cyan)}
+        .cnfpt-card .card-label{background:rgba(37,99,235,.08);color:var(--blue-accent)}
+        .elus-card .card-label{background:rgba(249,115,22,.08);color:var(--orange-accent)}
+
+        .opco-list{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:20px}
+        .opco-tag{background:var(--gray-50);padding:4px 12px;border-radius:50px;font-size:.72rem;font-weight:600;color:var(--text-secondary);border:1px solid var(--gray-100)}
+
+        /* ACCOMPAGNEMENT */
+        .accomp-section{padding:80px 0;background:var(--navy);position:relative;overflow:hidden}
+        .accomp-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(16,185,129,.12) 0%,transparent 60%)}
+        .accomp-section .container{position:relative;z-index:1;text-align:center;max-width:700px}
+        .accomp-section h2{color:var(--white);font-size:clamp(1.8rem,3vw,2.4rem);margin-bottom:16px}
+        .accomp-section p{color:var(--gray-400);font-size:1rem;line-height:1.7;margin-bottom:12px}
+        .accomp-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:32px 0;text-align:left}
+        .accomp-list li{display:flex;align-items:center;gap:10px;font-size:.9rem;color:var(--gray-400);padding:8px 0}
+        .accomp-list li::before{content:'✓';color:var(--green-accent);font-weight:700;font-size:.9rem;flex-shrink:0}
+        .btn-cta-light{display:inline-flex;align-items:center;gap:10px;background:var(--white);color:var(--navy);padding:16px 32px;border-radius:50px;font-family:var(--font-display);font-weight:700;font-size:1rem;transition:all .3s;box-shadow:0 4px 15px rgba(0,0,0,.1);margin-top:24px}
+        .btn-cta-light:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,.15)}
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        .footer {
+            background: #060e1a;
+            padding: 64px 0 0;
+            color: var(--gray-400);
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 48px;
+            padding-bottom: 48px;
+        }
+        .footer-brand img {
+            height: 40px;
+            filter: brightness(0) invert(1);
+            opacity: 0.8;
+            margin-bottom: 16px;
+        }
+        .footer-brand > p {
+            font-size: 0.88rem;
+            line-height: 1.6;
+            color: var(--gray-500);
+            margin-bottom: 20px;
+        }
+        .footer-contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .footer-contact-info span {
+            font-size: 0.8rem;
+            color: var(--gray-500);
+        }
+        .footer-col {}
+        .footer h4,
+        .footer-col h4 {
+            color: var(--white);
+            font-family: var(--font-display);
+            font-size: 0.82rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: 20px;
+        }
+        .footer-links {
+            list-style: none;
+        }
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        .footer-links a {
+            font-size: 0.85rem;
+            color: var(--gray-500);
+            transition: color 0.2s;
+        }
+        .footer-links a:hover {
+            color: var(--white);
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding: 24px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            color: var(--gray-600);
+        }
+        .footer-bottom-right {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .qualiopi-badge-footer {
+            background: rgba(255,255,255,0.08);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--gray-400);
+        }
+
+        .fade-in{opacity:0;transform:translateY(30px);transition:all .7s ease-out}.fade-in.visible{opacity:1;transform:translateY(0)}
+
+        @media(max-width:1024px){.detail-grid{grid-template-columns:1fr}}
+        @media(max-width:768px){.nav-links{display:none;position:absolute;top:72px;left:0;right:0;background:var(--white);flex-direction:column;padding:24px;gap:16px;border-bottom:1px solid var(--gray-200);box-shadow:var(--shadow-lg)}.nav-links.active{display:flex}.mobile-menu-btn{display:block}.accomp-list{grid-template-columns:1fr}}
+
+        /* Footer responsive */
+        @media (max-width: 900px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 32px;
+            }
+        }
+        @media (max-width: 600px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+            }
+            .footer-bottom-right {
+                justify-content: center;
+            }
+        }
+        </style>
+</head>
+<body>
+    <div class="top-banner">💰 <strong>Formations finançables à 100%</strong> — On monte votre dossier gratuitement</div>
+
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-logo"><img src="logo-sy-academy.png" alt="SY Academy"></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="collectivites.html">Collectivités</a></li>
+                <li><a href="pme.html">PME / TPE</a></li>
+                <li><a href="approche.html">Notre approche</a></li>
+                <li><a href="financement.html" class="active">Financement</a></li>
+                <li><a href="contact.html" class="nav-cta">Demander un devis →</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <section class="hero-fin">
+        <div class="container">
+            <h1>Votre formation peut être <span class="highlight">100% financée</span></h1>
+            <p>OPCO, CNFPT, plan de formation, DIF élus… plusieurs dispositifs existent pour prendre en charge le coût de votre formation. SY Academy vous accompagne dans le montage du dossier.</p>
+        </div>
+    </section>
+
+    <!-- TABLEAU SYNTHÈSE -->
+    <section class="synthese-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Synthèse</span>
+                <h2>Qui finance quoi ?</h2>
+            </div>
+            <div class="synthese-table-wrapper">
+                <table class="synthese-table">
+                    <thead><tr><th>Vous êtes</th><th>Dispositif</th><th>Prise en charge</th><th>Conditions</th></tr></thead>
+                    <tbody>
+                        <tr><td>PME / TPE &lt;50 salariés</td><td>OPCO — Plan de développement des compétences</td><td><span class="prise-en-charge prise-100">Jusqu'à 100%</span></td><td>Être à jour de ses cotisations OPCO</td></tr>
+                        <tr><td>PME / TPE 50-300 salariés</td><td>OPCO — Plan de développement des compétences</td><td><span class="prise-en-charge prise-variable">Partielle</span></td><td>Selon l'OPCO et les fonds disponibles</td></tr>
+                        <tr><td>Collectivité territoriale</td><td>CNFPT — Plan de formation</td><td><span class="prise-en-charge prise-100">100%</span></td><td>Inscription au plan de formation</td></tr>
+                        <tr><td>Collectivité territoriale</td><td>Budget propre / Marché public</td><td><span class="prise-en-charge prise-100">100%</span></td><td>Convention de formation ou MAPA</td></tr>
+                        <tr><td>Élu local</td><td>DIF Élus</td><td><span class="prise-en-charge prise-100">100%</span></td><td>20h/an cumulables, organisme agréé</td></tr>
+                        <tr><td>Toute entreprise</td><td>Plan de développement des compétences</td><td><span class="prise-en-charge prise-variable">Budget propre</span></td><td>Décision de l'employeur</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- OPCO -->
+    <section class="detail-section" id="opco">
+        <div class="container">
+            <div class="detail-grid">
+                <div class="detail-content fade-in">
+                    <span class="section-label">PME / TPE</span>
+                    <h3>Financement OPCO : 0€ pour vous</h3>
+                    <p>Chaque entreprise cotise à un OPCO (Opérateur de Compétences). Si vous avez moins de 50 salariés, votre OPCO peut financer 100% de la formation au titre du plan de développement des compétences.</p>
+                    <p>Vous ne savez pas quel est votre OPCO ? Pas de souci — on le trouve pour vous en 2 minutes à partir de votre convention collective.</p>
+                    <ul class="detail-steps">
+                        <li><strong>Contactez-nous</strong> — on identifie votre OPCO et vos droits</li>
+                        <li><strong>On prépare le dossier</strong> — convention, programme, devis conformes</li>
+                        <li><strong>Votre OPCO valide</strong> — accord sous 2 à 4 semaines</li>
+                        <li><strong>Formation réalisée</strong> — l'OPCO nous paie directement (subrogation)</li>
+                    </ul>
+                </div>
+                <div class="detail-card opco-card fade-in">
+                    <div class="card-label">Entreprises &lt;50 salariés</div>
+                    <div class="big-number"><span>100%</span></div>
+                    <p>prise en charge possible par votre OPCO</p>
+                    <div class="opco-list">
+                        <span class="opco-tag">Atlas</span><span class="opco-tag">OPCO EP</span><span class="opco-tag">AKTO</span><span class="opco-tag">OPCO 2i</span><span class="opco-tag">Constructys</span><span class="opco-tag">Ocapiat</span><span class="opco-tag">AFDAS</span><span class="opco-tag">Uniformation</span><span class="opco-tag">OPCO Santé</span><span class="opco-tag">OPCO Mobilités</span><span class="opco-tag">OPCO Commerce</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CNFPT -->
+    <section class="detail-section" id="cnfpt">
+        <div class="container">
+            <div class="detail-grid">
+                <div class="detail-card cnfpt-card fade-in">
+                    <div class="card-label">Agents territoriaux</div>
+                    <div class="big-number"><span>100%</span></div>
+                    <p>financé par le CNFPT ou le plan de formation de votre collectivité</p>
+                </div>
+                <div class="detail-content fade-in">
+                    <span class="section-label">Collectivités</span>
+                    <h3>Financement CNFPT et plan de formation</h3>
+                    <p>Les formations SY Academy sont éligibles au financement par le CNFPT dans le cadre du plan de formation de votre collectivité. SY Academy étant certifié Qualiopi, vos formations sont automatiquement éligibles.</p>
+                    <p>Vous pouvez aussi nous solliciter directement via le budget formation propre de votre collectivité, avec une simple convention de formation.</p>
+                    <ul class="detail-steps">
+                        <li><strong>Contactez-nous</strong> — on analyse vos besoins par service</li>
+                        <li><strong>On produit les documents</strong> — programme, convention, devis CNFPT-compatibles</li>
+                        <li><strong>Inscription au plan de formation</strong> — validation par la DRH / DGA</li>
+                        <li><strong>Formation réalisée</strong> — dans vos locaux ou à Maurepas</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIF ÉLUS -->
+    <section class="detail-section" id="elus">
+        <div class="container">
+            <div class="detail-grid">
+                <div class="detail-content fade-in">
+                    <span class="section-label">Élus locaux</span>
+                    <h3>DIF Élus : votre droit à la formation</h3>
+                    <p>Les élus locaux disposent d'un Droit Individuel à la Formation (DIF) de 20 heures par an, cumulables sur toute la durée du mandat. Ce droit permet de financer des formations liées à l'exercice du mandat.</p>
+                    <p>Notre sensibilisation élus (COL-05 — 3h30) est éligible au DIF élus. Elle permet aux élus de comprendre les enjeux de l'IA pour leur collectivité et de définir une feuille de route réaliste.</p>
+                </div>
+                <div class="detail-card elus-card fade-in">
+                    <div class="card-label">Élus municipaux</div>
+                    <div class="big-number">20<span>h</span>/an</div>
+                    <p>de droits DIF cumulables sur toute la durée du mandat</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACCOMPAGNEMENT -->
+    <section class="accomp-section">
+        <div class="container">
+            <h2>SY Academy s'occupe de tout</h2>
+            <p>Vous n'avez pas à devenir expert en financement de la formation. On gère l'administratif pour vous.</p>
+            <ul class="accomp-list">
+                <li>Identification de votre OPCO ou dispositif</li>
+                <li>Vérification de vos droits et plafonds</li>
+                <li>Rédaction de la convention de formation</li>
+                <li>Production du programme conforme</li>
+                <li>Devis au format demandé par le financeur</li>
+                <li>Montage complet du dossier</li>
+                <li>Suivi jusqu'à l'accord de prise en charge</li>
+                <li>Facturation directe au financeur (subrogation)</li>
+            </ul>
+            <a href="contact.html" class="btn-cta-light">Demander un devis → on s'occupe du reste</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+
+                <!-- Bloc 1 : Marque -->
+                <div class="footer-brand">
+                    <img src="logo-sy-academy.png" alt="SY Academy">
+                    <p>SY Academy améliore la performance des organisations en combinant management structuré, organisation des process et l'intégration concrète de l'IA.</p>
+                    <div class="footer-contact-info">
+                        <span>📍 13 Villa du Breuil, 78280 Guyancourt</span>
+                        <span>🏢 Centre : SDCL CENTER, Maurepas (78)</span>
+                        <span>📧 contact@syacademy.fr</span>
+                    </div>
+                </div>
+
+                <!-- Bloc 2 : Formations -->
+                <div class="footer-col">
+                    <h4>Formations</h4>
+                    <ul class="footer-links">
+                        <li><a href="collectivites.html">Collectivités territoriales</a></li>
+                        <li><a href="pme.html">PME / TPE</a></li>
+                        <li><a href="contact.html">Audit Performance &amp; IA</a></li>
+                        <li><a href="#">Catalogue complet (PDF)</a></li>
+                    </ul>
+                </div>
+
+                <!-- Bloc 3 : Financement -->
+                <div class="footer-col">
+                    <h4>Financement</h4>
+                    <ul class="footer-links">
+                        <li><a href="financement.html">OPCO — PME / TPE</a></li>
+                        <li><a href="financement.html">CNFPT — Collectivités</a></li>
+                        <li><a href="financement.html">Plan de formation</a></li>
+                        <li><a href="financement.html">DIF Élus</a></li>
+                    </ul>
+                </div>
+
+                <!-- Bloc 4 : SY Academy -->
+                <div class="footer-col">
+                    <h4>SY Academy</h4>
+                    <ul class="footer-links">
+                        <li><a href="approche.html">Notre approche</a></li>
+                        <li><a href="contact.html">Contact / Devis</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Mentions légales</a></li>
+                        <li><a href="#">CGV</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Barre du bas -->
+            <div class="footer-bottom">
+                <span>© 2026 SY Academy — Tous droits réservés</span>
+                <div class="footer-bottom-right">
+                    <span class="qualiopi-badge-footer">QUALIOPI</span>
+                    <span>La certification qualité a été délivrée au titre de la catégorie d'action suivante : actions de formation</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const navbar=document.getElementById('navbar');window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',window.scrollY>20));
+        const mb=document.getElementById('mobileMenuBtn'),nl=document.getElementById('navLinks');mb.addEventListener('click',()=>nl.classList.toggle('active'));nl.querySelectorAll('a').forEach(l=>l.addEventListener('click',()=>nl.classList.remove('active')));
+        const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible')})},{threshold:.1,rootMargin:'0px 0px -50px 0px'});document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+    </script>
+</body>
+</html>

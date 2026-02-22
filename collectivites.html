@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formations IA pour Collectivités Territoriales — SY Academy</title>
+    <meta name="description" content="7 formations IA souveraine pour collectivités territoriales. Mistral, RGPD, hébergement français. Finançables CNFPT et plan de formation. Certification Qualiopi.">
+    <meta name="keywords" content="formation IA collectivités territoriales, formation IA mairie, formation Mistral collectivité, CNFPT IA, formation intelligence artificielle service public, formation urbanisme IA">
+    <link rel="canonical" href="https://syacademy.fr/collectivites">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --navy: #0a1628;
+            --navy-light: #132040;
+            --blue-mid: #1a3a6e;
+            --blue-accent: #2563eb;
+            --blue-bright: #3b82f6;
+            --blue-gradient-start: #1e3a8a;
+            --blue-gradient-end: #2563eb;
+            --cyan: #06b6d4;
+            --white: #ffffff;
+            --gray-50: #f8fafc;
+            --gray-100: #f1f5f9;
+            --gray-200: #e2e8f0;
+            --gray-300: #cbd5e1;
+            --gray-400: #94a3b8;
+            --gray-500: #64748b;
+            --gray-600: #475569;
+            --gray-700: #334155;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --orange-accent: #f59e0b;
+            --green-accent: #10b981;
+            --red-soft: #ef4444;
+            --font-display: 'Outfit', sans-serif;
+            --font-body: 'DM Sans', sans-serif;
+            --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+            --shadow-lg: 0 8px 30px rgba(0,0,0,0.12);
+            --shadow-xl: 0 20px 50px rgba(0,0,0,0.15);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); color: var(--text-primary); background: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+        img { max-width: 100%; height: auto; display: block; }
+        a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
+        h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); font-weight: 700; line-height: 1.2; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        /* ============================================
+           TOP BANNER
+           ============================================ */
+        .top-banner {
+            background: linear-gradient(135deg, var(--blue-gradient-start), var(--blue-gradient-end));
+            color: var(--white); text-align: center; padding: 10px 24px;
+            font-size: 0.85rem; font-weight: 500;
+        }
+        .top-banner strong { color: var(--orange-accent); }
+
+        /* ============================================
+           NAVBAR
+           ============================================ */
+        .navbar {
+            position: sticky; top: 0; z-index: 1000;
+            background: rgba(255,255,255,0.95); backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--gray-200); transition: box-shadow 0.3s;
+        }
+        .navbar.scrolled { box-shadow: var(--shadow-md); }
+        .navbar .container { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+        .navbar-logo img { height: 48px; }
+        .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+        .nav-links a { font-family: var(--font-display); font-size: 0.9rem; font-weight: 500; color: var(--text-secondary); padding: 4px 0; position: relative; }
+        .nav-links a::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: linear-gradient(90deg, var(--blue-gradient-start), var(--blue-gradient-end)); border-radius: 2px; transition: width 0.3s; }
+        .nav-links a:hover { color: var(--text-primary); }
+        .nav-links a:hover::after { width: 100%; }
+        .nav-links a.active { color: var(--blue-accent); font-weight: 600; }
+        .nav-links a.active::after { width: 100%; }
+        .nav-cta { display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, var(--blue-gradient-start), var(--blue-gradient-end)); color: var(--white) !important; padding: 10px 22px; border-radius: 50px; font-weight: 600; font-size: 0.85rem; }
+        .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 15px rgba(37,99,235,0.4); }
+        .nav-cta::after { display: none !important; }
+        .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+        .mobile-menu-btn span { display: block; width: 24px; height: 2px; background: var(--navy); margin: 6px 0; border-radius: 2px; transition: 0.3s; }
+
+        /* ============================================
+           HERO COLLECTIVITÉS
+           ============================================ */
+        .hero-col {
+            padding: 80px 0 60px;
+            background: var(--navy);
+            position: relative; overflow: hidden;
+        }
+        .hero-col::before {
+            content: ''; position: absolute; inset: 0;
+            background: radial-gradient(ellipse at 20% 30%, rgba(37,99,235,0.2) 0%, transparent 60%),
+                        radial-gradient(ellipse at 80% 70%, rgba(6,182,212,0.12) 0%, transparent 60%);
+        }
+        .hero-col .container { position: relative; z-index: 1; max-width: 900px; text-align: center; }
+        .hero-col .hero-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12);
+            padding: 8px 18px; border-radius: 50px; font-size: 0.8rem; font-weight: 600;
+            color: var(--cyan); margin-bottom: 24px;
+        }
+        .hero-col h1 { font-size: clamp(2rem, 4vw, 3rem); color: var(--white); margin-bottom: 20px; }
+        .hero-col h1 .highlight {
+            background: linear-gradient(135deg, var(--blue-bright), var(--cyan));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+        }
+        .hero-col .subtitle { font-size: 1.1rem; color: var(--gray-400); max-width: 650px; margin: 0 auto 36px; line-height: 1.7; }
+        .hero-col .hero-ctas { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 40px; }
+        .btn-primary { display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, var(--blue-gradient-start), var(--blue-gradient-end)); color: var(--white); padding: 16px 32px; border-radius: 50px; font-family: var(--font-display); font-weight: 600; font-size: 1rem; border: none; cursor: pointer; box-shadow: 0 4px 15px rgba(37,99,235,0.3); transition: all 0.3s; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(37,99,235,0.4); }
+        .btn-secondary { display: inline-flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.06); color: var(--white); padding: 16px 32px; border-radius: 50px; font-family: var(--font-display); font-weight: 600; font-size: 1rem; border: 1px solid rgba(255,255,255,0.2); cursor: pointer; transition: all 0.3s; }
+        .btn-secondary:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.4); transform: translateY(-2px); }
+
+        .hero-trust-bar {
+            display: flex; justify-content: center; gap: 36px; flex-wrap: wrap;
+            padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.08);
+        }
+        .trust-item { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: var(--gray-400); font-weight: 500; }
+
+        /* ============================================
+           PROBLÈMES
+           ============================================ */
+        .problems-section { padding: 80px 0; background: var(--gray-50); }
+        .problems-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+        .problem-card {
+            background: var(--white); border-radius: var(--radius-md); padding: 28px 24px;
+            border: 1px solid var(--gray-200); text-align: center; transition: all 0.3s;
+        }
+        .problem-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+        .problem-icon { font-size: 2rem; margin-bottom: 16px; }
+        .problem-card h3 { font-size: 1rem; color: var(--navy); margin-bottom: 8px; }
+        .problem-card p { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; }
+
+        /* ============================================
+           SECTION LABEL
+           ============================================ */
+        .section-header { text-align: center; margin-bottom: 48px; }
+        .section-label { display: inline-block; font-family: var(--font-display); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--blue-accent); margin-bottom: 12px; }
+        .section-header h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); color: var(--navy); margin-bottom: 12px; }
+        .section-header p { font-size: 1rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto; }
+
+        /* ============================================
+           MISTRAL BANNER
+           ============================================ */
+        .mistral-banner {
+            margin: 0; padding: 48px 0;
+            background: linear-gradient(135deg, #0f172a, #1e3a5f);
+        }
+        .mistral-inner {
+            display: flex; align-items: center; gap: 40px;
+            max-width: 900px; margin: 0 auto;
+        }
+        .mistral-icon { font-size: 3rem; flex-shrink: 0; }
+        .mistral-inner h3 { color: var(--white); font-size: 1.2rem; margin-bottom: 8px; }
+        .mistral-inner p { color: var(--gray-400); font-size: 0.9rem; line-height: 1.6; }
+        .mistral-tags { display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap; }
+        .mistral-tag {
+            background: rgba(6,182,212,0.12); color: var(--cyan);
+            padding: 6px 14px; border-radius: 50px; font-size: 0.75rem;
+            font-weight: 600; letter-spacing: 0.03em;
+        }
+
+        /* ============================================
+           TRAINING CARDS
+           ============================================ */
+        .formations-section { padding: 80px 0; background: var(--white); }
+
+        .formations-filter {
+            display: flex; justify-content: center; gap: 10px; margin-bottom: 40px; flex-wrap: wrap;
+        }
+        .filter-btn {
+            padding: 8px 20px; border-radius: 50px; border: 1px solid var(--gray-200);
+            background: var(--white); font-family: var(--font-display); font-size: 0.8rem;
+            font-weight: 600; color: var(--text-secondary); cursor: pointer; transition: all 0.3s;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--blue-accent); color: var(--white); border-color: var(--blue-accent);
+        }
+
+        .formations-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+
+        .formation-card {
+            background: var(--white); border-radius: var(--radius-lg);
+            border: 1px solid var(--gray-200); overflow: hidden;
+            transition: all 0.4s; position: relative;
+        }
+        .formation-card:hover { box-shadow: var(--shadow-xl); transform: translateY(-4px); border-color: transparent; }
+        .formation-card.audit { grid-column: 1 / -1; }
+
+        .card-header {
+            padding: 24px 28px 16px;
+            display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;
+        }
+        .card-code {
+            display: inline-flex; padding: 4px 12px; border-radius: 6px;
+            font-family: var(--font-display); font-size: 0.7rem; font-weight: 700;
+            letter-spacing: 0.08em; text-transform: uppercase; flex-shrink: 0;
+        }
+        .card-code.audit-code { background: rgba(249,115,22,0.1); color: #ea580c; }
+        .card-code.col-code { background: rgba(37,99,235,0.08); color: var(--blue-accent); }
+
+        .card-badges { display: flex; gap: 8px; flex-wrap: wrap; }
+        .card-badge {
+            padding: 4px 10px; border-radius: 50px; font-size: 0.7rem;
+            font-weight: 600; background: var(--gray-50); color: var(--text-secondary);
+        }
+        .card-badge.places { background: rgba(16,185,129,0.08); color: var(--green-accent); }
+        .card-badge.new { background: rgba(249,115,22,0.08); color: var(--orange-accent); }
+
+        .card-body { padding: 0 28px 20px; }
+        .card-body h3 { font-size: 1.2rem; color: var(--navy); margin-bottom: 10px; line-height: 1.3; }
+        .card-body > p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 16px; }
+
+        .card-meta {
+            display: flex; gap: 20px; flex-wrap: wrap;
+            padding: 16px 0; border-top: 1px solid var(--gray-100); margin-bottom: 16px;
+        }
+        .meta-item { display: flex; align-items: center; gap: 6px; font-size: 0.8rem; color: var(--text-secondary); font-weight: 500; }
+        .meta-icon { font-size: 1rem; }
+
+        .card-objectives { margin-bottom: 16px; }
+        .card-objectives summary {
+            font-family: var(--font-display); font-size: 0.85rem; font-weight: 600;
+            color: var(--blue-accent); cursor: pointer; padding: 8px 0;
+            list-style: none; display: flex; align-items: center; gap: 6px;
+        }
+        .card-objectives summary::before { content: '▸'; transition: transform 0.2s; }
+        .card-objectives[open] summary::before { transform: rotate(90deg); }
+        .card-objectives ul {
+            list-style: none; padding: 8px 0 0 0;
+        }
+        .card-objectives li {
+            padding: 5px 0 5px 20px; font-size: 0.82rem; color: var(--text-secondary);
+            position: relative; line-height: 1.5;
+        }
+        .card-objectives li::before { content: '✓'; position: absolute; left: 0; color: var(--green-accent); font-weight: 700; font-size: 0.8rem; }
+
+        .card-livrables summary {
+            font-family: var(--font-display); font-size: 0.85rem; font-weight: 600;
+            color: var(--text-secondary); cursor: pointer; padding: 8px 0;
+            list-style: none; display: flex; align-items: center; gap: 6px;
+        }
+        .card-livrables summary::before { content: '▸'; transition: transform 0.2s; }
+        .card-livrables[open] summary::before { transform: rotate(90deg); }
+        .card-livrables ul { list-style: none; padding: 8px 0 0 0; }
+        .card-livrables li { padding: 4px 0 4px 20px; font-size: 0.82rem; color: var(--text-secondary); position: relative; }
+        .card-livrables li::before { content: '📄'; position: absolute; left: 0; font-size: 0.75rem; }
+
+        .card-footer {
+            padding: 16px 28px 24px;
+            display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+        }
+        .card-price {
+            font-family: var(--font-display); font-size: 1.6rem; font-weight: 800; color: var(--navy);
+        }
+        .card-price small { font-size: 0.8rem; font-weight: 500; color: var(--text-secondary); display: block; }
+
+        .btn-card {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 12px 24px; border-radius: 50px;
+            font-family: var(--font-display); font-weight: 600; font-size: 0.85rem;
+            transition: all 0.3s; cursor: pointer; border: none;
+        }
+        .btn-card-primary {
+            background: linear-gradient(135deg, var(--blue-gradient-start), var(--blue-gradient-end));
+            color: var(--white);
+        }
+        .btn-card-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(37,99,235,0.35); }
+        .btn-card-outline {
+            background: var(--white); color: var(--blue-accent);
+            border: 2px solid var(--gray-200);
+        }
+        .btn-card-outline:hover { border-color: var(--blue-accent); }
+
+        /* Full-width audit card layout */
+        .formation-card.audit .card-body { max-width: 700px; }
+        .formation-card.audit .card-footer { border-top: 1px solid var(--gray-100); margin: 0 28px; padding: 20px 0 24px; }
+
+        /* ============================================
+           PLANNING SESSIONS
+           ============================================ */
+        .planning-section { padding: 80px 0; background: var(--gray-50); }
+
+        .planning-table-wrapper { overflow-x: auto; border-radius: var(--radius-lg); background: var(--white); box-shadow: var(--shadow-md); }
+        .planning-table { width: 100%; border-collapse: collapse; min-width: 700px; }
+        .planning-table thead th {
+            background: var(--navy); color: var(--white); padding: 16px 20px;
+            font-family: var(--font-display); font-size: 0.8rem; font-weight: 600;
+            text-transform: uppercase; letter-spacing: 0.06em; text-align: left;
+        }
+        .planning-table tbody tr { border-bottom: 1px solid var(--gray-100); transition: background 0.2s; }
+        .planning-table tbody tr:hover { background: var(--gray-50); }
+        .planning-table td { padding: 16px 20px; font-size: 0.88rem; color: var(--text-primary); vertical-align: middle; }
+        .planning-table .session-code {
+            display: inline-block; padding: 3px 10px; border-radius: 6px;
+            font-size: 0.72rem; font-weight: 700; background: rgba(37,99,235,0.08);
+            color: var(--blue-accent); font-family: var(--font-display); letter-spacing: 0.04em;
+        }
+        .planning-table .session-format {
+            display: inline-block; padding: 3px 10px; border-radius: 50px;
+            font-size: 0.72rem; font-weight: 600;
+        }
+        .format-intra { background: rgba(6,182,212,0.08); color: var(--cyan); }
+        .format-inter { background: rgba(16,185,129,0.08); color: var(--green-accent); }
+        .places-badge {
+            display: inline-flex; align-items: center; gap: 4px; font-size: 0.8rem; font-weight: 600;
+        }
+        .places-badge.available { color: var(--green-accent); }
+        .places-badge.limited { color: var(--orange-accent); }
+        .planning-table .btn-inscr {
+            padding: 8px 18px; border-radius: 50px; border: none;
+            background: linear-gradient(135deg, var(--blue-gradient-start), var(--blue-gradient-end));
+            color: var(--white); font-family: var(--font-display); font-size: 0.78rem;
+            font-weight: 600; cursor: pointer; transition: all 0.3s;
+        }
+        .planning-table .btn-inscr:hover { box-shadow: 0 4px 12px rgba(37,99,235,0.3); transform: translateY(-1px); }
+
+        .planning-note {
+            text-align: center; margin-top: 24px; font-size: 0.85rem; color: var(--text-secondary);
+        }
+        .planning-note strong { color: var(--blue-accent); }
+
+        /* ============================================
+           FINANCEMENT
+           ============================================ */
+        .financement-section { padding: 80px 0; background: var(--white); }
+        .financement-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .fin-card {
+            background: var(--gray-50); border-radius: var(--radius-md); padding: 32px 28px;
+            border: 1px solid var(--gray-100); text-align: center;
+        }
+        .fin-icon { font-size: 2.5rem; margin-bottom: 16px; }
+        .fin-card h3 { font-size: 1.05rem; color: var(--navy); margin-bottom: 8px; }
+        .fin-card p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; }
+        .fin-card .fin-tag {
+            display: inline-block; margin-top: 16px; padding: 6px 16px; border-radius: 50px;
+            background: rgba(16,185,129,0.08); color: var(--green-accent);
+            font-size: 0.78rem; font-weight: 700;
+        }
+
+        /* ============================================
+           FAQ
+           ============================================ */
+        .faq-section { padding: 80px 0; background: var(--gray-50); }
+        .faq-list { max-width: 800px; margin: 0 auto; }
+        .faq-item {
+            background: var(--white); border: 1px solid var(--gray-200);
+            border-radius: var(--radius-md); margin-bottom: 12px; overflow: hidden;
+        }
+        .faq-item summary {
+            padding: 20px 24px; font-family: var(--font-display); font-size: 1rem;
+            font-weight: 600; color: var(--navy); cursor: pointer; list-style: none;
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .faq-item summary::after { content: '+'; font-size: 1.5rem; color: var(--blue-accent); font-weight: 300; transition: transform 0.2s; }
+        .faq-item[open] summary::after { content: '−'; }
+        .faq-answer { padding: 0 24px 20px; font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; }
+
+        /* ============================================
+           FORMULAIRE PRÉ-INSCRIPTION
+           ============================================ */
+        .inscription-section {
+            padding: 80px 0; background: var(--navy); position: relative; overflow: hidden;
+        }
+        .inscription-section::before {
+            content: ''; position: absolute; inset: 0;
+            background: radial-gradient(ellipse at 30% 50%, rgba(37,99,235,0.2) 0%, transparent 60%),
+                        radial-gradient(ellipse at 70% 50%, rgba(6,182,212,0.15) 0%, transparent 60%);
+        }
+        .inscription-section .container { position: relative; z-index: 1; }
+        .inscription-section .section-header h2 { color: var(--white); }
+        .inscription-section .section-header p { color: var(--gray-400); }
+        .inscription-section .section-label { color: var(--cyan); }
+
+        .form-wrapper {
+            max-width: 680px; margin: 0 auto;
+            background: var(--white); border-radius: var(--radius-lg);
+            padding: 40px; box-shadow: var(--shadow-xl);
+        }
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .form-group { display: flex; flex-direction: column; gap: 6px; }
+        .form-group.full { grid-column: 1 / -1; }
+        .form-group label {
+            font-family: var(--font-display); font-size: 0.82rem; font-weight: 600; color: var(--navy);
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            padding: 12px 16px; border: 1px solid var(--gray-200); border-radius: var(--radius-sm);
+            font-family: var(--font-body); font-size: 0.9rem; color: var(--text-primary);
+            transition: border-color 0.3s; background: var(--white);
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none; border-color: var(--blue-accent); box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+        }
+        .form-group textarea { resize: vertical; min-height: 80px; }
+        .form-group select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M6 8L1 3h10z' fill='%2364748b'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 16px center; padding-right: 40px; }
+
+        .form-submit {
+            grid-column: 1 / -1; margin-top: 8px;
+            padding: 16px 32px; border-radius: 50px; border: none;
+            background: linear-gradient(135deg, var(--blue-gradient-start), var(--blue-gradient-end));
+            color: var(--white); font-family: var(--font-display); font-weight: 700;
+            font-size: 1rem; cursor: pointer; transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(37,99,235,0.3);
+        }
+        .form-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(37,99,235,0.4); }
+
+        .form-note {
+            grid-column: 1 / -1; text-align: center;
+            font-size: 0.78rem; color: var(--text-secondary); margin-top: 4px;
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        .footer {
+            background: #060e1a;
+            padding: 64px 0 0;
+            color: var(--gray-400);
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 48px;
+            padding-bottom: 48px;
+        }
+        .footer-brand img {
+            height: 40px;
+            filter: brightness(0) invert(1);
+            opacity: 0.8;
+            margin-bottom: 16px;
+        }
+        .footer-brand > p {
+            font-size: 0.88rem;
+            line-height: 1.6;
+            color: var(--gray-500);
+            margin-bottom: 20px;
+        }
+        .footer-contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .footer-contact-info span {
+            font-size: 0.8rem;
+            color: var(--gray-500);
+        }
+        .footer-col {}
+        .footer h4,
+        .footer-col h4 {
+            color: var(--white);
+            font-family: var(--font-display);
+            font-size: 0.82rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: 20px;
+        }
+        .footer-links {
+            list-style: none;
+        }
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        .footer-links a {
+            font-size: 0.85rem;
+            color: var(--gray-500);
+            transition: color 0.2s;
+        }
+        .footer-links a:hover {
+            color: var(--white);
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding: 24px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            color: var(--gray-600);
+        }
+        .footer-bottom-right {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .qualiopi-badge-footer {
+            background: rgba(255,255,255,0.08);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--gray-400);
+        }
+
+        /* ============================================
+           STICKY MOBILE CTA
+           ============================================ */
+        .sticky-mobile-cta {
+            display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 999;
+            background: var(--white); border-top: 1px solid var(--gray-200);
+            padding: 12px 16px; box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+        }
+        .sticky-mobile-cta a {
+            display: block; text-align: center; padding: 14px;
+            background: linear-gradient(135deg, var(--blue-gradient-start), var(--blue-gradient-end));
+            color: var(--white); border-radius: 50px; font-family: var(--font-display);
+            font-weight: 700; font-size: 0.95rem;
+        }
+
+        /* ============================================
+           ANIMATIONS
+           ============================================ */
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+        .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.7s ease-out; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+        @media (max-width: 1024px) {
+            .formations-grid { grid-template-columns: 1fr; }
+            .formation-card.audit { grid-column: 1; }
+            .problems-grid { grid-template-columns: 1fr 1fr; }
+            .financement-grid { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; }
+            
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; position: absolute; top: 72px; left: 0; right: 0; background: var(--white); flex-direction: column; padding: 24px; gap: 16px; border-bottom: 1px solid var(--gray-200); box-shadow: var(--shadow-lg); }
+            .nav-links.active { display: flex; }
+            .mobile-menu-btn { display: block; }
+            .hero-col { padding: 60px 0 40px; }
+            .hero-col .hero-ctas { flex-direction: column; align-items: center; }
+            .hero-trust-bar { flex-direction: column; align-items: center; gap: 12px; }
+            .problems-grid { grid-template-columns: 1fr; }
+            .form-grid { grid-template-columns: 1fr; }
+            .form-group.full { grid-column: 1; }
+            
+            
+            .sticky-mobile-cta { display: block; }
+            .footer { padding-bottom: 70px; }
+            .mistral-inner { flex-direction: column; text-align: center; }
+            .card-footer { flex-direction: column; align-items: flex-start; }
+            .planning-table { font-size: 0.82rem; }
+        }
+
+        /* Footer responsive */
+        @media (max-width: 900px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 32px;
+            }
+        }
+        @media (max-width: 600px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+            }
+            .footer-bottom-right {
+                justify-content: center;
+            }
+        }
+        </style>
+</head>
+<body>
+
+    <!-- Top Banner -->
+    <div class="top-banner">
+        🏛️ <strong>Collectivités territoriales</strong> — Formations finançables à 100% par le CNFPT ou votre plan de formation
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-logo">
+                <img src="logo-sy-academy.png" alt="SY Academy">
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="collectivites.html" class="active">Collectivités</a></li>
+                <li><a href="pme.html">PME / TPE</a></li>
+                <li><a href="index.html#approche">Notre approche</a></li>
+                <li><a href="#financement">Financement</a></li>
+                <li><a href="#inscription" class="nav-cta">Demander un devis →</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero-col">
+        <div class="container">
+            <div class="hero-badge">🇫🇷 IA souveraine — Mistral — Hébergement français</div>
+            <h1>Transformez vos services municipaux<br>avec <span class="highlight">l'IA souveraine</span></h1>
+            <p class="subtitle">
+                7 formations conçues pour les collectivités territoriales. Vos agents repartent avec des outils concrets, opérationnels dès le lendemain. Mistral, conformité RGPD, données hébergées en France.
+            </p>
+            <div class="hero-ctas">
+                <a href="#formations" class="btn-primary">Voir les formations →</a>
+                <a href="#inscription" class="btn-secondary">Demander un audit gratuit</a>
+            </div>
+            <div class="hero-trust-bar">
+                <div class="trust-item">✓ Certification Qualiopi</div>
+                <div class="trust-item">✓ Finançable CNFPT</div>
+                <div class="trust-item">✓ 70% de pratique</div>
+                <div class="trust-item">✓ Intra ou inter</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROBLÈMES -->
+    <section class="problems-section">
+        <div class="container">
+            <div class="problems-grid">
+                <div class="problem-card fade-in">
+                    <div class="problem-icon">⏱️</div>
+                    <h3>Manque de moyens</h3>
+                    <p>Faire plus avec moins d'agents, de budget et de temps. L'IA automatise les tâches répétitives.</p>
+                </div>
+                <div class="problem-card fade-in">
+                    <div class="problem-icon">📋</div>
+                    <h3>Charge administrative</h3>
+                    <p>40 à 60% du temps des agents en saisie, recopie, mise en forme. L'IA réduit ça drastiquement.</p>
+                </div>
+                <div class="problem-card fade-in">
+                    <div class="problem-icon">⚖️</div>
+                    <h3>Complexité réglementaire</h3>
+                    <p>Urbanisme, marchés publics, délibérations... L'IA aide à naviguer dans la réglementation.</p>
+                </div>
+                <div class="problem-card fade-in">
+                    <div class="problem-icon">👥</div>
+                    <h3>Pression des usagers</h3>
+                    <p>Réponses rapides, accessibles 24h/24. L'IA améliore la qualité et la rapidité de service.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MISTRAL BANNER -->
+    <section class="mistral-banner">
+        <div class="container">
+            <div class="mistral-inner">
+                <div class="mistral-icon">🛡️</div>
+                <div>
+                    <h3>Pourquoi Mistral pour les collectivités ?</h3>
+                    <p>Toutes nos formations collectivités utilisent Mistral (Le Chat) comme IA principale. C'est l'IA française qui garantit que les données de vos agents et de vos usagers ne quittent jamais le territoire français. Aucune donnée n'est stockée ni utilisée pour entraîner un modèle étranger.</p>
+                    <div class="mistral-tags">
+                        <span class="mistral-tag">🇫🇷 IA française</span>
+                        <span class="mistral-tag">🔒 Conforme RGPD</span>
+                        <span class="mistral-tag">🏛️ Hébergement souverain</span>
+                        <span class="mistral-tag">✓ Offre Pro : données non utilisées pour l'entraînement</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMATIONS -->
+    <section class="formations-section" id="formations">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Nos formations</span>
+                <h2>7 programmes adaptés à vos services</h2>
+                <p>Chaque formation est personnalisable selon les besoins identifiés lors de l'audit.</p>
+            </div>
+
+            <div class="formations-filter">
+                <button class="filter-btn active" data-filter="all">Toutes</button>
+                <button class="filter-btn" data-filter="management">Management</button>
+                <button class="filter-btn" data-filter="admin">Administratif</button>
+                <button class="filter-btn" data-filter="metier">Métier</button>
+                <button class="filter-btn" data-filter="elus">Élus</button>
+            </div>
+
+            <div class="formations-grid">
+
+                <!-- AUDIT -->
+                <div class="formation-card audit fade-in" data-category="all management admin metier elus">
+                    <div class="card-header">
+                        <span class="card-code audit-code">Produit d'appel</span>
+                        <div class="card-badges">
+                            <span class="card-badge new">★ Recommandé en 1er</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Audit Performance & IA — Diagnostic organisationnel</h3>
+                        <p>Avant toute formation, un diagnostic précis. Cartographie complète du fonctionnement de votre collectivité : process, management, maturité numérique. Vous repartez avec une feuille de route priorisée et chiffrée.</p>
+                        <div class="card-meta">
+                            <span class="meta-item"><span class="meta-icon">📅</span> 1 à 2 jours</span>
+                            <span class="meta-item"><span class="meta-icon">👤</span> Direction + responsables de service</span>
+                            <span class="meta-item"><span class="meta-icon">📍</span> Sur site (dans vos locaux)</span>
+                        </div>
+                        <details class="card-objectives">
+                            <summary>Objectifs pédagogiques</summary>
+                            <ul>
+                                <li>Cartographier les processus clés de chaque service et identifier les dysfonctionnements</li>
+                                <li>Évaluer la maturité numérique et IA de l'organisation (scoring par service)</li>
+                                <li>Identifier les quick wins : tâches automatisables à fort impact et faible complexité</li>
+                                <li>Produire un plan d'action priorisé avec estimation des gains (temps, coûts, qualité)</li>
+                                <li>Recommander un parcours de formation adapté aux besoins identifiés</li>
+                            </ul>
+                        </details>
+                        <details class="card-livrables">
+                            <summary>Livrables remis</summary>
+                            <ul>
+                                <li>Rapport de diagnostic (20-30 pages) avec scoring par service</li>
+                                <li>Cartographie visuelle des process clés</li>
+                                <li>Matrice des quick wins (impact / complexité)</li>
+                                <li>Plan d'action priorisé sur 6-12 mois</li>
+                                <li>Parcours de formation recommandé avec devis détaillé</li>
+                            </ul>
+                        </details>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-price">1 500 — 3 000€ <small>Selon la taille de la collectivité</small></div>
+                        <a href="#inscription" class="btn-card btn-card-primary">Demander un audit →</a>
+                    </div>
+                </div>
+
+                <!-- COL-01 -->
+                <div class="formation-card fade-in" data-category="management">
+                    <div class="card-header">
+                        <span class="card-code col-code">COL-01</span>
+                        <div class="card-badges"><span class="card-badge places">✓ Places disponibles</span></div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Manager et piloter son service avec l'IA</h3>
+                        <p>Les encadrants territoriaux apprennent à structurer leur pilotage et à utiliser Mistral pour produire notes, comptes-rendus et tableaux de bord en quelques minutes.</p>
+                        <div class="card-meta">
+                            <span class="meta-item"><span class="meta-icon">📅</span> 2 jours (14h)</span>
+                            <span class="meta-item"><span class="meta-icon">👤</span> Encadrants, chefs de service</span>
+                            <span class="meta-item"><span class="meta-icon">👥</span> 6 à 12 participants</span>
+                        </div>
+                        <details class="card-objectives">
+                            <summary>Objectifs pédagogiques</summary>
+                            <ul>
+                                <li>Structurer le pilotage de son service avec des indicateurs clés et des tableaux de bord</li>
+                                <li>Utiliser Mistral pour produire notes de synthèse, comptes-rendus et rapports en 10 minutes</li>
+                                <li>Automatiser les tâches de reporting et de suivi d'activité</li>
+                                <li>Adopter une posture managériale adaptée à la transformation numérique</li>
+                                <li>Construire un plan d'action personnel d'intégration de l'IA dans son service</li>
+                            </ul>
+                        </details>
+                        <details class="card-livrables">
+                            <summary>Livrables remis</summary>
+                            <ul>
+                                <li>Support de formation complet (PDF)</li>
+                                <li>Fiches pratiques « prompts pour managers territoriaux »</li>
+                                <li>Modèle de tableau de bord personnalisable</li>
+                                <li>Plan d'action individuel complété</li>
+                                <li>Accès espace ressources SY Academy — 3 mois</li>
+                            </ul>
+                        </details>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-price">2 800€ <small>Intra-collectivité (jusqu'à 12 agents)</small></div>
+                        <a href="#inscription" class="btn-card btn-card-primary">S'inscrire →</a>
+                    </div>
+                </div>
+
+                <!-- COL-02 -->
+                <div class="formation-card fade-in" data-category="admin">
+                    <div class="card-header">
+                        <span class="card-code col-code">COL-02</span>
+                        <div class="card-badges"><span class="card-badge places">✓ Places disponibles</span></div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Réduire la charge administrative grâce à l'IA</h3>
+                        <p>Les agents administratifs apprennent à rédiger 5 fois plus vite avec Mistral, automatiser la mise en forme et le classement, et gagner 1h par jour sur leur poste.</p>
+                        <div class="card-meta">
+                            <span class="meta-item"><span class="meta-icon">📅</span> 2 jours (14h)</span>
+                            <span class="meta-item"><span class="meta-icon">👤</span> Agents administratifs, secrétaires</span>
+                            <span class="meta-item"><span class="meta-icon">👥</span> 6 à 12 participants</span>
+                        </div>
+                        <details class="card-objectives">
+                            <summary>Objectifs pédagogiques</summary>
+                            <ul>
+                                <li>Rédiger des courriers, notes et réponses types 5 fois plus vite avec Mistral</li>
+                                <li>Automatiser la mise en forme et le classement de documents</li>
+                                <li>Créer des modèles de réponse pour les demandes récurrentes des usagers</li>
+                                <li>Organiser son poste de travail numérique pour gagner 1h par jour</li>
+                                <li>Identifier et mettre en œuvre 5 automatisations simples dans son quotidien</li>
+                            </ul>
+                        </details>
+                        <details class="card-livrables">
+                            <summary>Livrables remis</summary>
+                            <ul>
+                                <li>Support de formation complet (PDF)</li>
+                                <li>Bibliothèque de 30 prompts pour agents territoriaux</li>
+                                <li>Modèles de documents pré-optimisés</li>
+                                <li>Fiche « RGPD et IA : les 10 règles d'or »</li>
+                                <li>Plan d'action individuel</li>
+                            </ul>
+                        </details>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-price">2 800€ <small>Intra-collectivité (jusqu'à 12 agents)</small></div>
+                        <a href="#inscription" class="btn-card btn-card-primary">S'inscrire →</a>
+                    </div>
+                </div>
+
+                <!-- COL-03 -->
+                <div class="formation-card fade-in" data-category="metier">
+                    <div class="card-header">
+                        <span class="card-code col-code">COL-03</span>
+                        <div class="card-badges"><span class="card-badge new">Démo chatbot incluse</span></div>
+                    </div>
+                    <div class="card-body">
+                        <h3>L'IA au service de la relation usager</h3>
+                        <p>Concevoir des réponses personnalisées, comprendre le fonctionnement d'un chatbot municipal, produire du contenu de communication rapidement. Inclut une démonstration chatbot SOLE SOLUTION.</p>
+                        <div class="card-meta">
+                            <span class="meta-item"><span class="meta-icon">📅</span> 1 jour (7h)</span>
+                            <span class="meta-item"><span class="meta-icon">👤</span> Accueil, communication, relations usagers</span>
+                            <span class="meta-item"><span class="meta-icon">👥</span> 6 à 12 participants</span>
+                        </div>
+                        <details class="card-objectives">
+                            <summary>Objectifs pédagogiques</summary>
+                            <ul>
+                                <li>Concevoir des réponses types personnalisées pour les demandes fréquentes</li>
+                                <li>Comprendre le fonctionnement d'un chatbot municipal et définir ses cas d'usage</li>
+                                <li>Utiliser l'IA pour produire du contenu de communication (newsletters, réseaux sociaux, site web)</li>
+                                <li>Améliorer la qualité et la rapidité des réponses aux usagers</li>
+                            </ul>
+                        </details>
+                        <details class="card-livrables">
+                            <summary>Livrables remis</summary>
+                            <ul>
+                                <li>Support de formation (PDF)</li>
+                                <li>Kit de 20 prompts « relation usager »</li>
+                                <li>Modèle de cahier des charges chatbot</li>
+                                <li>Base de réponses types créée pendant la formation</li>
+                            </ul>
+                        </details>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-price">1 500€ <small>Intra-collectivité (jusqu'à 12 agents)</small></div>
+                        <a href="#inscription" class="btn-card btn-card-primary">S'inscrire →</a>
+                    </div>
+                </div>
+
+                <!-- COL-04 -->
+                <div class="formation-card fade-in" data-category="metier">
+                    <div class="card-header">
+                        <span class="card-code col-code">COL-04</span>
+                        <div class="card-badges"><span class="card-badge new">Démo SOLE SOLUTION URBA</span></div>
+                    </div>
+                    <div class="card-body">
+                        <h3>IA et urbanisme : instruire plus vite, décider mieux</h3>
+                        <p>Accélérer l'instruction des autorisations d'urbanisme grâce à l'IA. Analyse de conformité PLU, rédaction assistée d'avis et d'arrêtés. Démonstration de la plateforme SOLE SOLUTION URBA.</p>
+                        <div class="card-meta">
+                            <span class="meta-item"><span class="meta-icon">📅</span> 2 jours (14h)</span>
+                            <span class="meta-item"><span class="meta-icon">👤</span> Instructeurs urbanisme, DGS, resp. aménagement</span>
+                            <span class="meta-item"><span class="meta-icon">👥</span> 6 à 12 participants</span>
+                        </div>
+                        <details class="card-objectives">
+                            <summary>Objectifs pédagogiques</summary>
+                            <ul>
+                                <li>Utiliser l'IA pour analyser rapidement la conformité d'un dossier au PLU</li>
+                                <li>Accélérer la rédaction des avis, arrêtés et courriers d'instruction</li>
+                                <li>Structurer le processus d'instruction pour réduire les délais</li>
+                                <li>Comprendre les possibilités et limites de l'IA en urbanisme réglementaire</li>
+                            </ul>
+                        </details>
+                        <details class="card-livrables">
+                            <summary>Livrables remis</summary>
+                            <ul>
+                                <li>Support de formation (PDF)</li>
+                                <li>Kit de prompts « urbanisme réglementaire »</li>
+                                <li>Modèles d'avis et d'arrêtés pré-optimisés IA</li>
+                                <li>Grille d'analyse de conformité PLU assistée par IA</li>
+                            </ul>
+                        </details>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-price">3 200€ <small>Intra-collectivité (jusqu'à 12 agents)</small></div>
+                        <a href="#inscription" class="btn-card btn-card-primary">S'inscrire →</a>
+                    </div>
+                </div>
+
+                <!-- COL-05 -->
+                <div class="formation-card fade-in" data-category="elus">
+                    <div class="card-header">
+                        <span class="card-code col-code">COL-05</span>
+                        <div class="card-badges"><span class="card-badge">½ journée</span></div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Sensibilisation élus : IA et transformation du service public</h3>
+                        <p>Une demi-journée pour comprendre les enjeux de l'IA sans jargon technique. Démonstrations en direct, retours d'expérience de communes et co-construction d'une feuille de route.</p>
+                        <div class="card-meta">
+                            <span class="meta-item"><span class="meta-icon">📅</span> ½ journée (3h30)</span>
+                            <span class="meta-item"><span class="meta-icon">👤</span> Élus municipaux, maires, adjoints</span>
+                            <span class="meta-item"><span class="meta-icon">📍</span> Sur site ou en salle du conseil</span>
+                        </div>
+                        <details class="card-objectives">
+                            <summary>Objectifs pédagogiques</summary>
+                            <ul>
+                                <li>Comprendre ce qu'est l'IA générative et ce qu'elle peut (et ne peut pas) faire</li>
+                                <li>Identifier les cas d'usage concrets pour sa collectivité</li>
+                                <li>Maîtriser les enjeux éthiques, juridiques et de souveraineté des données</li>
+                                <li>Définir une feuille de route réaliste de transformation numérique</li>
+                            </ul>
+                        </details>
+                        <details class="card-livrables">
+                            <summary>Livrables remis</summary>
+                            <ul>
+                                <li>Support de présentation (PDF)</li>
+                                <li>Fiche synthèse « L'IA pour ma collectivité en 10 points clés »</li>
+                                <li>Modèle de feuille de route transformation numérique</li>
+                            </ul>
+                        </details>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-price">1 200€ <small>Finançable DIF élus</small></div>
+                        <a href="#inscription" class="btn-card btn-card-primary">S'inscrire →</a>
+                    </div>
+                </div>
+
+                <!-- COL-06 -->
+                <div class="formation-card fade-in" data-category="metier">
+                    <div class="card-header">
+                        <span class="card-code col-code">COL-06</span>
+                        <div class="card-badges"><span class="card-badge new">Démo chatbot incluse</span></div>
+                    </div>
+                    <div class="card-body">
+                        <h3>IA pour les services Jeunesse, Sport et Éducation</h3>
+                        <p>Automatiser les inscriptions, optimiser les plannings, créer des tableaux de bord de fréquentation et produire les bilans d'activité avec l'IA. Démonstration chatbot inscription.</p>
+                        <div class="card-meta">
+                            <span class="meta-item"><span class="meta-icon">📅</span> 2 jours (14h)</span>
+                            <span class="meta-item"><span class="meta-icon">👤</span> Resp. jeunesse, sport, périscolaire, éducation</span>
+                            <span class="meta-item"><span class="meta-icon">👥</span> 6 à 12 participants</span>
+                        </div>
+                        <details class="card-objectives">
+                            <summary>Objectifs pédagogiques</summary>
+                            <ul>
+                                <li>Automatiser la gestion des inscriptions et des plannings</li>
+                                <li>Créer des outils de suivi des effectifs et de fréquentation en temps réel</li>
+                                <li>Produire rapidement les supports de communication vers les familles</li>
+                                <li>Optimiser l'organisation des activités périscolaires et extrascolaires</li>
+                                <li>Générer les bilans d'activité et rapports annuels avec l'IA</li>
+                            </ul>
+                        </details>
+                        <details class="card-livrables">
+                            <summary>Livrables remis</summary>
+                            <ul>
+                                <li>Support de formation (PDF)</li>
+                                <li>Kit de prompts « services jeunesse/sport/éducation »</li>
+                                <li>Modèles de documents optimisés (mails parents, bilans, plannings)</li>
+                                <li>Plan d'action individuel</li>
+                            </ul>
+                        </details>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-price">2 800€ <small>Intra-collectivité (jusqu'à 12 agents)</small></div>
+                        <a href="#inscription" class="btn-card btn-card-primary">S'inscrire →</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PLANNING SESSIONS -->
+    <section class="planning-section" id="planning">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Planning</span>
+                <h2>Prochaines sessions programmées</h2>
+                <p>Sessions inter-collectivités à Maurepas (78) ou intra dans vos locaux sur demande.</p>
+            </div>
+
+            <div class="planning-table-wrapper">
+                <table class="planning-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Formation</th>
+                            <th>Format</th>
+                            <th>Lieu</th>
+                            <th>Places</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>17-18 mars 2026</strong></td>
+                            <td><span class="session-code">COL-01</span> Manager et piloter avec l'IA</td>
+                            <td><span class="session-format format-inter">Inter</span></td>
+                            <td>Maurepas (78)</td>
+                            <td><span class="places-badge available">● 8 places</span></td>
+                            <td><button class="btn-inscr" onclick="scrollToForm('COL-01')">S'inscrire</button></td>
+                        </tr>
+                        <tr>
+                            <td><strong>24-25 mars 2026</strong></td>
+                            <td><span class="session-code">COL-02</span> Réduire la charge administrative</td>
+                            <td><span class="session-format format-inter">Inter</span></td>
+                            <td>Maurepas (78)</td>
+                            <td><span class="places-badge available">● 10 places</span></td>
+                            <td><button class="btn-inscr" onclick="scrollToForm('COL-02')">S'inscrire</button></td>
+                        </tr>
+                        <tr>
+                            <td><strong>31 mars 2026</strong></td>
+                            <td><span class="session-code">COL-05</span> Sensibilisation élus</td>
+                            <td><span class="session-format format-inter">Inter</span></td>
+                            <td>Maurepas (78)</td>
+                            <td><span class="places-badge available">● 12 places</span></td>
+                            <td><button class="btn-inscr" onclick="scrollToForm('COL-05')">S'inscrire</button></td>
+                        </tr>
+                        <tr>
+                            <td><strong>7-8 avril 2026</strong></td>
+                            <td><span class="session-code">COL-04</span> IA et urbanisme</td>
+                            <td><span class="session-format format-inter">Inter</span></td>
+                            <td>Maurepas (78)</td>
+                            <td><span class="places-badge available">● 8 places</span></td>
+                            <td><button class="btn-inscr" onclick="scrollToForm('COL-04')">S'inscrire</button></td>
+                        </tr>
+                        <tr>
+                            <td><strong>14 avril 2026</strong></td>
+                            <td><span class="session-code">COL-03</span> IA et relation usager</td>
+                            <td><span class="session-format format-inter">Inter</span></td>
+                            <td>Maurepas (78)</td>
+                            <td><span class="places-badge available">● 10 places</span></td>
+                            <td><button class="btn-inscr" onclick="scrollToForm('COL-03')">S'inscrire</button></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sur demande</strong></td>
+                            <td><span class="session-code">TOUTES</span> Toutes les formations</td>
+                            <td><span class="session-format format-intra">Intra</span></td>
+                            <td>Dans vos locaux</td>
+                            <td><span class="places-badge available">● Sur mesure</span></td>
+                            <td><button class="btn-inscr" onclick="scrollToForm('')">Demander</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="planning-note">
+                📞 <strong>Session intra dans vos locaux ?</strong> Nous nous déplaçons partout en France. 
+                <a href="#inscription" style="color: var(--blue-accent); text-decoration: underline;">Demandez un devis personnalisé</a>.
+            </p>
+        </div>
+    </section>
+
+    <!-- FINANCEMENT -->
+    <section class="financement-section" id="financement">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Financement</span>
+                <h2>100% finançable — on s'occupe du dossier</h2>
+                <p>SY Academy vous accompagne dans le montage de votre dossier de financement.</p>
+            </div>
+
+            <div class="financement-grid">
+                <div class="fin-card fade-in">
+                    <div class="fin-icon">🏛️</div>
+                    <h3>CNFPT</h3>
+                    <p>Formation des agents territoriaux prise en charge dans le cadre du plan de formation de votre collectivité. Nous sommes référençables CNFPT.</p>
+                    <span class="fin-tag">100% pris en charge</span>
+                </div>
+                <div class="fin-card fade-in">
+                    <div class="fin-icon">📋</div>
+                    <h3>Plan de formation</h3>
+                    <p>Inscription directe au plan de développement des compétences de votre collectivité. Convention de formation fournie.</p>
+                    <span class="fin-tag">Budget formation propre</span>
+                </div>
+                <div class="fin-card fade-in">
+                    <div class="fin-icon">🗳️</div>
+                    <h3>DIF Élus</h3>
+                    <p>La sensibilisation élus (COL-05) est éligible au Droit Individuel à la Formation des élus locaux. 20h/an de droits cumulables.</p>
+                    <span class="fin-tag">Éligible DIF élus</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Questions fréquentes</span>
+                <h2>Tout ce que vous devez savoir</h2>
+            </div>
+
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>Les données de nos agents sont-elles en sécurité ?</summary>
+                    <div class="faq-answer">Oui. Nous utilisons exclusivement Mistral (Le Chat), l'IA française dont les données sont hébergées en France et conformes au RGPD. Aucune donnée n'est envoyée à des serveurs étrangers ni utilisée pour entraîner un modèle. De plus, pendant les formations, nous travaillons sur des données anonymisées quand c'est nécessaire.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>Comment se passe le financement via le CNFPT ?</summary>
+                    <div class="faq-answer">SY Academy est un organisme certifié Qualiopi, ce qui vous permet de faire financer nos formations via le plan de formation de votre collectivité ou directement auprès du CNFPT. Nous vous fournissons tous les documents nécessaires (convention, programme, devis) et vous accompagnons dans le montage du dossier.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>Les formations se déroulent-elles dans nos locaux ?</summary>
+                    <div class="faq-answer">Oui, toutes nos formations sont disponibles en intra (dans vos locaux, partout en France). Nous proposons également des sessions inter-collectivités dans notre centre de formation à Maurepas (78). Le format intra est recommandé car il permet de travailler directement sur vos cas réels, vos documents et vos process.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>Faut-il des compétences techniques en informatique ?</summary>
+                    <div class="faq-answer">Non. Nos formations sont conçues pour des agents sans aucune compétence technique en IA. Le seul prérequis est de savoir utiliser un ordinateur et une messagerie. Nous accompagnons chaque participant à son niveau, du débutant complet au plus avancé.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>Combien de participants par session ?</summary>
+                    <div class="faq-answer">Nos formations accueillent de 6 à 12 participants par session, sauf la sensibilisation élus qui peut accueillir jusqu'à 20 personnes. Ce format permet un accompagnement individualisé et un travail sur les cas concrets de chaque participant.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>Quelle est la différence entre la formation et le déploiement d'outils ?</summary>
+                    <div class="faq-answer">La formation (SY Academy) vous apprend à utiliser l'IA dans votre quotidien. Si vous souhaitez ensuite déployer des outils automatisés (chatbot municipal, workflows, tableaux de bord connectés), notre partenaire SOLE SOLUTION propose ces prestations séparément. La formation inclut des démonstrations de ces outils pour que vous puissiez évaluer leur pertinence.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>Peut-on combiner plusieurs formations ?</summary>
+                    <div class="faq-answer">Absolument. C'est même recommandé. L'idéal est de commencer par l'Audit Performance & IA qui identifie les besoins de chaque service, puis de déployer les formations adaptées. Nous proposons des parcours sur mesure avec des tarifs dégressifs pour les commandes multi-formations.</div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULAIRE PRÉ-INSCRIPTION -->
+    <section class="inscription-section" id="inscription">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Inscription</span>
+                <h2>Demandez votre devis ou pré-inscrivez-vous</h2>
+                <p>Réponse garantie sous 24h. Nous montons votre dossier de financement.</p>
+            </div>
+
+            <div class="form-wrapper">
+                <form id="inscriptionForm" class="form-grid" action="https://formspree.io/f/VOTRE_ID" method="POST">
+                    <div class="form-group">
+                        <label for="nom">Nom *</label>
+                        <input type="text" id="nom" name="nom" required placeholder="Votre nom">
+                    </div>
+                    <div class="form-group">
+                        <label for="prenom">Prénom *</label>
+                        <input type="text" id="prenom" name="prenom" required placeholder="Votre prénom">
+                    </div>
+                    <div class="form-group">
+                        <label for="collectivite">Collectivité *</label>
+                        <input type="text" id="collectivite" name="collectivite" required placeholder="Nom de votre collectivité">
+                    </div>
+                    <div class="form-group">
+                        <label for="fonction">Fonction *</label>
+                        <input type="text" id="fonction" name="fonction" required placeholder="Ex: DGS, Resp. formation, Élu...">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email professionnel *</label>
+                        <input type="email" id="email" name="email" required placeholder="votre.email@collectivite.fr">
+                    </div>
+                    <div class="form-group">
+                        <label for="telephone">Téléphone</label>
+                        <input type="tel" id="telephone" name="telephone" placeholder="06 00 00 00 00">
+                    </div>
+                    <div class="form-group full">
+                        <label for="formation">Formation(s) souhaitée(s) *</label>
+                        <select id="formation" name="formation" required>
+                            <option value="">— Sélectionnez une formation —</option>
+                            <option value="audit">Audit Performance & IA (1-2 jours)</option>
+                            <option value="COL-01">COL-01 — Manager et piloter avec l'IA (2 jours)</option>
+                            <option value="COL-02">COL-02 — Réduire la charge administrative (2 jours)</option>
+                            <option value="COL-03">COL-03 — IA et relation usager (1 jour)</option>
+                            <option value="COL-04">COL-04 — IA et urbanisme (2 jours)</option>
+                            <option value="COL-05">COL-05 — Sensibilisation élus (½ journée)</option>
+                            <option value="COL-06">COL-06 — IA Jeunesse, Sport, Éducation (2 jours)</option>
+                            <option value="parcours">Parcours sur mesure (plusieurs formations)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="participants">Nombre de participants estimé</label>
+                        <select id="participants" name="participants">
+                            <option value="">— Sélectionnez —</option>
+                            <option value="1-5">1 à 5</option>
+                            <option value="6-10">6 à 10</option>
+                            <option value="11-20">11 à 20</option>
+                            <option value="20+">Plus de 20</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="format">Format souhaité</label>
+                        <select id="format" name="format">
+                            <option value="">— Sélectionnez —</option>
+                            <option value="intra">Intra (dans nos locaux)</option>
+                            <option value="inter">Inter (à Maurepas 78)</option>
+                            <option value="indifferent">Indifférent</option>
+                        </select>
+                    </div>
+                    <div class="form-group full">
+                        <label for="message">Message / besoin spécifique</label>
+                        <textarea id="message" name="message" placeholder="Précisez vos besoins, le contexte, les services concernés..."></textarea>
+                    </div>
+                    <div class="form-group full">
+                        <label for="source">Comment nous avez-vous connu ?</label>
+                        <select id="source" name="source">
+                            <option value="">— Sélectionnez —</option>
+                            <option value="cnfpt">CNFPT / catalogue formation</option>
+                            <option value="google">Recherche Google</option>
+                            <option value="bouche-a-oreille">Bouche-à-oreille / recommandation</option>
+                            <option value="linkedin">LinkedIn</option>
+                            <option value="webinaire">Webinaire</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="form-submit">Envoyer ma demande →</button>
+                    <p class="form-note">
+                        🔒 Vos données sont confidentielles et ne sont utilisées que pour traiter votre demande. 
+                        Réponse garantie sous 24h ouvrées.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+
+                <!-- Bloc 1 : Marque -->
+                <div class="footer-brand">
+                    <img src="logo-sy-academy.png" alt="SY Academy">
+                    <p>SY Academy améliore la performance des organisations en combinant management structuré, organisation des process et l'intégration concrète de l'IA.</p>
+                    <div class="footer-contact-info">
+                        <span>📍 13 Villa du Breuil, 78280 Guyancourt</span>
+                        <span>🏢 Centre : SDCL CENTER, Maurepas (78)</span>
+                        <span>📧 contact@syacademy.fr</span>
+                    </div>
+                </div>
+
+                <!-- Bloc 2 : Formations -->
+                <div class="footer-col">
+                    <h4>Formations</h4>
+                    <ul class="footer-links">
+                        <li><a href="collectivites.html">Collectivités territoriales</a></li>
+                        <li><a href="pme.html">PME / TPE</a></li>
+                        <li><a href="contact.html">Audit Performance &amp; IA</a></li>
+                        <li><a href="#">Catalogue complet (PDF)</a></li>
+                    </ul>
+                </div>
+
+                <!-- Bloc 3 : Financement -->
+                <div class="footer-col">
+                    <h4>Financement</h4>
+                    <ul class="footer-links">
+                        <li><a href="financement.html">OPCO — PME / TPE</a></li>
+                        <li><a href="financement.html">CNFPT — Collectivités</a></li>
+                        <li><a href="financement.html">Plan de formation</a></li>
+                        <li><a href="financement.html">DIF Élus</a></li>
+                    </ul>
+                </div>
+
+                <!-- Bloc 4 : SY Academy -->
+                <div class="footer-col">
+                    <h4>SY Academy</h4>
+                    <ul class="footer-links">
+                        <li><a href="approche.html">Notre approche</a></li>
+                        <li><a href="contact.html">Contact / Devis</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Mentions légales</a></li>
+                        <li><a href="#">CGV</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Barre du bas -->
+            <div class="footer-bottom">
+                <span>© 2026 SY Academy — Tous droits réservés</span>
+                <div class="footer-bottom-right">
+                    <span class="qualiopi-badge-footer">QUALIOPI</span>
+                    <span>La certification qualité a été délivrée au titre de la catégorie d'action suivante : actions de formation</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- STICKY MOBILE CTA -->
+    <div class="sticky-mobile-cta">
+        <a href="#inscription">Demander un devis →</a>
+    </div>
+
+    <script>
+        // Navbar scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 20));
+
+        // Mobile menu
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        mobileMenuBtn.addEventListener('click', () => navLinks.classList.toggle('active'));
+        navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => navLinks.classList.remove('active')));
+
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+
+        // Filter buttons
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const filter = btn.dataset.filter;
+                document.querySelectorAll('.formation-card').forEach(card => {
+                    if (filter === 'all' || card.dataset.category.includes(filter)) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Scroll to form with pre-selected formation
+        function scrollToForm(code) {
+            const select = document.getElementById('formation');
+            if (code && select) {
+                for (let opt of select.options) {
+                    if (opt.value === code) { select.value = code; break; }
+                }
+            }
+            document.getElementById('inscription').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        // Simple form validation feedback
+        document.getElementById('inscriptionForm').addEventListener('submit', function(e) {
+            // In production, this would submit to Formspree or your backend
+            // For now, show a confirmation
+            e.preventDefault();
+            const btn = this.querySelector('.form-submit');
+            btn.textContent = '✓ Demande envoyée !';
+            btn.style.background = 'var(--green-accent)';
+            setTimeout(() => {
+                btn.textContent = 'Envoyer ma demande →';
+                btn.style.background = '';
+            }, 3000);
+        });
+    </script>
+
+</body>
+</html>

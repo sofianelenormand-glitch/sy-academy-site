@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Devis — SY Academy | Formation IA Management Organisation</title>
+    <meta name="description" content="Contactez SY Academy pour un devis formation IA. Réponse sous 24h. Montage dossier OPCO/CNFPT gratuit. Guyancourt / Maurepas (78).">
+    <link rel="canonical" href="https://syacademy.fr/contact">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root{--navy:#0a1628;--blue-accent:#2563eb;--blue-bright:#3b82f6;--blue-gradient-start:#1e3a8a;--blue-gradient-end:#2563eb;--cyan:#06b6d4;--white:#ffffff;--gray-50:#f8fafc;--gray-100:#f1f5f9;--gray-200:#e2e8f0;--gray-400:#94a3b8;--gray-500:#64748b;--gray-600:#475569;--text-primary:#0f172a;--text-secondary:#475569;--orange-accent:#f59e0b;--green-accent:#10b981;--font-display:'Outfit',sans-serif;--font-body:'DM Sans',sans-serif;--shadow-md:0 4px 12px rgba(0,0,0,.08);--shadow-lg:0 8px 30px rgba(0,0,0,.12);--shadow-xl:0 20px 50px rgba(0,0,0,.15);--radius-sm:8px;--radius-md:12px;--radius-lg:20px}
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:var(--font-body);color:var(--text-primary);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}img{max-width:100%;height:auto;display:block}a{text-decoration:none;color:inherit;transition:all .3s}h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.2}.container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+        .top-banner{background:linear-gradient(135deg,var(--blue-gradient-start),var(--blue-gradient-end));color:var(--white);text-align:center;padding:10px 24px;font-size:.85rem;font-weight:500}.top-banner strong{color:var(--orange-accent)}
+        .navbar{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--gray-200);transition:box-shadow .3s}.navbar.scrolled{box-shadow:var(--shadow-md)}.navbar .container{display:flex;align-items:center;justify-content:space-between;height:72px}.navbar-logo img{height:48px}.nav-links{display:flex;align-items:center;gap:32px;list-style:none}.nav-links a{font-family:var(--font-display);font-size:.9rem;font-weight:500;color:var(--text-secondary);padding:4px 0;position:relative}.nav-links a::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:linear-gradient(90deg,var(--blue-gradient-start),var(--blue-gradient-end));border-radius:2px;transition:width .3s}.nav-links a:hover{color:var(--text-primary)}.nav-links a:hover::after{width:100%}.nav-links a.active{color:var(--blue-accent);font-weight:600}.nav-links a.active::after{width:100%}.nav-cta{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--blue-gradient-start),var(--blue-gradient-end));color:var(--white)!important;padding:10px 22px;border-radius:50px;font-weight:600;font-size:.85rem}.nav-cta:hover{transform:translateY(-1px);box-shadow:0 4px 15px rgba(37,99,235,.4)}.nav-cta::after{display:none!important}.mobile-menu-btn{display:none;background:none;border:none;cursor:pointer;padding:8px}.mobile-menu-btn span{display:block;width:24px;height:2px;background:var(--navy);margin:6px 0;border-radius:2px}
+
+        /* HERO */
+        .hero-contact{padding:80px 0 60px;background:var(--navy);position:relative;overflow:hidden}
+        .hero-contact::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(37,99,235,.15) 0%,transparent 60%)}
+        .hero-contact .container{position:relative;z-index:1;text-align:center;max-width:700px}
+        .hero-contact h1{font-size:clamp(2rem,4vw,2.6rem);color:var(--white);margin-bottom:16px}
+        .hero-contact p{font-size:1.05rem;color:var(--gray-400);line-height:1.7}
+
+        /* MAIN LAYOUT */
+        .contact-main{padding:80px 0;background:var(--gray-50)}
+        .contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:48px;align-items:start}
+
+        /* INFO COLONNE */
+        .contact-info{}
+        .info-card{background:var(--white);border-radius:var(--radius-lg);padding:32px;border:1px solid var(--gray-200);margin-bottom:24px}
+        .info-card h3{font-size:1.1rem;color:var(--navy);margin-bottom:16px}
+        .info-item{display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-bottom:1px solid var(--gray-100)}
+        .info-item:last-child{border-bottom:none}
+        .info-icon{font-size:1.2rem;flex-shrink:0;margin-top:2px}
+        .info-text{font-size:.9rem;color:var(--text-secondary);line-height:1.5}
+        .info-text strong{color:var(--text-primary);display:block;margin-bottom:2px}
+
+        .promise-card{background:linear-gradient(135deg,var(--blue-gradient-start),var(--blue-gradient-end));border-radius:var(--radius-lg);padding:32px;color:var(--white);margin-bottom:24px}
+        .promise-card h3{font-size:1.1rem;margin-bottom:16px}
+        .promise-list{list-style:none}
+        .promise-list li{display:flex;align-items:center;gap:10px;padding:8px 0;font-size:.88rem;color:rgba(255,255,255,.85)}
+        .promise-list li::before{content:'✓';color:var(--green-accent);font-weight:700;flex-shrink:0}
+
+        .rdv-card{background:var(--white);border-radius:var(--radius-lg);padding:32px;border:1px solid var(--gray-200);text-align:center}
+        .rdv-card h3{font-size:1.1rem;color:var(--navy);margin-bottom:12px}
+        .rdv-card p{font-size:.88rem;color:var(--text-secondary);margin-bottom:20px}
+        .btn-calendly{display:inline-flex;align-items:center;gap:10px;background:var(--navy);color:var(--white);padding:14px 28px;border-radius:50px;font-family:var(--font-display);font-weight:600;font-size:.9rem;transition:all .3s}
+        .btn-calendly:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(10,22,40,.3)}
+
+        /* FORMULAIRE */
+        .contact-form-card{background:var(--white);border-radius:var(--radius-lg);padding:40px;border:1px solid var(--gray-200);box-shadow:var(--shadow-lg)}
+        .contact-form-card h2{font-size:1.4rem;color:var(--navy);margin-bottom:8px}
+        .contact-form-card > p{font-size:.88rem;color:var(--text-secondary);margin-bottom:28px}
+        .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+        .form-group{display:flex;flex-direction:column;gap:6px}
+        .form-group.full{grid-column:1/-1}
+        .form-group label{font-family:var(--font-display);font-size:.82rem;font-weight:600;color:var(--navy)}
+        .form-group input,.form-group select,.form-group textarea{padding:12px 16px;border:1px solid var(--gray-200);border-radius:var(--radius-sm);font-family:var(--font-body);font-size:.9rem;color:var(--text-primary);transition:border-color .3s;background:var(--white)}
+        .form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--blue-accent);box-shadow:0 0 0 3px rgba(37,99,235,.1)}
+        .form-group textarea{resize:vertical;min-height:100px}
+        .form-group select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M6 8L1 3h10z' fill='%2364748b'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:40px}
+
+        .form-submit{grid-column:1/-1;margin-top:8px;padding:16px 32px;border-radius:50px;border:none;background:linear-gradient(135deg,var(--blue-gradient-start),var(--blue-gradient-end));color:var(--white);font-family:var(--font-display);font-weight:700;font-size:1rem;cursor:pointer;transition:all .3s;box-shadow:0 4px 15px rgba(37,99,235,.3)}
+        .form-submit:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(37,99,235,.4)}
+        .form-note{grid-column:1/-1;text-align:center;font-size:.78rem;color:var(--text-secondary);margin-top:4px}
+
+        /* MAP */
+        .map-section{padding:0;background:var(--white)}
+        .map-embed{width:100%;height:350px;border:none;filter:grayscale(30%)}
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        .footer {
+            background: #060e1a;
+            padding: 64px 0 0;
+            color: var(--gray-400);
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 48px;
+            padding-bottom: 48px;
+        }
+        .footer-brand img {
+            height: 40px;
+            filter: brightness(0) invert(1);
+            opacity: 0.8;
+            margin-bottom: 16px;
+        }
+        .footer-brand > p {
+            font-size: 0.88rem;
+            line-height: 1.6;
+            color: var(--gray-500);
+            margin-bottom: 20px;
+        }
+        .footer-contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .footer-contact-info span {
+            font-size: 0.8rem;
+            color: var(--gray-500);
+        }
+        .footer-col {}
+        .footer h4,
+        .footer-col h4 {
+            color: var(--white);
+            font-family: var(--font-display);
+            font-size: 0.82rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: 20px;
+        }
+        .footer-links {
+            list-style: none;
+        }
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        .footer-links a {
+            font-size: 0.85rem;
+            color: var(--gray-500);
+            transition: color 0.2s;
+        }
+        .footer-links a:hover {
+            color: var(--white);
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding: 24px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            color: var(--gray-600);
+        }
+        .footer-bottom-right {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .qualiopi-badge-footer {
+            background: rgba(255,255,255,0.08);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--gray-400);
+        }
+
+        .fade-in{opacity:0;transform:translateY(30px);transition:all .7s ease-out}.fade-in.visible{opacity:1;transform:translateY(0)}
+
+        @media(max-width:1024px){.contact-grid{grid-template-columns:1fr}.contact-form-card{order:-1}}
+        @media(max-width:768px){.nav-links{display:none;position:absolute;top:72px;left:0;right:0;background:var(--white);flex-direction:column;padding:24px;gap:16px;border-bottom:1px solid var(--gray-200);box-shadow:var(--shadow-lg)}.nav-links.active{display:flex}.mobile-menu-btn{display:block}.form-grid{grid-template-columns:1fr}.form-group.full{grid-column:1}}
+
+        /* Footer responsive */
+        @media (max-width: 900px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 32px;
+            }
+        }
+        @media (max-width: 600px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+            }
+            .footer-bottom-right {
+                justify-content: center;
+            }
+        }
+        </style>
+</head>
+<body>
+    <div class="top-banner">📞 <strong>Réponse garantie sous 24h</strong> — Montage dossier OPCO / CNFPT gratuit</div>
+
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-logo"><img src="logo-sy-academy.png" alt="SY Academy"></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="collectivites.html">Collectivités</a></li>
+                <li><a href="pme.html">PME / TPE</a></li>
+                <li><a href="approche.html">Notre approche</a></li>
+                <li><a href="financement.html">Financement</a></li>
+                <li><a href="contact.html" class="nav-cta active">Demander un devis →</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <section class="hero-contact">
+        <div class="container">
+            <h1>Parlons de votre projet</h1>
+            <p>Décrivez-nous votre besoin. On vous répond sous 24h avec une proposition adaptée à votre contexte et à votre financement.</p>
+        </div>
+    </section>
+
+    <section class="contact-main">
+        <div class="container">
+            <div class="contact-grid">
+
+                <!-- COLONNE INFO -->
+                <div class="contact-info">
+
+                    <div class="promise-card fade-in">
+                        <h3>Ce qui se passe quand vous nous contactez</h3>
+                        <ul class="promise-list">
+                            <li>Réponse sous 24h ouvrées</li>
+                            <li>Appel de cadrage (15 min) pour comprendre votre besoin</li>
+                            <li>Proposition sur mesure sous 48h</li>
+                            <li>Identification de votre financement (OPCO, CNFPT...)</li>
+                            <li>Montage du dossier financeur gratuit</li>
+                            <li>Aucun engagement jusqu'à la signature</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card fade-in">
+                        <h3>Coordonnées</h3>
+                        <div class="info-item">
+                            <span class="info-icon">📍</span>
+                            <div class="info-text">
+                                <strong>Siège social</strong>
+                                13 Villa du Breuil<br>78280 Guyancourt
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">🏢</span>
+                            <div class="info-text">
+                                <strong>Centre de formation</strong>
+                                SDCL CENTER<br>Maurepas (78)
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">📧</span>
+                            <div class="info-text">
+                                <strong>Email</strong>
+                                contact@syacademy.fr
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">📞</span>
+                            <div class="info-text">
+                                <strong>Téléphone</strong>
+                                <!-- À COMPLÉTER -->
+                                06 XX XX XX XX
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">🌐</span>
+                            <div class="info-text">
+                                <strong>Site web</strong>
+                                syacademy.fr
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rdv-card fade-in">
+                        <h3>📅 Réserver un créneau directement</h3>
+                        <p>Envie de discuter de vive voix ? Réservez un appel de 15 minutes avec Sofiane.</p>
+                        <!-- REMPLACER par l'URL Calendly réelle -->
+                        <a href="https://calendly.com/sofiane-syacademy/15min" target="_blank" class="btn-calendly">Choisir un créneau →</a>
+                    </div>
+
+                </div>
+
+                <!-- FORMULAIRE -->
+                <div class="contact-form-card fade-in">
+                    <h2>Demandez votre devis gratuit</h2>
+                    <p>Remplissez ce formulaire. On s'occupe du reste.</p>
+
+                    <form id="contactForm" class="form-grid" action="https://formspree.io/f/VOTRE_ID" method="POST">
+                        <div class="form-group">
+                            <label for="nom">Nom *</label>
+                            <input type="text" id="nom" name="nom" required placeholder="Votre nom">
+                        </div>
+                        <div class="form-group">
+                            <label for="prenom">Prénom *</label>
+                            <input type="text" id="prenom" name="prenom" required placeholder="Votre prénom">
+                        </div>
+                        <div class="form-group">
+                            <label for="organisation">Organisation *</label>
+                            <input type="text" id="organisation" name="organisation" required placeholder="Nom de votre collectivité ou entreprise">
+                        </div>
+                        <div class="form-group">
+                            <label for="type_org">Type d'organisation *</label>
+                            <select id="type_org" name="type_org" required>
+                                <option value="">— Sélectionnez —</option>
+                                <option value="collectivite">Collectivité territoriale</option>
+                                <option value="pme">PME / TPE</option>
+                                <option value="association">Association</option>
+                                <option value="of">Organisme de formation</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="fonction">Fonction *</label>
+                            <input type="text" id="fonction" name="fonction" required placeholder="Ex: DGS, Dirigeant, DRH, Manager...">
+                        </div>
+                        <div class="form-group">
+                            <label for="effectif">Effectif</label>
+                            <select id="effectif" name="effectif">
+                                <option value="">— Sélectionnez —</option>
+                                <option value="1-10">1 à 10</option>
+                                <option value="11-49">11 à 49</option>
+                                <option value="50-200">50 à 200</option>
+                                <option value="200+">Plus de 200</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email professionnel *</label>
+                            <input type="email" id="email" name="email" required placeholder="votre@email.fr">
+                        </div>
+                        <div class="form-group">
+                            <label for="telephone">Téléphone</label>
+                            <input type="tel" id="telephone" name="telephone" placeholder="06 00 00 00 00">
+                        </div>
+                        <div class="form-group full">
+                            <label for="besoin">Quel est votre besoin ? *</label>
+                            <select id="besoin" name="besoin" required>
+                                <option value="">— Sélectionnez —</option>
+                                <option value="audit">Audit Performance & IA</option>
+                                <option value="formation-col">Formation — Collectivités</option>
+                                <option value="formation-pme">Formation — PME / TPE</option>
+                                <option value="parcours">Parcours complet (audit + formation + outils)</option>
+                                <option value="info">Juste une demande d'information</option>
+                            </select>
+                        </div>
+                        <div class="form-group full">
+                            <label for="message">Décrivez votre projet</label>
+                            <textarea id="message" name="message" placeholder="Votre contexte, les services ou équipes concernés, vos contraintes de planning, votre budget..."></textarea>
+                        </div>
+                        <div class="form-group full">
+                            <label for="source">Comment nous avez-vous connu ?</label>
+                            <select id="source" name="source">
+                                <option value="">— Sélectionnez —</option>
+                                <option value="google">Recherche Google</option>
+                                <option value="linkedin">LinkedIn</option>
+                                <option value="bouche-a-oreille">Bouche-à-oreille</option>
+                                <option value="cnfpt">CNFPT / catalogue</option>
+                                <option value="webinaire">Webinaire</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="form-submit">Envoyer ma demande →</button>
+                        <p class="form-note">🔒 Données confidentielles — Réponse garantie sous 24h ouvrées — Montage dossier financeur offert</p>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MAP -->
+    <section class="map-section">
+        <iframe class="map-embed" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2634.5!2d2.0564!3d48.7714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67e0a1b1b1b1b%3A0x0!2s13+Villa+du+Breuil%2C+78280+Guyancourt!5e0!3m2!1sfr!2sfr!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="SY Academy — Guyancourt (78)"></iframe>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+
+                <!-- Bloc 1 : Marque -->
+                <div class="footer-brand">
+                    <img src="logo-sy-academy.png" alt="SY Academy">
+                    <p>SY Academy améliore la performance des organisations en combinant management structuré, organisation des process et l'intégration concrète de l'IA.</p>
+                    <div class="footer-contact-info">
+                        <span>📍 13 Villa du Breuil, 78280 Guyancourt</span>
+                        <span>🏢 Centre : SDCL CENTER, Maurepas (78)</span>
+                        <span>📧 contact@syacademy.fr</span>
+                    </div>
+                </div>
+
+                <!-- Bloc 2 : Formations -->
+                <div class="footer-col">
+                    <h4>Formations</h4>
+                    <ul class="footer-links">
+                        <li><a href="collectivites.html">Collectivités territoriales</a></li>
+                        <li><a href="pme.html">PME / TPE</a></li>
+                        <li><a href="contact.html">Audit Performance &amp; IA</a></li>
+                        <li><a href="#">Catalogue complet (PDF)</a></li>
+                    </ul>
+                </div>
+
+                <!-- Bloc 3 : Financement -->
+                <div class="footer-col">
+                    <h4>Financement</h4>
+                    <ul class="footer-links">
+                        <li><a href="financement.html">OPCO — PME / TPE</a></li>
+                        <li><a href="financement.html">CNFPT — Collectivités</a></li>
+                        <li><a href="financement.html">Plan de formation</a></li>
+                        <li><a href="financement.html">DIF Élus</a></li>
+                    </ul>
+                </div>
+
+                <!-- Bloc 4 : SY Academy -->
+                <div class="footer-col">
+                    <h4>SY Academy</h4>
+                    <ul class="footer-links">
+                        <li><a href="approche.html">Notre approche</a></li>
+                        <li><a href="contact.html">Contact / Devis</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Mentions légales</a></li>
+                        <li><a href="#">CGV</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Barre du bas -->
+            <div class="footer-bottom">
+                <span>© 2026 SY Academy — Tous droits réservés</span>
+                <div class="footer-bottom-right">
+                    <span class="qualiopi-badge-footer">QUALIOPI</span>
+                    <span>La certification qualité a été délivrée au titre de la catégorie d'action suivante : actions de formation</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const navbar=document.getElementById('navbar');window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',window.scrollY>20));
+        const mb=document.getElementById('mobileMenuBtn'),nl=document.getElementById('navLinks');mb.addEventListener('click',()=>nl.classList.toggle('active'));nl.querySelectorAll('a').forEach(l=>l.addEventListener('click',()=>nl.classList.remove('active')));
+        const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible')})},{threshold:.1,rootMargin:'0px 0px -50px 0px'});document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+        document.getElementById('contactForm').addEventListener('submit',function(e){e.preventDefault();const btn=this.querySelector('.form-submit');btn.textContent='✓ Demande envoyée !';btn.style.background='var(--green-accent)';setTimeout(()=>{btn.textContent='Envoyer ma demande →';btn.style.background=''},3000)});
+    </script>
+</body>
+</html>

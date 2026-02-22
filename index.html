@@ -1,0 +1,1903 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SY Academy — Formation Management, Organisation & Intelligence Artificielle</title>
+    <meta name="description" content="SY Academy améliore la performance de votre organisation en combinant management structuré, organisation des process et intégration concrète de l'IA. Certification Qualiopi. Formations finançables OPCO et CNFPT.">
+    <meta name="keywords" content="formation management IA, formation intelligence artificielle entreprise, organisme formation IA, formation IA collectivités, formation IA PME">
+    <meta property="og:title" content="SY Academy — Management, Organisation & IA">
+    <meta property="og:description" content="Formations professionnelles en management, organisation et intelligence artificielle. Certification Qualiopi, finançables OPCO/CNFPT.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://syacademy.fr">
+    <link rel="canonical" href="https://syacademy.fr">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* ============================================
+           CSS VARIABLES
+           ============================================ */
+        :root {
+            --navy: #0a1628;
+            --navy-light: #132040;
+            --blue-mid: #1a3a6e;
+            --blue-accent: #2563eb;
+            --blue-bright: #3b82f6;
+            --blue-gradient-start: #1e3a8a;
+            --blue-gradient-end: #2563eb;
+            --cyan: #06b6d4;
+            --white: #ffffff;
+            --gray-50: #f8fafc;
+            --gray-100: #f1f5f9;
+            --gray-200: #e2e8f0;
+            --gray-300: #cbd5e1;
+            --gray-400: #94a3b8;
+            --gray-500: #64748b;
+            --gray-600: #475569;
+            --gray-700: #334155;
+            --gray-800: #1e293b;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --orange-accent: #f59e0b;
+            --orange-bright: #f97316;
+            --green-accent: #10b981;
+            --font-display: 'Outfit', sans-serif;
+            --font-body: 'DM Sans', sans-serif;
+            --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+            --shadow-lg: 0 8px 30px rgba(0,0,0,0.12);
+            --shadow-xl: 0 20px 50px rgba(0,0,0,0.15);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --radius-xl: 28px;
+        }
+
+        /* ============================================
+           RESET & BASE
+           ============================================ */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text-primary);
+            background: var(--white);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ============================================
+           TOP BANNER
+           ============================================ */
+        .top-banner {
+            background: linear-gradient(135deg, var(--blue-gradient-start), var(--blue-gradient-end));
+            color: var(--white);
+            text-align: center;
+            padding: 10px 24px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+        }
+
+        .top-banner span {
+            opacity: 0.9;
+        }
+
+        .top-banner strong {
+            color: var(--orange-accent);
+        }
+
+        /* ============================================
+           NAVBAR
+           ============================================ */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--gray-200);
+            padding: 0 24px;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            box-shadow: var(--shadow-md);
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+        }
+
+        .navbar-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .navbar-logo img {
+            height: 48px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-family: var(--font-display);
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            position: relative;
+            padding: 4px 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--blue-gradient-start), var(--blue-gradient-end));
+            border-radius: 2px;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, var(--blue-gradient-start), var(--blue-gradient-end));
+            color: var(--white) !important;
+            padding: 10px 22px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            letter-spacing: 0.02em;
+            transition: transform 0.2s, box-shadow 0.3s;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+        }
+
+        .nav-cta::after {
+            display: none !important;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .mobile-menu-btn span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--navy);
+            margin: 6px 0;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        /* ============================================
+           HERO SECTION
+           ============================================ */
+        .hero {
+            position: relative;
+            padding: 100px 0 80px;
+            background: var(--gray-50);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -200px;
+            right: -200px;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(37,99,235,0.06) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -150px;
+            left: -150px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(6,182,212,0.05) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-content {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--blue-accent);
+            margin-bottom: 24px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .hero-badge .dot {
+            width: 8px;
+            height: 8px;
+            background: var(--green-accent);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.2rem, 4vw, 3.2rem);
+            color: var(--navy);
+            margin-bottom: 20px;
+            line-height: 1.15;
+        }
+
+        .hero h1 .highlight {
+            background: linear-gradient(135deg, var(--blue-gradient-start), var(--blue-accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 36px;
+            max-width: 520px;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, var(--blue-gradient-start), var(--blue-gradient-end));
+            color: var(--white);
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--white);
+            color: var(--navy);
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1rem;
+            border: 2px solid var(--gray-200);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--blue-accent);
+            color: var(--blue-accent);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .hero-trust {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            padding-top: 12px;
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .trust-icon {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Hero visual */
+        .hero-visual {
+            position: relative;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .hero-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            box-shadow: var(--shadow-xl);
+            position: relative;
+        }
+
+        .hero-card::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            border-radius: calc(var(--radius-lg) + 2px);
+            background: linear-gradient(135deg, var(--blue-gradient-start), var(--cyan));
+            z-index: -1;
+            opacity: 0.15;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .stat-block {
+            text-align: center;
+            padding: 20px 16px;
+            border-radius: var(--radius-md);
+            background: var(--gray-50);
+        }
+
+        .stat-number {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--blue-gradient-start), var(--blue-accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-top: 4px;
+            font-weight: 500;
+        }
+
+        .hero-card-footer {
+            margin-top: 24px;
+            padding-top: 20px;
+            border-top: 1px solid var(--gray-100);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .live-dot {
+            width: 10px;
+            height: 10px;
+            background: var(--green-accent);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        .hero-card-footer span {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        /* ============================================
+           PROBLEM / SOLUTION
+           ============================================ */
+        .problem-section {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .problem-content h2 {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            color: var(--navy);
+            margin-bottom: 20px;
+        }
+
+        .problem-content h2 .highlight {
+            background: linear-gradient(135deg, var(--blue-gradient-start), var(--blue-accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .problem-content p {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            line-height: 1.7;
+        }
+
+        .problem-stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .problem-stat {
+            background: var(--gray-50);
+            border-radius: var(--radius-md);
+            padding: 28px 24px;
+            text-align: center;
+            border: 1px solid var(--gray-100);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .problem-stat:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .problem-stat .big-number {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--navy);
+            line-height: 1;
+        }
+
+        .problem-stat .big-number span {
+            background: linear-gradient(135deg, var(--blue-gradient-start), var(--blue-accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .problem-stat p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 8px;
+            font-weight: 500;
+        }
+
+        /* ============================================
+           3 PILLARS
+           ============================================ */
+        .pillars-section {
+            padding: 100px 0;
+            background: var(--navy);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pillars-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(ellipse at 20% 50%, rgba(37,99,235,0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 50%, rgba(6,182,212,0.1) 0%, transparent 50%);
+        }
+
+        .pillars-section .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-family: var(--font-display);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--blue-bright);
+            margin-bottom: 16px;
+        }
+
+        .pillars-section .section-header h2 {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+
+        .pillars-section .section-header p {
+            font-size: 1.05rem;
+            color: var(--gray-400);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .pillar-card {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: var(--radius-lg);
+            padding: 40px 32px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pillar-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--blue-accent), var(--cyan));
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .pillar-card:hover {
+            background: rgba(255,255,255,0.08);
+            border-color: rgba(255,255,255,0.15);
+            transform: translateY(-4px);
+        }
+
+        .pillar-card:hover::before {
+            opacity: 1;
+        }
+
+        .pillar-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            font-size: 1.5rem;
+        }
+
+        .pillar-icon.management {
+            background: rgba(37,99,235,0.15);
+        }
+
+        .pillar-icon.organisation {
+            background: rgba(6,182,212,0.15);
+        }
+
+        .pillar-icon.ia {
+            background: rgba(249,115,22,0.15);
+        }
+
+        .pillar-card h3 {
+            color: var(--white);
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+        }
+
+        .pillar-card p {
+            color: var(--gray-400);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .pillar-items {
+            list-style: none;
+        }
+
+        .pillar-items li {
+            color: var(--gray-300);
+            font-size: 0.85rem;
+            padding: 6px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .pillar-items li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--blue-bright);
+            font-weight: 600;
+        }
+
+        /* ============================================
+           PARCOURS CLIENT
+           ============================================ */
+        .parcours-section {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .parcours-section .section-header h2 {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            color: var(--navy);
+            margin-bottom: 16px;
+        }
+
+        .parcours-section .section-header p {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .parcours-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            position: relative;
+        }
+
+        .parcours-grid::before {
+            content: '';
+            position: absolute;
+            top: 72px;
+            left: 16.66%;
+            right: 16.66%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--blue-gradient-start), var(--blue-accent), var(--cyan));
+            border-radius: 3px;
+            z-index: 0;
+        }
+
+        .parcours-step {
+            text-align: center;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .step-number {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--white);
+            background: linear-gradient(135deg, var(--blue-gradient-start), var(--blue-gradient-end));
+            box-shadow: 0 4px 15px rgba(37,99,235,0.3);
+        }
+
+        .parcours-step:nth-child(2) .step-number {
+            background: linear-gradient(135deg, var(--blue-accent), var(--blue-bright));
+        }
+
+        .parcours-step:nth-child(3) .step-number {
+            background: linear-gradient(135deg, var(--blue-bright), var(--cyan));
+        }
+
+        .parcours-step h3 {
+            font-size: 1.15rem;
+            color: var(--navy);
+            margin-bottom: 8px;
+        }
+
+        .parcours-step .step-entity {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--blue-accent);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 12px;
+        }
+
+        .parcours-step p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* ============================================
+           VERTICALES
+           ============================================ */
+        .verticales-section {
+            padding: 100px 0;
+            background: var(--gray-50);
+        }
+
+        .verticales-section .section-header h2 {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            color: var(--navy);
+            margin-bottom: 16px;
+        }
+
+        .verticales-section .section-header p {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .verticales-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+
+        .verticale-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 44px 40px;
+            border: 1px solid var(--gray-200);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .verticale-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            transition: opacity 0.4s;
+            opacity: 0;
+        }
+
+        .verticale-card:hover {
+            border-color: transparent;
+            box-shadow: var(--shadow-xl);
+            transform: translateY(-4px);
+        }
+
+        .verticale-card:hover::after {
+            opacity: 1;
+        }
+
+        .verticale-card.collectivites::after {
+            background: linear-gradient(90deg, var(--blue-gradient-start), var(--blue-accent));
+        }
+
+        .verticale-card.pme::after {
+            background: linear-gradient(90deg, var(--blue-accent), var(--cyan));
+        }
+
+        .verticale-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .verticale-card.collectivites .verticale-tag {
+            background: rgba(30,58,138,0.08);
+            color: var(--blue-gradient-start);
+        }
+
+        .verticale-card.pme .verticale-tag {
+            background: rgba(6,182,212,0.08);
+            color: var(--cyan);
+        }
+
+        .verticale-card h3 {
+            font-size: 1.4rem;
+            color: var(--navy);
+            margin-bottom: 12px;
+        }
+
+        .verticale-card > p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        .verticale-features {
+            list-style: none;
+            margin-bottom: 28px;
+        }
+
+        .verticale-features li {
+            padding: 8px 0;
+            padding-left: 28px;
+            position: relative;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .verticale-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--green-accent);
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .verticale-card .formations-count {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--blue-accent);
+            margin-bottom: 20px;
+        }
+
+        .btn-verticale {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .verticale-card.collectivites .btn-verticale {
+            background: linear-gradient(135deg, var(--blue-gradient-start), var(--blue-gradient-end));
+            color: var(--white);
+        }
+
+        .verticale-card.collectivites .btn-verticale:hover {
+            box-shadow: 0 6px 20px rgba(37,99,235,0.35);
+            transform: translateY(-2px);
+        }
+
+        .verticale-card.pme .btn-verticale {
+            background: var(--white);
+            color: var(--navy);
+            border: 2px solid var(--gray-200);
+        }
+
+        .verticale-card.pme .btn-verticale:hover {
+            border-color: var(--cyan);
+            color: var(--cyan);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        /* ============================================
+           CHIFFRES CLÉS / SOCIAL PROOF
+           ============================================ */
+        .social-proof-section {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .social-proof-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+        }
+
+        .proof-item {
+            text-align: center;
+            padding: 32px 20px;
+        }
+
+        .proof-number {
+            font-family: var(--font-display);
+            font-size: 2.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--blue-gradient-start), var(--blue-accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .proof-label {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        /* ============================================
+           TESTIMONIALS (prêt pour les premiers retours)
+           ============================================ */
+        .testimonials-section {
+            padding: 100px 0;
+            background: var(--gray-50);
+        }
+
+        .testimonials-section .section-header h2 {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            color: var(--navy);
+            margin-bottom: 16px;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 36px;
+            border: 1px solid var(--gray-200);
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            font-family: Georgia, serif;
+            font-size: 4rem;
+            color: var(--blue-accent);
+            opacity: 0.15;
+            position: absolute;
+            top: 12px;
+            left: 24px;
+            line-height: 1;
+        }
+
+        .testimonial-text {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .testimonial-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--blue-gradient-start), var(--blue-accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .testimonial-author-info strong {
+            display: block;
+            font-size: 0.9rem;
+            color: var(--navy);
+        }
+
+        .testimonial-author-info span {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        /* ============================================
+           CTA FINAL
+           ============================================ */
+        .cta-section {
+            padding: 100px 0;
+            background: var(--navy);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(ellipse at 30% 50%, rgba(37,99,235,0.2) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 50%, rgba(6,182,212,0.15) 0%, transparent 60%);
+        }
+
+        .cta-section .container {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            color: var(--gray-400);
+            margin-bottom: 40px;
+            max-width: 550px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn-cta-light {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--white);
+            color: var(--navy);
+            padding: 18px 36px;
+            border-radius: 50px;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .btn-cta-light:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+
+        .btn-cta-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: transparent;
+            color: var(--white);
+            padding: 16px 36px;
+            border-radius: 50px;
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1rem;
+            border: 2px solid rgba(255,255,255,0.25);
+            transition: all 0.3s;
+        }
+
+        .btn-cta-outline:hover {
+            border-color: var(--white);
+            background: rgba(255,255,255,0.05);
+            transform: translateY(-2px);
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        .footer {
+            background: #060e1a;
+            padding: 64px 0 0;
+            color: var(--gray-400);
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 48px;
+            padding-bottom: 48px;
+        }
+        .footer-brand img {
+            height: 40px;
+            filter: brightness(0) invert(1);
+            opacity: 0.8;
+            margin-bottom: 16px;
+        }
+        .footer-brand > p {
+            font-size: 0.88rem;
+            line-height: 1.6;
+            color: var(--gray-500);
+            margin-bottom: 20px;
+        }
+        .footer-contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .footer-contact-info span {
+            font-size: 0.8rem;
+            color: var(--gray-500);
+        }
+        .footer-col {}
+        .footer h4,
+        .footer-col h4 {
+            color: var(--white);
+            font-family: var(--font-display);
+            font-size: 0.82rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: 20px;
+        }
+        .footer-links {
+            list-style: none;
+        }
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        .footer-links a {
+            font-size: 0.85rem;
+            color: var(--gray-500);
+            transition: color 0.2s;
+        }
+        .footer-links a:hover {
+            color: var(--white);
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding: 24px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            color: var(--gray-600);
+        }
+        .footer-bottom-right {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .qualiopi-badge-footer {
+            background: rgba(255,255,255,0.08);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--gray-400);
+        }
+
+        /* ============================================
+           ANIMATIONS
+           ============================================ */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.7s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+        @media (max-width: 1024px) {
+            .hero .container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .hero-visual {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+            .pillars-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+            .problem-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 32px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .top-banner {
+                font-size: 0.75rem;
+                padding: 8px 16px;
+            }
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 72px;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 24px;
+                gap: 16px;
+                border-bottom: 1px solid var(--gray-200);
+                box-shadow: var(--shadow-lg);
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .mobile-menu-btn {
+                display: block;
+            }
+            .hero {
+                padding: 60px 0;
+            }
+            .hero-ctas {
+                flex-direction: column;
+            }
+            .hero-ctas a {
+                text-align: center;
+                justify-content: center;
+            }
+            .hero-trust {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+            .verticales-grid {
+                grid-template-columns: 1fr;
+            }
+            .parcours-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .parcours-grid::before {
+                display: none;
+            }
+            .social-proof-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 16px;
+            }
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+            
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .hero-stats {
+                grid-template-columns: 1fr;
+            }
+            .problem-stats-grid {
+                grid-template-columns: 1fr;
+            }
+            .social-proof-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Footer responsive */
+        @media (max-width: 900px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 32px;
+            }
+        }
+        @media (max-width: 600px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+            }
+            .footer-bottom-right {
+                justify-content: center;
+            }
+        }
+        </style>
+</head>
+<body>
+
+    <!-- Top Banner -->
+    <div class="top-banner">
+        <span>🎓 <strong>Formations finançables à 100%</strong> par votre OPCO ou le CNFPT — Certification Qualiopi</span>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="/" class="navbar-logo">
+                <img src="logo-sy-academy.png" alt="SY Academy — Management, Organisation & IA">
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#collectivites">Collectivités</a></li>
+                <li><a href="#pme">PME / TPE</a></li>
+                <li><a href="#approche">Notre approche</a></li>
+                <li><a href="#financement">Financement</a></li>
+                <li><a href="#contact" class="nav-cta">Demander un devis →</a></li>
+            </ul>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="dot"></span>
+                    Certification Qualiopi — Actions de formation
+                </div>
+
+                <h1>
+                    Améliorez la performance<br>
+                    de votre organisation avec<br>
+                    <span class="highlight">le management et l'IA</span>
+                </h1>
+
+                <p class="hero-subtitle">
+                    SY Academy combine management structuré, organisation des process 
+                    et intégration concrète de l'intelligence artificielle. 
+                    Vos équipes repartent avec des outils opérationnels dès le lendemain.
+                </p>
+
+                <div class="hero-ctas">
+                    <a href="#collectivites" class="btn-primary">
+                        Collectivités territoriales →
+                    </a>
+                    <a href="#pme" class="btn-secondary">
+                        PME / TPE →
+                    </a>
+                </div>
+
+                <div class="hero-trust">
+                    <div class="trust-item">
+                        <span class="trust-icon">🏛️</span>
+                        Qualiopi certifié
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-icon">💰</span>
+                        100% finançable OPCO
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-icon">🔧</span>
+                        70% de pratique
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="hero-card">
+                    <div class="hero-stats">
+                        <div class="stat-block">
+                            <div class="stat-number">9</div>
+                            <div class="stat-label">Programmes de formation</div>
+                        </div>
+                        <div class="stat-block">
+                            <div class="stat-number">70%</div>
+                            <div class="stat-label">Pratique sur cas réels</div>
+                        </div>
+                        <div class="stat-block">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Finançable OPCO/CNFPT</div>
+                        </div>
+                        <div class="stat-block">
+                            <div class="stat-number">J+1</div>
+                            <div class="stat-label">Résultats opérationnels</div>
+                        </div>
+                    </div>
+                    <div class="hero-card-footer">
+                        <span class="live-dot"></span>
+                        <span>Sessions disponibles — Île-de-France et toute la France</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROBLÈME / SOLUTION -->
+    <section class="problem-section">
+        <div class="container">
+            <div class="problem-grid">
+                <div class="problem-content fade-in">
+                    <span class="section-label">Le constat</span>
+                    <h2>
+                        90% des organisations <span class="highlight">n'exploitent pas encore l'IA</span>
+                    </h2>
+                    <p>
+                        Pendant ce temps, celles qui intègrent l'intelligence artificielle 
+                        dans leurs process constatent des gains de productivité majeurs. 
+                        Le problème n'est pas la technologie — c'est l'absence de méthode.
+                    </p>
+                    <p>
+                        SY Academy ne vous apprend pas simplement à utiliser ChatGPT. 
+                        Nous transformons votre organisation de l'intérieur : management structuré, 
+                        process clarifiés, et IA intégrée là où elle a un vrai impact.
+                    </p>
+                </div>
+
+                <div class="problem-stats-grid fade-in">
+                    <div class="problem-stat">
+                        <div class="big-number"><span>30%</span></div>
+                        <p>de gains de productivité constatés avec l'IA</p>
+                    </div>
+                    <div class="problem-stat">
+                        <div class="big-number"><span>2h</span></div>
+                        <p>gagnées par jour et par agent en moyenne</p>
+                    </div>
+                    <div class="problem-stat">
+                        <div class="big-number"><span>100%</span></div>
+                        <p>des formations finançables par votre OPCO</p>
+                    </div>
+                    <div class="problem-stat">
+                        <div class="big-number"><span>J+1</span></div>
+                        <p>les outils sont opérationnels dès le lendemain</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3 PILIERS -->
+    <section class="pillars-section" id="approche">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Notre méthode</span>
+                <h2>Trois leviers pour transformer votre organisation</h2>
+                <p>Pas de théorie abstraite. Une approche intégrée qui produit des résultats mesurables.</p>
+            </div>
+
+            <div class="pillars-grid">
+                <div class="pillar-card fade-in">
+                    <div class="pillar-icon management">📋</div>
+                    <h3>Management structuré</h3>
+                    <p>Des méthodes de pilotage claires pour que chaque manager sache quoi suivre, comment décider et comment rendre compte.</p>
+                    <ul class="pillar-items">
+                        <li>Tableaux de bord décisionnels</li>
+                        <li>Rituels managériaux efficaces</li>
+                        <li>Indicateurs de performance clairs</li>
+                        <li>Pilotage par objectifs mesurables</li>
+                    </ul>
+                </div>
+
+                <div class="pillar-card fade-in">
+                    <div class="pillar-icon organisation">⚙️</div>
+                    <h3>Organisation des process</h3>
+                    <p>Cartographier, simplifier et optimiser vos processus métier avant d'y intégrer la technologie.</p>
+                    <ul class="pillar-items">
+                        <li>Cartographie des processus clés</li>
+                        <li>Identification des goulots d'étranglement</li>
+                        <li>Standardisation des pratiques</li>
+                        <li>Gains de temps mesurables</li>
+                    </ul>
+                </div>
+
+                <div class="pillar-card fade-in">
+                    <div class="pillar-icon ia">🤖</div>
+                    <h3>IA concrète et opérationnelle</h3>
+                    <p>L'intelligence artificielle au service de vos métiers : pas un gadget, mais un outil de productivité réel.</p>
+                    <ul class="pillar-items">
+                        <li>Mistral pour les collectivités (RGPD)</li>
+                        <li>ChatGPT, Claude, Gemini pour les PME</li>
+                        <li>Automatisations sur mesure (n8n)</li>
+                        <li>Prompting avancé métier par métier</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PARCOURS CLIENT -->
+    <section class="parcours-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Le parcours</span>
+                <h2>De l'audit au déploiement : un accompagnement complet</h2>
+                <p>Chaque étape est conçue pour produire des résultats concrets et mesurables.</p>
+            </div>
+
+            <div class="parcours-grid">
+                <div class="parcours-step fade-in">
+                    <div class="step-number">1</div>
+                    <h3>Audit Performance & IA</h3>
+                    <div class="step-entity">SY Academy</div>
+                    <p>Diagnostic complet de votre organisation : process, management, maturité numérique. Vous repartez avec une feuille de route priorisée et chiffrée.</p>
+                </div>
+
+                <div class="parcours-step fade-in">
+                    <div class="step-number">2</div>
+                    <h3>Formation sur mesure</h3>
+                    <div class="step-entity">SY Academy</div>
+                    <p>Programmes adaptés par service et par métier. 70% de pratique sur vos cas réels. Vos équipes repartent autonomes avec des outils opérationnels.</p>
+                </div>
+
+                <div class="parcours-step fade-in">
+                    <div class="step-number">3</div>
+                    <h3>Déploiement des outils</h3>
+                    <div class="step-entity">SOLE SOLUTION</div>
+                    <p>Chatbots, workflows automatisés, tableaux de bord connectés. Déployés et personnalisés pour votre organisation. Accompagnement dans la durée.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VERTICALES -->
+    <section class="verticales-section" id="collectivites">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Nos formations</span>
+                <h2>Des programmes adaptés à votre réalité</h2>
+                <p>Chaque verticale dispose de formations conçues pour ses enjeux spécifiques.</p>
+            </div>
+
+            <div class="verticales-grid">
+                <div class="verticale-card collectivites fade-in">
+                    <div class="verticale-tag">🏛️ Service public</div>
+                    <h3>Collectivités territoriales</h3>
+                    <p>Modernisez vos services municipaux avec l'IA souveraine. Mistral, hébergement français, conformité RGPD.</p>
+
+                    <ul class="verticale-features">
+                        <li>IA souveraine (Mistral) — données hébergées en France</li>
+                        <li>Formations finançables CNFPT ou plan de formation</li>
+                        <li>Programmes par service : urbanisme, accueil, jeunesse, sport</li>
+                        <li>Sensibilisation élus et cadres dirigeants</li>
+                        <li>Process administratifs optimisés et automatisés</li>
+                    </ul>
+
+                    <div class="formations-count">7 formations disponibles — de 0,5 à 2 jours</div>
+
+                    <a href="collectivites.html" class="btn-verticale">Découvrir l'offre Collectivités →</a>
+                </div>
+
+                <div class="verticale-card pme fade-in" id="pme">
+                    <div class="verticale-tag">🏢 Entreprises</div>
+                    <h3>PME / TPE</h3>
+                    <p>Gagnez en productivité avec l'IA. Approche multi-outils (ChatGPT, Claude, Gemini), focus ROI, résultats dès le lendemain.</p>
+
+                    <ul class="verticale-features">
+                        <li>Approche multi-outils : ChatGPT, Claude, Gemini</li>
+                        <li>100% pris en charge par votre OPCO (entreprises &lt;50 sal.)</li>
+                        <li>Focus ROI : gains mesurables dès la fin de formation</li>
+                        <li>Management et pilotage d'équipe augmentés par l'IA</li>
+                        <li>Automatisations concrètes adaptées à votre métier</li>
+                    </ul>
+
+                    <div class="formations-count">3 formations disponibles — de 1 à 2 jours</div>
+
+                    <a href="pme.html" class="btn-verticale">Découvrir l'offre PME →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHIFFRES CLÉS -->
+    <section class="social-proof-section">
+        <div class="container">
+            <div class="social-proof-grid">
+                <div class="proof-item fade-in">
+                    <div class="proof-number">9</div>
+                    <div class="proof-label">Programmes de formation</div>
+                </div>
+                <div class="proof-item fade-in">
+                    <div class="proof-number">15+</div>
+                    <div class="proof-label">Années d'expertise terrain</div>
+                </div>
+                <div class="proof-item fade-in">
+                    <div class="proof-number">100%</div>
+                    <div class="proof-label">Finançable OPCO / CNFPT</div>
+                </div>
+                <div class="proof-item fade-in">
+                    <div class="proof-number">70%</div>
+                    <div class="proof-label">De pratique en formation</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TÉMOIGNAGES -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Retours terrain</span>
+                <h2>Ce qu'en disent nos participants</h2>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in">
+                    <p class="testimonial-text">
+                        "En deux jours, nos responsables de service ont compris comment utiliser Mistral 
+                        pour leurs tâches quotidiennes. Le gain de temps est impressionnant, 
+                        surtout sur les courriers et les comptes rendus."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">MC</div>
+                        <div class="testimonial-author-info">
+                            <strong>Marie C.</strong>
+                            <span>DGA — Commune de 25 000 hab.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fade-in">
+                    <p class="testimonial-text">
+                        "Ce n'est pas une formation 'ChatGPT pour les nuls'. On a travaillé sur nos vrais process, 
+                        avec nos vrais documents. Mon équipe a gagné en autonomie immédiatement."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">PD</div>
+                        <div class="testimonial-author-info">
+                            <strong>Philippe D.</strong>
+                            <span>Dirigeant PME — 22 salariés</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fade-in">
+                    <p class="testimonial-text">
+                        "La formation a été un déclic pour nos élus. Ils ont enfin compris les enjeux concrets de l'IA 
+                        pour notre commune, sans le jargon technique."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">SL</div>
+                        <div class="testimonial-author-info">
+                            <strong>Sophie L.</strong>
+                            <span>Responsable formation — Interco IDF</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <h2>Évaluez le potentiel IA<br>de votre organisation</h2>
+            <p>
+                Demandez votre audit gratuit. En 1 à 2 jours, nous identifions 
+                les leviers de performance concrets pour votre structure.
+            </p>
+
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn-cta-light">
+                    Demander un audit gratuit →
+                </a>
+                <a href="tel:+33600000000" class="btn-cta-outline">
+                    📞 Nous appeler directement
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="financement">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="logo-sy-academy.png" alt="SY Academy">
+                    <p>
+                        SY Academy améliore la performance des organisations 
+                        en combinant management structuré, organisation des process 
+                        et intégration concrète de l'intelligence artificielle.
+                    </p>
+                    <p style="margin-top: 16px; font-size: 0.8rem;">
+                        13 Villa du Breuil, 78280 Guyancourt<br>
+                        Centre de formation : SDCL CENTER, Maurepas
+                    </p>
+                </div>
+
+                <div>
+                    <h4>Formations</h4>
+                    <ul class="footer-links">
+                        <li><a href="collectivites.html">Collectivités territoriales</a></li>
+                        <li><a href="pme.html">PME / TPE</a></li>
+                        <li><a href="#">Audit Performance & IA</a></li>
+                        <li><a href="#">Catalogue complet</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Financement</h4>
+                    <ul class="footer-links">
+                        <li><a href="financement.html">OPCO — PME &lt;50 salariés</a></li>
+                        <li><a href="financement.html">CNFPT — Collectivités</a></li>
+                        <li><a href="financement.html">Plan de formation</a></li>
+                        <li><a href="financement.html">DIF Élus</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>SY Academy</h4>
+                    <ul class="footer-links">
+                        <li><a href="approche.html">Notre approche</a></li>
+                        <li><a href="contact.html">Contact / Devis</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Mentions légales</a></li>
+                        <li><a href="#">CGV</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2026 SY Academy — Tous droits réservés</span>
+                <div class="footer-certif">
+                    <span class="qualiopi-badge-footer">QUALIOPI</span>
+                    <span>La certification qualité a été délivrée au titre de la catégorie d'action suivante : actions de formation</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 20);
+        });
+
+        // Mobile menu
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu on link click
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => navLinks.classList.remove('active'));
+        });
+
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
