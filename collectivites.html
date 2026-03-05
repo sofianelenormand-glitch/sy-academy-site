@@ -498,24 +498,24 @@
             align-items: center;
             gap: 8px;
         }
+        .qualiopi-footer-block {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
         .qualiopi-logo-footer {
-            height: 40px;
+            height: 55px;
             width: auto;
-            opacity: 0.9;
+            flex-shrink: 0;
+            background: white;
+            padding: 6px 10px;
+            border-radius: 4px;
         }
         .qualiopi-mention {
-            font-size: 0.72rem;
-            color: var(--gray-500);
-            max-width: 350px;
+            font-size: 0.7rem;
+            color: #94a3b8;
             line-height: 1.4;
-        }
-        .qualiopi-badge-footer {
-            background: rgba(255,255,255,0.08);
-            padding: 4px 12px;
-            border-radius: 4px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: var(--gray-400);
+            max-width: 300px;
         }
 
         /* ============================================
@@ -1306,7 +1306,10 @@
             <!-- Barre du bas -->
             <div class="footer-bottom">
                 <span>© 2026 SY Academy — Tous droits réservés</span>
-                <span class="qualiopi-mention">La certification qualité a été délivrée au titre de la catégorie d'action suivante : actions de formation</span>
+                <div class="qualiopi-footer-block">
+                    <img src="logo-qualiopi.jpg" alt="Qualiopi processus certifié - République Française" class="qualiopi-logo-footer">
+                    <p class="qualiopi-mention">La certification qualité a été délivrée au titre de la catégorie d'action suivante : actions de formation</p>
+                </div>
             </div>
         </div>
     </footer>
