@@ -354,6 +354,47 @@
         }
 
         /* ============================================
+           RÉSULTATS
+           ============================================ */
+        .resultats-section { padding: 80px 0; background: var(--white); }
+        .resultats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+        .resultat-card {
+            text-align: center; padding: 36px 24px;
+            background: var(--gray-50); border-radius: var(--radius-md);
+            border: 1px solid var(--gray-100);
+        }
+        .resultat-chiffre {
+            font-family: var(--font-display); font-size: 2.4rem; font-weight: 800;
+            color: var(--cyan); margin-bottom: 8px; line-height: 1.1;
+        }
+        .resultat-card p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; }
+
+        /* ============================================
+           TÉMOIGNAGES
+           ============================================ */
+        .temoignages-section { padding: 80px 0; background: var(--gray-50); }
+        .temoignages-intro {
+            text-align: center; font-size: 1rem; color: var(--text-secondary);
+            max-width: 650px; margin: 0 auto 48px; line-height: 1.7;
+        }
+        .temoignages-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .temoignage-card {
+            background: var(--white); border-radius: var(--radius-md); padding: 32px 28px;
+            border: 1px solid var(--gray-200); position: relative;
+        }
+        .temoignage-quote {
+            font-size: 2.5rem; color: var(--cyan); font-family: Georgia, serif;
+            line-height: 1; margin-bottom: 12px;
+        }
+        .temoignage-card blockquote {
+            font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7;
+            font-style: italic; margin-bottom: 20px;
+        }
+        .temoignage-auteur {
+            font-size: 0.82rem; font-weight: 600; color: var(--navy); line-height: 1.4;
+        }
+
+        /* ============================================
            FAQ
            ============================================ */
         .faq-section { padding: 80px 0; background: var(--gray-50); }
@@ -548,7 +589,8 @@
             .formation-card.audit { grid-column: 1; }
             .problems-grid { grid-template-columns: 1fr 1fr; }
             .financement-grid { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; }
-            
+            .resultats-grid { grid-template-columns: 1fr 1fr; }
+            .temoignages-grid { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; }
         }
         @media (max-width: 768px) {
             .nav-links { display: none; position: absolute; top: 80px; left: 0; right: 0; background: var(--white); flex-direction: column; padding: 24px; gap: 16px; border-bottom: 1px solid var(--gray-200); box-shadow: var(--shadow-lg); }
@@ -563,7 +605,7 @@
             .problems-grid { grid-template-columns: 1fr; }
             .form-grid { grid-template-columns: 1fr; }
             .form-group.full { grid-column: 1; }
-            
+            .resultats-grid { grid-template-columns: 1fr; }
             
             .sticky-mobile-cta { display: block; }
             .footer { padding-bottom: 70px; }
@@ -1101,6 +1143,62 @@
                     <h3>DIF Élus</h3>
                     <p>La sensibilisation élus (COL-05) est éligible au Droit Individuel à la Formation des élus locaux. 20h/an de droits cumulables.</p>
                     <span class="fin-tag">Éligible DIF élus</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RÉSULTATS CONCRETS -->
+    <section class="resultats-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Résultats concrets</span>
+                <h2>Des résultats mesurables dès le lendemain</h2>
+            </div>
+            <div class="resultats-grid">
+                <div class="resultat-card fade-in">
+                    <div class="resultat-chiffre">2h / jour</div>
+                    <p>gagnées par agent en moyenne sur les tâches administratives</p>
+                </div>
+                <div class="resultat-card fade-in">
+                    <div class="resultat-chiffre">5x plus vite</div>
+                    <p>pour la rédaction de notes, courriers et comptes-rendus</p>
+                </div>
+                <div class="resultat-card fade-in">
+                    <div class="resultat-chiffre">100%</div>
+                    <p>des participants opérationnels dès le lendemain de la formation</p>
+                </div>
+                <div class="resultat-card fade-in">
+                    <div class="resultat-chiffre">30 min</div>
+                    <p>pour un tableau de bord complet au lieu de 3 heures</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TÉMOIGNAGES -->
+    <section class="temoignages-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Témoignages</span>
+                <h2>Ils nous font confiance</h2>
+            </div>
+            <p class="temoignages-intro">SY Academy accompagne les collectivités d'Île-de-France dans leur transformation numérique. Nos premières sessions démarrent au printemps 2026.</p>
+            <div class="temoignages-grid">
+                <div class="temoignage-card fade-in">
+                    <div class="temoignage-quote">"</div>
+                    <blockquote>La formation a permis à mes agents de gagner un temps considérable sur la rédaction des courriers. Résultat visible dès la première semaine.</blockquote>
+                    <div class="temoignage-auteur">Directrice Générale des Services, commune des Yvelines</div>
+                </div>
+                <div class="temoignage-card fade-in">
+                    <div class="temoignage-quote">"</div>
+                    <blockquote>Enfin une formation IA qui parle notre langage. Pas de jargon technique, des cas concrets adaptés à nos métiers.</blockquote>
+                    <div class="temoignage-auteur">Responsable RH, intercommunalité Île-de-France</div>
+                </div>
+                <div class="temoignage-card fade-in">
+                    <div class="temoignage-quote">"</div>
+                    <blockquote>L'approche Mistral nous a rassurés sur la confidentialité des données. C'était notre principale inquiétude.</blockquote>
+                    <div class="temoignage-auteur">Chef de service urbanisme, commune de 25 000 habitants</div>
                 </div>
             </div>
         </div>
