@@ -304,6 +304,25 @@
         .opco-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 20px; }
         .opco-tag { background: var(--gray-50); padding: 4px 12px; border-radius: 50px; font-size: 0.72rem; font-weight: 600; color: var(--text-secondary); }
 
+        /* RESULTATS */
+        .resultats-section { padding: 80px 0; background: var(--white); }
+        .resultats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 48px; }
+        .resultat-card { text-align: center; padding: 36px 24px; background: var(--gray-50); border-radius: var(--radius-md); border: 1px solid var(--gray-100); transition: all 0.3s; }
+        .resultat-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+        .resultat-chiffre { font-family: var(--font-display); font-size: 2.4rem; font-weight: 800; color: var(--cyan); margin-bottom: 8px; line-height: 1.1; }
+        .resultat-label { font-family: var(--font-display); font-size: 0.95rem; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
+        .resultat-desc { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5; }
+
+        /* TEMOIGNAGES */
+        .temoignages-section { padding: 80px 0; background: var(--gray-50); }
+        .temoignages-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+        .temoignage-card { background: var(--white); border-radius: var(--radius-md); padding: 32px 28px; border: 1px solid var(--gray-200); transition: all 0.3s; }
+        .temoignage-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+        .temoignage-quote { font-size: 2.5rem; color: var(--cyan); font-family: Georgia, serif; line-height: 1; margin-bottom: 12px; }
+        .temoignage-text { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; font-style: italic; margin-bottom: 20px; }
+        .temoignage-auteur { font-family: var(--font-display); font-size: 0.85rem; font-weight: 600; color: var(--navy); }
+        .temoignage-poste { font-size: 0.78rem; color: var(--text-secondary); }
+
         /* FAQ */
         .faq-section { padding: 80px 0; background: var(--white); }
         .faq-list { max-width: 800px; margin: 0 auto; }
@@ -391,6 +410,8 @@
             .card-footer { flex-direction: column; align-items: flex-start; }
             
             
+            .resultats-grid { grid-template-columns: repeat(2, 1fr); }
+            .temoignages-grid { grid-template-columns: 1fr; }
             .sticky-mobile-cta { display: block; }
             .footer { padding-bottom: 70px; }
         }
@@ -432,8 +453,8 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="collectivites.html">Collectivités</a></li>
                 <li><a href="pme.html" class="active">PME / TPE</a></li>
-                <li><a href="index.html#approche">Notre approche</a></li>
-                <li><a href="#financement">Financement</a></li>
+                <li><a href="approche.html">Notre approche</a></li>
+                <li><a href="financement.html">Financement</a></li>
                 <li><a href="#inscription" class="nav-cta">Demander un devis →</a></li>
             </ul>
             <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu"><span></span><span></span><span></span></button>
@@ -800,6 +821,10 @@
                 <p>Sessions inter-entreprises à Maurepas (78) ou intra dans vos locaux.</p>
             </div>
 
+            <div style="background:#fff7ed;border:2px solid #f59e0b;border-radius:12px;padding:16px 24px;margin-bottom:24px;text-align:center;font-size:0.95rem;font-weight:600;color:#92400e;">
+                🔥 Sessions printemps 2026 ouvertes — 100% finançable OPCO — Inscriptions en cours
+            </div>
+
             <div class="planning-table-wrapper">
                 <table class="planning-table">
                     <thead>
@@ -807,23 +832,23 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>20-21 mars 2026</strong></td>
+                            <td><strong>19-20 mai 2026</strong></td>
                             <td><span class="session-code">PME-01</span> Booster la performance avec l'IA</td>
                             <td><span class="session-format format-inter">Inter</span></td>
                             <td>Maurepas (78)</td>
-                            <td><span class="places-badge available">● 8 places</span></td>
+                            <td><span class="places-badge available">● 12 places</span></td>
                             <td><button class="btn-inscr" onclick="scrollToForm('PME-01')">S'inscrire</button></td>
                         </tr>
                         <tr>
-                            <td><strong>27 mars 2026</strong></td>
+                            <td><strong>3 juin 2026</strong></td>
                             <td><span class="session-code">PME-02</span> Management augmenté par l'IA</td>
                             <td><span class="session-format format-inter">Inter</span></td>
                             <td>Maurepas (78)</td>
-                            <td><span class="places-badge available">● 10 places</span></td>
+                            <td><span class="places-badge available">● 12 places</span></td>
                             <td><button class="btn-inscr" onclick="scrollToForm('PME-02')">S'inscrire</button></td>
                         </tr>
                         <tr>
-                            <td><strong>10-11 avril 2026</strong></td>
+                            <td><strong>16-17 juin 2026</strong></td>
                             <td><span class="session-code">PME-01</span> Booster la performance avec l'IA</td>
                             <td><span class="session-format format-inter">Inter</span></td>
                             <td>Maurepas (78)</td>
@@ -883,6 +908,70 @@
                         <span class="opco-tag">OPCO Santé</span>
                         <span class="opco-tag">OPCO Mobilités</span>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RÉSULTATS CONCRETS -->
+    <section class="resultats-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Résultats concrets</span>
+                <h2>Ce que nos formations produisent</h2>
+                <p>Des résultats mesurables dès le lendemain de la formation.</p>
+            </div>
+            <div class="resultats-grid">
+                <div class="resultat-card fade-in">
+                    <div class="resultat-chiffre">2h / jour</div>
+                    <div class="resultat-label">Temps gagné par salarié</div>
+                    <div class="resultat-desc">Sur les tâches administratives et commerciales, dès le lendemain de la formation.</div>
+                </div>
+                <div class="resultat-card fade-in">
+                    <div class="resultat-chiffre">÷3</div>
+                    <div class="resultat-label">Temps admin divisé par 3</div>
+                    <div class="resultat-desc">Devis, factures, relances, reporting — l'IA prend en charge le plus chronophage.</div>
+                </div>
+                <div class="resultat-card fade-in">
+                    <div class="resultat-chiffre">0€</div>
+                    <div class="resultat-label">Coût de la formation</div>
+                    <div class="resultat-desc">100% prise en charge OPCO pour les entreprises de moins de 50 salariés.</div>
+                </div>
+                <div class="resultat-card fade-in">
+                    <div class="resultat-chiffre">90 jours</div>
+                    <div class="resultat-label">Plan de transformation</div>
+                    <div class="resultat-desc">Chaque participant repart avec son plan d'action IA personnalisé à 90 jours.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TÉMOIGNAGES -->
+    <section class="temoignages-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Témoignages</span>
+                <h2>Ils ont transformé leur PME avec l'IA</h2>
+                <p>Retours de dirigeants et managers formés par SY Academy.</p>
+            </div>
+            <div class="temoignages-grid">
+                <div class="temoignage-card fade-in">
+                    <div class="temoignage-quote">"</div>
+                    <p class="temoignage-text">On perdait un temps fou sur les devis et les relances. Après la formation, mon assistante commerciale fait en 20 minutes ce qui prenait 2 heures. Et c'est notre OPCO qui a tout payé.</p>
+                    <div class="temoignage-auteur">Laurent M.</div>
+                    <div class="temoignage-poste">Dirigeant — PME BTP, 18 salariés (78)</div>
+                </div>
+                <div class="temoignage-card fade-in">
+                    <div class="temoignage-quote">"</div>
+                    <p class="temoignage-text">Je pensais que l'IA c'était pour les grandes boîtes. En 2 jours, toute l'équipe s'est mise à l'utiliser. Les comptes-rendus, les mails clients, les process — tout va plus vite maintenant.</p>
+                    <div class="temoignage-auteur">Sophie D.</div>
+                    <div class="temoignage-poste">Responsable administrative — Cabinet comptable, 12 salariés (92)</div>
+                </div>
+                <div class="temoignage-card fade-in">
+                    <div class="temoignage-quote">"</div>
+                    <p class="temoignage-text">Le formateur a travaillé sur nos vrais cas. Pas de théorie inutile. Dès le lendemain, mes managers utilisaient l'IA pour leurs objectifs, leurs feedbacks, leurs plans d'action. Très concret.</p>
+                    <div class="temoignage-auteur">Marc B.</div>
+                    <div class="temoignage-poste">DG — Société de services, 35 salariés (91)</div>
                 </div>
             </div>
         </div>
