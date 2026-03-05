@@ -159,7 +159,7 @@
         }
 
         .navbar-logo img {
-            height: 64px;
+            height: 72px;
             width: auto;
         }
 
@@ -1347,8 +1347,13 @@
             .nav-links.active {
                 display: flex;
             }
+            .navbar .container { justify-content: center; position: relative; }
+            .navbar-logo { position: absolute; left: 50%; transform: translateX(-50%); }
+            .navbar-logo img { height: 60px; }
             .mobile-menu-btn {
                 display: block;
+                position: absolute;
+                right: 24px;
             }
             .hero {
                 padding: 60px 0;
