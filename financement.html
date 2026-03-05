@@ -20,7 +20,7 @@
         *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:var(--font-body);color:var(--text-primary);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}img{max-width:100%;height:auto;display:block}a{text-decoration:none;color:inherit;transition:all .3s}h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.2}.container{max-width:1200px;margin:0 auto;padding:0 24px}
 
         .top-banner{background:linear-gradient(135deg,var(--blue-gradient-start),var(--blue-gradient-end));color:var(--white);text-align:center;padding:10px 24px;font-size:.85rem;font-weight:500}.top-banner strong{color:var(--orange-accent)}
-        .navbar{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--gray-200);transition:box-shadow .3s}.navbar.scrolled{box-shadow:var(--shadow-md)}.navbar .container{display:flex;align-items:center;justify-content:space-between;height:72px}.navbar-logo img{height:48px}.nav-links{display:flex;align-items:center;gap:32px;list-style:none}.nav-links a{font-family:var(--font-display);font-size:.9rem;font-weight:500;color:var(--text-secondary);padding:4px 0;position:relative}.nav-links a::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:linear-gradient(90deg,var(--blue-gradient-start),var(--blue-gradient-end));border-radius:2px;transition:width .3s}.nav-links a:hover{color:var(--text-primary)}.nav-links a:hover::after{width:100%}.nav-links a.active{color:var(--blue-accent);font-weight:600}.nav-links a.active::after{width:100%}.nav-cta{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--blue-gradient-start),var(--blue-gradient-end));color:var(--white)!important;padding:10px 22px;border-radius:50px;font-weight:600;font-size:.85rem}.nav-cta:hover{transform:translateY(-1px);box-shadow:0 4px 15px rgba(37,99,235,.4)}.nav-cta::after{display:none!important}.mobile-menu-btn{display:none;background:none;border:none;cursor:pointer;padding:8px}.mobile-menu-btn span{display:block;width:24px;height:2px;background:var(--navy);margin:6px 0;border-radius:2px}
+        .navbar{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--gray-200);transition:box-shadow .3s}.navbar.scrolled{box-shadow:var(--shadow-md)}.navbar .container{display:flex;align-items:center;justify-content:space-between;height:80px}.navbar-logo img{height:64px}.nav-links{display:flex;align-items:center;gap:32px;list-style:none}.nav-links a{font-family:var(--font-display);font-size:.9rem;font-weight:500;color:var(--text-secondary);padding:4px 0;position:relative}.nav-links a::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:linear-gradient(90deg,var(--blue-gradient-start),var(--blue-gradient-end));border-radius:2px;transition:width .3s}.nav-links a:hover{color:var(--text-primary)}.nav-links a:hover::after{width:100%}.nav-links a.active{color:var(--blue-accent);font-weight:600}.nav-links a.active::after{width:100%}.nav-cta{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--blue-gradient-start),var(--blue-gradient-end));color:var(--white)!important;padding:10px 22px;border-radius:50px;font-weight:600;font-size:.85rem}.nav-cta:hover{transform:translateY(-1px);box-shadow:0 4px 15px rgba(37,99,235,.4)}.nav-cta::after{display:none!important}.mobile-menu-btn{display:none;background:none;border:none;cursor:pointer;padding:8px}.mobile-menu-btn span{display:block;width:24px;height:2px;background:var(--navy);margin:6px 0;border-radius:2px}
 
         /* HERO */
         .hero-fin{padding:80px 0 60px;background:var(--navy);position:relative;overflow:hidden}
@@ -99,13 +99,12 @@
         }
         .footer-grid {
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
             gap: 48px;
             padding-bottom: 48px;
         }
         .footer-brand img {
-            height: 40px;
-            filter: brightness(0) invert(1);
+            height: 60px;
             opacity: 0.8;
             margin-bottom: 16px;
         }
@@ -186,7 +185,7 @@
         .fade-in{opacity:0;transform:translateY(30px);transition:all .7s ease-out}.fade-in.visible{opacity:1;transform:translateY(0)}
 
         @media(max-width:1024px){.detail-grid{grid-template-columns:1fr}}
-        @media(max-width:768px){.nav-links{display:none;position:absolute;top:72px;left:0;right:0;background:var(--white);flex-direction:column;padding:24px;gap:16px;border-bottom:1px solid var(--gray-200);box-shadow:var(--shadow-lg)}.nav-links.active{display:flex}.mobile-menu-btn{display:block}.accomp-list{grid-template-columns:1fr}}
+        @media(max-width:768px){.nav-links{display:none;position:absolute;top:80px;left:0;right:0;background:var(--white);flex-direction:column;padding:24px;gap:16px;border-bottom:1px solid var(--gray-200);box-shadow:var(--shadow-lg)}.nav-links.active{display:flex}.mobile-menu-btn{display:block}.accomp-list{grid-template-columns:1fr}}
 
         /* Footer responsive */
         @media (max-width: 900px) {
@@ -371,7 +370,7 @@
                         <li><a href="collectivites.html">Collectivités territoriales</a></li>
                         <li><a href="pme.html">PME / TPE</a></li>
                         <li><a href="contact.html">Audit Performance &amp; IA</a></li>
-                        <li><a href="#">Catalogue complet (PDF)</a></li>
+                        <li><a href="contact.html">Catalogue complet (PDF)</a></li>
                     </ul>
                 </div>
 
@@ -392,9 +391,22 @@
                     <ul class="footer-links">
                         <li><a href="approche.html">Notre approche</a></li>
                         <li><a href="contact.html">Contact / Devis</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Mentions légales</a></li>
-                        <li><a href="#">CGV</a></li>
+                        <li><a href="contact.html">Blog</a></li>
+                        <li><a href="contact.html">Mentions légales</a></li>
+                        <li><a href="contact.html">CGV</a></li>
+                    </ul>
+                </div>
+
+                <!-- Bloc 5 : SOLE SOLUTION -->
+                <div class="footer-col">
+                    <h4>SOLE SOLUTION</h4>
+                    <p style="font-size:0.85rem;color:var(--gray-500);margin-bottom:12px;">Automatisation & outils IA</p>
+                    <ul class="footer-links">
+                        <li><a href="https://sole-solution.fr/">sole-solution.fr</a></li>
+                        <li><a href="https://sole-solution.fr/">Chatbots municipaux</a></li>
+                        <li><a href="https://sole-solution.fr/">SOLE SOLUTION URBA</a></li>
+                        <li><a href="https://sole-solution.fr/">Workflows automatisés</a></li>
+                        <li><a href="https://sole-solution.fr/">Tableaux de bord IA</a></li>
                     </ul>
                 </div>
 
@@ -403,9 +415,7 @@
             <!-- Barre du bas -->
             <div class="footer-bottom">
                 <span>© 2026 SY Academy — Tous droits réservés</span>
-                <div class="footer-bottom-right">
-                    <img src="logo-qualiopi.png" alt="Qualiopi processus certifié - République Française" class="qualiopi-logo-footer"><span class="qualiopi-mention">La certification qualité a été délivrée au titre de la catégorie d'action suivante : actions de formation</span>
-                </div>
+                <span class="qualiopi-mention">La certification qualité a été délivrée au titre de la catégorie d'action suivante : actions de formation</span>
             </div>
         </div>
     </footer>

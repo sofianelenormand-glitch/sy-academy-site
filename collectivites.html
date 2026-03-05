@@ -79,8 +79,8 @@
             border-bottom: 1px solid var(--gray-200); transition: box-shadow 0.3s;
         }
         .navbar.scrolled { box-shadow: var(--shadow-md); }
-        .navbar .container { display: flex; align-items: center; justify-content: space-between; height: 72px; }
-        .navbar-logo img { height: 48px; }
+        .navbar .container { display: flex; align-items: center; justify-content: space-between; height: 80px; }
+        .navbar-logo img { height: 64px; }
         .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
         .nav-links a { font-family: var(--font-display); font-size: 0.9rem; font-weight: 500; color: var(--text-secondary); padding: 4px 0; position: relative; }
         .nav-links a::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: linear-gradient(90deg, var(--blue-gradient-start), var(--blue-gradient-end)); border-radius: 2px; transition: width 0.3s; }
@@ -434,13 +434,12 @@
         }
         .footer-grid {
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
             gap: 48px;
             padding-bottom: 48px;
         }
         .footer-brand img {
-            height: 40px;
-            filter: brightness(0) invert(1);
+            height: 60px;
             opacity: 0.8;
             margin-bottom: 16px;
         }
@@ -551,7 +550,7 @@
             
         }
         @media (max-width: 768px) {
-            .nav-links { display: none; position: absolute; top: 72px; left: 0; right: 0; background: var(--white); flex-direction: column; padding: 24px; gap: 16px; border-bottom: 1px solid var(--gray-200); box-shadow: var(--shadow-lg); }
+            .nav-links { display: none; position: absolute; top: 80px; left: 0; right: 0; background: var(--white); flex-direction: column; padding: 24px; gap: 16px; border-bottom: 1px solid var(--gray-200); box-shadow: var(--shadow-lg); }
             .nav-links.active { display: flex; }
             .mobile-menu-btn { display: block; }
             .hero-col { padding: 60px 0 40px; }
@@ -1154,7 +1153,8 @@
             </div>
 
             <div class="form-wrapper">
-                <form id="inscriptionForm" class="form-grid" action="https://formspree.io/f/VOTRE_ID" method="POST">
+                <form id="inscriptionForm" class="form-grid" name="inscription-collectivites" action="/success" method="POST" data-netlify="true">
+                    <input type="hidden" name="form-name" value="inscription-collectivites">
                     <div class="form-group">
                         <label for="nom">Nom *</label>
                         <input type="text" id="nom" name="nom" required placeholder="Votre nom">
@@ -1260,7 +1260,7 @@
                         <li><a href="collectivites.html">Collectivités territoriales</a></li>
                         <li><a href="pme.html">PME / TPE</a></li>
                         <li><a href="contact.html">Audit Performance &amp; IA</a></li>
-                        <li><a href="#">Catalogue complet (PDF)</a></li>
+                        <li><a href="contact.html">Catalogue complet (PDF)</a></li>
                     </ul>
                 </div>
 
@@ -1281,9 +1281,22 @@
                     <ul class="footer-links">
                         <li><a href="approche.html">Notre approche</a></li>
                         <li><a href="contact.html">Contact / Devis</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Mentions légales</a></li>
-                        <li><a href="#">CGV</a></li>
+                        <li><a href="contact.html">Blog</a></li>
+                        <li><a href="contact.html">Mentions légales</a></li>
+                        <li><a href="contact.html">CGV</a></li>
+                    </ul>
+                </div>
+
+                <!-- Bloc 5 : SOLE SOLUTION -->
+                <div class="footer-col">
+                    <h4>SOLE SOLUTION</h4>
+                    <p style="font-size:0.85rem;color:var(--gray-500);margin-bottom:12px;">Automatisation & outils IA</p>
+                    <ul class="footer-links">
+                        <li><a href="https://sole-solution.fr/">sole-solution.fr</a></li>
+                        <li><a href="https://sole-solution.fr/">Chatbots municipaux</a></li>
+                        <li><a href="https://sole-solution.fr/">SOLE SOLUTION URBA</a></li>
+                        <li><a href="https://sole-solution.fr/">Workflows automatisés</a></li>
+                        <li><a href="https://sole-solution.fr/">Tableaux de bord IA</a></li>
                     </ul>
                 </div>
 
@@ -1292,9 +1305,7 @@
             <!-- Barre du bas -->
             <div class="footer-bottom">
                 <span>© 2026 SY Academy — Tous droits réservés</span>
-                <div class="footer-bottom-right">
-                    <img src="logo-qualiopi.png" alt="Qualiopi processus certifié - République Française" class="qualiopi-logo-footer"><span class="qualiopi-mention">La certification qualité a été délivrée au titre de la catégorie d'action suivante : actions de formation</span>
-                </div>
+                <span class="qualiopi-mention">La certification qualité a été délivrée au titre de la catégorie d'action suivante : actions de formation</span>
             </div>
         </div>
     </footer>
@@ -1357,19 +1368,6 @@
             document.getElementById('inscription').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
-        // Simple form validation feedback
-        document.getElementById('inscriptionForm').addEventListener('submit', function(e) {
-            // In production, this would submit to Formspree or your backend
-            // For now, show a confirmation
-            e.preventDefault();
-            const btn = this.querySelector('.form-submit');
-            btn.textContent = '✓ Demande envoyée !';
-            btn.style.background = 'var(--green-accent)';
-            setTimeout(() => {
-                btn.textContent = 'Envoyer ma demande →';
-                btn.style.background = '';
-            }, 3000);
-        });
     </script>
 
 </body>
