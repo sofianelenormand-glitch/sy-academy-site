@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merci — SY Academy | Votre demande a bien été reçue</title>
+    <meta name="description" content="Merci pour votre demande. L'équipe SY Academy vous recontacte sous 24h ouvrées.">
+    <link rel="icon" type="image/png" href="favicon-sy-academy.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root{--navy:#0a1628;--blue-accent:#2563eb;--blue-bright:#3b82f6;--blue-gradient-start:#1e3a8a;--blue-gradient-end:#2563eb;--cyan:#06b6d4;--white:#ffffff;--gray-50:#f8fafc;--gray-100:#f1f5f9;--gray-200:#e2e8f0;--gray-400:#94a3b8;--gray-500:#64748b;--gray-600:#475569;--text-primary:#0f172a;--text-secondary:#475569;--orange-accent:#f59e0b;--green-accent:#10b981;--font-display:'Outfit',sans-serif;--font-body:'DM Sans',sans-serif;--shadow-md:0 4px 12px rgba(0,0,0,.08);--shadow-lg:0 8px 30px rgba(0,0,0,.12);--shadow-xl:0 20px 50px rgba(0,0,0,.15);--radius-sm:8px;--radius-md:12px;--radius-lg:20px}
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:var(--font-body);color:var(--text-primary);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}img{max-width:100%;height:auto;display:block}a{text-decoration:none;color:inherit;transition:all .3s}h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.2}.container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+        .navbar{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--gray-200);transition:box-shadow .3s}.navbar.scrolled{box-shadow:var(--shadow-md)}.navbar .container{display:flex;align-items:center;justify-content:space-between;height:80px}.navbar-logo img{height:72px}.nav-links{display:flex;align-items:center;gap:32px;list-style:none}.nav-links a{font-family:var(--font-display);font-size:.9rem;font-weight:500;color:var(--text-secondary);padding:4px 0;position:relative}.nav-links a::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:linear-gradient(90deg,var(--blue-gradient-start),var(--blue-gradient-end));border-radius:2px;transition:width .3s}.nav-links a:hover{color:var(--text-primary)}.nav-links a:hover::after{width:100%}.nav-cta{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--blue-gradient-start),var(--blue-gradient-end));color:var(--white)!important;padding:12px 28px !important;border-radius:50px;font-weight:600;font-size:.95rem !important;white-space:nowrap}.nav-cta:hover{transform:translateY(-1px);box-shadow:0 4px 15px rgba(37,99,235,.4)}.nav-cta::after{display:none!important}.mobile-menu-btn{display:none;background:none;border:none;cursor:pointer;padding:8px}.mobile-menu-btn span{display:block;width:24px;height:2px;background:var(--navy);margin:6px 0;border-radius:2px}
+
+        /* HERO */
+        .hero-success{padding:80px 0 60px;background:var(--navy);position:relative;overflow:hidden}
+        .hero-success::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(37,99,235,.15) 0%,transparent 60%)}
+        .hero-success .container{position:relative;z-index:1;text-align:center;max-width:750px}
+        .hero-success .check-icon{font-size:3.5rem;margin-bottom:20px;display:block}
+        .hero-success h1{font-size:clamp(2rem,4vw,2.6rem);color:var(--white);margin-bottom:16px}
+        .hero-success p{font-size:1.1rem;color:var(--gray-400);line-height:1.7}
+
+        /* STEPS */
+        .steps-section{padding:80px 0;background:var(--gray-50)}
+        .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;max-width:900px;margin:0 auto}
+        .step-card{background:var(--white);border-radius:var(--radius-lg);padding:36px 28px;border:1px solid var(--gray-200);text-align:center;transition:transform .3s,box-shadow .3s}
+        .step-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+        .step-card .step-emoji{font-size:2.2rem;margin-bottom:16px;display:block}
+        .step-card p{font-size:.95rem;color:var(--text-secondary);line-height:1.6}
+
+        /* CTA BUTTONS */
+        .cta-section{padding:60px 0 80px;background:var(--gray-50);text-align:center}
+        .cta-buttons{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
+        .btn-primary{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,var(--blue-gradient-start),var(--blue-gradient-end));color:var(--white);padding:16px 32px;border-radius:50px;font-family:var(--font-display);font-weight:600;font-size:1rem;transition:transform .2s,box-shadow .3s;box-shadow:0 4px 15px rgba(37,99,235,.3)}
+        .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(37,99,235,.4)}
+        .btn-secondary{display:inline-flex;align-items:center;gap:10px;background:var(--white);color:var(--navy);padding:16px 32px;border-radius:50px;font-family:var(--font-display);font-weight:600;font-size:1rem;border:2px solid var(--gray-200);transition:all .3s}
+        .btn-secondary:hover{border-color:var(--blue-accent);color:var(--blue-accent);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+
+        /* FOOTER */
+        .footer{background:#060e1a;padding:64px 0 0;color:var(--gray-400)}
+        .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px}
+        .footer-brand img{height:60px;opacity:.8;margin-bottom:16px}
+        .footer-brand>p{font-size:.88rem;line-height:1.6;color:var(--gray-500);margin-bottom:20px}
+        .footer-contact-info{display:flex;flex-direction:column;gap:8px;margin-top:20px}
+        .footer-contact-info span{font-size:.8rem;color:var(--gray-500)}
+        .footer h4,.footer-col h4{color:var(--white);font-family:var(--font-display);font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;margin-bottom:20px}
+        .footer-links{list-style:none}
+        .footer-links li{margin-bottom:12px}
+        .footer-links a{font-size:.85rem;color:var(--gray-500);transition:color .2s}
+        .footer-links a:hover{color:var(--white)}
+        .footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding:24px 0;display:flex;justify-content:space-between;align-items:center;font-size:.8rem;color:var(--gray-600)}
+        .qualiopi-footer-block{display:flex;align-items:center;gap:16px}
+        .qualiopi-logo-footer{height:55px;width:auto;flex-shrink:0;background:white;padding:6px 10px;border-radius:4px}
+        .qualiopi-mention{font-size:.7rem;color:#94a3b8;line-height:1.4;max-width:300px}
+
+        .fade-in{opacity:0;transform:translateY(30px);transition:all .7s ease-out}.fade-in.visible{opacity:1;transform:translateY(0)}
+
+        @media(max-width:1024px){.steps-grid{grid-template-columns:1fr;max-width:400px}}
+        @media(max-width:768px){.nav-links{display:none;position:absolute;top:80px;left:0;right:0;background:var(--white);flex-direction:column;padding:24px;gap:16px;border-bottom:1px solid var(--gray-200);box-shadow:var(--shadow-lg)}.nav-links.active{display:flex}.navbar .container{justify-content:center;position:relative}.navbar-logo{position:absolute;left:50%;transform:translateX(-50%)}.navbar-logo img{height:60px}.mobile-menu-btn{display:block;position:absolute;right:24px}.cta-buttons{flex-direction:column;align-items:center}}
+        @media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr;gap:32px}}
+        @media(max-width:600px){.footer-grid{grid-template-columns:1fr;gap:28px}.footer-bottom{flex-direction:column;gap:12px;text-align:center}}
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-logo"><img src="logo-sy-academy.png" alt="SY Academy"></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="collectivites.html">Collectivités</a></li>
+                <li><a href="pme.html">PME / TPE</a></li>
+                <li><a href="approche.html">Notre approche</a></li>
+                <li><a href="financement.html">Financement</a></li>
+                <li><a href="contact.html" class="nav-cta">Demander un devis →</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero-success">
+        <div class="container">
+            <span class="check-icon">✅</span>
+            <h1>Merci pour votre demande !</h1>
+            <p>Nous avons bien reçu votre message. Notre équipe vous recontacte sous 24h ouvrées.</p>
+        </div>
+    </section>
+
+    <!-- STEPS -->
+    <section class="steps-section">
+        <div class="container">
+            <div class="steps-grid">
+                <div class="step-card fade-in">
+                    <span class="step-emoji">📧</span>
+                    <p>Un email de confirmation va vous être envoyé</p>
+                </div>
+                <div class="step-card fade-in">
+                    <span class="step-emoji">📞</span>
+                    <p>Nous vous rappelons sous 24h pour un premier échange</p>
+                </div>
+                <div class="step-card fade-in">
+                    <span class="step-emoji">📋</span>
+                    <p>Si éligible, nous commençons le montage de votre dossier de financement</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="cta-buttons">
+            <a href="index.html" class="btn-primary">Retour à l'accueil →</a>
+            <a href="collectivites.html" class="btn-secondary">Découvrir nos formations →</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="logo-sy-academy.png" alt="SY Academy">
+                    <p>SY Academy améliore la performance des organisations en combinant management structuré, organisation des process et l'intégration concrète de l'IA.</p>
+                    <div class="footer-contact-info">
+                        <span>🏢 Centre de formation : SDCL CENTER, Maurepas (78)</span>
+                        <span>📧 contact@syacademy.fr</span>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Formations</h4>
+                    <ul class="footer-links">
+                        <li><a href="collectivites.html">Collectivités territoriales</a></li>
+                        <li><a href="pme.html">PME / TPE</a></li>
+                        <li><a href="contact.html">Audit Performance &amp; IA</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Financement</h4>
+                    <ul class="footer-links">
+                        <li><a href="financement.html">OPCO — PME / TPE</a></li>
+                        <li><a href="financement.html">Budget formation — Collectivités</a></li>
+                        <li><a href="financement.html">Plan de formation</a></li>
+                        <li><a href="financement.html">DIF Élus</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>SY Academy</h4>
+                    <ul class="footer-links">
+                        <li><a href="approche.html">Notre approche</a></li>
+                        <li><a href="contact.html">Contact / Devis</a></li>
+                        <li><a href="mentions-legales.html">Mentions légales</a></li>
+                        <li><a href="politique-confidentialite.html">Politique de confidentialité</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>SOLE SOLUTION</h4>
+                    <p style="font-size:0.85rem;color:var(--gray-500);margin-bottom:12px;">Automatisation & outils IA</p>
+                    <ul class="footer-links">
+                        <li><a href="https://sole-solution.fr/">sole-solution.fr</a></li>
+                        <li><a href="https://sole-solution.fr/">Chatbots municipaux</a></li>
+                        <li><a href="https://sole-solution.fr/">SOLE SOLUTION URBA</a></li>
+                        <li><a href="https://sole-solution.fr/">Workflows automatisés</a></li>
+                        <li><a href="https://sole-solution.fr/">Tableaux de bord IA</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 SY Academy — Tous droits réservés</span>
+                <div class="qualiopi-footer-block">
+                    <img src="logo-qualiopi.jpg" alt="Qualiopi processus certifié - République Française" class="qualiopi-logo-footer">
+                    <p class="qualiopi-mention">La certification qualité a été délivrée au titre de la catégorie d'action suivante : actions de formation</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const navbar=document.getElementById('navbar');window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',window.scrollY>20));
+        const mb=document.getElementById('mobileMenuBtn'),nl=document.getElementById('navLinks');mb.addEventListener('click',()=>nl.classList.toggle('active'));nl.querySelectorAll('a').forEach(l=>l.addEventListener('click',()=>nl.classList.remove('active')));
+        const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible')})},{threshold:.1,rootMargin:'0px 0px -50px 0px'});document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+    </script>
+</body>
+</html>
