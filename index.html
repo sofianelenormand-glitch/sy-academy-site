@@ -1089,6 +1089,137 @@
         }
 
         /* ============================================
+           ESPACE APPRENANT
+           ============================================ */
+        .espace-apprenant-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f0f4ff 0%, #e8f0fe 100%);
+        }
+        .espace-apprenant-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .espace-apprenant-text .section-label {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 18px;
+        }
+        .espace-apprenant-text h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 18px;
+            line-height: 1.2;
+        }
+        .espace-apprenant-text p {
+            color: #555;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 28px;
+        }
+        .espace-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 36px;
+        }
+        .espace-features li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 0;
+            color: #333;
+            font-size: 0.98rem;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+        .espace-icon {
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        .btn-espace-apprenant {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 15px rgba(37,99,235,0.3);
+        }
+        .btn-espace-apprenant:hover {
+            background: var(--primary-dark, #1d4ed8);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37,99,235,0.4);
+        }
+        /* Mock UI card */
+        .espace-card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+            overflow: hidden;
+        }
+        .espace-card-header {
+            background: #1e293b;
+            padding: 14px 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.8rem;
+            color: #94a3b8;
+        }
+        .espace-card-dot {
+            width: 12px; height: 12px;
+            border-radius: 50%;
+        }
+        .espace-card-dot.red { background: #ef4444; }
+        .espace-card-dot.yellow { background: #f59e0b; }
+        .espace-card-dot.green { background: #10b981; }
+        .espace-card-header span { margin-left: 6px; }
+        .espace-card-body { padding: 20px; display: flex; flex-direction: column; gap: 12px; }
+        .espace-card-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 14px 16px;
+            border-radius: 10px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+        }
+        .espace-card-item.active {
+            background: #eff6ff;
+            border-color: #bfdbfe;
+        }
+        .espace-card-icon { font-size: 1.4rem; flex-shrink: 0; }
+        .espace-card-item div { flex: 1; }
+        .espace-card-item strong { display: block; font-size: 0.88rem; color: #1e293b; }
+        .espace-card-item p { margin: 2px 0 0; font-size: 0.78rem; color: #64748b; }
+        .espace-badge {
+            font-size: 0.72rem;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 20px;
+            background: #fef3c7;
+            color: #92400e;
+            white-space: nowrap;
+        }
+        .espace-badge.green { background: #d1fae5; color: #065f46; }
+        .espace-badge.blue { background: #dbeafe; color: #1e40af; }
+        @media (max-width: 768px) {
+            .espace-apprenant-inner { grid-template-columns: 1fr; gap: 40px; }
+            .espace-apprenant-text h2 { font-size: 1.6rem; }
+        }
+
+        /* ============================================
            CTA FINAL
            ============================================ */
         .cta-section {
@@ -1789,6 +1920,64 @@
                         <div class="testimonial-author-info">
                             <strong>Sophie L.</strong>
                             <span>Responsable formation — Interco IDF</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ESPACE APPRENANT -->
+    <section class="espace-apprenant-section">
+        <div class="container">
+            <div class="espace-apprenant-inner">
+                <div class="espace-apprenant-text">
+                    <span class="section-label">Inclus dans toutes nos formations</span>
+                    <h2>Un espace numérique dédié à chaque apprenant</h2>
+                    <p>Après votre formation, accédez à votre espace personnel SY Academy : supports, documents, évaluations et assistant IA pédagogique — disponibles 24h/24, depuis n'importe quel appareil.</p>
+                    <ul class="espace-features">
+                        <li><span class="espace-icon">📁</span> Vos supports et documents disponibles à tout moment</li>
+                        <li><span class="espace-icon">🤖</span> Un assistant IA pédagogique pour continuer à progresser</li>
+                        <li><span class="espace-icon">✅</span> Vos attestations et évaluations en ligne</li>
+                        <li><span class="espace-icon">📊</span> Le suivi personnalisé de votre parcours</li>
+                    </ul>
+                    <a href="https://sy-academy-app.vercel.app/" target="_blank" class="btn-espace-apprenant">
+                        Accéder à mon espace apprenant →
+                    </a>
+                </div>
+                <div class="espace-apprenant-visual">
+                    <div class="espace-card">
+                        <div class="espace-card-header">
+                            <div class="espace-card-dot red"></div>
+                            <div class="espace-card-dot yellow"></div>
+                            <div class="espace-card-dot green"></div>
+                            <span>Espace apprenant SY Academy</span>
+                        </div>
+                        <div class="espace-card-body">
+                            <div class="espace-card-item active">
+                                <span class="espace-card-icon">🎓</span>
+                                <div>
+                                    <strong>Mes formations</strong>
+                                    <p>COL-01 · Manager avec l'IA</p>
+                                </div>
+                                <span class="espace-badge">En cours</span>
+                            </div>
+                            <div class="espace-card-item">
+                                <span class="espace-card-icon">📄</span>
+                                <div>
+                                    <strong>Mes documents</strong>
+                                    <p>Convention · Attestation · Supports</p>
+                                </div>
+                                <span class="espace-badge green">Disponible</span>
+                            </div>
+                            <div class="espace-card-item">
+                                <span class="espace-card-icon">🤖</span>
+                                <div>
+                                    <strong>Assistant IA</strong>
+                                    <p>Posez vos questions formation</p>
+                                </div>
+                                <span class="espace-badge blue">Actif</span>
+                            </div>
                         </div>
                     </div>
                 </div>
