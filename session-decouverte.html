@@ -27,17 +27,28 @@
   html { scroll-behavior: smooth; }
   body { background: var(--bg); color: var(--text); font-family: 'Plus Jakarta Sans', sans-serif; line-height: 1.6; }
 
-  /* ===== TOPBAR ===== */
-  .topbar {
-    background: linear-gradient(90deg, var(--blue), var(--blue-mid));
-    color: white;
-    text-align: center;
-    padding: 10px 20px;
-    font-size: 13px;
-    font-weight: 500;
+  /* ===== COUNTDOWN BANNER ===== */
+  .countdown-banner {
+    background: linear-gradient(90deg, #1e3a8a, #2563eb, #06b6d4);
+    color: #fff;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
   }
-
-  .topbar a { color: white; text-decoration: underline; }
+  .countdown-banner .marquee-track {
+    display: inline-flex;
+    animation: marquee-scroll 18s linear infinite;
+  }
+  .countdown-banner .marquee-item {
+    padding: 10px 80px;
+    white-space: nowrap;
+  }
+  @keyframes marquee-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
 
   /* ===== NAV ===== */
   nav {
@@ -521,8 +532,13 @@
 <body>
 
 <!-- TOPBAR -->
-<div class="topbar">
-  🎓 Formations finançables à 100% par votre OPCO ou le budget formation de votre collectivité — Certification Qualiopi
+<div class="countdown-banner">
+  <div class="marquee-track">
+    <span class="marquee-item"><span class="countdown-text"></span></span>
+    <span class="marquee-item"><span class="countdown-text"></span></span>
+    <span class="marquee-item"><span class="countdown-text"></span></span>
+    <span class="marquee-item"><span class="countdown-text"></span></span>
+  </div>
 </div>
 
 <!-- NAV -->
@@ -822,6 +838,20 @@
   }, { threshold: 0.1 });
 
   document.querySelectorAll('.timeline-item, .public-card').forEach(el => observer.observe(el));
+</script>
+<script>
+(function(){
+  var target=new Date('2026-05-23T09:00:00+02:00').getTime();
+  function pad(n){return String(n).padStart(2,'0');}
+  function update(){
+    var diff=target-Date.now();
+    if(diff<=0){document.querySelectorAll('.countdown-text').forEach(function(el){el.textContent='\u{1F680} SY Academy \u00B7 Session d\u00E9couverte IA \u00B7 23 Mai \u00B7 C\u2019est maintenant !';});return;}
+    var d=Math.floor(diff/86400000),h=Math.floor((diff%86400000)/3600000),m=Math.floor((diff%3600000)/60000),s=Math.floor((diff%60000)/1000);
+    var txt='\u{1F680} Lancement SY Academy \u00B7 Session d\u00E9couverte IA \u00B7 23 Mai \u00B7 '+pad(d)+'j '+pad(h)+'h '+pad(m)+'m '+pad(s)+'s';
+    document.querySelectorAll('.countdown-text').forEach(function(el){el.textContent=txt;});
+  }
+  update();setInterval(update,1000);
+})();
 </script>
 </body>
 </html>
