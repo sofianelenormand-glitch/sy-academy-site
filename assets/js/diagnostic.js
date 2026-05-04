@@ -17,6 +17,7 @@
   const REDIRECT_ON_SUCCESS = '/diagnostic-merci';
   const QUESTION_NAMES = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8', 'q9', 'q10', 'q11', 'q12'];
   const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const PHONE_REGEX = /^(\+33|0)[1-9]([-. ]?[0-9]{2}){4}$/;
 
   document.addEventListener('DOMContentLoaded', init);
 
@@ -62,6 +63,12 @@
     } else if (!EMAIL_REGEX.test(email.value.trim())) {
       markError(email, 'Format d\u2019email invalide.');
       errors.push('email');
+    }
+
+    const tel = form.elements['telephone'];
+    if (tel && tel.value.trim() && !PHONE_REGEX.test(tel.value.trim())) {
+      markError(tel, 'Format téléphone invalide (ex : 06 12 34 56 78).');
+      errors.push('telephone');
     }
 
     QUESTION_NAMES.forEach((name) => {
@@ -153,6 +160,7 @@
       prenom: form.elements['prenom'].value.trim(),
       nom: form.elements['nom'].value.trim(),
       email: form.elements['email'].value.trim(),
+      telephone: form.elements['telephone'].value.trim(),
       fonction: form.elements['fonction'].value,
       taille_entreprise: form.elements['taille_entreprise'].value,
       answers: QUESTION_NAMES.map((name) => {

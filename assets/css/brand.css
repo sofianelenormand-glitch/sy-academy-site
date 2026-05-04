@@ -1574,6 +1574,13 @@ p {
   margin-left: 2px;
 }
 
+.form-label .optional {
+  font-size: 0.85em;
+  color: var(--graphite);
+  font-weight: 400;
+  margin-left: 4px;
+}
+
 .form-input,
 .form-select,
 .form-textarea {
