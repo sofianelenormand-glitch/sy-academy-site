@@ -2379,6 +2379,167 @@ p {
 }
 
 /* =============================================================================
+ * 20.6 / DIAGNOSTIC PAGE — Form 12 questions · score · merci
+ * ========================================================================== */
+
+.diagnostic-section {
+  padding: var(--s-7) 0;
+  background: var(--bone);
+}
+
+.diagnostic-section + .diagnostic-section {
+  border-top: var(--border-thin);
+}
+
+.diagnostic-step-num {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--cyan);
+  margin-bottom: var(--s-3);
+}
+
+.diagnostic-step-num::before { content: "// "; }
+
+.diagnostic-criterion {
+  background: var(--paper);
+  padding: var(--s-5) var(--s-6);
+  margin: var(--s-6) 0;
+  border: 0;
+  border-left: 3px solid var(--cyan);
+  border-radius: var(--radius-sm);
+}
+
+.diagnostic-criterion-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--s-3);
+  margin-bottom: var(--s-4);
+  padding: 0 0 var(--s-3);
+  border-bottom: var(--border-thin);
+  width: 100%;
+}
+
+.diagnostic-criterion-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.diagnostic-criterion-meta {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--graphite);
+}
+
+.diagnostic-question {
+  margin-bottom: var(--s-5);
+  padding-bottom: var(--s-4);
+  border-bottom: 1px dotted rgba(216, 218, 229, 0.6);
+}
+
+.diagnostic-question:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.diagnostic-question-num {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  color: var(--blue-deep);
+  margin-bottom: var(--s-2);
+}
+
+.diagnostic-question-num::before { content: "// "; }
+
+.diagnostic-question-title {
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: var(--s-3);
+  line-height: 1.4;
+}
+
+.btn-spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin-right: var(--s-2);
+  vertical-align: -2px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-spinner { animation: none; }
+}
+
+.form-error {
+  color: var(--terracotta);
+  font-size: 0.8125rem;
+  margin-top: var(--s-2);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.form-error::before { content: "⚠"; }
+
+.form-input.has-error,
+.form-select.has-error {
+  border-color: var(--terracotta);
+}
+
+#form-error-global {
+  margin-top: var(--s-4);
+  padding: var(--s-3) var(--s-4);
+  background: rgba(166, 50, 46, 0.06);
+  border-left: 3px solid var(--terracotta);
+  border-radius: var(--radius-sm);
+  font-size: 0.9375rem;
+}
+
+.merci-hero {
+  padding: var(--s-9) 0;
+  background: var(--bone);
+  text-align: center;
+}
+
+.merci-hero h1 {
+  max-width: 720px;
+  margin: 0 auto var(--s-5);
+}
+
+.merci-hero .lead {
+  max-width: 580px;
+  margin: 0 auto var(--s-6);
+}
+
+.merci-trust {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--s-3);
+  margin: 0 auto;
+}
+
+/* =============================================================================
  * 21 / FONTS — V1.1 (commenté, à activer après hébergement local)
  * ==========================================================================
  *
