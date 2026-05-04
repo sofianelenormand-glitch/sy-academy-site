@@ -1398,8 +1398,8 @@ p {
 }
 
 .footer-brand img {
-  height: 100px;
-  width: 100px;
+  height: 60px;
+  width: 60px;
   margin-bottom: var(--s-4);
   display: block;
   object-fit: contain;
