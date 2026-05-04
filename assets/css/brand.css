@@ -1824,6 +1824,37 @@ p {
 .mb-5 { margin-bottom: var(--s-5); }
 .mb-6 { margin-bottom: var(--s-6); }
 
+.section-head-center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 720px;
+}
+
+.section-head-center .lead,
+.section-head-center h1,
+.section-head-center h2,
+.section-head-center h3 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-ctas-center {
+  justify-content: center;
+}
+
+.methode-diagram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.methode-diagram svg {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+}
+
 /* =============================================================================
  * 21 / FONTS — V1.1 (commenté, à activer après hébergement local)
  * ==========================================================================
