@@ -1,0 +1,45 @@
+<!--
+  Top banner countdown + navbar — SY Academy · Brand.SYS v1.0
+  Le countdown est mis à jour par /assets/js/nav.js via [data-countdown].
+  Format ISO attendu : data-countdown="2026-05-23T09:00:00+02:00"
+-->
+
+<!-- TOP BANNER · Marquee countdown session -->
+<div class="top-banner" role="region" aria-label="Annonce session découverte">
+  <div class="marquee-track">
+    <span class="marquee-item">Session découverte · 23 mai 2026 · Maurepas (78)</span>
+    <span class="marquee-item" data-countdown="2026-05-23T09:00:00+02:00">J-?? · ??h??</span>
+    <span class="marquee-item">Inscription jusqu'au 20 mai · gratuit</span>
+    <span class="marquee-item">Session découverte · 23 mai 2026 · Maurepas (78)</span>
+    <span class="marquee-item" data-countdown="2026-05-23T09:00:00+02:00">J-?? · ??h??</span>
+    <span class="marquee-item">Inscription jusqu'au 20 mai · gratuit</span>
+  </div>
+</div>
+
+<!-- NAVBAR sticky -->
+<header class="navbar" id="navbar">
+  <div class="container navbar-inner">
+    <a class="navbar-logo" href="/" aria-label="SY Academy — accueil">
+      <img src="/assets/img/logo-sy-academy.png" alt="SY Academy" width="140" height="32">
+    </a>
+
+    <nav class="nav-links" aria-label="Navigation principale">
+      <a href="/approche">Approche</a>
+      <a href="/collectivites">Collectivités</a>
+      <a href="/pme">PME</a>
+      <a href="/financement">Financement</a>
+      <a href="/article/5-criteres-formation-ia">Article</a>
+      <a href="/contact">Contact</a>
+      <a href="/session-decouverte" class="nav-session">
+        <span class="pulse-dot" aria-hidden="true"></span>
+        Session 23 mai
+      </a>
+    </nav>
+
+    <button class="mobile-menu-btn" aria-expanded="false" aria-controls="nav-links" aria-label="Ouvrir le menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Brand.SYS v1.0 — Démo composants</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600&display=swap">
+  <link rel="stylesheet" href="/assets/css/brand.css">
+</head>
+<body>
+
+  <!-- TOP BANNER -->
+  <div class="top-banner" role="region" aria-label="Annonce">
+    <div class="marquee-track">
+      <span class="marquee-item">Session découverte · 23 mai 2026 · Maurepas (78)</span>
+      <span class="marquee-item">Inscription jusqu'au 20 mai</span>
+      <span class="marquee-item">Session découverte · 23 mai 2026 · Maurepas (78)</span>
+      <span class="marquee-item">Inscription jusqu'au 20 mai</span>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a class="navbar-logo" href="/" aria-label="SY Academy — accueil">
+        <strong style="font-family: var(--font-display); font-weight: 600;">SY Academy</strong>
+      </a>
+      <nav class="nav-links" aria-label="Navigation principale">
+        <a href="/approche">Approche</a>
+        <a href="/collectivites">Collectivités</a>
+        <a href="/pme">PME</a>
+        <a href="/financement">Financement</a>
+        <a href="/contact">Contact</a>
+        <a href="/session-decouverte" class="nav-session">
+          <span class="pulse-dot" aria-hidden="true"></span>
+          Session 23 mai
+        </a>
+      </nav>
+      <button class="mobile-menu-btn" aria-expanded="false" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-meta">
+        <span class="hero-meta-left">// hero · démo</span>
+        <span class="hero-meta-right">2026.05</span>
+      </div>
+      <div class="hero-content">
+        <span class="eyebrow">démo composants</span>
+        <h1>Penser avec l'IA. <span class="accent">Décider sans elle.</span></h1>
+        <p class="lead">Page de démo des composants Brand.SYS v1.0. Tous les blocs visuels sont instanciés ici pour validation responsive et cohérence éditoriale avant intégration dans les vraies pages.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary btn-arrow" href="#kpi">Voir les KPIs</a>
+          <a class="btn btn-ghost" href="#cards">Composants</a>
+          <a class="btn btn-cta btn-arrow" href="#cta">CTA cyan</a>
+        </div>
+        <ul class="hero-trust">
+          <li class="trust-item">Qualiopi NDA 11788770478</li>
+          <li class="trust-item">AI Act art. 4</li>
+          <li class="trust-item">Méthode CRAFT + 4D</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- KPI -->
+  <section class="section section-bone" id="kpi">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">01 / 04 · chiffres</span>
+        <h2>KPIs en 4 colonnes</h2>
+      </div>
+      <div class="kpi-grid kpi-4">
+        <div class="kpi-block">
+          <div class="kpi-num">70%</div>
+          <div class="kpi-label">de pratique</div>
+        </div>
+        <div class="kpi-block">
+          <div class="kpi-num">5</div>
+          <div class="kpi-label">livrables ramenés</div>
+        </div>
+        <div class="kpi-block">
+          <div class="kpi-num">J+180</div>
+          <div class="kpi-label">mesure autonomie</div>
+        </div>
+        <div class="kpi-block">
+          <div class="kpi-num">12</div>
+          <div class="kpi-label">questions diagnostic</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARDS -->
+  <section class="section section-paper" id="cards">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">02 / 04 · cards</span>
+        <h2>Cards numérotées</h2>
+      </div>
+      <div class="cards-grid cols-3">
+        <article class="card">
+          <div class="card-num">01 / 03</div>
+          <h3>Délégation</h3>
+          <p>Confier sans renoncer. Définir ce que l'IA fait, ce qu'elle ne fait pas, et ce qui reste humain.</p>
+          <ul class="card-list">
+            <li>Cadre signé</li>
+            <li>Rôles explicites</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="card-num">02 / 03</div>
+          <h3>Description</h3>
+          <p>Décrire pour décider. Documenter le périmètre et la traçabilité avant l'usage.</p>
+          <ul class="card-list">
+            <li>Charte d'usage</li>
+            <li>Registre AI Act</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="card-num">03 / 03</div>
+          <h3>Discernement</h3>
+          <p>Penser avec, décider sans. Construire une grille critériée pour reprendre la main sur la décision.</p>
+          <ul class="card-list">
+            <li>Grille 4D</li>
+            <li>Plan d'action 30j</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALLOUT + INK -->
+  <section class="section section-ink" id="cta">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow on-dark">03 / 04 · règle d'or</span>
+        <h2 style="color: var(--bone);">La règle d'or</h2>
+      </div>
+      <div class="callout is-ink">
+        <span class="callout-eye">// règle d'or</span>
+        <p class="callout-text">Mieux vaut un livrable imparfait fini, qu'un livrable parfait inachevé.</p>
+      </div>
+      <div class="cards-grid cols-2 mt-6">
+        <div class="split-card is-primary">
+          <div class="split-card-head">
+            <span class="eyebrow on-dark">// collectivités</span>
+            <h3 style="color: var(--bone);">7 formations · IA souveraine</h3>
+          </div>
+          <ul class="feature-list">
+            <li>Mistral hébergé en France</li>
+            <li>DIF Élus mobilisable</li>
+            <li>Conformité AI Act art. 4</li>
+          </ul>
+          <div class="split-card-foot">
+            <a class="btn btn-light btn-arrow" href="/collectivites">Voir les formations</a>
+          </div>
+        </div>
+        <div class="split-card">
+          <div class="split-card-head">
+            <span class="eyebrow">// pme · tpe</span>
+            <h3>3 formations · OPCO 100%</h3>
+          </div>
+          <ul class="feature-list">
+            <li>ChatGPT, Claude, Gemini</li>
+            <li>OPCO finance à 100%</li>
+            <li>Livrables intégrables</li>
+          </ul>
+          <div class="split-card-foot">
+            <a class="btn btn-primary btn-arrow" href="/pme">Voir les formations</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section section-bone">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">04 / 04 · témoignages</span>
+        <h2>Ils ont suivi la formation</h2>
+      </div>
+      <div class="cards-grid cols-3">
+        <article class="testimonial">
+          <span class="testimonial-eye">// rrh · pme</span>
+          <p class="testimonial-text">La grille 4D nous a permis de cadrer trois usages internes en deux semaines.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" aria-hidden="true">MC</div>
+            <div class="testimonial-author-info">
+              <strong>Marie Caron</strong>
+              <span>RRH · 120 collab.</span>
+            </div>
+          </div>
+        </article>
+        <article class="testimonial">
+          <span class="testimonial-eye">// dgs · collectivité</span>
+          <p class="testimonial-text">Un cadre clair pour les élus, et une charte signée par le COMEX la semaine suivante.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" aria-hidden="true">PL</div>
+            <div class="testimonial-author-info">
+              <strong>Philippe Lefèvre</strong>
+              <span>DGS · CC 78</span>
+            </div>
+          </div>
+        </article>
+        <article class="testimonial">
+          <span class="testimonial-eye">// dirigeant · tpe</span>
+          <p class="testimonial-text">J'ai compris ce que je déléguais à l'IA, et surtout ce que je gardais. C'était la bonne question.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" aria-hidden="true">AB</div>
+            <div class="testimonial-author-info">
+              <strong>Antoine Brun</strong>
+              <span>CEO · 18 collab.</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- MOCK + FORM -->
+  <section class="section section-paper">
+    <div class="container">
+      <div class="split-section">
+        <div>
+          <span class="eyebrow">// mock · espace apprenant</span>
+          <h2>Vue produit</h2>
+          <p class="lead">Aperçu d'un mock window pour illustrer un parcours apprenant ou un livrable.</p>
+        </div>
+        <div class="mock-window">
+          <div class="mock-window-head">
+            <span class="mock-window-dot r"></span>
+            <span class="mock-window-dot y"></span>
+            <span class="mock-window-dot g"></span>
+            <span class="mock-window-title">parcours.sy-academy</span>
+          </div>
+          <div class="mock-body">
+            <div class="mock-item is-active">
+              <div class="mock-item-icon">01</div>
+              <div class="mock-item-text">
+                <strong>Audit posture</strong>
+                <p>// 12 questions</p>
+              </div>
+            </div>
+            <div class="mock-item">
+              <div class="mock-item-icon">02</div>
+              <div class="mock-item-text">
+                <strong>Formation CRAFT + 4D</strong>
+                <p>// 2 jours présentiel</p>
+              </div>
+            </div>
+            <div class="mock-item">
+              <div class="mock-item-icon">03</div>
+              <div class="mock-item-text">
+                <strong>Livrables organisationnels</strong>
+                <p>// charte · grille · plan</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TAGS demo -->
+  <section class="section section-bone">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">// tags</span>
+        <h2>Tags · Pills</h2>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+        <span class="tag">Default</span>
+        <span class="tag tag-blue">Blue</span>
+        <span class="tag tag-cyan">Cyan</span>
+        <span class="tag tag-success">Success</span>
+        <span class="tag tag-alert">Alert</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM demo -->
+  <section class="section section-paper">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">// formulaire</span>
+        <h2>Form components</h2>
+      </div>
+      <form style="max-width: 720px;">
+        <div class="form-row cols-2">
+          <div class="form-group">
+            <label class="form-label" for="prenom">Prénom <span class="required">*</span></label>
+            <input class="form-input" type="text" id="prenom" name="prenom" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="nom">Nom <span class="required">*</span></label>
+            <input class="form-input" type="text" id="nom" name="nom" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="fonction">Fonction</label>
+          <select class="form-select" id="fonction" name="fonction">
+            <option value="">— sélectionner —</option>
+            <option>RRH</option>
+            <option>Responsable formation</option>
+            <option>Dirigeant</option>
+          </select>
+          <p class="form-help">Permet d'adapter les exemples concrets dans le rapport.</p>
+        </div>
+        <div class="form-group">
+          <span class="form-label">Q1 · L'OF a-t-il un cadre de discernement transposable ?</span>
+          <div class="radio-group">
+            <label class="radio-option">
+              <input type="radio" name="q1" value="2">
+              <span class="radio-option-label">Oui, démontré (preuve)</span>
+              <span class="radio-option-points">2 pts</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="q1" value="1">
+              <span class="radio-option-label">Partiellement</span>
+              <span class="radio-option-points">1 pt</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="q1" value="0">
+              <span class="radio-option-label">Non / pas clair</span>
+              <span class="radio-option-points">0 pt</span>
+            </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="checkbox-group">
+            <label>
+              <input type="checkbox" name="rgpd">
+              J'accepte que mes données soient traitées pour me transmettre le rapport.
+            </label>
+          </div>
+        </div>
+        <div class="form-honeypot" aria-hidden="true">
+          <label>Ne pas remplir<input type="text" name="_honeypot"></label>
+        </div>
+        <button type="submit" class="btn btn-primary btn-arrow">Envoyer</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-meta">
+        <span>// footer · démo</span>
+        <span>v1.0 — 2026.05</span>
+      </div>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <strong style="font-family: var(--font-display); color: var(--bone); font-size: 1.25rem;">SY Academy</strong>
+          <p>Organisme de formation Qualiopi. Émanciper, pas équiper.</p>
+          <div class="footer-contact">
+            <span>Maurepas (78)</span>
+            <a href="mailto:contact@syacademy.fr">contact@syacademy.fr</a>
+          </div>
+        </div>
+        <div>
+          <h4>// formations</h4>
+          <ul class="footer-links">
+            <li><a href="/collectivites">Collectivités</a></li>
+            <li><a href="/pme">PME / TPE</a></li>
+            <li><a href="/approche">Approche</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>// ressources</h4>
+          <ul class="footer-links">
+            <li><a href="/article/5-criteres-formation-ia">Article SEO</a></li>
+            <li><a href="/grille-audit-formation-ia">Grille audit</a></li>
+            <li><a href="/diagnostic">Diagnostic</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>// financement</h4>
+          <ul class="footer-links">
+            <li><a href="/financement">OPCO · DIF</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>// légal</h4>
+          <ul class="footer-links">
+            <li><a href="/mentions-legales">Mentions légales</a></li>
+            <li><a href="/politique-confidentialite">Confidentialité</a></li>
+          </ul>
+          <div class="qualiopi-block mt-4">
+            <p>Qualiopi NDA 11788770478</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 SY Academy</span>
+        <div class="footer-bottom-links">
+          <a href="/sitemap.xml">Sitemap</a>
+          <a href="/robots.txt">Robots</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/nav.js" defer></script>
+</body>
+</html>

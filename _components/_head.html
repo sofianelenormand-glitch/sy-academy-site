@@ -1,0 +1,50 @@
+<!--
+  Bloc <head> template SY Academy · Brand.SYS v1.0
+  Variables à remplacer dans chaque page :
+  {{TITLE}}      — Title (55-60 car. max, format "Mot-clé | SY Academy")
+  {{DESC}}       — Meta description (140-160 car.)
+  {{CANONICAL}}  — URL canonique absolue (https://syacademy.fr/...)
+  {{OG_IMAGE}}   — Image Open Graph 1200×630 (path absolu ou /assets/img/og-...)
+  {{OG_TYPE}}    — "website" | "article" (selon page)
+-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#061240">
+<meta name="format-detection" content="telephone=no">
+
+<title>{{TITLE}}</title>
+<meta name="description" content="{{DESC}}">
+<link rel="canonical" href="{{CANONICAL}}">
+
+<!-- Open Graph -->
+<meta property="og:type" content="{{OG_TYPE}}">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="SY Academy">
+<meta property="og:title" content="{{TITLE}}">
+<meta property="og:description" content="{{DESC}}">
+<meta property="og:url" content="{{CANONICAL}}">
+<meta property="og:image" content="{{OG_IMAGE}}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{TITLE}}">
+<meta name="twitter:description" content="{{DESC}}">
+<meta name="twitter:image" content="{{OG_IMAGE}}">
+
+<!-- Favicons -->
+<link rel="icon" type="image/png" href="/assets/img/favicon-sy-academy.png">
+<link rel="apple-touch-icon" href="/assets/img/favicon-sy-academy.png">
+
+<!-- Fonts (V1 · Google Fonts · self-hosting prévu V1.1) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600&display=swap">
+
+<!-- Brand CSS (source unique) -->
+<link rel="preload" as="style" href="/assets/css/brand.css">
+<link rel="stylesheet" href="/assets/css/brand.css">
+
+<!-- Sitemap -->
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">

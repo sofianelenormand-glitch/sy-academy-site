@@ -1,0 +1,177 @@
+# =============================================================================
+# SY Academy · Netlify config — Brand.SYS v1.0
+# =============================================================================
+# Headers sécurité (CSP volontairement absente — à reconstruire après)
+# Redirects URLs propres (sans .html)
+# =============================================================================
+
+[build]
+  publish = "."
+
+# -----------------------------------------------------------------------------
+# REDIRECTS · URLs propres (sans .html)
+# -----------------------------------------------------------------------------
+
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/approche.html"
+  to = "/approche"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/collectivites.html"
+  to = "/collectivites"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pme.html"
+  to = "/pme"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/financement.html"
+  to = "/financement"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/session-decouverte.html"
+  to = "/session-decouverte"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact.html"
+  to = "/contact"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/diagnostic.html"
+  to = "/diagnostic"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/diagnostic-merci.html"
+  to = "/diagnostic-merci"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/grille-audit-formation-ia.html"
+  to = "/grille-audit-formation-ia"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/mentions-legales.html"
+  to = "/mentions-legales"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/politique-confidentialite.html"
+  to = "/politique-confidentialite"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/article/5-criteres-formation-ia.html"
+  to = "/article/5-criteres-formation-ia"
+  status = 301
+  force = true
+
+# Anciennes URLs / variations
+[[redirects]]
+  from = "/analyse-besoins.html"
+  to = "/diagnostic"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/success.html"
+  to = "/diagnostic-merci"
+  status = 301
+  force = true
+
+# -----------------------------------------------------------------------------
+# HEADERS · Sécurité globale (sans CSP — à reconstruire après audit ressources)
+# -----------------------------------------------------------------------------
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    X-XSS-Protection = "1; mode=block"
+    Cross-Origin-Opener-Policy = "same-origin"
+
+# -----------------------------------------------------------------------------
+# CACHE · Assets statiques (immutable 1 an)
+# -----------------------------------------------------------------------------
+
+[[headers]]
+  for = "/assets/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/assets/pdf/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+# HTML : pas de cache long (revalidation)
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Sitemap / robots
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+    Content-Type = "application/xml; charset=utf-8"
+
+[[headers]]
+  for = "/robots.txt"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+    Content-Type = "text/plain; charset=utf-8"
+
+# -----------------------------------------------------------------------------
+# 404 fallback
+# -----------------------------------------------------------------------------
+
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
