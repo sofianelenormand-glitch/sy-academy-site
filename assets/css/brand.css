@@ -2348,6 +2348,36 @@ p {
   justify-content: center;
 }
 
+.article-content .btn,
+.cta-section .btn {
+  text-decoration: none;
+}
+
+.article-content .btn-primary,
+.cta-section .btn-primary {
+  color: var(--bone);
+  background-color: var(--ink);
+}
+
+.article-content .btn-primary:hover,
+.cta-section .btn-primary:hover {
+  color: var(--bone);
+  background-color: var(--navy-deep);
+}
+
+.article-content .btn-ghost,
+.cta-section .btn-ghost {
+  color: var(--ink);
+  background-color: transparent;
+  border-color: var(--ink);
+}
+
+.article-content .btn-ghost:hover,
+.cta-section .btn-ghost:hover {
+  color: var(--bone);
+  background-color: var(--ink);
+}
+
 /* =============================================================================
  * 21 / FONTS — V1.1 (commenté, à activer après hébergement local)
  * ==========================================================================
