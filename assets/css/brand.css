@@ -503,8 +503,10 @@ p {
 }
 
 .navbar-logo img {
-  height: 32px;
-  width: auto;
+  height: 56px;
+  width: 56px;
+  display: block;
+  object-fit: contain;
 }
 
 .nav-links {
@@ -1397,8 +1399,10 @@ p {
 
 .footer-brand img {
   height: 100px;
-  width: auto;
+  width: 100px;
   margin-bottom: var(--s-4);
+  display: block;
+  object-fit: contain;
 }
 
 .footer-tagline {
@@ -1496,10 +1500,13 @@ p {
 
 .qualiopi-logo {
   height: 80px;
-  width: 80px;
+  width: auto;
+  max-width: 140px;
   flex-shrink: 0;
   background: transparent;
   padding: 0;
+  display: block;
+  object-fit: contain;
 }
 
 .qualiopi-mention {
