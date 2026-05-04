@@ -493,7 +493,7 @@ p {
   align-items: center;
   justify-content: space-between;
   gap: var(--s-5);
-  padding-block: 1rem;
+  padding-block: var(--s-2);
 }
 
 .navbar-logo {
@@ -503,8 +503,8 @@ p {
 }
 
 .navbar-logo img {
-  height: 56px;
-  width: 56px;
+  height: 80px;
+  width: 80px;
   display: block;
   object-fit: contain;
 }
