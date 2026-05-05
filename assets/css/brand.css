@@ -848,16 +848,16 @@ p {
 
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--s-6);
-  margin-top: var(--s-7);
+  grid-template-columns: 1fr 2fr;
+  gap: var(--s-8);
+  margin-top: var(--s-8);
+  align-items: start;
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 768px) {
   .contact-grid {
-    grid-template-columns: 2fr 1fr;
-    gap: var(--s-8);
-    align-items: start;
+    grid-template-columns: 1fr;
+    gap: var(--s-6);
   }
 }
 
@@ -889,12 +889,12 @@ p {
 }
 
 .form-rgpd label a {
-  color: var(--blue-deep);
+  color: var(--cyan);
   text-decoration: underline;
 }
 
 .form-rgpd label a:hover {
-  color: var(--cyan);
+  color: var(--blue-mid);
 }
 
 .contact-info {
