@@ -3722,5 +3722,83 @@ section.section-ink .legal-note em {
 }
 
 /* =============================================================================
+ * SECTION TRANSPARENCE (Bloc 16 · home)
+ * ========================================================================== */
+
+.strikethrough-text {
+  position: relative;
+  color: var(--graphite);
+  font-style: italic;
+  white-space: nowrap;
+}
+
+.strikethrough-text::after {
+  content: "";
+  position: absolute;
+  left: -2%;
+  right: -2%;
+  top: 50%;
+  height: 2px;
+  background: var(--cyan);
+  transform: rotate(-2deg);
+  pointer-events: none;
+}
+
+.transparence-content {
+  max-width: 720px;
+  margin: var(--s-7) auto 0;
+}
+
+.transparence-content .lead {
+  margin-bottom: var(--s-5);
+}
+
+.transparence-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--s-5) 0;
+}
+
+.transparence-list li {
+  padding: var(--s-4) 0;
+  border-bottom: 1px solid var(--fog);
+  line-height: 1.7;
+  font-size: 1rem;
+  color: var(--ink-soft);
+}
+
+.transparence-list li:last-child {
+  border-bottom: none;
+}
+
+.transparence-list strong {
+  color: var(--ink);
+}
+
+.transparence-list a {
+  color: var(--blue-mid);
+  text-decoration: none;
+  font-weight: 500;
+  font-family: var(--font-mono);
+  font-size: 0.9375rem;
+  transition: color var(--transition-base);
+}
+
+.transparence-list a:hover {
+  color: var(--blue-deep);
+  text-decoration: underline;
+}
+
+.transparence-conclusion {
+  margin: var(--s-7) auto 0;
+  padding-top: var(--s-5);
+  border-top: 2px solid var(--cyan);
+  font-size: 1.0625rem;
+  text-align: center;
+  max-width: 600px;
+  color: var(--ink);
+}
+
+/* =============================================================================
  * FIN · BRAND.SYS v1.0
  * ========================================================================== */
