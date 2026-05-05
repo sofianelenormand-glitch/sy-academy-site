@@ -3282,6 +3282,65 @@ section.section-ink .legal-note em {
   color: rgba(216, 218, 229, 0.65);
 }
 
+/* === Section Sources === */
+
+.section-sources {
+  background-color: var(--bone);
+  border-top: 1px solid rgba(14, 20, 48, 0.06);
+}
+
+.sources-list {
+  list-style: decimal;
+  padding-left: var(--s-5);
+  margin-top: var(--s-6);
+}
+
+.sources-list li {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  margin-bottom: var(--s-4);
+  color: var(--graphite);
+}
+
+.sources-list li strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.sources-list li a {
+  color: var(--blue-mid);
+  text-decoration: underline;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+}
+
+.sources-list li a:hover {
+  color: var(--blue-deep);
+}
+
+.sources-note {
+  margin-top: var(--s-6);
+  padding-top: var(--s-5);
+  border-top: 1px solid rgba(14, 20, 48, 0.06);
+  font-size: 0.8125rem;
+  color: var(--graphite);
+  text-align: center;
+}
+
+.sources-note em {
+  font-style: italic;
+}
+
+.sources-note a {
+  color: var(--blue-mid);
+  text-decoration: underline;
+}
+
+.hero-narrow {
+  padding-top: var(--s-9);
+  padding-bottom: var(--s-7);
+}
+
 /* === APPROCHE PAGE === */
 
 .container.container-narrow {
