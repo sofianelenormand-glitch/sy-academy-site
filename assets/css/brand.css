@@ -842,6 +842,26 @@ p {
   color: rgba(251, 250, 246, 0.65);
 }
 
+.program-cta {
+  margin-top: var(--s-6);
+  padding: var(--s-5);
+  border: 1px solid rgba(38, 168, 232, 0.2);
+  border-radius: var(--radius-md);
+  text-align: center;
+  background-color: rgba(38, 168, 232, 0.04);
+}
+
+.program-cta .btn {
+  margin-bottom: var(--s-2);
+}
+
+.program-cta-note {
+  font-size: 0.875rem;
+  color: var(--graphite);
+  margin: 0;
+  line-height: 1.4;
+}
+
 .split-card {
   display: flex;
   flex-direction: column;
