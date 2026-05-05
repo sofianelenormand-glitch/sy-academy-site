@@ -1,1290 +1,575 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formations IA pour PME et TPE — SY Academy</title>
-    <meta name="description" content="Formations IA pour PME et TPE. ChatGPT, Claude, Gemini. 100% finançable OPCO pour les entreprises de moins de 50 salariés. Certification Qualiopi. Résultats dès le lendemain.">
-    <meta name="keywords" content="formation IA PME, formation intelligence artificielle PME, formation IA entreprise Yvelines, formation ChatGPT entreprise, productivité PME intelligence artificielle, formation IA OPCO">
-    <link rel="canonical" href="https://syacademy.fr/pme">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#061240">
+  <meta name="format-detection" content="telephone=no">
 
-    <link rel="icon" type="image/png" href="/assets/img/favicon-sy-academy.png">
-    <meta property="og:title" content="Formations IA pour PME et TPE — SY Academy">
-    <meta property="og:description" content="Formations IA pour PME et TPE. ChatGPT, Claude, Gemini. 100% finançable OPCO pour les entreprises de moins de 50 salariés. Certification Qualiopi. Résultats dès le lendemain.">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="fr_FR">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <title>Formation IA pour PME et TPE | SY Academy</title>
+  <meta name="description" content="Formez vos équipes à l'IA avec SY Academy. Programme Qualiopi 100% finançable OPCO, méthode CRAFT + 4D, multi-outils ChatGPT Claude Mistral.">
+  <link rel="canonical" href="https://syacademy.fr/pme">
 
-    <style>
-        :root {
-            --navy: #0a1628;
-            --navy-light: #132040;
-            --blue-accent: #2563eb;
-            --blue-bright: #3b82f6;
-            --blue-gradient-start: #1e3a8a;
-            --blue-gradient-end: #2563eb;
-            --cyan: #06b6d4;
-            --white: #ffffff;
-            --gray-50: #f8fafc;
-            --gray-100: #f1f5f9;
-            --gray-200: #e2e8f0;
-            --gray-300: #cbd5e1;
-            --gray-400: #94a3b8;
-            --gray-500: #64748b;
-            --gray-600: #475569;
-            --gray-700: #334155;
-            --text-primary: #0f172a;
-            --text-secondary: #475569;
-            --orange-accent: #f59e0b;
-            --green-accent: #10b981;
-            --font-display: 'Outfit', sans-serif;
-            --font-body: 'DM Sans', sans-serif;
-            --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
-            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
-            --shadow-lg: 0 8px 30px rgba(0,0,0,0.12);
-            --shadow-xl: 0 20px 50px rgba(0,0,0,0.15);
-            --radius-sm: 8px;
-            --radius-md: 12px;
-            --radius-lg: 20px;
-        }
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="SY Academy">
+  <meta property="og:title" content="Formation IA pour PME et TPE | SY Academy">
+  <meta property="og:description" content="Formez vos équipes à l'IA avec SY Academy. Programme Qualiopi 100% finançable OPCO, méthode CRAFT + 4D, multi-outils ChatGPT Claude Mistral.">
+  <meta property="og:url" content="https://syacademy.fr/pme">
+  <meta property="og:image" content="https://syacademy.fr/assets/img/og-pme.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
 
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body { font-family: var(--font-body); color: var(--text-primary); background: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
-        img { max-width: 100%; height: auto; display: block; }
-        a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
-        h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); font-weight: 700; line-height: 1.2; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Formation IA pour PME et TPE | SY Academy">
+  <meta name="twitter:description" content="Formez vos équipes à l'IA. Programme Qualiopi 100% finançable OPCO, méthode CRAFT + 4D, multi-outils.">
+  <meta name="twitter:image" content="https://syacademy.fr/assets/img/og-pme.png">
 
-        /* TOP BANNER */
-        .countdown-banner {
-            background: linear-gradient(90deg, #1e3a8a, #2563eb, #06b6d4);
-            color: #fff; overflow: hidden; white-space: nowrap;
-            font-size: 14px; font-weight: 600; letter-spacing: 0.02em;
-        }
-        .countdown-banner .marquee-track { display: inline-flex; animation: marquee-scroll 18s linear infinite; }
-        .countdown-banner .marquee-item { padding: 10px 80px; white-space: nowrap; }
-        @keyframes marquee-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="/assets/img/favicon-sy-academy.png">
+  <link rel="apple-touch-icon" href="/assets/img/favicon-sy-academy.png">
 
-        /* NAVBAR */
-        .navbar {
-            position: sticky; top: 0; z-index: 1000;
-            background: rgba(255,255,255,0.95); backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--gray-200); transition: box-shadow 0.3s;
-        }
-        .navbar.scrolled { box-shadow: var(--shadow-md); }
-        .navbar .container { display: flex; align-items: center; justify-content: space-between; height: 80px; }
-        .navbar-logo img { height: 72px; }
-        .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
-        .nav-links a { font-family: var(--font-display); font-size: 0.9rem; font-weight: 500; color: var(--text-secondary); padding: 4px 0; position: relative; }
-        .nav-links a::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: linear-gradient(90deg, var(--blue-gradient-start), var(--blue-gradient-end)); border-radius: 2px; transition: width 0.3s; }
-        .nav-links a:hover { color: var(--text-primary); }
-        .nav-links a:hover::after { width: 100%; }
-        .nav-links a.active { color: var(--blue-accent); font-weight: 600; }
-        .nav-links a.active::after { width: 100%; }
-        .nav-cta { display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, var(--blue-gradient-start), var(--blue-gradient-end)); color: var(--white) !important; padding: 12px 28px !important; border-radius: 50px; font-weight: 600; font-size: 0.95rem !important; white-space: nowrap; }
-        .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 15px rgba(37,99,235,0.4); }
-        .nav-cta::after { display: none !important; }
-        .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
-        .mobile-menu-btn span { display: block; width: 24px; height: 2px; background: var(--navy); margin: 6px 0; border-radius: 2px; transition: 0.3s; }
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600&display=swap">
 
-        /* HERO PME */
-        .hero-pme {
-            padding: 80px 0 60px;
-            background: var(--navy); position: relative; overflow: hidden;
-        }
-        .hero-pme::before {
-            content: ''; position: absolute; inset: 0;
-            background: radial-gradient(ellipse at 70% 30%, rgba(6,182,212,0.18) 0%, transparent 60%),
-                        radial-gradient(ellipse at 20% 70%, rgba(37,99,235,0.15) 0%, transparent 60%);
-        }
-        .hero-pme .container { position: relative; z-index: 1; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; align-items: center; }
-        .hero-content { }
-        .hero-badge {
-            display: inline-flex; align-items: center; gap: 8px;
-            background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12);
-            padding: 8px 18px; border-radius: 50px; font-size: 0.8rem; font-weight: 600;
-            color: var(--cyan); margin-bottom: 24px;
-        }
-        .hero-pme h1 { font-size: clamp(2rem, 4vw, 2.8rem); color: var(--white); margin-bottom: 20px; }
-        .hero-pme h1 .highlight {
-            background: linear-gradient(135deg, var(--cyan), var(--blue-bright));
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-        }
-        .hero-subtitle { font-size: 1.05rem; color: var(--gray-400); max-width: 520px; line-height: 1.7; margin-bottom: 36px; }
-        .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 40px; }
-        .btn-primary { display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, var(--cyan), var(--blue-accent)); color: var(--white); padding: 16px 32px; border-radius: 50px; font-family: var(--font-display); font-weight: 600; font-size: 1rem; border: none; cursor: pointer; box-shadow: 0 4px 15px rgba(6,182,212,0.3); transition: all 0.3s; }
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(6,182,212,0.4); }
-        .btn-secondary { display: inline-flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.06); color: var(--white); padding: 16px 32px; border-radius: 50px; font-family: var(--font-display); font-weight: 600; font-size: 1rem; border: 1px solid rgba(255,255,255,0.2); cursor: pointer; transition: all 0.3s; }
-        .btn-secondary:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.4); transform: translateY(-2px); }
-        .hero-trust-bar { display: flex; gap: 24px; flex-wrap: wrap; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); }
-        .trust-item { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; color: var(--gray-400); font-weight: 500; }
+  <!-- Brand CSS -->
+  <link rel="preload" as="style" href="/assets/css/brand.css">
+  <link rel="stylesheet" href="/assets/css/brand.css">
 
-        /* Hero ROI Card */
-        .hero-roi-card {
-            background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1);
-            border-radius: var(--radius-lg); padding: 36px; backdrop-filter: blur(10px);
-        }
-        .hero-roi-card h3 { color: var(--white); font-size: 1.1rem; margin-bottom: 20px; text-align: center; }
-        .roi-rows { display: flex; flex-direction: column; gap: 16px; }
-        .roi-row { display: flex; justify-content: space-between; align-items: center; padding-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,0.06); }
-        .roi-row:last-child { border-bottom: none; padding-bottom: 0; }
-        .roi-label { font-size: 0.88rem; color: var(--gray-400); }
-        .roi-value { font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; color: var(--white); }
-        .roi-value.green { color: var(--green-accent); }
-        .roi-value.cyan { color: var(--cyan); }
-        .roi-total { margin-top: 20px; padding: 20px; background: rgba(6,182,212,0.08); border-radius: var(--radius-md); text-align: center; }
-        .roi-total .big { font-family: var(--font-display); font-size: 2.2rem; font-weight: 800; color: var(--cyan); }
-        .roi-total p { font-size: 0.82rem; color: var(--gray-400); margin-top: 4px; }
+  <!-- Sitemap -->
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 
-        /* SECTION UTILS */
-        .section-header { text-align: center; margin-bottom: 48px; }
-        .section-label { display: inline-block; font-family: var(--font-display); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--blue-accent); margin-bottom: 12px; }
-        .section-header h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); color: var(--navy); margin-bottom: 12px; }
-        .section-header p { font-size: 1rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto; }
+  <!-- JSON-LD : Organization (global) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://syacademy.fr/#organization",
+    "name": "SY Academy",
+    "alternateName": "SY Academy — Penser avec l'IA. Décider sans elle.",
+    "url": "https://syacademy.fr/",
+    "logo": "https://syacademy.fr/assets/img/logo-sy-academy.png",
+    "image": "https://syacademy.fr/assets/img/og-default.png",
+    "description": "Organisme de formation Qualiopi spécialisé en IA, management et organisation. Méthode CRAFT + 4D. Émanciper, pas équiper.",
+    "founder": {
+      "@type": "Person",
+      "name": "Sofiane Lenormand",
+      "jobTitle": "Dirigeant fondateur"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Maurepas",
+      "postalCode": "78310",
+      "addressRegion": "Île-de-France",
+      "addressCountry": "FR"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "email": "contact@syacademy.fr",
+      "areaServed": "FR",
+      "availableLanguage": ["French"]
+    },
+    "identifier": [
+      { "@type": "PropertyValue", "propertyID": "SIRET", "value": "84193712100024" },
+      { "@type": "PropertyValue", "propertyID": "NDA", "value": "11788770478" }
+    ],
+    "hasCredential": {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "Certification",
+      "name": "Qualiopi",
+      "recognizedBy": { "@type": "Organization", "name": "France Compétences" }
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/sy-academy/"
+    ]
+  }
+  </script>
 
-        /* PROBLEMS */
-        .problems-section { padding: 80px 0; background: var(--gray-50); }
-        .problems-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-        .problem-card {
-            background: var(--white); border-radius: var(--radius-md); padding: 32px 28px;
-            border: 1px solid var(--gray-200); transition: all 0.3s;
-        }
-        .problem-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
-        .problem-icon { font-size: 2rem; margin-bottom: 16px; }
-        .problem-card h3 { font-size: 1.05rem; color: var(--navy); margin-bottom: 8px; }
-        .problem-card p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; }
+  <!-- JSON-LD : WebSite (global) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://syacademy.fr/#website",
+    "url": "https://syacademy.fr/",
+    "name": "SY Academy",
+    "description": "Penser avec l'IA. Décider sans elle. Formations IA pour collectivités et PME.",
+    "inLanguage": "fr-FR",
+    "publisher": { "@id": "https://syacademy.fr/#organization" }
+  }
+  </script>
 
-        /* MULTI-OUTILS BANNER */
-        .outils-banner { padding: 48px 0; background: linear-gradient(135deg, #0f172a, #1e3a5f); }
-        .outils-inner { display: grid; grid-template-columns: auto 1fr; gap: 40px; align-items: center; }
-        .outils-logos { display: flex; gap: 20px; flex-shrink: 0; }
-        .outil-circle {
-            width: 64px; height: 64px; border-radius: 50%;
-            background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
-            display: flex; align-items: center; justify-content: center;
-            font-size: 0.7rem; font-weight: 700; color: var(--white);
-            font-family: var(--font-display); text-align: center; line-height: 1.2;
-        }
-        .outils-inner h3 { color: var(--white); font-size: 1.2rem; margin-bottom: 8px; }
-        .outils-inner > div > p { color: var(--gray-400); font-size: 0.9rem; line-height: 1.6; }
-        .outils-tags { display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap; }
-        .outil-tag { background: rgba(6,182,212,0.12); color: var(--cyan); padding: 6px 14px; border-radius: 50px; font-size: 0.75rem; font-weight: 600; }
+  <!-- JSON-LD : BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://syacademy.fr/" },
+      { "@type": "ListItem", "position": 2, "name": "PME / TPE", "item": "https://syacademy.fr/pme" }
+    ]
+  }
+  </script>
 
-        /* FORMATIONS CARDS */
-        .formations-section { padding: 80px 0; background: var(--white); }
-        .formations-grid { display: grid; grid-template-columns: 1fr; gap: 28px; max-width: 900px; margin: 0 auto; }
-
-        .formation-card {
-            background: var(--white); border-radius: var(--radius-lg);
-            border: 1px solid var(--gray-200); overflow: hidden; transition: all 0.4s;
-        }
-        .formation-card:hover { box-shadow: var(--shadow-xl); transform: translateY(-4px); border-color: transparent; }
-        .formation-card.audit { border-left: 4px solid var(--orange-accent); }
-        .formation-card.pme-card { border-left: 4px solid var(--cyan); }
-
-        .card-header { padding: 24px 28px 16px; display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
-        .card-code { display: inline-flex; padding: 4px 12px; border-radius: 6px; font-family: var(--font-display); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; flex-shrink: 0; }
-        .card-code.audit-code { background: rgba(249,115,22,0.1); color: #ea580c; }
-        .card-code.pme-code { background: rgba(6,182,212,0.1); color: var(--cyan); }
-        .card-badges { display: flex; gap: 8px; flex-wrap: wrap; }
-        .card-badge { padding: 4px 10px; border-radius: 50px; font-size: 0.7rem; font-weight: 600; background: var(--gray-50); color: var(--text-secondary); }
-        .card-badge.places { background: rgba(16,185,129,0.08); color: var(--green-accent); }
-        .card-badge.new { background: rgba(249,115,22,0.08); color: var(--orange-accent); }
-        .card-badge.opco { background: rgba(6,182,212,0.08); color: var(--cyan); }
-
-        .card-body { padding: 0 28px 20px; }
-        .card-body h3 { font-size: 1.25rem; color: var(--navy); margin-bottom: 10px; line-height: 1.3; }
-        .card-body > p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 16px; }
-
-        .card-meta { display: flex; gap: 20px; flex-wrap: wrap; padding: 16px 0; border-top: 1px solid var(--gray-100); margin-bottom: 16px; }
-        .meta-item { display: flex; align-items: center; gap: 6px; font-size: 0.8rem; color: var(--text-secondary); font-weight: 500; }
-        .meta-icon { font-size: 1rem; }
-
-        /* Programme accordéon */
-        .card-programme { margin-bottom: 16px; }
-        .card-programme summary, .card-objectives summary, .card-livrables summary {
-            font-family: var(--font-display); font-size: 0.85rem; font-weight: 600;
-            cursor: pointer; padding: 8px 0; list-style: none;
-            display: flex; align-items: center; gap: 6px;
-        }
-        .card-objectives summary { color: var(--blue-accent); }
-        .card-programme summary { color: var(--navy); }
-        .card-livrables summary { color: var(--text-secondary); }
-        .card-programme summary::before, .card-objectives summary::before, .card-livrables summary::before { content: '▸'; transition: transform 0.2s; }
-        .card-programme[open] summary::before, .card-objectives[open] summary::before, .card-livrables[open] summary::before { transform: rotate(90deg); }
-
-        .card-objectives ul, .card-livrables ul, .card-programme ul { list-style: none; padding: 8px 0 0 0; }
-        .card-objectives li { padding: 5px 0 5px 20px; font-size: 0.82rem; color: var(--text-secondary); position: relative; line-height: 1.5; }
-        .card-objectives li::before { content: '✓'; position: absolute; left: 0; color: var(--green-accent); font-weight: 700; font-size: 0.8rem; }
-        .card-livrables li { padding: 4px 0 4px 20px; font-size: 0.82rem; color: var(--text-secondary); position: relative; }
-        .card-livrables li::before { content: '📄'; position: absolute; left: 0; font-size: 0.75rem; }
-
-        .programme-day { margin-bottom: 12px; }
-        .programme-day h4 { font-size: 0.82rem; color: var(--navy); margin-bottom: 6px; font-weight: 600; }
-        .programme-day li { padding: 3px 0 3px 20px; font-size: 0.8rem; color: var(--text-secondary); position: relative; line-height: 1.5; }
-        .programme-day li::before { content: '→'; position: absolute; left: 0; color: var(--blue-accent); font-weight: 600; font-size: 0.75rem; }
-
-        .card-footer { padding: 16px 28px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; border-top: 1px solid var(--gray-100); margin: 0 28px; padding: 20px 0 24px; }
-        .card-price { font-family: var(--font-display); font-size: 1.6rem; font-weight: 800; color: var(--navy); }
-        .card-price small { font-size: 0.8rem; font-weight: 500; color: var(--text-secondary); display: block; }
-
-        .btn-card { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 50px; font-family: var(--font-display); font-weight: 600; font-size: 0.85rem; transition: all 0.3s; cursor: pointer; border: none; }
-        .btn-card-primary { background: linear-gradient(135deg, var(--cyan), var(--blue-accent)); color: var(--white); }
-        .btn-card-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(6,182,212,0.35); }
-
-        /* ROI CALCULATOR */
-        .roi-section { padding: 80px 0; background: var(--gray-50); }
-        .roi-calculator {
-            max-width: 700px; margin: 0 auto;
-            background: var(--white); border-radius: var(--radius-lg);
-            padding: 40px; box-shadow: var(--shadow-lg); border: 1px solid var(--gray-200);
-        }
-        .roi-calculator h3 { font-size: 1.2rem; color: var(--navy); margin-bottom: 24px; text-align: center; }
-        .roi-input-group { margin-bottom: 20px; }
-        .roi-input-group label { display: block; font-family: var(--font-display); font-size: 0.85rem; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
-        .roi-input-group input[type="range"] { width: 100%; accent-color: var(--cyan); height: 6px; cursor: pointer; }
-        .roi-input-values { display: flex; justify-content: space-between; font-size: 0.78rem; color: var(--text-secondary); margin-top: 4px; }
-        .roi-input-current { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--cyan); text-align: center; margin-top: 4px; }
-
-        .roi-results {
-            margin-top: 28px; padding: 28px; background: var(--navy); border-radius: var(--radius-md);
-            display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; text-align: center;
-        }
-        .roi-result-item { }
-        .roi-result-number { font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; color: var(--cyan); }
-        .roi-result-label { font-size: 0.78rem; color: var(--gray-400); margin-top: 4px; }
-
-        .roi-disclaimer { text-align: center; margin-top: 16px; font-size: 0.75rem; color: var(--gray-500); font-style: italic; }
-
-        /* PLANNING */
-        .planning-section { padding: 80px 0; background: var(--white); }
-        .planning-table-wrapper { overflow-x: auto; border-radius: var(--radius-lg); background: var(--white); box-shadow: var(--shadow-md); }
-        .planning-table { width: 100%; border-collapse: collapse; min-width: 650px; }
-        .planning-table thead th { background: var(--navy); color: var(--white); padding: 16px 20px; font-family: var(--font-display); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; text-align: left; }
-        .planning-table tbody tr { border-bottom: 1px solid var(--gray-100); transition: background 0.2s; }
-        .planning-table tbody tr:hover { background: var(--gray-50); }
-        .planning-table td { padding: 16px 20px; font-size: 0.88rem; color: var(--text-primary); vertical-align: middle; }
-        .session-code { display: inline-block; padding: 3px 10px; border-radius: 6px; font-size: 0.72rem; font-weight: 700; background: rgba(6,182,212,0.08); color: var(--cyan); font-family: var(--font-display); }
-        .session-format { display: inline-block; padding: 3px 10px; border-radius: 50px; font-size: 0.72rem; font-weight: 600; }
-        .format-intra { background: rgba(6,182,212,0.08); color: var(--cyan); }
-        .format-inter { background: rgba(16,185,129,0.08); color: var(--green-accent); }
-        .places-badge { display: inline-flex; align-items: center; gap: 4px; font-size: 0.8rem; font-weight: 600; }
-        .places-badge.available { color: var(--green-accent); }
-        .btn-inscr { padding: 8px 18px; border-radius: 50px; border: none; background: linear-gradient(135deg, var(--cyan), var(--blue-accent)); color: var(--white); font-family: var(--font-display); font-size: 0.78rem; font-weight: 600; cursor: pointer; transition: all 0.3s; }
-        .btn-inscr:hover { box-shadow: 0 4px 12px rgba(6,182,212,0.3); transform: translateY(-1px); }
-        .planning-note { text-align: center; margin-top: 24px; font-size: 0.85rem; color: var(--text-secondary); }
-        .planning-note strong { color: var(--cyan); }
-
-        /* FINANCEMENT OPCO */
-        .financement-section { padding: 80px 0; background: var(--gray-50); }
-        .fin-main { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
-        .fin-content h3 { font-size: 1.4rem; color: var(--navy); margin-bottom: 16px; }
-        .fin-content p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 12px; }
-        .fin-steps { list-style: none; margin: 24px 0; }
-        .fin-steps li { padding: 12px 0 12px 40px; position: relative; font-size: 0.9rem; color: var(--text-secondary); border-bottom: 1px solid var(--gray-100); }
-        .fin-steps li::before { position: absolute; left: 0; font-size: 1.2rem; }
-        .fin-steps li:nth-child(1)::before { content: '①'; color: var(--cyan); }
-        .fin-steps li:nth-child(2)::before { content: '②'; color: var(--cyan); }
-        .fin-steps li:nth-child(3)::before { content: '③'; color: var(--cyan); }
-        .fin-steps li:nth-child(4)::before { content: '④'; color: var(--green-accent); }
-
-        .fin-card-opco {
-            background: var(--white); border-radius: var(--radius-lg); padding: 40px;
-            border: 2px solid var(--cyan); text-align: center;
-        }
-        .fin-card-opco .big-badge {
-            display: inline-block; background: rgba(6,182,212,0.08); color: var(--cyan);
-            padding: 8px 24px; border-radius: 50px; font-family: var(--font-display);
-            font-size: 0.85rem; font-weight: 700; letter-spacing: 0.04em; margin-bottom: 20px;
-        }
-        .fin-card-opco .big-number { font-family: var(--font-display); font-size: 3.5rem; font-weight: 800; color: var(--navy); line-height: 1; }
-        .fin-card-opco .big-number span { color: var(--cyan); }
-        .fin-card-opco p { font-size: 0.9rem; color: var(--text-secondary); margin-top: 12px; line-height: 1.6; }
-        .opco-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 20px; }
-        .opco-tag { background: var(--gray-50); padding: 4px 12px; border-radius: 50px; font-size: 0.72rem; font-weight: 600; color: var(--text-secondary); }
-
-        /* RESULTATS */
-        .resultats-section { padding: 80px 0; background: var(--white); }
-        .resultats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 48px; }
-        .resultat-card { text-align: center; padding: 36px 24px; background: var(--gray-50); border-radius: var(--radius-md); border: 1px solid var(--gray-100); transition: all 0.3s; }
-        .resultat-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
-        .resultat-chiffre { font-family: var(--font-display); font-size: 2.4rem; font-weight: 800; color: var(--cyan); margin-bottom: 8px; line-height: 1.1; }
-        .resultat-label { font-family: var(--font-display); font-size: 0.95rem; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
-        .resultat-desc { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5; }
-
-        /* TEMOIGNAGES */
-        .temoignages-section { padding: 80px 0; background: var(--gray-50); }
-        .temoignages-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
-        .temoignage-card { background: var(--white); border-radius: var(--radius-md); padding: 32px 28px; border: 1px solid var(--gray-200); transition: all 0.3s; }
-        .temoignage-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
-        .temoignage-quote { font-size: 2.5rem; color: var(--cyan); font-family: Georgia, serif; line-height: 1; margin-bottom: 12px; }
-        .temoignage-text { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; font-style: italic; margin-bottom: 20px; }
-        .temoignage-auteur { font-family: var(--font-display); font-size: 0.85rem; font-weight: 600; color: var(--navy); }
-        .temoignage-poste { font-size: 0.78rem; color: var(--text-secondary); }
-
-        /* FAQ */
-        .faq-section { padding: 80px 0; background: var(--white); }
-        .faq-list { max-width: 800px; margin: 0 auto; }
-        .faq-item { background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-md); margin-bottom: 12px; overflow: hidden; }
-        .faq-item summary { padding: 20px 24px; font-family: var(--font-display); font-size: 1rem; font-weight: 600; color: var(--navy); cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between; }
-        .faq-item summary::after { content: '+'; font-size: 1.5rem; color: var(--cyan); font-weight: 300; }
-        .faq-item[open] summary::after { content: '−'; }
-        .faq-answer { padding: 0 24px 20px; font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; }
-
-        /* FORMULAIRE */
-        .inscription-section { padding: 80px 0; background: var(--navy); position: relative; overflow: hidden; }
-        .inscription-section::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 50%, rgba(6,182,212,0.15) 0%, transparent 60%), radial-gradient(ellipse at 70% 50%, rgba(37,99,235,0.12) 0%, transparent 60%); }
-        .inscription-section .container { position: relative; z-index: 1; }
-        .inscription-section .section-header h2 { color: var(--white); }
-        .inscription-section .section-header p { color: var(--gray-400); }
-        .inscription-section .section-label { color: var(--cyan); }
-
-        .form-wrapper { max-width: 680px; margin: 0 auto; background: var(--white); border-radius: var(--radius-lg); padding: 40px; box-shadow: var(--shadow-xl); }
-        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-        .form-group { display: flex; flex-direction: column; gap: 6px; }
-        .form-group.full { grid-column: 1 / -1; }
-        .form-group label { font-family: var(--font-display); font-size: 0.82rem; font-weight: 600; color: var(--navy); }
-        .form-group input, .form-group select, .form-group textarea { padding: 12px 16px; border: 1px solid var(--gray-200); border-radius: var(--radius-sm); font-family: var(--font-body); font-size: 0.9rem; color: var(--text-primary); transition: border-color 0.3s; background: var(--white); }
-        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--cyan); box-shadow: 0 0 0 3px rgba(6,182,212,0.1); }
-        .form-group textarea { resize: vertical; min-height: 80px; }
-        .form-group select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M6 8L1 3h10z' fill='%2364748b'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 16px center; padding-right: 40px; }
-
-        .form-submit { grid-column: 1 / -1; margin-top: 8px; padding: 16px 32px; border-radius: 50px; border: none; background: linear-gradient(135deg, var(--cyan), var(--blue-accent)); color: var(--white); font-family: var(--font-display); font-weight: 700; font-size: 1rem; cursor: pointer; transition: all 0.3s; box-shadow: 0 4px 15px rgba(6,182,212,0.3); }
-        .form-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(6,182,212,0.4); }
-        .form-note { grid-column: 1 / -1; text-align: center; font-size: 0.78rem; color: var(--text-secondary); margin-top: 4px; }
-
-        /* FOOTER */
-        .footer { background: #060e1a; padding: 60px 0 0; color: var(--gray-400); }
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
-            gap: 48px;
-            padding-bottom: 48px;
-        }
-        .footer-brand p { font-size: 0.9rem; line-height: 1.6; margin-top: 16px; color: var(--gray-500); }
-        .footer-brand img { height: 60px; opacity: 0.8; }
-        .footer-contact-info { display: flex; flex-direction: column; gap: 8px; margin-top: 20px; }
-        .footer-contact-info span { font-size: 0.8rem; color: var(--gray-500); }
-        .footer h4 { color: var(--white); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 20px; }
-        .footer-links { list-style: none; }
-        .footer-links li { margin-bottom: 10px; }
-        .footer-links a { font-size: 0.85rem; color: var(--gray-500); }
-        .footer-links a:hover { color: var(--white); }
-        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.06); padding: 24px 0; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--gray-600); }
-        .qualiopi-footer-block { display: flex; align-items: center; gap: 16px; }
-        .qualiopi-logo-footer { height: 55px; width: auto; flex-shrink: 0; background: white; padding: 6px 10px; border-radius: 4px; }
-        .qualiopi-mention { font-size: 0.7rem; color: #94a3b8; line-height: 1.4; max-width: 300px; }
-
-        /* STICKY MOBILE */
-        .sticky-mobile-cta { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 999; background: var(--white); border-top: 1px solid var(--gray-200); padding: 12px 16px; box-shadow: 0 -4px 20px rgba(0,0,0,0.1); }
-        .sticky-mobile-cta a { display: block; text-align: center; padding: 14px; background: linear-gradient(135deg, var(--cyan), var(--blue-accent)); color: var(--white); border-radius: 50px; font-family: var(--font-display); font-weight: 700; font-size: 0.95rem; }
-
-        /* ANIMATIONS */
-        .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.7s ease-out; }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
-
-        /* RESPONSIVE */
-        @media (max-width: 1024px) {
-            .hero-pme .container { grid-template-columns: 1fr; gap: 40px; }
-            .hero-roi-card { max-width: 500px; }
-            .fin-main { grid-template-columns: 1fr; }
-            
-        }
-        @media (max-width: 768px) {
-            .nav-links { display: none; position: absolute; top: 80px; left: 0; right: 0; background: var(--white); flex-direction: column; padding: 24px; gap: 16px; border-bottom: 1px solid var(--gray-200); box-shadow: var(--shadow-lg); }
-            .nav-links.active { display: flex; }
-            .navbar .container { justify-content: center; position: relative; }
-            .navbar-logo { position: absolute; left: 50%; transform: translateX(-50%); }
-            .navbar-logo img { height: 60px; }
-            .mobile-menu-btn { display: block; position: absolute; right: 24px; }
-            .hero-pme { padding: 60px 0 40px; }
-            .hero-ctas { flex-direction: column; }
-            .hero-trust-bar { flex-direction: column; gap: 10px; }
-            .problems-grid { grid-template-columns: 1fr; }
-            .outils-inner { grid-template-columns: 1fr; text-align: center; }
-            .outils-logos { justify-content: center; }
-            .form-grid { grid-template-columns: 1fr; }
-            .form-group.full { grid-column: 1; }
-            .roi-results { grid-template-columns: 1fr; gap: 16px; }
-            .card-footer { flex-direction: column; align-items: flex-start; }
-            
-            
-            .resultats-grid { grid-template-columns: repeat(2, 1fr); }
-            .temoignages-grid { grid-template-columns: 1fr; }
-            .sticky-mobile-cta { display: block; }
-            .footer { padding-bottom: 70px; }
-        }
-
-        /* Footer responsive */
-        @media (max-width: 900px) {
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 32px;
-            }
-        }
-        @media (max-width: 600px) {
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: 28px;
-            }
-            .footer-bottom {
-                flex-direction: column;
-                gap: 12px;
-                text-align: center;
-            }
-            .footer-bottom-right {
-                justify-content: center;
-            }
-        }
-        </style>
+  <!-- JSON-LD : Course -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "Penser avec l'IA — PME / TPE",
+    "description": "Programme de formation IA multi-outils pour RRH, dirigeants et managers PME. Méthode CRAFT + 4D, OPCO 100% finançable, mesure J+30/J+90/J+180.",
+    "provider": {
+      "@type": "EducationalOrganization",
+      "name": "SY Academy",
+      "url": "https://syacademy.fr"
+    },
+    "courseMode": "blended",
+    "educationalLevel": "Professional",
+    "inLanguage": "fr-FR",
+    "offers": {
+      "@type": "Offer",
+      "category": "OPCO / Plan de développement"
+    }
+  }
+  </script>
 </head>
 <body>
 
-    <!-- Countdown Banner -->
-    <div class="countdown-banner">
-        <div class="marquee-track">
-            <span class="marquee-item"><span class="countdown-text"></span></span>
-            <span class="marquee-item"><span class="countdown-text"></span></span>
-            <span class="marquee-item"><span class="countdown-text"></span></span>
-            <span class="marquee-item"><span class="countdown-text"></span></span>
-        </div>
+  <!-- TOP BANNER · Marquee countdown session -->
+  <div class="top-banner" role="region" aria-label="Annonce session découverte">
+    <div class="marquee-track">
+      <span class="marquee-item">Session découverte · 23 mai 2026 · Maurepas (78)</span>
+      <span class="marquee-item" data-countdown="2026-05-23T09:00:00+02:00">J-?? · ??h??</span>
+      <span class="marquee-item">Inscription jusqu'au 20 mai · gratuit</span>
+      <span class="marquee-item">Session découverte · 23 mai 2026 · Maurepas (78)</span>
+      <span class="marquee-item" data-countdown="2026-05-23T09:00:00+02:00">J-?? · ??h??</span>
+      <span class="marquee-item">Inscription jusqu'au 20 mai · gratuit</span>
     </div>
+  </div>
 
-    <!-- Navbar -->
-    <nav class="navbar" id="navbar">
-        <div class="container">
-            <a href="index.html" class="navbar-logo"><img src="/assets/img/logo-sy-academy.png" alt="SY Academy"></a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="collectivites.html">Collectivités</a></li>
-                <li><a href="pme.html" class="active">PME / TPE</a></li>
-                <li><a href="approche.html">Notre approche</a></li>
-                <li><a href="financement.html">Financement</a></li>
-                <li><a href="session-decouverte.html" class="nav-session">🟢 Session découverte</a></li>
-                <li><a href="#inscription" class="nav-cta">Demander un devis →</a></li>
+  <!-- NAVBAR sticky -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a class="navbar-logo" href="/" aria-label="SY Academy — accueil">
+        <img src="/assets/img/logo-sy-academy.png" alt="SY Academy" width="80" height="80">
+      </a>
+
+      <nav class="nav-links" aria-label="Navigation principale">
+        <a href="/approche">Approche</a>
+        <a href="/collectivites">Collectivités</a>
+        <a href="/pme" class="is-active" aria-current="page">PME</a>
+        <a href="/financement">Financement</a>
+        <a href="/article/5-criteres-formation-ia">Article</a>
+        <a href="/contact">Contact</a>
+        <a href="/session-decouverte" class="nav-session">
+          <span class="pulse-dot" aria-hidden="true"></span>
+          Session 23 mai
+        </a>
+      </nav>
+
+      <button class="mobile-menu-btn" aria-expanded="false" aria-controls="nav-links" aria-label="Ouvrir le menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- SECTION 1 · HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-meta">
+          <span class="hero-meta-left">VERTICALE · PME / TPE</span>
+          <span class="hero-meta-right">QUALIOPI · 2026.05</span>
+        </div>
+        <div class="hero-grid">
+          <div class="hero-content">
+            <span class="eyebrow">01 · VERTICALE PME / TPE</span>
+            <h1 id="hero-title">L'IA dans votre PME. <span class="accent">Pour penser mieux, pas pour penser à votre place.</span></h1>
+            <p class="lead">Formez vos RH, vos managers et vos équipes opérationnelles à un usage de l'IA qui produit de la valeur durable. Pas de gadget, pas de hype : une méthode et des livrables organisationnels.</p>
+            <div class="hero-ctas">
+              <a class="btn btn-cta btn-arrow" href="/contact">Discuter de votre projet</a>
+              <a class="btn btn-ghost btn-arrow" href="#programme">Voir le programme</a>
+            </div>
+            <ul class="hero-trust">
+              <li class="trust-item">Qualiopi NDA 11788770478</li>
+              <li class="trust-item">AI Act art. 4 traité</li>
+              <li class="trust-item">100% finançable OPCO</li>
             </ul>
-            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu"><span></span><span></span><span></span></button>
-        </div>
-    </nav>
-
-    <!-- HERO -->
-    <section class="hero-pme">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-badge">💰 100% finançable OPCO — Entreprises &lt;50 salariés</div>
-                <h1>Votre PME peut gagner<br><span class="highlight">30% de productivité</span><br>avec l'IA</h1>
-                <p class="hero-subtitle">
-                    On vous montre comment. Formations concrètes sur ChatGPT, Claude et Gemini, 
-                    adaptées à votre métier. Vos équipes repartent avec des outils opérationnels 
-                    dès le lendemain. Et c'est finançable à 100%.
-                </p>
-                <div class="hero-ctas">
-                    <a href="#formations" class="btn-primary">Voir les formations →</a>
-                    <a href="#roi" class="btn-secondary">Calculer mes gains →</a>
-                </div>
-                <div class="hero-trust-bar">
-                    <div class="trust-item">✓ Certification Qualiopi</div>
-                    <div class="trust-item">✓ 100% OPCO</div>
-                    <div class="trust-item">✓ 70% pratique</div>
-                    <div class="trust-item">✓ ROI dès J+1</div>
-                </div>
+          </div>
+          <aside class="kpi-card" aria-label="Repères programme">
+            <div class="kpi-card-head">
+              <span>// REPERES</span>
+              <span>2026.05</span>
             </div>
-
-            <div class="hero-roi-card">
-                <h3>📊 Gains moyens constatés après formation</h3>
-                <div class="roi-rows">
-                    <div class="roi-row">
-                        <span class="roi-label">Temps gagné par salarié</span>
-                        <span class="roi-value cyan">2h / jour</span>
-                    </div>
-                    <div class="roi-row">
-                        <span class="roi-label">Gain productivité global</span>
-                        <span class="roi-value cyan">+30%</span>
-                    </div>
-                    <div class="roi-row">
-                        <span class="roi-label">Coût de la formation</span>
-                        <span class="roi-value">0€ avec OPCO</span>
-                    </div>
-                    <div class="roi-row">
-                        <span class="roi-label">Délai avant résultats</span>
-                        <span class="roi-value green">J+1</span>
-                    </div>
-                </div>
-                <div class="roi-total">
-                    <div class="big">ROI immédiat</div>
-                    <p>Formation gratuite, résultats dès le lendemain</p>
-                </div>
+            <div class="kpi-grid kpi-4">
+              <div class="kpi-block">
+                <div class="kpi-num">2j</div>
+                <div class="kpi-label">Programme phare J1 + J+7</div>
+              </div>
+              <div class="kpi-block">
+                <div class="kpi-num">100%</div>
+                <div class="kpi-label">OPCO finançable</div>
+              </div>
+              <div class="kpi-block">
+                <div class="kpi-num">MULTI</div>
+                <div class="kpi-label">ChatGPT Claude Mistral Gemini</div>
+              </div>
+              <div class="kpi-block">
+                <div class="kpi-num">4D</div>
+                <div class="kpi-label">CRAFT + 4D · méthode</div>
+              </div>
             </div>
+            <div class="kpi-card-foot">
+              <span>// PROCHAINE SESSION · 23 MAI 2026</span>
+            </div>
+          </aside>
         </div>
+      </div>
     </section>
 
-    <!-- PROBLÈMES PME -->
-    <section class="problems-section">
-        <div class="container">
-            <div class="problems-grid">
-                <div class="problem-card fade-in">
-                    <div class="problem-icon">⏰</div>
-                    <h3>Temps perdu sur l'admin</h3>
-                    <p>Devis, factures, relances, emails, reporting... vos équipes passent plus de temps à administrer qu'à produire. L'IA peut diviser ce temps par 3.</p>
-                </div>
-                <div class="problem-card fade-in">
-                    <div class="problem-icon">📉</div>
-                    <h3>Process inexistants ou flous</h3>
-                    <p>Sans process clairs, chacun réinvente la roue. Erreurs, doublons, informations perdues. Structurer avant d'automatiser, c'est notre méthode.</p>
-                </div>
-                <div class="problem-card fade-in">
-                    <div class="problem-icon">🏃</div>
-                    <h3>Vos concurrents avancent</h3>
-                    <p>Les PME qui adoptent l'IA prennent de l'avance chaque jour. Celles qui attendent accumulent du retard. Le moment de s'y mettre, c'est maintenant.</p>
-                </div>
-            </div>
+    <!-- SECTION 2 · CONSTAT -->
+    <section class="section section-paper" aria-labelledby="constat-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">02 · CONSTAT</span>
+          <h2 id="constat-title">Les PME face à l'IA : <span class="accent">entre injonction et confusion.</span></h2>
+          <p class="lead">Vos équipes apprennent un outil le matin, l'oublient en 30 jours. Personne ne sait mesurer ce qui a vraiment changé. La méthode prime sur l'outil — sinon le retour sur investissement est nul.</p>
         </div>
+
+        <div class="cards-grid cols-3">
+          <div class="kpi-block">
+            <div class="kpi-num">22%</div>
+            <div class="kpi-label">des PME françaises utilisent l'IA de manière régulière (Bpifrance Le Lab, juin 2025)</div>
+          </div>
+          <div class="kpi-block">
+            <div class="kpi-num">71%</div>
+            <div class="kpi-label">des dirigeants se sentent dépassés par le rythme des évolutions IA (IFOP/Talan, mars 2025)</div>
+          </div>
+          <div class="kpi-block">
+            <div class="kpi-num">89%</div>
+            <div class="kpi-label">des formations IA proposées aux PME sont des présentations d'outils, pas des formations à la méthode (Microsoft Research, 2025)</div>
+          </div>
+        </div>
+
+        <div class="callout mt-6">
+          <span class="callout-eye">// LE PIEGE DE L'OUTIL</span>
+          <p class="callout-text">La majorité des formations IA empilent des fonctionnalités — ChatGPT, Claude, Mistral — sans transmettre la méthode pour discerner ce qui mérite l'IA et ce qui ne le mérite pas. Trois mois plus tard, l'usage retombe et le budget formation s'évapore. Sans cadre, l'investissement formation IA produit rarement le ROI attendu.</p>
+        </div>
+      </div>
     </section>
 
-    <!-- MULTI-OUTILS -->
-    <section class="outils-banner">
-        <div class="container">
-            <div class="outils-inner">
-                <div class="outils-logos">
-                    <div class="outil-circle">Chat<br>GPT</div>
-                    <div class="outil-circle">Claude</div>
-                    <div class="outil-circle">Gemini</div>
-                </div>
-                <div>
-                    <h3>Approche multi-outils : vous choisissez celui qui vous convient</h3>
-                    <p>Pas de dogme. Nos formations vous présentent ChatGPT, Claude et Gemini. Vous testez les trois sur vos cas réels et vous adoptez celui qui est le plus adapté à votre métier et à vos contraintes (prix, confidentialité, fonctionnalités).</p>
-                    <div class="outils-tags">
-                        <span class="outil-tag">ChatGPT (OpenAI)</span>
-                        <span class="outil-tag">Claude (Anthropic)</span>
-                        <span class="outil-tag">Gemini (Google)</span>
-                        <span class="outil-tag">Automatisations n8n</span>
-                    </div>
-                </div>
-            </div>
+    <!-- SECTION 3 · DIFFERENCIATEURS -->
+    <section class="section section-bone" aria-labelledby="diff-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">03 · DIFFERENCIATION</span>
+          <h2 id="diff-title">Une formation qui produit de la valeur, <span class="accent">pas du buzz.</span></h2>
+          <p class="lead">Quatre choix structurants qui rendent notre programme directement opérationnel pour vos équipes, dès la sortie de la salle.</p>
         </div>
+
+        <div class="cards-grid cols-2">
+          <article class="card">
+            <div class="card-num">01 / 04</div>
+            <h3>Multi-outils par design</h3>
+            <p>ChatGPT, Claude, Gemini, Mistral : nous formons sur les 4. Vos équipes apprennent à choisir le bon outil pour le bon usage, pas à devenir prisonnières d'une marque.</p>
+          </article>
+          <article class="card">
+            <div class="card-num">02 / 04</div>
+            <h3>Méthode CRAFT + 4D</h3>
+            <p>Une grille de lecture transposable à n'importe quel outil, n'importe quel cas d'usage. Quand un nouveau modèle sort dans 6 mois, vos équipes savent l'évaluer seules.</p>
+          </article>
+          <article class="card">
+            <div class="card-num">03 / 04</div>
+            <h3>OPCO 100% finançable</h3>
+            <p>Programme Qualiopi NDA 11788770478. Vos OPCO (OPCO EP, AKTO, ATLAS, etc.) couvrent 100% du coût pédagogique. Nous gérons le dossier avec vous.</p>
+          </article>
+          <article class="card">
+            <div class="card-num">04 / 04</div>
+            <h3>Mesure à J+30, J+90, J+180</h3>
+            <p>Nous ne lâchons pas vos équipes après la formation. Mesure d'impact à 1, 3 et 6 mois. Si le retour à l'autonomie n'est pas là, on intervient.</p>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <!-- FORMATIONS -->
-    <section class="formations-section" id="formations">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Nos formations PME</span>
-                <h2>3 programmes pour transformer votre entreprise</h2>
-                <p>De l'audit initial au management augmenté, chaque formation produit des résultats mesurables.</p>
-            </div>
-
-            <div class="formations-grid">
-
-                <!-- AUDIT -->
-                <div class="formation-card audit fade-in">
-                    <div class="card-header">
-                        <span class="card-code audit-code">Produit d'appel</span>
-                        <div class="card-badges"><span class="card-badge new">★ Recommandé en 1er</span></div>
-                    </div>
-                    <div class="card-body">
-                        <h3>Audit Performance & IA — Diagnostic organisationnel</h3>
-                        <p>Avant de former, on diagnostique. Cartographie complète de votre entreprise : process, management, maturité numérique. Vous repartez avec un plan d'action priorisé, chiffré, avec le ROI attendu sur chaque action.</p>
-                        <div class="card-meta">
-                            <span class="meta-item"><span class="meta-icon">📅</span> 1 à 2 jours</span>
-                            <span class="meta-item"><span class="meta-icon">👤</span> Dirigeant + responsables clés</span>
-                            <span class="meta-item"><span class="meta-icon">📍</span> Dans vos locaux</span>
-                        </div>
-                        <details class="card-objectives">
-                            <summary>Objectifs pédagogiques</summary>
-                            <ul>
-                                <li>Cartographier les processus clés et identifier les dysfonctionnements</li>
-                                <li>Évaluer la maturité numérique et IA de votre entreprise</li>
-                                <li>Identifier les quick wins à fort impact et faible complexité</li>
-                                <li>Produire un plan d'action priorisé avec estimation des gains</li>
-                                <li>Recommander un parcours de formation adapté</li>
-                            </ul>
-                        </details>
-                        <details class="card-livrables">
-                            <summary>Livrables remis</summary>
-                            <ul>
-                                <li>Rapport de diagnostic avec scoring par fonction</li>
-                                <li>Cartographie visuelle des process clés</li>
-                                <li>Matrice des quick wins (impact / complexité)</li>
-                                <li>Plan d'action priorisé sur 6-12 mois</li>
-                                <li>Calcul du ROI attendu par action</li>
-                            </ul>
-                        </details>
-                    </div>
-                    <div class="card-footer">
-                        <div class="card-price">1 500 — 3 000€ <small>Selon la taille de l'entreprise</small></div>
-                        <a href="#inscription" class="btn-card btn-card-primary">Demander un audit →</a>
-                    </div>
-                </div>
-
-                <!-- PME-01 -->
-                <div class="formation-card pme-card fade-in">
-                    <div class="card-header">
-                        <span class="card-code pme-code">PME-01</span>
-                        <div class="card-badges">
-                            <span class="card-badge opco">100% OPCO</span>
-                            <span class="card-badge places">✓ Places disponibles</span>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h3>Booster la performance de votre PME avec l'IA</h3>
-                        <p>La formation complète. En 2 jours, vos équipes maîtrisent l'IA générative, identifient les 5 tâches les plus chronophages de l'entreprise, les automatisent, et repartent avec un plan de transformation à 90 jours.</p>
-                        <div class="card-meta">
-                            <span class="meta-item"><span class="meta-icon">📅</span> 2 jours (14h)</span>
-                            <span class="meta-item"><span class="meta-icon">👤</span> Dirigeants, managers, équipes opérationnelles</span>
-                            <span class="meta-item"><span class="meta-icon">👥</span> 6 à 12 participants</span>
-                        </div>
-                        <details class="card-objectives">
-                            <summary>Objectifs pédagogiques</summary>
-                            <ul>
-                                <li>Maîtriser les fondamentaux de l'IA générative (ChatGPT, Claude, Gemini) pour son métier</li>
-                                <li>Identifier et automatiser les 5 tâches les plus chronophages de son entreprise</li>
-                                <li>Structurer ses process internes pour gagner en efficacité</li>
-                                <li>Construire un plan de transformation IA réaliste pour sa PME</li>
-                            </ul>
-                        </details>
-                        <details class="card-programme">
-                            <summary>Programme détaillé (4 demi-journées)</summary>
-                            <div class="programme-day">
-                                <h4>Jour 1 matin — Diagnostic et fondamentaux IA</h4>
-                                <ul>
-                                    <li>Autodiagnostic : les 10 questions clés pour évaluer le potentiel IA</li>
-                                    <li>Panorama des outils : ChatGPT, Claude, Gemini — forces, limites, tarifs</li>
-                                    <li>La méthode du prompting efficace</li>
-                                    <li>Atelier : chaque participant teste l'IA sur une problématique réelle</li>
-                                </ul>
-                            </div>
-                            <div class="programme-day">
-                                <h4>Jour 1 après-midi — IA pour les fonctions clés</h4>
-                                <ul>
-                                    <li>IA pour le commercial : prospection, rédaction d'offres, relances</li>
-                                    <li>IA pour l'administratif : devis, factures, courriers, reporting</li>
-                                    <li>IA pour le marketing : contenus, réseaux sociaux, emailing, SEO</li>
-                                    <li>IA pour le management : comptes-rendus, objectifs, suivi d'équipe</li>
-                                </ul>
-                            </div>
-                            <div class="programme-day">
-                                <h4>Jour 2 matin — Structurer et automatiser</h4>
-                                <ul>
-                                    <li>Cartographier ses process clés (vente, production, admin, RH)</li>
-                                    <li>Identifier les goulots d'étranglement et zones d'automatisation</li>
-                                    <li>Démonstration : workflows automatisés no-code</li>
-                                    <li>Atelier : construire sa première automatisation</li>
-                                </ul>
-                            </div>
-                            <div class="programme-day">
-                                <h4>Jour 2 après-midi — Plan de transformation</h4>
-                                <ul>
-                                    <li>Sécurité, confidentialité et RGPD pour les PME</li>
-                                    <li>Calculer le ROI de l'IA : heures et euros gagnés par mois</li>
-                                    <li>Construction du plan de transformation IA à 90 jours</li>
-                                    <li>Pitch : chaque participant présente son plan en 3 minutes</li>
-                                </ul>
-                            </div>
-                        </details>
-                        <details class="card-livrables">
-                            <summary>Livrables remis</summary>
-                            <ul>
-                                <li>Support de formation complet (PDF)</li>
-                                <li>Kit de 50 prompts classés par fonction (commercial, admin, marketing, management)</li>
-                                <li>Modèle de plan de transformation IA à 90 jours</li>
-                                <li>Grille de calcul ROI personnalisable</li>
-                                <li>Accès espace ressources SY Academy — 3 mois</li>
-                            </ul>
-                        </details>
-                    </div>
-                    <div class="card-footer">
-                        <div class="card-price">3 000€ <small>Intra-entreprise (jusqu'à 12 pers.) — 100% OPCO</small></div>
-                        <a href="#inscription" class="btn-card btn-card-primary">S'inscrire →</a>
-                    </div>
-                </div>
-
-                <!-- PME-02 -->
-                <div class="formation-card pme-card fade-in">
-                    <div class="card-header">
-                        <span class="card-code pme-code">PME-02</span>
-                        <div class="card-badges">
-                            <span class="card-badge opco">100% OPCO</span>
-                            <span class="card-badge places">✓ Places disponibles</span>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h3>Management et pilotage d'équipe augmenté par l'IA</h3>
-                        <p>En 1 jour, vos managers apprennent à déléguer toute la dimension administrative du management à l'IA : comptes-rendus, objectifs, plans d'action, tableaux de bord. Ils se concentrent sur l'essentiel : l'humain.</p>
-                        <div class="card-meta">
-                            <span class="meta-item"><span class="meta-icon">📅</span> 1 jour (7h)</span>
-                            <span class="meta-item"><span class="meta-icon">👤</span> Managers, chefs d'équipe, responsables</span>
-                            <span class="meta-item"><span class="meta-icon">👥</span> 6 à 12 participants</span>
-                        </div>
-                        <details class="card-objectives">
-                            <summary>Objectifs pédagogiques</summary>
-                            <ul>
-                                <li>Utiliser l'IA pour produire comptes-rendus, objectifs et plans d'action en 5 minutes</li>
-                                <li>Créer un tableau de bord de pilotage automatisé</li>
-                                <li>Structurer ses rituels managériaux pour gagner en impact</li>
-                                <li>Gérer le changement auprès de son équipe lors de l'intégration de l'IA</li>
-                            </ul>
-                        </details>
-                        <details class="card-programme">
-                            <summary>Programme détaillé</summary>
-                            <div class="programme-day">
-                                <h4>Matin — Le manager augmenté</h4>
-                                <ul>
-                                    <li>Les 5 tâches managériales que l'IA peut faire à votre place</li>
-                                    <li>Atelier : rédiger un objectif SMART, un feedback, un plan d'action avec l'IA</li>
-                                    <li>Atelier : créer un compte-rendu de réunion en 2 minutes</li>
-                                    <li>Construire son tableau de bord d'équipe avec l'IA</li>
-                                </ul>
-                            </div>
-                            <div class="programme-day">
-                                <h4>Après-midi — Conduite du changement</h4>
-                                <ul>
-                                    <li>Embarquer son équipe : communication, formation, accompagnement</li>
-                                    <li>Les résistances au changement et comment les dépasser</li>
-                                    <li>Structurer ses rituels managériaux (weekly, one-to-one, revue de performance)</li>
-                                    <li>Plan d'action : intégrer l'IA dans son management en 30 jours</li>
-                                </ul>
-                            </div>
-                        </details>
-                        <details class="card-livrables">
-                            <summary>Livrables remis</summary>
-                            <ul>
-                                <li>Support de formation (PDF)</li>
-                                <li>Kit de prompts « management augmenté »</li>
-                                <li>Modèle de tableau de bord équipe</li>
-                                <li>Plan d'action 30 jours</li>
-                            </ul>
-                        </details>
-                    </div>
-                    <div class="card-footer">
-                        <div class="card-price">1 600€ <small>Intra-entreprise (jusqu'à 12 pers.) — 100% OPCO</small></div>
-                        <a href="#inscription" class="btn-card btn-card-primary">S'inscrire →</a>
-                    </div>
-                </div>
-
-            </div>
+    <!-- SECTION 4 · PROGRAMME PENSER AVEC L'IA -->
+    <section id="programme" class="section section-paper" aria-labelledby="prog-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">04 · PROGRAMME</span>
+          <h2 id="prog-title">Le programme <span class="accent">Penser avec l'IA</span>, adapté aux PME.</h2>
+          <p class="lead">« Penser avec l'IA » est notre programme phare : 2 jours espacés (J1 + J+7) pour ancrer durablement, pas pour gaver de fonctionnalités.</p>
+          <p class="lead">Adapté aux contraintes des PME : cas d'usage RH, commercial, opérationnel, vocabulaire entreprise. Vous ne traduisez pas, vous appliquez.</p>
         </div>
+
+        <div class="cards-grid cols-3">
+          <article class="card">
+            <div class="card-num">01 / 03</div>
+            <h3>Jour 1 — La posture</h3>
+            <ul class="card-list">
+              <li>Comprendre ce que l'IA peut et ne peut pas faire</li>
+              <li>Cadre méthodologique CRAFT + 4D</li>
+              <li>Cas d'usage PME (recrutement, formation, GPEC, productivité)</li>
+              <li>Atelier : votre premier prompt structuré</li>
+            </ul>
+          </article>
+          <article class="card">
+            <div class="card-num">02 / 03</div>
+            <h3>Intersession — J1 → J+7</h3>
+            <ul class="card-list">
+              <li>Mise en pratique sur vos vrais dossiers</li>
+              <li>Production d'un livrable test</li>
+              <li>Support asynchrone par email</li>
+            </ul>
+          </article>
+          <article class="card">
+            <div class="card-num">03 / 03</div>
+            <h3>Jour 2 — L'usage</h3>
+            <ul class="card-list">
+              <li>Retour d'expérience collectif</li>
+              <li>Approfondissement sur 2 à 3 cas complexes</li>
+              <li>Construction de votre charte d'usage IA</li>
+              <li>Plan d'action 30 jours</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="callout mt-6">
+          <span class="callout-eye">// FORMAT INTRA</span>
+          <p class="callout-text">Disponible en intra sur-mesure pour vos équipes (5 à 15 personnes), adapté à votre métier et vos process spécifiques.</p>
+        </div>
+      </div>
     </section>
 
-    <!-- CALCULATEUR ROI -->
-    <section class="roi-section" id="roi">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Simulateur</span>
-                <h2>Combien l'IA peut vous faire économiser ?</h2>
-                <p>Estimez vos gains potentiels en fonction de la taille de votre équipe.</p>
-            </div>
-
-            <div class="roi-calculator">
-                <h3>🧮 Calculateur de gains IA</h3>
-
-                <div class="roi-input-group">
-                    <label>Nombre de salariés concernés</label>
-                    <input type="range" id="roiSalaries" min="1" max="50" value="10">
-                    <div class="roi-input-current" id="roiSalariesValue">10 salariés</div>
-                    <div class="roi-input-values"><span>1</span><span>50</span></div>
-                </div>
-
-                <div class="roi-input-group">
-                    <label>Heures admin / salarié / jour (avant IA)</label>
-                    <input type="range" id="roiHeures" min="1" max="6" value="3" step="0.5">
-                    <div class="roi-input-current" id="roiHeuresValue">3h / jour</div>
-                    <div class="roi-input-values"><span>1h</span><span>6h</span></div>
-                </div>
-
-                <div class="roi-input-group">
-                    <label>Coût horaire moyen chargé (€)</label>
-                    <input type="range" id="roiCout" min="20" max="80" value="35">
-                    <div class="roi-input-current" id="roiCoutValue">35€ / heure</div>
-                    <div class="roi-input-values"><span>20€</span><span>80€</span></div>
-                </div>
-
-                <div class="roi-results">
-                    <div class="roi-result-item">
-                        <div class="roi-result-number" id="roiHeuresGagnees">660h</div>
-                        <div class="roi-result-label">Heures gagnées / mois</div>
-                    </div>
-                    <div class="roi-result-item">
-                        <div class="roi-result-number" id="roiEurosGagnes">23 100€</div>
-                        <div class="roi-result-label">Économie / mois</div>
-                    </div>
-                    <div class="roi-result-item">
-                        <div class="roi-result-number" id="roiAnnuel">277 200€</div>
-                        <div class="roi-result-label">Économie / an</div>
-                    </div>
-                </div>
-
-                <p class="roi-disclaimer">* Estimation basée sur un gain de 30% du temps admin. Résultats variables selon les métiers et l'organisation.</p>
-            </div>
+    <!-- SECTION 5 · METHODE CRAFT + 4D -->
+    <section class="section section-ink" aria-labelledby="methode-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow on-dark">05 · SIGNATURE</span>
+          <h2 id="methode-title">Notre méthode signature : <span class="accent">CRAFT + 4D</span>.</h2>
+          <p class="lead">Deux grilles complémentaires. CRAFT pour structurer vos prompts. 4D pour évaluer ce que l'IA produit. Une fois maîtrisées, elles s'appliquent à tous les outils — ChatGPT, Claude, Mistral, Gemini — sans dépendre des évolutions de chacun.</p>
         </div>
+
+        <h3 class="mt-6">CRAFT — Pour structurer vos prompts</h3>
+        <p class="lead">Cinq dimensions à remplir pour transformer une demande approximative en instruction exploitable.</p>
+
+        <div class="cards-grid cols-3 mt-4">
+          <article class="card card-compact">
+            <span class="card-num">01 / 05</span>
+            <h4>C — Contexte</h4>
+            <p>Décrire la situation, l'enjeu, le périmètre.</p>
+          </article>
+          <article class="card card-compact">
+            <span class="card-num">02 / 05</span>
+            <h4>R — Rôle</h4>
+            <p>Indiquer la posture attendue de l'IA (expert juriste, formateur, etc.).</p>
+          </article>
+          <article class="card card-compact">
+            <span class="card-num">03 / 05</span>
+            <h4>A — Action</h4>
+            <p>Formuler la tâche précise à exécuter.</p>
+          </article>
+          <article class="card card-compact">
+            <span class="card-num">04 / 05</span>
+            <h4>F — Format</h4>
+            <p>Spécifier le format de sortie (tableau, note de synthèse, email, plan, etc.).</p>
+          </article>
+          <article class="card card-compact">
+            <span class="card-num">05 / 05</span>
+            <h4>T — Ton</h4>
+            <p>Caler le registre (formel, vulgarisé, factuel, pédagogique, etc.).</p>
+          </article>
+        </div>
+
+        <h3 class="mt-6">4D — Pour évaluer ce que l'IA produit</h3>
+        <p class="lead">Une fois le prompt structuré, encore faut-il évaluer la réponse. Les 4D sont les quatre dimensions de votre vigilance.</p>
+
+        <div class="cards-grid cols-2 mt-4">
+          <article class="card">
+            <span class="card-num">01 / 04</span>
+            <h4>Délégation</h4>
+            <p>Identifier ce qui doit rester entre les mains de l'humain et ce qui peut être confié à l'IA.</p>
+          </article>
+          <article class="card">
+            <span class="card-num">02 / 04</span>
+            <h4>Description</h4>
+            <p>Formuler un prompt qui produit un résultat exploitable, pas une réponse générique.</p>
+          </article>
+          <article class="card">
+            <span class="card-num">03 / 04</span>
+            <h4>Discernement</h4>
+            <p>Évaluer la réponse de l'IA avec les bons critères : factuel, juridique, éthique, contextuel.</p>
+          </article>
+          <article class="card">
+            <span class="card-num">04 / 04</span>
+            <h4>Diligence</h4>
+            <p>Tracer, documenter, ajuster. Faire de l'IA un actif organisationnel, pas un gadget individuel.</p>
+          </article>
+        </div>
+
+        <p class="section-foot">La méthode CRAFT + 4D est ancrée dans le programme « Penser avec l'IA » et adaptée aux cas d'usage métier des PME.</p>
+      </div>
     </section>
 
-    <!-- PLANNING -->
-    <section class="planning-section" id="planning">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Planning</span>
-                <h2>Prochaines sessions programmées</h2>
-                <p>Sessions inter-entreprises à Maurepas (78) ou intra dans vos locaux.</p>
-            </div>
-
-            <div style="background:#fff7ed;border:2px solid #f59e0b;border-radius:12px;padding:16px 24px;margin-bottom:24px;text-align:center;font-size:0.95rem;font-weight:600;color:#92400e;">
-                🔥 Sessions printemps 2026 ouvertes — 100% finançable OPCO — Inscriptions en cours
-            </div>
-
-            <div class="planning-table-wrapper">
-                <table class="planning-table">
-                    <thead>
-                        <tr><th>Date</th><th>Formation</th><th>Format</th><th>Lieu</th><th>Places</th><th></th></tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>19-20 mai 2026</strong></td>
-                            <td><span class="session-code">PME-01</span> Booster la performance avec l'IA</td>
-                            <td><span class="session-format format-inter">Inter</span></td>
-                            <td>Maurepas (78)</td>
-                            <td><span class="places-badge available">● 12 places</span></td>
-                            <td><button class="btn-inscr" onclick="scrollToForm('PME-01')">S'inscrire</button></td>
-                        </tr>
-                        <tr>
-                            <td><strong>3 juin 2026</strong></td>
-                            <td><span class="session-code">PME-02</span> Management augmenté par l'IA</td>
-                            <td><span class="session-format format-inter">Inter</span></td>
-                            <td>Maurepas (78)</td>
-                            <td><span class="places-badge available">● 12 places</span></td>
-                            <td><button class="btn-inscr" onclick="scrollToForm('PME-02')">S'inscrire</button></td>
-                        </tr>
-                        <tr>
-                            <td><strong>16-17 juin 2026</strong></td>
-                            <td><span class="session-code">PME-01</span> Booster la performance avec l'IA</td>
-                            <td><span class="session-format format-inter">Inter</span></td>
-                            <td>Maurepas (78)</td>
-                            <td><span class="places-badge available">● 12 places</span></td>
-                            <td><button class="btn-inscr" onclick="scrollToForm('PME-01')">S'inscrire</button></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Sur demande</strong></td>
-                            <td><span class="session-code">TOUTES</span> Toutes les formations</td>
-                            <td><span class="session-format format-intra">Intra</span></td>
-                            <td>Dans vos locaux</td>
-                            <td><span class="places-badge available">● Sur mesure</span></td>
-                            <td><button class="btn-inscr" onclick="scrollToForm('')">Demander</button></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <p class="planning-note">📞 <strong>Formation intra dans vos locaux ?</strong> On se déplace partout en Île-de-France et en France. <a href="#inscription" style="color:var(--cyan);text-decoration:underline;">Demandez un devis</a>.</p>
+    <!-- SECTION 6 · FINANCEMENT -->
+    <section class="section section-bone" aria-labelledby="fin-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">06 · FINANCEMENT</span>
+          <h2 id="fin-title">Le financement OPCO et <span class="accent">les autres voies.</span></h2>
+          <p class="lead">Vous n'avancez pas le coût pédagogique : nous identifions le bon dispositif et nous montons le dossier avec vous.</p>
         </div>
+
+        <div class="cards-grid cols-3">
+          <article class="card">
+            <div class="card-num">01 / 03</div>
+            <h3>OPCO 100%</h3>
+            <p>OPCO EP, AKTO, ATLAS, OCAPIAT, Constructys, AFDAS et autres : votre OPCO couvre intégralement le coût pédagogique. Nous gérons la demande de prise en charge avec vous.</p>
+          </article>
+          <article class="card">
+            <div class="card-num">02 / 03</div>
+            <h3>Plan de développement</h3>
+            <p>Si votre OPCO ne couvre pas l'intégralité, le solde est imputable sur votre plan de développement des compétences. Devis détaillé.</p>
+          </article>
+          <article class="card">
+            <div class="card-num">03 / 03</div>
+            <h3>Autofinancement</h3>
+            <p>Pour les TPE non rattachées à un OPCO ou en complément. Tarif préférentiel pour groupes de 3 inscrits et plus.</p>
+          </article>
+        </div>
+
+        <div class="hero-ctas hero-ctas-center mt-6">
+          <a class="btn btn-ghost btn-arrow" href="/financement">Voir tous les détails financement</a>
+        </div>
+      </div>
     </section>
 
-    <!-- FINANCEMENT OPCO -->
-    <section class="financement-section" id="financement">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Financement</span>
-                <h2>Votre formation IA peut ne rien vous coûter</h2>
-                <p>Si votre entreprise a moins de 50 salariés, votre OPCO finance 100% de la formation.</p>
-            </div>
-
-            <div class="fin-main">
-                <div class="fin-content">
-                    <h3>Comment ça marche ?</h3>
-                    <p>Chaque entreprise cotise à un OPCO (Opérateur de Compétences). Si vous avez moins de 50 salariés, votre OPCO peut prendre en charge 100% du coût de la formation au titre du plan de développement des compétences.</p>
-                    <ul class="fin-steps">
-                        <li><strong>Vous nous contactez</strong> — on identifie votre OPCO et vos droits</li>
-                        <li><strong>On monte le dossier</strong> — convention, programme, devis au bon format</li>
-                        <li><strong>Votre OPCO valide</strong> — accord de prise en charge sous 2-4 semaines</li>
-                        <li><strong>Vous êtes formé</strong> — l'OPCO nous paie directement (subrogation)</li>
-                    </ul>
-                    <p><strong>SY Academy s'occupe de tout le montage administratif.</strong> Vous n'avez qu'à venir en formation.</p>
-                </div>
-
-                <div class="fin-card-opco fade-in">
-                    <div class="big-badge">Entreprises &lt;50 salariés</div>
-                    <div class="big-number"><span>100%</span></div>
-                    <p>prise en charge possible par votre OPCO au titre du plan de développement des compétences</p>
-                    <div class="opco-list">
-                        <span class="opco-tag">Atlas</span>
-                        <span class="opco-tag">OPCO EP</span>
-                        <span class="opco-tag">AKTO</span>
-                        <span class="opco-tag">OPCO 2i</span>
-                        <span class="opco-tag">Constructys</span>
-                        <span class="opco-tag">Ocapiat</span>
-                        <span class="opco-tag">AFDAS</span>
-                        <span class="opco-tag">Uniformation</span>
-                        <span class="opco-tag">OPCO Santé</span>
-                        <span class="opco-tag">OPCO Mobilités</span>
-                    </div>
-                </div>
-            </div>
+    <!-- SECTION 7 · CTA FINAL -->
+    <section class="section section-ink" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="section-head section-head-center">
+          <span class="eyebrow on-dark">07 · COMMENCER</span>
+          <h2 id="cta-title">Prêt à former vos équipes <span class="accent">sans gaspiller le budget</span> ?</h2>
+          <p class="lead">Échangeons sur vos enjeux. En une heure, on cadre votre besoin et on construit la proposition la plus adaptée — programme inter « Penser avec l'IA » ou formation intra sur-mesure.</p>
+          <div class="hero-ctas hero-ctas-center">
+            <a class="btn btn-cta btn-arrow" href="/contact">Discuter de votre projet</a>
+            <a class="btn btn-light btn-arrow" href="/financement">Voir tous les financements</a>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- RÉSULTATS CONCRETS -->
-    <section class="resultats-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Résultats concrets</span>
-                <h2>Ce que nos formations produisent</h2>
-                <p>Des résultats mesurables dès le lendemain de la formation.</p>
-            </div>
-            <div class="resultats-grid">
-                <div class="resultat-card fade-in">
-                    <div class="resultat-chiffre">2h / jour</div>
-                    <div class="resultat-label">Temps gagné par salarié</div>
-                    <div class="resultat-desc">Sur les tâches administratives et commerciales, dès le lendemain de la formation.</div>
-                </div>
-                <div class="resultat-card fade-in">
-                    <div class="resultat-chiffre">÷3</div>
-                    <div class="resultat-label">Temps admin divisé par 3</div>
-                    <div class="resultat-desc">Devis, factures, relances, reporting — l'IA prend en charge le plus chronophage.</div>
-                </div>
-                <div class="resultat-card fade-in">
-                    <div class="resultat-chiffre">0€</div>
-                    <div class="resultat-label">Coût de la formation</div>
-                    <div class="resultat-desc">100% prise en charge OPCO pour les entreprises de moins de 50 salariés.</div>
-                </div>
-                <div class="resultat-card fade-in">
-                    <div class="resultat-chiffre">90 jours</div>
-                    <div class="resultat-label">Plan de transformation</div>
-                    <div class="resultat-desc">Chaque participant repart avec son plan d'action IA personnalisé à 90 jours.</div>
-                </div>
-            </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+
+      <!-- Bandeau signature Brand.SYS -->
+      <div class="footer-meta">
+        <span>// SY-ACADEMY · BRAND.SYS</span>
+        <span>v1.0 · 2026 · syacademy.fr</span>
+      </div>
+
+      <!-- Grille principale 5 colonnes -->
+      <div class="footer-grid">
+
+        <!-- COL 1 : Logo + tagline + adresse -->
+        <div class="footer-brand">
+          <img src="/assets/img/logo-sy-academy.png"
+               alt="SY Academy"
+               width="60" height="60">
+          <p class="footer-tagline">
+            Penser avec l'IA. Décider sans elle.
+          </p>
+          <p class="footer-desc">
+            Organisme de formation Qualiopi spécialisé en management,
+            organisation et IA.
+          </p>
+          <div class="footer-contact">
+            <span>📍 SDCL Center, Maurepas (78)</span>
+            <span>✉️ contact@syacademy.fr</span>
+            <span>NDA 11788770478</span>
+            <span>SIRET 84193712100024</span>
+          </div>
         </div>
-    </section>
 
-    <!-- TÉMOIGNAGES -->
-    <section class="temoignages-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Témoignages</span>
-                <h2>Ils ont transformé leur PME avec l'IA</h2>
-                <p>Retours de dirigeants et managers formés par SY Academy.</p>
-            </div>
-            <div class="temoignages-grid">
-                <div class="temoignage-card fade-in">
-                    <div class="temoignage-quote">"</div>
-                    <p class="temoignage-text">On perdait un temps fou sur les devis et les relances. Après la formation, mon assistante commerciale fait en 20 minutes ce qui prenait 2 heures. Et c'est notre OPCO qui a tout payé.</p>
-                    <div class="temoignage-auteur">Laurent M.</div>
-                    <div class="temoignage-poste">Dirigeant — PME BTP, 18 salariés (78)</div>
-                </div>
-                <div class="temoignage-card fade-in">
-                    <div class="temoignage-quote">"</div>
-                    <p class="temoignage-text">Je pensais que l'IA c'était pour les grandes boîtes. En 2 jours, toute l'équipe s'est mise à l'utiliser. Les comptes-rendus, les mails clients, les process — tout va plus vite maintenant.</p>
-                    <div class="temoignage-auteur">Sophie D.</div>
-                    <div class="temoignage-poste">Responsable administrative — Cabinet comptable, 12 salariés (92)</div>
-                </div>
-                <div class="temoignage-card fade-in">
-                    <div class="temoignage-quote">"</div>
-                    <p class="temoignage-text">Le formateur a travaillé sur nos vrais cas. Pas de théorie inutile. Dès le lendemain, mes managers utilisaient l'IA pour leurs objectifs, leurs feedbacks, leurs plans d'action. Très concret.</p>
-                    <div class="temoignage-auteur">Marc B.</div>
-                    <div class="temoignage-poste">DG — Société de services, 35 salariés (91)</div>
-                </div>
-            </div>
+        <!-- COL 2 : Formations -->
+        <div>
+          <h4>// FORMATIONS</h4>
+          <ul class="footer-links">
+            <li><a href="/collectivites">Collectivités</a></li>
+            <li><a href="/pme">PME / TPE</a></li>
+            <li><a href="/diagnostic">Diagnostic 12 questions</a></li>
+            <li><a href="/session-decouverte">Session 23 mai</a></li>
+            <li><a href="/approche">Notre approche</a></li>
+          </ul>
         </div>
-    </section>
 
-    <!-- FAQ -->
-    <section class="faq-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Questions fréquentes</span>
-                <h2>Tout ce que vous devez savoir</h2>
-            </div>
-            <div class="faq-list">
-                <details class="faq-item">
-                    <summary>Comment savoir si mon OPCO prend en charge la formation ?</summary>
-                    <div class="faq-answer">Contactez-nous et nous identifierons votre OPCO en fonction de votre convention collective. Si votre entreprise a moins de 50 salariés, vous avez accès au plan de développement des compétences financé par votre OPCO. Nous nous occupons de tout le montage administratif.</div>
-                </details>
-                <details class="faq-item">
-                    <summary>Quels outils IA sont utilisés dans la formation ?</summary>
-                    <div class="faq-answer">Nous présentons ChatGPT (OpenAI), Claude (Anthropic) et Gemini (Google). Chaque participant teste les trois sur ses cas réels et choisit celui qui lui convient le mieux. Nous montrons aussi des démonstrations d'automatisations avec des outils no-code.</div>
-                </details>
-                <details class="faq-item">
-                    <summary>La formation a-t-elle lieu dans nos locaux ?</summary>
-                    <div class="faq-answer">Oui, nous proposons des formations intra dans vos locaux partout en Île-de-France et en France. Nous proposons aussi des sessions inter-entreprises dans notre centre de formation à Maurepas (78). Le format intra est idéal car on travaille directement sur vos vrais cas.</div>
-                </details>
-                <details class="faq-item">
-                    <summary>Mes données d'entreprise sont-elles en sécurité ?</summary>
-                    <div class="faq-answer">Oui. Pendant la formation, nous expliquons les bonnes pratiques de confidentialité avec chaque outil. Nous abordons les règles RGPD, les données à ne jamais soumettre à une IA, et les paramètres de confidentialité de chaque plateforme. Si la confidentialité est critique pour vous, nous pouvons travailler avec des données anonymisées.</div>
-                </details>
-                <details class="faq-item">
-                    <summary>Faut-il des compétences techniques ?</summary>
-                    <div class="faq-answer">Aucune. Il suffit de savoir utiliser un ordinateur et un navigateur web. Nos formations sont conçues pour des personnes qui n'ont jamais utilisé d'IA. On part de zéro et on arrive à des résultats opérationnels en 1 à 2 jours.</div>
-                </details>
-                <details class="faq-item">
-                    <summary>Quel est le ROI concret de la formation ?</summary>
-                    <div class="faq-answer">En moyenne, les participants gagnent 1 à 2 heures par jour sur les tâches administratives et commerciales dès le lendemain de la formation. Pour une équipe de 10 personnes, ça représente environ 250 heures gagnées par mois. Pendant la formation, nous calculons le ROI personnalisé pour votre entreprise.</div>
-                </details>
-            </div>
+        <!-- COL 3 : Financement -->
+        <div>
+          <h4>// FINANCEMENT</h4>
+          <ul class="footer-links">
+            <li><a href="/financement">OPCO PME / TPE</a></li>
+            <li><a href="/financement#collectivite">Budget collectivité</a></li>
+            <li><a href="/financement#plan">Plan de formation</a></li>
+            <li><a href="/financement#dif">DIF Élus</a></li>
+            <li><a href="/contact">Devis sur mesure</a></li>
+          </ul>
         </div>
-    </section>
 
-    <!-- FORMULAIRE -->
-    <section class="inscription-section" id="inscription">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Inscription</span>
-                <h2>Demandez votre devis ou pré-inscrivez-vous</h2>
-                <p>Réponse sous 24h. Nous montons votre dossier OPCO gratuitement.</p>
-            </div>
-
-            <div class="form-wrapper">
-                <form id="inscriptionForm" class="form-grid" name="inscription-pme" action="/success.html" method="POST" data-netlify="true">
-                    <input type="hidden" name="form-name" value="inscription-pme">
-                    <div class="form-group">
-                        <label for="nom">Nom *</label>
-                        <input type="text" id="nom" name="nom" required placeholder="Votre nom">
-                    </div>
-                    <div class="form-group">
-                        <label for="prenom">Prénom *</label>
-                        <input type="text" id="prenom" name="prenom" required placeholder="Votre prénom">
-                    </div>
-                    <div class="form-group">
-                        <label for="entreprise">Entreprise *</label>
-                        <input type="text" id="entreprise" name="entreprise" required placeholder="Nom de votre entreprise">
-                    </div>
-                    <div class="form-group">
-                        <label for="fonction">Fonction *</label>
-                        <input type="text" id="fonction" name="fonction" required placeholder="Ex: Dirigeant, DRH, Manager...">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email professionnel *</label>
-                        <input type="email" id="email" name="email" required placeholder="votre@entreprise.fr">
-                    </div>
-                    <div class="form-group">
-                        <label for="telephone">Téléphone</label>
-                        <input type="tel" id="telephone" name="telephone" placeholder="06 00 00 00 00">
-                    </div>
-                    <div class="form-group">
-                        <label for="effectif">Effectif de l'entreprise</label>
-                        <select id="effectif" name="effectif">
-                            <option value="">— Sélectionnez —</option>
-                            <option value="1-10">1 à 10 salariés</option>
-                            <option value="11-20">11 à 20 salariés</option>
-                            <option value="21-49">21 à 49 salariés</option>
-                            <option value="50+">50 salariés et plus</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="opco">Connaissez-vous votre OPCO ?</label>
-                        <select id="opco" name="opco">
-                            <option value="">— Sélectionnez —</option>
-                            <option value="oui">Oui, je le connais</option>
-                            <option value="non">Non, j'ai besoin d'aide</option>
-                            <option value="pas-concerne">Pas concerné</option>
-                        </select>
-                    </div>
-                    <div class="form-group full">
-                        <label for="formation">Formation(s) souhaitée(s) *</label>
-                        <select id="formation" name="formation" required>
-                            <option value="">— Sélectionnez une formation —</option>
-                            <option value="audit">Audit Performance & IA (1-2 jours)</option>
-                            <option value="PME-01">PME-01 — Booster la performance avec l'IA (2 jours)</option>
-                            <option value="PME-02">PME-02 — Management augmenté par l'IA (1 jour)</option>
-                            <option value="parcours">Parcours complet (audit + formation)</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="participants">Nombre de participants</label>
-                        <select id="participants" name="participants">
-                            <option value="">— Sélectionnez —</option>
-                            <option value="1-5">1 à 5</option>
-                            <option value="6-10">6 à 10</option>
-                            <option value="11+">Plus de 10</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="format">Format souhaité</label>
-                        <select id="format" name="format_pref">
-                            <option value="">— Sélectionnez —</option>
-                            <option value="intra">Intra (dans nos locaux)</option>
-                            <option value="inter">Inter (à Maurepas 78)</option>
-                            <option value="indifferent">Indifférent</option>
-                        </select>
-                    </div>
-                    <div class="form-group full">
-                        <label for="message">Message / besoin spécifique</label>
-                        <textarea id="message" name="message" placeholder="Décrivez vos besoins, votre contexte, les services concernés..."></textarea>
-                    </div>
-                    <div class="form-group full" style="display:flex;align-items:flex-start;gap:10px;">
-                        <input type="checkbox" id="rgpd-consent" name="rgpd-consent" required style="margin-top:4px;flex-shrink:0;">
-                        <label for="rgpd-consent" style="font-size:0.78rem;color:#94a3b8;line-height:1.5;font-weight:400;">
-                            J'accepte que SY Academy collecte mes données dans le cadre de cette demande de contact. Elles seront utilisées uniquement pour répondre à ma demande et me recontacter si je le souhaite. Je peux demander leur suppression à tout moment via <a href="mailto:contact@syacademy.fr" style="color:#06b6d4;">contact@syacademy.fr</a>. <a href="politique-confidentialite.html" style="color:#06b6d4;">Politique de confidentialité</a>
-                        </label>
-                    </div>
-                    <button type="submit" class="form-submit">Envoyer ma demande →</button>
-                    <p class="form-note">🔒 Données confidentielles — Réponse garantie sous 24h — Montage dossier OPCO gratuit</p>
-                </form>
-            </div>
+        <!-- COL 4 : SY Academy -->
+        <div>
+          <h4>// SY ACADEMY</h4>
+          <ul class="footer-links">
+            <li><a href="/approche">Notre approche</a></li>
+            <li><a href="/contact">Contact / Devis</a></li>
+            <li><a href="/article/5-criteres-formation-ia">Article 5 critères</a></li>
+            <li><a href="/grille-audit-formation-ia">Grille audit (PDF)</a></li>
+            <li><a href="/mentions-legales">Mentions légales</a></li>
+            <li><a href="/politique-confidentialite">Confidentialité</a></li>
+          </ul>
         </div>
-    </section>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-
-                <!-- Bloc 1 : Marque -->
-                <div class="footer-brand">
-                    <img src="/assets/img/logo-sy-academy.png" alt="SY Academy">
-                    <p>SY Academy améliore la performance des organisations en combinant management structuré, organisation des process et l'intégration concrète de l'IA.</p>
-                    <div class="footer-contact-info">
-                        <span>🏢 Centre de formation : SDCL CENTER, Maurepas (78)</span>
-                        <span>📧 contact@syacademy.fr</span>
-                    </div>
-                </div>
-
-                <!-- Bloc 2 : Formations -->
-                <div class="footer-col">
-                    <h4>Formations</h4>
-                    <ul class="footer-links">
-                        <li><a href="collectivites.html">Collectivités territoriales</a></li>
-                        <li><a href="pme.html">PME / TPE</a></li>
-                        <li><a href="contact.html">Audit Performance &amp; IA</a></li>
-                    </ul>
-                </div>
-
-                <!-- Bloc 3 : Financement -->
-                <div class="footer-col">
-                    <h4>Financement</h4>
-                    <ul class="footer-links">
-                        <li><a href="financement.html">OPCO — PME / TPE</a></li>
-                        <li><a href="financement.html">Budget formation — Collectivités</a></li>
-                        <li><a href="financement.html">Plan de formation</a></li>
-                        <li><a href="financement.html">DIF Élus</a></li>
-                    </ul>
-                </div>
-
-                <!-- Bloc 4 : SY Academy -->
-                <div class="footer-col">
-                    <h4>SY Academy</h4>
-                    <ul class="footer-links">
-                        <li><a href="approche.html">Notre approche</a></li>
-                        <li><a href="contact.html">Contact / Devis</a></li>
-                        <li><a href="mentions-legales.html">Mentions légales</a></li>
-                        <li><a href="politique-confidentialite.html">Politique de confidentialité</a></li>
-                    </ul>
-                </div>
-
-                <!-- Bloc 5 : SOLE SOLUTION -->
-                <div class="footer-col">
-                    <h4>SOLE SOLUTION</h4>
-                    <p style="font-size:0.85rem;color:var(--gray-500);margin-bottom:12px;">Automatisation & outils IA</p>
-                    <ul class="footer-links">
-                        <li><a href="https://sole-solution.fr/">sole-solution.fr</a></li>
-                        <li><a href="https://sole-solution.fr/">Chatbots municipaux</a></li>
-                        <li><a href="https://sole-solution.fr/">SOLE SOLUTION URBA</a></li>
-                        <li><a href="https://sole-solution.fr/">Workflows automatisés</a></li>
-                        <li><a href="https://sole-solution.fr/">Tableaux de bord IA</a></li>
-                    </ul>
-                </div>
-
-            </div>
-
-            <!-- Barre du bas -->
-            <div class="footer-bottom">
-                <span>© 2026 SY Academy — Tous droits réservés</span>
-                <div class="qualiopi-footer-block">
-                    <img src="/assets/img/logo-qualiopi.jpg" alt="Qualiopi processus certifié - République Française" class="qualiopi-logo-footer">
-                    <p class="qualiopi-mention">La certification qualité a été délivrée au titre de la catégorie d'action suivante : actions de formation</p>
-                </div>
-            </div>
+        <!-- COL 5 : Sole Solution -->
+        <div>
+          <h4>// SOLE SOLUTION</h4>
+          <ul class="footer-links">
+            <li><a href="https://sole-solution.fr" rel="noopener" target="_blank">sole-solution.fr</a></li>
+            <li><a href="https://sole-solution.fr" rel="noopener" target="_blank">Chatbots municipaux</a></li>
+            <li><a href="https://sole-solution.fr" rel="noopener" target="_blank">SOLE SOLUTION URBA</a></li>
+            <li><a href="https://sole-solution.fr" rel="noopener" target="_blank">Workflows automatisés</a></li>
+            <li><a href="https://sole-solution.fr" rel="noopener" target="_blank">Tableaux de bord IA</a></li>
+          </ul>
         </div>
-    </footer>
 
-    <!-- STICKY MOBILE -->
-    <div class="sticky-mobile-cta">
-        <a href="#inscription">Demander un devis gratuit →</a>
+      </div>
+
+      <!-- Bottom bar : copyright + Qualiopi -->
+      <div class="footer-bottom">
+        <span class="footer-copyright">© 2026 SY Academy · Tous droits réservés</span>
+        <div class="qualiopi-block">
+          <img src="/assets/img/logo-qualiopi.jpg"
+               alt="Qualiopi - Processus certifié"
+               class="qualiopi-logo">
+          <p class="qualiopi-mention">
+            La certification qualité a été délivrée au titre de la catégorie
+            d'action suivante : <strong>actions de formation</strong>.
+          </p>
+        </div>
+      </div>
+
     </div>
+  </footer>
 
-    <script>
-        // Navbar
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 20));
-
-        // Mobile menu
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const navLinks = document.getElementById('navLinks');
-        mobileMenuBtn.addEventListener('click', () => navLinks.classList.toggle('active'));
-        navLinks.querySelectorAll('a').forEach(l => l.addEventListener('click', () => navLinks.classList.remove('active')));
-
-        // Scroll animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const t = document.querySelector(this.getAttribute('href'));
-                if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            });
-        });
-
-        // Scroll to form
-        function scrollToForm(code) {
-            const select = document.getElementById('formation');
-            if (code && select) {
-                for (let opt of select.options) {
-                    if (opt.value === code) { select.value = code; break; }
-                }
-            }
-            document.getElementById('inscription').scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-
-        // ROI Calculator
-        const sliders = {
-            salaries: document.getElementById('roiSalaries'),
-            heures: document.getElementById('roiHeures'),
-            cout: document.getElementById('roiCout')
-        };
-        const displays = {
-            salaries: document.getElementById('roiSalariesValue'),
-            heures: document.getElementById('roiHeuresValue'),
-            cout: document.getElementById('roiCoutValue')
-        };
-
-        function updateROI() {
-            const sal = parseInt(sliders.salaries.value);
-            const hrs = parseFloat(sliders.heures.value);
-            const cost = parseInt(sliders.cout.value);
-
-            displays.salaries.textContent = sal + ' salarié' + (sal > 1 ? 's' : '');
-            displays.heures.textContent = hrs + 'h / jour';
-            displays.cout.textContent = cost + '€ / heure';
-
-            const gainPct = 0.30;
-            const heuresGagneesMois = Math.round(sal * hrs * gainPct * 22);
-            const eurosGagnesMois = Math.round(heuresGagneesMois * cost);
-            const eurosAn = eurosGagnesMois * 12;
-
-            document.getElementById('roiHeuresGagnees').textContent = heuresGagneesMois.toLocaleString('fr-FR') + 'h';
-            document.getElementById('roiEurosGagnes').textContent = eurosGagnesMois.toLocaleString('fr-FR') + '€';
-            document.getElementById('roiAnnuel').textContent = eurosAn.toLocaleString('fr-FR') + '€';
-        }
-
-        Object.values(sliders).forEach(s => s.addEventListener('input', updateROI));
-        updateROI();
-
-    </script>
-
-<script>
-(function(){
-  var target=new Date('2026-05-23T09:00:00+02:00').getTime();
-  function pad(n){return String(n).padStart(2,'0');}
-  function update(){
-    var diff=target-Date.now();
-    if(diff<=0){document.querySelectorAll('.countdown-text').forEach(function(el){el.textContent='\u{1F680} SY Academy \u00B7 Session d\u00E9couverte IA \u00B7 23 Mai \u00B7 C\u2019est maintenant !';});return;}
-    var d=Math.floor(diff/86400000),h=Math.floor((diff%86400000)/3600000),m=Math.floor((diff%3600000)/60000),s=Math.floor((diff%60000)/1000);
-    var txt='\u{1F680} Lancement SY Academy \u00B7 Session d\u00E9couverte IA \u00B7 23 Mai \u00B7 '+pad(d)+'j '+pad(h)+'h '+pad(m)+'m '+pad(s)+'s';
-    document.querySelectorAll('.countdown-text').forEach(function(el){el.textContent=txt;});
-  }
-  update();setInterval(update,1000);
-})();
-</script>
+  <script src="/assets/js/nav.js" defer></script>
 </body>
 </html>
