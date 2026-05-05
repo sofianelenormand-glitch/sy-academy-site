@@ -323,6 +323,10 @@ p {
   color: rgba(251, 250, 246, 0.78);
 }
 
+.section-ink li {
+  color: white;
+}
+
 .section-head {
   margin-bottom: var(--s-7);
 }
@@ -1076,7 +1080,7 @@ p {
   font-weight: 600;
 }
 
-.checklist {
+.section-ink .checklist {
   list-style: none;
   padding: 0;
   display: grid;
@@ -1085,14 +1089,27 @@ p {
   margin-top: var(--s-6);
 }
 
-.checklist li {
-  padding: var(--s-4);
-  background-color: rgba(255, 255, 255, 0.04);
+.section-ink .checklist li {
+  padding: var(--s-4) var(--s-4) var(--s-4) var(--s-7);
+  margin-bottom: 0;
+  background-color: rgba(255, 255, 255, 0.06);
   border-radius: var(--radius-md);
   border-left: 3px solid var(--cyan);
   line-height: 1.5;
   font-size: 0.9375rem;
-  color: rgba(251, 250, 246, 0.85);
+  color: white;
+  position: relative;
+}
+
+.section-ink .checklist li::before {
+  content: "›";
+  position: absolute;
+  left: var(--s-4);
+  top: var(--s-4);
+  color: var(--cyan);
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1;
 }
 
 .faq-list {
