@@ -3256,6 +3256,189 @@ section.section-ink .legal-note em {
   color: rgba(216, 218, 229, 0.65);
 }
 
+/* === APPROCHE PAGE === */
+
+.container.container-narrow {
+  max-width: 760px;
+}
+
+/* Avatar placeholder */
+.avatar-placeholder {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--cyan), var(--blue-deep));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.avatar-initials {
+  font-family: var(--font-display);
+  font-size: 4rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.02em;
+}
+
+/* Fondateur grid */
+.fondateur-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-6);
+  align-items: start;
+  margin-top: var(--s-6);
+}
+
+@media (min-width: 768px) {
+  .fondateur-grid {
+    grid-template-columns: 220px 1fr;
+    gap: var(--s-7);
+  }
+}
+
+.fondateur-photo {
+  display: flex;
+  justify-content: center;
+}
+
+.fondateur-tags {
+  list-style: none;
+  padding: 0;
+  margin-top: var(--s-5);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2);
+}
+
+.fondateur-tags li {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: rgba(38, 168, 232, 0.08);
+  color: var(--blue-deep);
+  padding: var(--s-2) var(--s-3);
+  border-radius: var(--radius-md);
+}
+
+/* Vision quote */
+.vision-quote {
+  margin-top: var(--s-7);
+  padding: var(--s-6);
+  border-left: 4px solid var(--cyan);
+  background-color: rgba(38, 168, 232, 0.04);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+.vision-quote p {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin: 0;
+  color: var(--ink);
+}
+
+.vision-author {
+  display: block;
+  margin-top: var(--s-3);
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--cyan);
+}
+
+/* Prompt comparison (avant / après) */
+.prompt-comparison {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-5);
+  margin: var(--s-6) 0;
+}
+
+@media (min-width: 768px) {
+  .prompt-comparison {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.prompt-before,
+.prompt-after {
+  padding: var(--s-5);
+  border-radius: var(--radius-md);
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.prompt-before {
+  border-left: 3px solid var(--terracotta);
+}
+
+.prompt-after {
+  border-left: 3px solid var(--cyan);
+}
+
+.prompt-label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--cyan);
+  display: block;
+  margin-bottom: var(--s-3);
+}
+
+.prompt-before .prompt-label {
+  color: var(--terracotta);
+}
+
+.prompt-text {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.25);
+  padding: var(--s-3);
+  border-radius: 4px;
+  margin-bottom: var(--s-3);
+}
+
+.prompt-result {
+  font-size: 0.875rem;
+  color: rgba(216, 218, 229, 0.85);
+  margin: 0;
+  font-style: italic;
+}
+
+/* Diff grid (différenciateurs encart) */
+.diff-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-5);
+  margin-top: var(--s-6);
+}
+
+@media (min-width: 768px) {
+  .diff-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.diff-item h4 {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  margin: 0 0 var(--s-3);
+  color: var(--ink);
+}
+
+.diff-item p {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--graphite);
+  margin: 0;
+}
+
 /* =============================================================================
  * FIN · BRAND.SYS v1.0
  * ========================================================================== */
