@@ -848,13 +848,13 @@ p {
 
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: minmax(0, 1fr) 320px;
   gap: var(--s-8);
   margin-top: var(--s-8);
   align-items: start;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .contact-grid {
     grid-template-columns: 1fr;
     gap: var(--s-6);
@@ -901,6 +901,14 @@ p {
   display: flex;
   flex-direction: column;
   gap: var(--s-4);
+  position: sticky;
+  top: var(--s-6);
+}
+
+@media (max-width: 1024px) {
+  .contact-info {
+    position: static;
+  }
 }
 
 .info-card {
