@@ -1,0 +1,78 @@
+<!--
+  JSON-LD global — Organization (EducationalOrganization) + WebSite
+  À inclure sur toutes les pages, juste avant </head>.
+  Les schémas spécifiques (Course, Article, Event, BreadcrumbList...) viennent
+  en plus selon la page.
+-->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "@id": "https://syacademy.fr/#organization",
+  "name": "SY Academy",
+  "alternateName": "SY Academy — Penser avec l'IA. Décider sans elle.",
+  "url": "https://syacademy.fr/",
+  "logo": "https://syacademy.fr/assets/img/logo-sy-academy.png",
+  "image": "https://syacademy.fr/assets/img/og-default.png",
+  "description": "Organisme de formation Qualiopi spécialisé en IA, management et organisation. Méthode CRAFT + 4D. Émanciper, pas équiper.",
+  "founder": {
+    "@type": "Person",
+    "name": "Sofiane Lenormand",
+    "jobTitle": "Dirigeant fondateur"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Maurepas",
+    "postalCode": "78310",
+    "addressRegion": "Île-de-France",
+    "addressCountry": "FR"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "email": "contact@syacademy.fr",
+    "areaServed": "FR",
+    "availableLanguage": ["French"]
+  },
+  "identifier": [
+    {
+      "@type": "PropertyValue",
+      "propertyID": "SIRET",
+      "value": "84193712100024"
+    },
+    {
+      "@type": "PropertyValue",
+      "propertyID": "NDA",
+      "value": "11788770478"
+    }
+  ],
+  "hasCredential": {
+    "@type": "EducationalOccupationalCredential",
+    "credentialCategory": "Certification",
+    "name": "Qualiopi",
+    "recognizedBy": {
+      "@type": "Organization",
+      "name": "France Compétences"
+    }
+  },
+  "sameAs": [
+    "https://www.linkedin.com/company/sy-academy/"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://syacademy.fr/#website",
+  "url": "https://syacademy.fr/",
+  "name": "SY Academy",
+  "description": "Penser avec l'IA. Décider sans elle. Formations IA pour collectivités et PME.",
+  "inLanguage": "fr-FR",
+  "publisher": {
+    "@id": "https://syacademy.fr/#organization"
+  }
+}
+</script>

@@ -1,2144 +1,568 @@
-<!-- deploy trigger -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SY Academy — Formation Management, Organisation & Intelligence Artificielle</title>
-    <meta name="description" content="SY Academy améliore la performance de votre organisation en combinant management structuré, organisation des process et intégration concrète de l'IA. Certification Qualiopi. Formations finançables OPCO / budget formation collectivités.">
-    <meta name="keywords" content="formation management IA, formation intelligence artificielle entreprise, organisme formation IA, formation IA collectivités, formation IA PME">
-    <meta property="og:title" content="SY Academy — Management, Organisation & IA">
-    <meta property="og:description" content="Formations professionnelles en management, organisation et intelligence artificielle. Certification Qualiopi, finançables OPCO / budget formation collectivités.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://syacademy.fr">
-    <link rel="canonical" href="https://syacademy.fr">
-
-    <!-- Fonts -->
-    <link rel="icon" type="image/png" href="favicon-sy-academy.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <style>
-        /* ============================================
-           CSS VARIABLES
-           ============================================ */
-        :root {
-            --navy: #0a1628;
-            --navy-light: #132040;
-            --blue-mid: #1a3a6e;
-            --blue-accent: #2563eb;
-            --blue-bright: #3b82f6;
-            --blue-gradient-start: #1e3a8a;
-            --blue-gradient-end: #2563eb;
-            --cyan: #06b6d4;
-            --white: #ffffff;
-            --gray-50: #f8fafc;
-            --gray-100: #f1f5f9;
-            --gray-200: #e2e8f0;
-            --gray-300: #cbd5e1;
-            --gray-400: #94a3b8;
-            --gray-500: #64748b;
-            --gray-600: #475569;
-            --gray-700: #334155;
-            --gray-800: #1e293b;
-            --text-primary: #0f172a;
-            --text-secondary: #475569;
-            --orange-accent: #f59e0b;
-            --orange-bright: #f97316;
-            --green-accent: #10b981;
-            --font-display: 'Outfit', sans-serif;
-            --font-body: 'DM Sans', sans-serif;
-            --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
-            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
-            --shadow-lg: 0 8px 30px rgba(0,0,0,0.12);
-            --shadow-xl: 0 20px 50px rgba(0,0,0,0.15);
-            --radius-sm: 8px;
-            --radius-md: 12px;
-            --radius-lg: 20px;
-            --radius-xl: 28px;
-        }
-
-        /* ============================================
-           RESET & BASE
-           ============================================ */
-        *, *::before, *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            font-size: 16px;
-        }
-
-        body {
-            font-family: var(--font-body);
-            color: var(--text-primary);
-            background: var(--white);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-            overflow-x: hidden;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: all 0.3s ease;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: var(--font-display);
-            font-weight: 700;
-            line-height: 1.2;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* ============================================
-           TOP BANNER
-           ============================================ */
-        .countdown-banner {
-            background: linear-gradient(90deg, #1e3a8a, #2563eb, #06b6d4);
-            color: #fff;
-            overflow: hidden;
-            white-space: nowrap;
-            font-size: 14px;
-            font-weight: 600;
-            letter-spacing: 0.02em;
-        }
-        .countdown-banner .marquee-track {
-            display: inline-flex;
-            animation: marquee-scroll 18s linear infinite;
-        }
-        .countdown-banner .marquee-item {
-            padding: 10px 80px;
-            white-space: nowrap;
-        }
-        @keyframes marquee-scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-
-        /* ============================================
-           NAVBAR
-           ============================================ */
-        .navbar {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: rgba(255,255,255,0.95);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--gray-200);
-            padding: 0 24px;
-            transition: box-shadow 0.3s ease;
-        }
-
-        .navbar.scrolled {
-            box-shadow: var(--shadow-md);
-        }
-
-        .navbar .container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 80px;
-        }
-
-        .navbar-logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .navbar-logo img {
-            height: 72px;
-            width: auto;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 32px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            font-family: var(--font-display);
-            font-size: 0.9rem;
-            font-weight: 500;
-            color: var(--text-secondary);
-            position: relative;
-            padding: 4px 0;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, var(--blue-gradient-start), var(--blue-gradient-end));
-            border-radius: 2px;
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--text-primary);
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .nav-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: linear-gradient(135deg, var(--blue-gradient-start), var(--blue-gradient-end));
-            color: var(--white) !important;
-            padding: 12px 28px !important;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 0.95rem !important;
-            white-space: nowrap;
-            letter-spacing: 0.02em;
-            transition: transform 0.2s, box-shadow 0.3s;
-        }
-
-        .nav-cta:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
-        }
-
-        .nav-cta::after {
-            display: none !important;
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 8px;
-        }
-
-        .mobile-menu-btn span {
-            display: block;
-            width: 24px;
-            height: 2px;
-            background: var(--navy);
-            margin: 6px 0;
-            border-radius: 2px;
-            transition: all 0.3s ease;
-        }
-
-        /* ============================================
-           HERO SECTION
-           ============================================ */
-        .hero {
-            position: relative;
-            padding: 100px 0 80px;
-            background: var(--gray-50);
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -200px;
-            right: -200px;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(37,99,235,0.06) 0%, transparent 70%);
-            border-radius: 50%;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: -150px;
-            left: -150px;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(6,182,212,0.05) 0%, transparent 70%);
-            border-radius: 50%;
-        }
-
-        .hero .container {
-            position: relative;
-            z-index: 1;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .hero-content {
-            animation: fadeInUp 0.8s ease-out;
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--white);
-            border: 1px solid var(--gray-200);
-            padding: 6px 16px;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: var(--blue-accent);
-            margin-bottom: 24px;
-            box-shadow: var(--shadow-sm);
-        }
-
-        .hero-badge .dot {
-            width: 8px;
-            height: 8px;
-            background: var(--green-accent);
-            border-radius: 50%;
-            animation: pulse 2s infinite;
-        }
-
-        .hero h1 {
-            font-size: clamp(2.2rem, 4vw, 3.2rem);
-            color: var(--navy);
-            margin-bottom: 20px;
-            line-height: 1.15;
-        }
-
-        .hero h1 .highlight {
-            background: linear-gradient(135deg, var(--blue-gradient-start), var(--blue-accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero-subtitle {
-            font-size: 1.15rem;
-            color: var(--text-secondary);
-            line-height: 1.7;
-            margin-bottom: 36px;
-            max-width: 520px;
-        }
-
-        .hero-ctas {
-            display: flex;
-            gap: 16px;
-            flex-wrap: wrap;
-            margin-bottom: 40px;
-        }
-
-        .btn-primary {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: linear-gradient(135deg, var(--blue-gradient-start), var(--blue-gradient-end));
-            color: var(--white);
-            padding: 16px 32px;
-            border-radius: 50px;
-            font-family: var(--font-display);
-            font-weight: 600;
-            font-size: 1rem;
-            border: none;
-            cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.3s;
-            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
-        }
-
-        .btn-secondary {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: var(--white);
-            color: var(--navy);
-            padding: 16px 32px;
-            border-radius: 50px;
-            font-family: var(--font-display);
-            font-weight: 600;
-            font-size: 1rem;
-            border: 2px solid var(--gray-200);
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--blue-accent);
-            color: var(--blue-accent);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .hero-trust {
-            display: flex;
-            align-items: center;
-            gap: 24px;
-            padding-top: 12px;
-            border-top: 1px solid var(--gray-200);
-        }
-
-        .trust-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-            font-weight: 500;
-        }
-
-        .trust-icon {
-            width: 20px;
-            height: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        /* Hero visual */
-        .hero-visual {
-            position: relative;
-            animation: fadeInUp 0.8s ease-out 0.2s both;
-        }
-
-        .hero-card {
-            background: var(--white);
-            border-radius: var(--radius-lg);
-            padding: 40px;
-            box-shadow: var(--shadow-xl);
-            position: relative;
-        }
-
-        .hero-card::before {
-            content: '';
-            position: absolute;
-            inset: -2px;
-            border-radius: calc(var(--radius-lg) + 2px);
-            background: linear-gradient(135deg, var(--blue-gradient-start), var(--cyan));
-            z-index: -1;
-            opacity: 0.15;
-        }
-
-        .hero-stats {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px;
-        }
-
-        .stat-block {
-            text-align: center;
-            padding: 20px 16px;
-            border-radius: var(--radius-md);
-            background: var(--gray-50);
-        }
-
-        .stat-number {
-            font-family: var(--font-display);
-            font-size: 2rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--blue-gradient-start), var(--blue-accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .stat-label {
-            font-size: 0.8rem;
-            color: var(--text-secondary);
-            margin-top: 4px;
-            font-weight: 500;
-        }
-
-        .hero-card-footer {
-            margin-top: 24px;
-            padding-top: 20px;
-            border-top: 1px solid var(--gray-100);
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .live-dot {
-            width: 10px;
-            height: 10px;
-            background: var(--green-accent);
-            border-radius: 50%;
-            animation: pulse 2s infinite;
-        }
-
-        .hero-card-footer span {
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-            font-weight: 500;
-        }
-
-        /* ============================================
-           PROBLEM / SOLUTION
-           ============================================ */
-        .problem-section {
-            padding: 100px 0;
-            background: var(--white);
-        }
-
-        .problem-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .problem-content h2 {
-            font-size: clamp(1.8rem, 3vw, 2.5rem);
-            color: var(--navy);
-            margin-bottom: 20px;
-        }
-
-        .problem-content h2 .highlight {
-            background: linear-gradient(135deg, var(--blue-gradient-start), var(--blue-accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .problem-content p {
-            font-size: 1.05rem;
-            color: var(--text-secondary);
-            margin-bottom: 16px;
-            line-height: 1.7;
-        }
-
-        .problem-stats-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        .problem-stat {
-            background: var(--gray-50);
-            border-radius: var(--radius-md);
-            padding: 28px 24px;
-            text-align: center;
-            border: 1px solid var(--gray-100);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .problem-stat:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .problem-stat .big-number {
-            font-family: var(--font-display);
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--navy);
-            line-height: 1;
-        }
-
-        .problem-stat .big-number span {
-            background: linear-gradient(135deg, var(--blue-gradient-start), var(--blue-accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .problem-stat p {
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-            margin-top: 8px;
-            font-weight: 500;
-        }
-
-        /* ============================================
-           3 PILLARS
-           ============================================ */
-        .pillars-section {
-            padding: 100px 0;
-            background: var(--navy);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .pillars-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(ellipse at 20% 50%, rgba(37,99,235,0.15) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 50%, rgba(6,182,212,0.1) 0%, transparent 50%);
-        }
-
-        .pillars-section .container {
-            position: relative;
-            z-index: 1;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 64px;
-        }
-
-        .section-label {
-            display: inline-block;
-            font-family: var(--font-display);
-            font-size: 0.8rem;
-            font-weight: 700;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: var(--blue-bright);
-            margin-bottom: 16px;
-        }
-
-        .pillars-section .section-header h2 {
-            font-size: clamp(1.8rem, 3vw, 2.5rem);
-            color: var(--white);
-            margin-bottom: 16px;
-        }
-
-        .pillars-section .section-header p {
-            font-size: 1.05rem;
-            color: var(--gray-400);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .pillars-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 28px;
-        }
-
-        .pillar-card {
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(255,255,255,0.08);
-            border-radius: var(--radius-lg);
-            padding: 40px 32px;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .pillar-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--blue-accent), var(--cyan));
-            opacity: 0;
-            transition: opacity 0.4s;
-        }
-
-        .pillar-card:hover {
-            background: rgba(255,255,255,0.08);
-            border-color: rgba(255,255,255,0.15);
-            transform: translateY(-4px);
-        }
-
-        .pillar-card:hover::before {
-            opacity: 1;
-        }
-
-        .pillar-icon {
-            width: 56px;
-            height: 56px;
-            border-radius: var(--radius-md);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 24px;
-            font-size: 1.5rem;
-        }
-
-        .pillar-icon.management {
-            background: rgba(37,99,235,0.15);
-        }
-
-        .pillar-icon.organisation {
-            background: rgba(6,182,212,0.15);
-        }
-
-        .pillar-icon.ia {
-            background: rgba(249,115,22,0.15);
-        }
-
-        .pillar-card h3 {
-            color: var(--white);
-            font-size: 1.3rem;
-            margin-bottom: 12px;
-        }
-
-        .pillar-card p {
-            color: var(--gray-400);
-            font-size: 0.95rem;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .pillar-items {
-            list-style: none;
-        }
-
-        .pillar-items li {
-            color: var(--gray-300);
-            font-size: 0.85rem;
-            padding: 6px 0;
-            padding-left: 20px;
-            position: relative;
-        }
-
-        .pillar-items li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            color: var(--blue-bright);
-            font-weight: 600;
-        }
-
-        /* ============================================
-           PARCOURS CLIENT
-           ============================================ */
-        .parcours-section {
-            padding: 100px 0;
-            background: var(--white);
-        }
-
-        .parcours-section .section-header h2 {
-            font-size: clamp(1.8rem, 3vw, 2.5rem);
-            color: var(--navy);
-            margin-bottom: 16px;
-        }
-
-        .parcours-section .section-header p {
-            font-size: 1.05rem;
-            color: var(--text-secondary);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .parcours-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 0;
-            position: relative;
-        }
-
-        .parcours-grid::before {
-            content: '';
-            position: absolute;
-            top: 72px;
-            left: 16.66%;
-            right: 16.66%;
-            height: 3px;
-            background: linear-gradient(90deg, var(--blue-gradient-start), var(--blue-accent), var(--cyan));
-            border-radius: 3px;
-            z-index: 0;
-        }
-
-        .parcours-step {
-            text-align: center;
-            padding: 0 20px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .step-number {
-            width: 64px;
-            height: 64px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 24px;
-            font-family: var(--font-display);
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--white);
-            background: linear-gradient(135deg, var(--blue-gradient-start), var(--blue-gradient-end));
-            box-shadow: 0 4px 15px rgba(37,99,235,0.3);
-        }
-
-        .parcours-step:nth-child(2) .step-number {
-            background: linear-gradient(135deg, var(--blue-accent), var(--blue-bright));
-        }
-
-        .parcours-step:nth-child(3) .step-number {
-            background: linear-gradient(135deg, var(--blue-bright), var(--cyan));
-        }
-
-        .parcours-step h3 {
-            font-size: 1.15rem;
-            color: var(--navy);
-            margin-bottom: 8px;
-        }
-
-        .parcours-step .step-entity {
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: var(--blue-accent);
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            margin-bottom: 12px;
-        }
-
-        .parcours-step p {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            line-height: 1.6;
-        }
-
-        /* ============================================
-           VERTICALES
-           ============================================ */
-        .verticales-section {
-            padding: 100px 0;
-            background: var(--gray-50);
-        }
-
-        .verticales-section .section-header h2 {
-            font-size: clamp(1.8rem, 3vw, 2.5rem);
-            color: var(--navy);
-            margin-bottom: 16px;
-        }
-
-        .verticales-section .section-header p {
-            font-size: 1.05rem;
-            color: var(--text-secondary);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .verticales-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 32px;
-        }
-
-        .verticale-card {
-            background: var(--white);
-            border-radius: var(--radius-lg);
-            padding: 44px 40px;
-            border: 1px solid var(--gray-200);
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .verticale-card::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            transition: opacity 0.4s;
-            opacity: 0;
-        }
-
-        .verticale-card:hover {
-            border-color: transparent;
-            box-shadow: var(--shadow-xl);
-            transform: translateY(-4px);
-        }
-
-        .verticale-card:hover::after {
-            opacity: 1;
-        }
-
-        .verticale-card.collectivites::after {
-            background: linear-gradient(90deg, var(--blue-gradient-start), var(--blue-accent));
-        }
-
-        .verticale-card.pme::after {
-            background: linear-gradient(90deg, var(--blue-accent), var(--cyan));
-        }
-
-        .verticale-tag {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 6px 14px;
-            border-radius: 50px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-        }
-
-        .verticale-card.collectivites .verticale-tag {
-            background: rgba(30,58,138,0.08);
-            color: var(--blue-gradient-start);
-        }
-
-        .verticale-card.pme .verticale-tag {
-            background: rgba(6,182,212,0.08);
-            color: var(--cyan);
-        }
-
-        .verticale-card h3 {
-            font-size: 1.4rem;
-            color: var(--navy);
-            margin-bottom: 12px;
-        }
-
-        .verticale-card > p {
-            font-size: 0.95rem;
-            color: var(--text-secondary);
-            line-height: 1.6;
-            margin-bottom: 24px;
-        }
-
-        .verticale-features {
-            list-style: none;
-            margin-bottom: 28px;
-        }
-
-        .verticale-features li {
-            padding: 8px 0;
-            padding-left: 28px;
-            position: relative;
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-        }
-
-        .verticale-features li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--green-accent);
-            font-weight: 700;
-            font-size: 0.9rem;
-        }
-
-        .verticale-card .formations-count {
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--blue-accent);
-            margin-bottom: 20px;
-        }
-
-        .btn-verticale {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 14px 28px;
-            border-radius: 50px;
-            font-family: var(--font-display);
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: all 0.3s;
-        }
-
-        .verticale-card.collectivites .btn-verticale {
-            background: linear-gradient(135deg, var(--blue-gradient-start), var(--blue-gradient-end));
-            color: var(--white);
-        }
-
-        .verticale-card.collectivites .btn-verticale:hover {
-            box-shadow: 0 6px 20px rgba(37,99,235,0.35);
-            transform: translateY(-2px);
-        }
-
-        .verticale-card.pme .btn-verticale {
-            background: var(--white);
-            color: var(--navy);
-            border: 2px solid var(--gray-200);
-        }
-
-        .verticale-card.pme .btn-verticale:hover {
-            border-color: var(--cyan);
-            color: var(--cyan);
-            box-shadow: var(--shadow-md);
-            transform: translateY(-2px);
-        }
-
-        /* ============================================
-           CHIFFRES CLÉS / SOCIAL PROOF
-           ============================================ */
-        .social-proof-section {
-            padding: 80px 0;
-            background: var(--white);
-        }
-
-        .social-proof-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 32px;
-        }
-
-        .proof-item {
-            text-align: center;
-            padding: 32px 20px;
-        }
-
-        .proof-number {
-            font-family: var(--font-display);
-            font-size: 2.8rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--blue-gradient-start), var(--blue-accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            line-height: 1;
-            margin-bottom: 8px;
-        }
-
-        .proof-label {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            font-weight: 500;
-        }
-
-        /* ============================================
-           TESTIMONIALS (prêt pour les premiers retours)
-           ============================================ */
-        .testimonials-section {
-            padding: 100px 0;
-            background: var(--gray-50);
-        }
-
-        .testimonials-section .section-header h2 {
-            font-size: clamp(1.8rem, 3vw, 2.5rem);
-            color: var(--navy);
-            margin-bottom: 16px;
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 28px;
-        }
-
-        .testimonial-card {
-            background: var(--white);
-            border-radius: var(--radius-lg);
-            padding: 36px;
-            border: 1px solid var(--gray-200);
-            position: relative;
-        }
-
-        .testimonial-card::before {
-            content: '"';
-            font-family: Georgia, serif;
-            font-size: 4rem;
-            color: var(--blue-accent);
-            opacity: 0.15;
-            position: absolute;
-            top: 12px;
-            left: 24px;
-            line-height: 1;
-        }
-
-        .testimonial-text {
-            font-size: 0.95rem;
-            color: var(--text-secondary);
-            line-height: 1.7;
-            font-style: italic;
-            margin-bottom: 20px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .testimonial-avatar {
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--blue-gradient-start), var(--blue-accent));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-weight: 700;
-            font-size: 0.9rem;
-        }
-
-        .testimonial-author-info strong {
-            display: block;
-            font-size: 0.9rem;
-            color: var(--navy);
-        }
-
-        .testimonial-author-info span {
-            font-size: 0.8rem;
-            color: var(--text-secondary);
-        }
-
-        /* ============================================
-           ESPACE APPRENANT
-           ============================================ */
-        .espace-apprenant-section {
-            padding: 100px 0;
-            background: linear-gradient(135deg, #f0f4ff 0%, #e8f0fe 100%);
-        }
-        .espace-apprenant-inner {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-        .espace-apprenant-text .section-label {
-            display: inline-block;
-            background: var(--primary);
-            color: white;
-            padding: 4px 14px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 18px;
-        }
-        .espace-apprenant-text h2 {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--navy);
-            margin-bottom: 18px;
-            line-height: 1.2;
-        }
-        .espace-apprenant-text p {
-            color: #555;
-            font-size: 1.05rem;
-            line-height: 1.7;
-            margin-bottom: 28px;
-        }
-        .espace-features {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 36px;
-        }
-        .espace-features li {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 10px 0;
-            color: #333;
-            font-size: 0.98rem;
-            border-bottom: 1px solid rgba(0,0,0,0.06);
-        }
-        .espace-icon {
-            font-size: 1.2rem;
-            flex-shrink: 0;
-        }
-        .btn-espace-apprenant {
-            display: inline-block;
-            background: var(--primary);
-            color: white;
-            padding: 16px 32px;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 1rem;
-            text-decoration: none;
-            transition: all 0.2s ease;
-            box-shadow: 0 4px 15px rgba(37,99,235,0.3);
-        }
-        .btn-espace-apprenant:hover {
-            background: var(--primary-dark, #1d4ed8);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(37,99,235,0.4);
-        }
-        /* Mock UI card */
-        .espace-card {
-            background: white;
-            border-radius: 16px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.12);
-            overflow: hidden;
-        }
-        .espace-card-header {
-            background: #1e293b;
-            padding: 14px 20px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.8rem;
-            color: #94a3b8;
-        }
-        .espace-card-dot {
-            width: 12px; height: 12px;
-            border-radius: 50%;
-        }
-        .espace-card-dot.red { background: #ef4444; }
-        .espace-card-dot.yellow { background: #f59e0b; }
-        .espace-card-dot.green { background: #10b981; }
-        .espace-card-header span { margin-left: 6px; }
-        .espace-card-body { padding: 20px; display: flex; flex-direction: column; gap: 12px; }
-        .espace-card-item {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            padding: 14px 16px;
-            border-radius: 10px;
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
-        }
-        .espace-card-item.active {
-            background: #eff6ff;
-            border-color: #bfdbfe;
-        }
-        .espace-card-icon { font-size: 1.4rem; flex-shrink: 0; }
-        .espace-card-item div { flex: 1; }
-        .espace-card-item strong { display: block; font-size: 0.88rem; color: #1e293b; }
-        .espace-card-item p { margin: 2px 0 0; font-size: 0.78rem; color: #64748b; }
-        .espace-badge {
-            font-size: 0.72rem;
-            font-weight: 600;
-            padding: 3px 10px;
-            border-radius: 20px;
-            background: #fef3c7;
-            color: #92400e;
-            white-space: nowrap;
-        }
-        .espace-badge.green { background: #d1fae5; color: #065f46; }
-        .espace-badge.blue { background: #dbeafe; color: #1e40af; }
-        @media (max-width: 768px) {
-            .espace-apprenant-inner { grid-template-columns: 1fr; gap: 40px; }
-            .espace-apprenant-text h2 { font-size: 1.6rem; }
-        }
-
-        /* ============================================
-           CTA FINAL
-           ============================================ */
-        .cta-section {
-            padding: 100px 0;
-            background: var(--navy);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-section::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: 
-                radial-gradient(ellipse at 30% 50%, rgba(37,99,235,0.2) 0%, transparent 60%),
-                radial-gradient(ellipse at 70% 50%, rgba(6,182,212,0.15) 0%, transparent 60%);
-        }
-
-        .cta-section .container {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-        }
-
-        .cta-section h2 {
-            font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-            color: var(--white);
-            margin-bottom: 16px;
-        }
-
-        .cta-section p {
-            font-size: 1.1rem;
-            color: var(--gray-400);
-            margin-bottom: 40px;
-            max-width: 550px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .cta-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 16px;
-            flex-wrap: wrap;
-        }
-
-        .btn-cta-light {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: var(--white);
-            color: var(--navy);
-            padding: 18px 36px;
-            border-radius: 50px;
-            font-family: var(--font-display);
-            font-weight: 700;
-            font-size: 1rem;
-            transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-
-        .btn-cta-light:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-        }
-
-        .btn-cta-outline {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: transparent;
-            color: var(--white);
-            padding: 16px 36px;
-            border-radius: 50px;
-            font-family: var(--font-display);
-            font-weight: 600;
-            font-size: 1rem;
-            border: 2px solid rgba(255,255,255,0.25);
-            transition: all 0.3s;
-        }
-
-        .btn-cta-outline:hover {
-            border-color: var(--white);
-            background: rgba(255,255,255,0.05);
-            transform: translateY(-2px);
-        }
-
-        /* ============================================
-           FOOTER
-           ============================================ */
-        .footer {
-            background: #060e1a;
-            padding: 64px 0 0;
-            color: var(--gray-400);
-        }
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
-            gap: 48px;
-            padding-bottom: 48px;
-        }
-        .footer-brand img {
-            height: 60px;
-            opacity: 0.8;
-            margin-bottom: 16px;
-        }
-        .footer-brand > p {
-            font-size: 0.88rem;
-            line-height: 1.6;
-            color: var(--gray-500);
-            margin-bottom: 20px;
-        }
-        .footer-contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            margin-top: 20px;
-        }
-        .footer-contact-info span {
-            font-size: 0.8rem;
-            color: var(--gray-500);
-        }
-        .footer-col {}
-        .footer h4,
-        .footer-col h4 {
-            color: var(--white);
-            font-family: var(--font-display);
-            font-size: 0.82rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            margin-bottom: 20px;
-        }
-        .footer-links {
-            list-style: none;
-        }
-        .footer-links li {
-            margin-bottom: 12px;
-        }
-        .footer-links a {
-            font-size: 0.85rem;
-            color: var(--gray-500);
-            transition: color 0.2s;
-        }
-        .footer-links a:hover {
-            color: var(--white);
-        }
-        .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,0.06);
-            padding: 24px 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.8rem;
-            color: var(--gray-600);
-        }
-        .footer-bottom-right {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .qualiopi-footer-block {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-        .qualiopi-logo-footer {
-            height: 55px;
-            width: auto;
-            flex-shrink: 0;
-            background: white;
-            padding: 6px 10px;
-            border-radius: 4px;
-        }
-        .qualiopi-mention {
-            font-size: 0.7rem;
-            color: #94a3b8;
-            line-height: 1.4;
-            max-width: 300px;
-        }
-
-        /* ============================================
-           ANIMATIONS
-           ============================================ */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.7s ease-out;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* ============================================
-           RESPONSIVE
-           ============================================ */
-        @media (max-width: 1024px) {
-            .hero .container {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-            .hero-visual {
-                max-width: 500px;
-                margin: 0 auto;
-            }
-            .pillars-grid {
-                grid-template-columns: 1fr;
-                max-width: 500px;
-                margin: 0 auto;
-            }
-            .problem-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 32px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .countdown-banner {
-                font-size: 12px;
-            }
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 80px;
-                left: 0;
-                right: 0;
-                background: var(--white);
-                flex-direction: column;
-                padding: 24px;
-                gap: 16px;
-                border-bottom: 1px solid var(--gray-200);
-                box-shadow: var(--shadow-lg);
-            }
-            .nav-links.active {
-                display: flex;
-            }
-            .navbar .container { justify-content: center; position: relative; }
-            .navbar-logo { position: absolute; left: 50%; transform: translateX(-50%); }
-            .navbar-logo img { height: 60px; }
-            .mobile-menu-btn {
-                display: block;
-                position: absolute;
-                right: 24px;
-            }
-            .hero {
-                padding: 60px 0;
-            }
-            .hero-ctas {
-                flex-direction: column;
-            }
-            .hero-ctas a {
-                text-align: center;
-                justify-content: center;
-            }
-            .hero-trust {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 12px;
-            }
-            .verticales-grid {
-                grid-template-columns: 1fr;
-            }
-            .parcours-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-            .parcours-grid::before {
-                display: none;
-            }
-            .social-proof-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 16px;
-            }
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: 28px;
-            }
-            
-        }
-
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-            .hero-stats {
-                grid-template-columns: 1fr;
-            }
-            .problem-stats-grid {
-                grid-template-columns: 1fr;
-            }
-            .social-proof-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Footer responsive */
-        @media (max-width: 900px) {
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 32px;
-            }
-        }
-        @media (max-width: 600px) {
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: 28px;
-            }
-            .footer-bottom {
-                flex-direction: column;
-                gap: 12px;
-                text-align: center;
-            }
-            .footer-bottom-right {
-                justify-content: center;
-            }
-        }
-        </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#061240">
+  <meta name="format-detection" content="telephone=no">
+
+  <title>Formation IA Qualiopi · Collectivités & PME | SY Academy</title>
+  <meta name="description" content="Formation IA pour collectivités territoriales et PME en France. Méthode CRAFT + 4D, 70% de pratique sur vos cas. Qualiopi NDA 11788770478. Faire le diagnostic en 12 questions →">
+  <link rel="canonical" href="https://syacademy.fr/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="SY Academy">
+  <meta property="og:title" content="Formation IA Qualiopi · Collectivités & PME | SY Academy">
+  <meta property="og:description" content="Formation IA pour collectivités territoriales et PME en France. Méthode CRAFT + 4D, 70% de pratique sur vos cas. Qualiopi NDA 11788770478.">
+  <meta property="og:url" content="https://syacademy.fr/">
+  <meta property="og:image" content="https://syacademy.fr/assets/img/og-home.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Formation IA Qualiopi · Collectivités & PME | SY Academy">
+  <meta name="twitter:description" content="Formation IA pour collectivités territoriales et PME en France. Méthode CRAFT + 4D, 70% de pratique sur vos cas.">
+  <meta name="twitter:image" content="https://syacademy.fr/assets/img/og-home.png">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="/assets/img/favicon-sy-academy.png">
+  <link rel="apple-touch-icon" href="/assets/img/favicon-sy-academy.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600&display=swap">
+
+  <!-- Brand CSS -->
+  <link rel="preload" as="style" href="/assets/css/brand.css">
+  <link rel="stylesheet" href="/assets/css/brand.css">
+
+  <!-- Sitemap -->
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+  <!-- JSON-LD : Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://syacademy.fr/#organization",
+    "name": "SY Academy",
+    "alternateName": "SY Academy — Penser avec l'IA. Décider sans elle.",
+    "url": "https://syacademy.fr/",
+    "logo": "https://syacademy.fr/assets/img/logo-sy-academy.png",
+    "image": "https://syacademy.fr/assets/img/og-home.png",
+    "description": "Organisme de formation Qualiopi spécialisé en IA, management et organisation. Méthode CRAFT + 4D. Émanciper, pas équiper.",
+    "founder": {
+      "@type": "Person",
+      "name": "Sofiane Lenormand",
+      "jobTitle": "Dirigeant fondateur"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Maurepas",
+      "postalCode": "78310",
+      "addressRegion": "Île-de-France",
+      "addressCountry": "FR"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "email": "contact@syacademy.fr",
+      "areaServed": "FR",
+      "availableLanguage": ["French"]
+    },
+    "identifier": [
+      { "@type": "PropertyValue", "propertyID": "SIRET", "value": "84193712100024" },
+      { "@type": "PropertyValue", "propertyID": "NDA", "value": "11788770478" }
+    ],
+    "hasCredential": {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "Certification",
+      "name": "Qualiopi",
+      "recognizedBy": { "@type": "Organization", "name": "France Compétences" }
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/sy-academy/"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD : WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://syacademy.fr/#website",
+    "url": "https://syacademy.fr/",
+    "name": "SY Academy",
+    "description": "Penser avec l'IA. Décider sans elle. Formations IA pour collectivités et PME.",
+    "inLanguage": "fr-FR",
+    "publisher": { "@id": "https://syacademy.fr/#organization" }
+  }
+  </script>
+
+  <!-- JSON-LD : BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Accueil",
+        "item": "https://syacademy.fr/"
+      }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD : Services (collectivités + PME) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "name": "Formation Penser avec l'IA - Collectivités territoriales",
+        "serviceType": "Formation professionnelle continue",
+        "provider": { "@id": "https://syacademy.fr/#organization" },
+        "areaServed": { "@type": "Country", "name": "France" },
+        "audience": {
+          "@type": "Audience",
+          "audienceType": "Collectivités territoriales"
+        },
+        "url": "https://syacademy.fr/collectivites"
+      },
+      {
+        "@type": "Service",
+        "name": "Formation Penser avec l'IA - PME / TPE",
+        "serviceType": "Formation professionnelle continue",
+        "provider": { "@id": "https://syacademy.fr/#organization" },
+        "areaServed": { "@type": "Country", "name": "France" },
+        "audience": {
+          "@type": "Audience",
+          "audienceType": "PME / TPE"
+        },
+        "url": "https://syacademy.fr/pme"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
-    <!-- Countdown Banner -->
-    <div class="countdown-banner">
-        <div class="marquee-track">
-            <span class="marquee-item"><span class="countdown-text"></span></span>
-            <span class="marquee-item"><span class="countdown-text"></span></span>
-            <span class="marquee-item"><span class="countdown-text"></span></span>
-            <span class="marquee-item"><span class="countdown-text"></span></span>
-        </div>
+  <!-- NAVBAR sticky -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a class="navbar-logo" href="/" aria-label="SY Academy — accueil">
+        <img src="/assets/img/logo-sy-academy.png" alt="SY Academy" width="80" height="80">
+      </a>
+
+      <nav class="nav-links" aria-label="Navigation principale">
+        <a href="/approche">Approche</a>
+        <a href="/collectivites">Collectivités</a>
+        <a href="/pme">PME</a>
+        <a href="/financement">Financement</a>
+        <a href="/article/5-criteres-formation-ia">Article</a>
+        <a class="btn btn-cta-nav btn-arrow" href="/contact">Nous contacter</a>
+      </nav>
+
+      <button class="mobile-menu-btn" aria-expanded="false" aria-controls="nav-links" aria-label="Ouvrir le menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
+  </header>
 
-    <!-- Navbar -->
-    <nav class="navbar" id="navbar">
-        <div class="container">
-            <a href="/" class="navbar-logo">
-                <img src="logo-sy-academy.png" alt="SY Academy — Management, Organisation & IA">
-            </a>
-
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#collectivites">Collectivités</a></li>
-                <li><a href="#pme">PME / TPE</a></li>
-                <li><a href="approche.html">Notre approche</a></li>
-                <li><a href="financement.html">Financement</a></li>
-                <li><a href="session-decouverte.html" class="nav-session">🟢 Session découverte</a></li>
-                <li><a href="contact.html" class="nav-cta">Demander un devis →</a></li>
+  <main>
+    <!-- SECTION 1 · HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-meta">
+          <span class="hero-meta-left">FORMATIONS IA · MANAGEMENT · ORGANISATION</span>
+          <span class="hero-meta-right">QUALIOPI · 2026.05</span>
+        </div>
+        <div class="hero-grid">
+          <div class="hero-content">
+            <span class="eyebrow">01 · SY ACADEMY</span>
+            <h1 id="hero-title">Penser avec l'IA. <span class="accent">Décider sans elle.</span></h1>
+            <p class="lead">Formation IA pour collectivités territoriales et PME. Méthode CRAFT + 4D. 70% de pratique sur vos vrais cas. Vos équipes ressortent autonomes — pas dépendantes.</p>
+            <div class="hero-ctas">
+              <a class="btn btn-primary btn-arrow" href="/diagnostic">Faire le diagnostic</a>
+              <a class="btn btn-ghost btn-arrow" href="/approche">Découvrir l'approche</a>
+            </div>
+            <ul class="hero-trust">
+              <li class="trust-item">Qualiopi NDA 11788770478</li>
+              <li class="trust-item">AI Act art. 4 traité</li>
+              <li class="trust-item">100% finançable OPCO PME</li>
             </ul>
-
-            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </nav>
-
-    <!-- HERO -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <span class="dot"></span>
-                    Certification Qualiopi — Actions de formation
-                </div>
-
-                <h1>
-                    Améliorez la performance<br>
-                    de votre organisation avec<br>
-                    <span class="highlight">le management et l'IA</span>
-                </h1>
-
-                <p class="hero-subtitle">
-                    SY Academy combine management structuré, organisation des process 
-                    et intégration concrète de l'intelligence artificielle. 
-                    Vos équipes repartent avec des outils opérationnels dès le lendemain.
-                </p>
-
-                <div class="hero-ctas">
-                    <a href="#collectivites" class="btn-primary">
-                        Collectivités territoriales →
-                    </a>
-                    <a href="#pme" class="btn-secondary">
-                        PME / TPE →
-                    </a>
-                </div>
-
-                <div class="hero-trust">
-                    <div class="trust-item">
-                        <span class="trust-icon">🏛️</span>
-                        Qualiopi certifié
-                    </div>
-                    <div class="trust-item">
-                        <span class="trust-icon">💰</span>
-                        100% finançable OPCO
-                    </div>
-                    <div class="trust-item">
-                        <span class="trust-icon">🔧</span>
-                        70% de pratique
-                    </div>
-                </div>
+          </div>
+          <aside class="kpi-card" aria-label="Repères programme">
+            <div class="kpi-card-head">
+              <span>// REPÈRES</span>
+              <span>2026.05</span>
             </div>
-
-            <div class="hero-visual">
-                <div class="hero-card">
-                    <div class="hero-stats">
-                        <div class="stat-block">
-                            <div class="stat-number">9</div>
-                            <div class="stat-label">Programmes de formation</div>
-                        </div>
-                        <div class="stat-block">
-                            <div class="stat-number">70%</div>
-                            <div class="stat-label">Pratique sur cas réels</div>
-                        </div>
-                        <div class="stat-block">
-                            <div class="stat-number">100%</div>
-                            <div class="stat-label">Finançable OPCO / collectivités</div>
-                        </div>
-                        <div class="stat-block">
-                            <div class="stat-number">J+1</div>
-                            <div class="stat-label">Résultats opérationnels</div>
-                        </div>
-                    </div>
-                    <div class="hero-card-footer">
-                        <span class="live-dot"></span>
-                        <span>Sessions disponibles — Île-de-France et toute la France</span>
-                    </div>
-                </div>
+            <div class="kpi-grid kpi-4">
+              <div class="kpi-block">
+                <div class="kpi-num">2j</div>
+                <div class="kpi-label">Programme phare J1 + J+7</div>
+              </div>
+              <div class="kpi-block">
+                <div class="kpi-num">5</div>
+                <div class="kpi-label">Piliers de la méthode</div>
+              </div>
+              <div class="kpi-block">
+                <div class="kpi-num">70%</div>
+                <div class="kpi-label">Pratique sur vos cas</div>
+              </div>
+              <div class="kpi-block">
+                <div class="kpi-num">100%</div>
+                <div class="kpi-label">Finançable OPCO</div>
+              </div>
             </div>
+            <div class="kpi-card-foot">
+              <span>// PROCHAINE SESSION · 23 MAI 2026</span>
+            </div>
+          </aside>
         </div>
+      </div>
     </section>
 
-    <!-- PROBLÈME / SOLUTION -->
-    <section class="problem-section">
-        <div class="container">
-            <div class="problem-grid">
-                <div class="problem-content fade-in">
-                    <span class="section-label">Le constat</span>
-                    <h2>
-                        90% des organisations <span class="highlight">n'exploitent pas encore l'IA</span>
-                    </h2>
-                    <p>
-                        Pendant ce temps, celles qui intègrent l'intelligence artificielle 
-                        dans leurs process constatent des gains de productivité majeurs. 
-                        Le problème n'est pas la technologie — c'est l'absence de méthode.
-                    </p>
-                    <p>
-                        SY Academy ne vous apprend pas simplement à utiliser ChatGPT. 
-                        Nous transformons votre organisation de l'intérieur : management structuré, 
-                        process clarifiés, et IA intégrée là où elle a un vrai impact.
-                    </p>
-                </div>
-
-                <div class="problem-stats-grid fade-in">
-                    <div class="problem-stat">
-                        <div class="big-number"><span>30%</span></div>
-                        <p>de gains de productivité constatés avec l'IA</p>
-                    </div>
-                    <div class="problem-stat">
-                        <div class="big-number"><span>2h</span></div>
-                        <p>gagnées par jour et par agent en moyenne</p>
-                    </div>
-                    <div class="problem-stat">
-                        <div class="big-number"><span>100%</span></div>
-                        <p>des formations finançables par votre OPCO</p>
-                    </div>
-                    <div class="problem-stat">
-                        <div class="big-number"><span>J+1</span></div>
-                        <p>les outils sont opérationnels dès le lendemain</p>
-                    </div>
-                </div>
-            </div>
+    <!-- SECTION 2 · CONSTAT -->
+    <section class="section section-paper" aria-labelledby="constat-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">02 · CONSTAT</span>
+          <h2 id="constat-title">La formation IA classique <span class="accent">ne tient pas ses promesses.</span></h2>
+          <p class="lead">Trop d'outils, pas assez de cadre. Des stagiaires qui repartent avec des prompts copiés, mais sans méthode pour décider. Résultat : la dépendance s'installe.</p>
         </div>
+
+        <div class="callout">
+          <span class="callout-eye">// RÈGLE D'OR</span>
+          <p class="callout-text">Mieux vaut un livrable imparfait fini, qu'un livrable parfait inachevé.</p>
+        </div>
+
+        <div class="cards-grid cols-3 mt-6">
+          <div class="kpi-block">
+            <div class="kpi-num">73%</div>
+            <div class="kpi-label">des salariés formés à l'IA n'utilisent plus l'outil 90 jours après (étude BCG, 2025)</div>
+          </div>
+          <div class="kpi-block">
+            <div class="kpi-num">1 sur 5</div>
+            <div class="kpi-label">formation IA financée OPCO produit un livrable réutilisable en interne</div>
+          </div>
+          <div class="kpi-block">
+            <div class="kpi-num">+€2,4k</div>
+            <div class="kpi-label">coût moyen par agent formé sans cadre de discernement (re-formation à 12 mois)</div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- 3 PILIERS -->
-    <section class="pillars-section" id="approche">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Notre méthode</span>
-                <h2>Trois leviers pour transformer votre organisation</h2>
-                <p>Pas de théorie abstraite. Une approche intégrée qui produit des résultats mesurables.</p>
-            </div>
 
-            <div class="pillars-grid">
-                <div class="pillar-card fade-in">
-                    <div class="pillar-icon management">📋</div>
-                    <h3>Management structuré</h3>
-                    <p>Des méthodes de pilotage claires pour que chaque manager sache quoi suivre, comment décider et comment rendre compte.</p>
-                    <ul class="pillar-items">
-                        <li>Tableaux de bord décisionnels</li>
-                        <li>Rituels managériaux efficaces</li>
-                        <li>Indicateurs de performance clairs</li>
-                        <li>Pilotage par objectifs mesurables</li>
-                    </ul>
-                </div>
-
-                <div class="pillar-card fade-in">
-                    <div class="pillar-icon organisation">⚙️</div>
-                    <h3>Organisation des process</h3>
-                    <p>Cartographier, simplifier et optimiser vos processus métier avant d'y intégrer la technologie.</p>
-                    <ul class="pillar-items">
-                        <li>Cartographie des processus clés</li>
-                        <li>Identification des goulots d'étranglement</li>
-                        <li>Standardisation des pratiques</li>
-                        <li>Gains de temps mesurables</li>
-                    </ul>
-                </div>
-
-                <div class="pillar-card fade-in">
-                    <div class="pillar-icon ia">🤖</div>
-                    <h3>IA concrète et opérationnelle</h3>
-                    <p>L'intelligence artificielle au service de vos métiers : pas un gadget, mais un outil de productivité réel.</p>
-                    <ul class="pillar-items">
-                        <li>Mistral pour les collectivités (RGPD)</li>
-                        <li>ChatGPT, Claude, Gemini pour les PME</li>
-                        <li>Automatisations sur mesure (n8n)</li>
-                        <li>Prompting avancé métier par métier</li>
-                    </ul>
-                </div>
-            </div>
+    <!-- SECTION 3 · 5 PILIERS -->
+    <section class="section section-bone" aria-labelledby="piliers-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">03 · MÉTHODE</span>
+          <h2 id="piliers-title">5 piliers pour des équipes <span class="accent">vraiment autonomes.</span></h2>
+          <p class="lead">Pas un catalogue d'outils. Un cadre de pensée qui rend autonome dans la durée — sur vos métiers, vos cas, vos décisions.</p>
         </div>
+
+        <div class="cards-grid cols-3">
+          <article class="card">
+            <div class="card-num">01 / 05</div>
+            <h3>Hyper-individualisation</h3>
+            <p>On part de votre métier, vos outils, vos cas. Pas d'une généralité.</p>
+          </article>
+          <article class="card">
+            <div class="card-num">02 / 05</div>
+            <h3>Autonomie &amp; curiosité</h3>
+            <p>Apprendre à apprendre. Pour continuer à progresser sans nous.</p>
+          </article>
+          <article class="card">
+            <div class="card-num">03 / 05</div>
+            <h3>Apprendre en faisant</h3>
+            <p>70% du temps en pratique sur vos vrais documents.</p>
+          </article>
+          <article class="card">
+            <div class="card-num">04 / 05</div>
+            <h3>Co-construction horizontale</h3>
+            <p>Pas de cours descendant. On construit ensemble vos livrables.</p>
+          </article>
+          <article class="card">
+            <div class="card-num">05 / 05</div>
+            <h3>IA fil conducteur</h3>
+            <p>L'IA n'est pas le sujet. C'est le moyen de penser mieux.</p>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <!-- PARCOURS CLIENT -->
-    <section class="parcours-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Le parcours</span>
-                <h2>De l'audit au déploiement : un accompagnement complet</h2>
-                <p>Chaque étape est conçue pour produire des résultats concrets et mesurables.</p>
+    <!-- SECTION 4 · MÉTHODE CRAFT + 4D -->
+    <section class="section section-ink" aria-labelledby="methode-title">
+      <div class="container">
+        <div class="split-section">
+          <div>
+            <span class="eyebrow on-dark">04 · SIGNATURE</span>
+            <h2 id="methode-title">Une méthode signée <span class="accent">CRAFT + 4D.</span></h2>
+            <p class="lead">Pas un assemblage de prompts. Un cadre de discernement transposable, qui rend autonome dans la durée.</p>
+            <div class="hero-ctas">
+              <a class="btn btn-cta btn-arrow" href="/approche">Découvrir l'approche</a>
             </div>
-
-            <div class="parcours-grid">
-                <div class="parcours-step fade-in">
-                    <div class="step-number">1</div>
-                    <h3>Audit Performance & IA</h3>
-                    <div class="step-entity">SY Academy</div>
-                    <p>Diagnostic complet de votre organisation : process, management, maturité numérique. Vous repartez avec une feuille de route priorisée et chiffrée.</p>
-                </div>
-
-                <div class="parcours-step fade-in">
-                    <div class="step-number">2</div>
-                    <h3>Formation sur mesure</h3>
-                    <div class="step-entity">SY Academy</div>
-                    <p>Programmes adaptés par service et par métier. 70% de pratique sur vos cas réels. Vos équipes repartent autonomes avec des outils opérationnels.</p>
-                </div>
-
-                <div class="parcours-step fade-in">
-                    <div class="step-number">3</div>
-                    <h3>Déploiement des outils</h3>
-                    <div class="step-entity">SOLE SOLUTION</div>
-                    <p>Chatbots, workflows automatisés, tableaux de bord connectés. Déployés et personnalisés pour votre organisation. Accompagnement dans la durée.</p>
-                </div>
-            </div>
+          </div>
+          <div class="methode-diagram" aria-hidden="true">
+            <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagramme méthode 4D">
+              <defs>
+                <style>
+                  .d-circle { fill: none; stroke: rgba(251,250,246,0.18); stroke-width: 1; }
+                  .d-link { stroke: rgba(38,168,232,0.32); stroke-width: 1; fill: none; }
+                  .d-node { fill: #061240; stroke: #26A8E8; stroke-width: 1.5; }
+                  .d-letter { fill: #FBFAF6; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 600; text-anchor: middle; dominant-baseline: middle; }
+                  .d-core { fill: none; stroke: #26A8E8; stroke-width: 1; stroke-dasharray: 2 4; opacity: 0.4; }
+                  @keyframes diag-rot { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+                  @keyframes diag-pulse { 0%, 100% { opacity: 0.4; } 50% { opacity: 0.85; } }
+                  .d-rotate { transform-origin: 160px 160px; animation: diag-rot 60s linear infinite; }
+                  .d-pulse { animation: diag-pulse 4s ease-in-out infinite; transform-origin: 160px 160px; }
+                  @media (prefers-reduced-motion: reduce) {
+                    .d-rotate, .d-pulse { animation: none; }
+                  }
+                </style>
+              </defs>
+              <g class="d-rotate">
+                <circle class="d-circle" cx="160" cy="160" r="130" />
+                <circle class="d-core d-pulse" cx="160" cy="160" r="48" />
+              </g>
+              <line class="d-link" x1="160" y1="50" x2="270" y2="160" />
+              <line class="d-link" x1="270" y1="160" x2="160" y2="270" />
+              <line class="d-link" x1="160" y1="270" x2="50" y2="160" />
+              <line class="d-link" x1="50" y1="160" x2="160" y2="50" />
+              <line class="d-link" x1="160" y1="50" x2="160" y2="270" />
+              <line class="d-link" x1="50" y1="160" x2="270" y2="160" />
+              <g>
+                <circle class="d-node" cx="160" cy="50" r="28" />
+                <text class="d-letter" x="160" y="50">D</text>
+              </g>
+              <g>
+                <circle class="d-node" cx="270" cy="160" r="28" />
+                <text class="d-letter" x="270" y="160">D</text>
+              </g>
+              <g>
+                <circle class="d-node" cx="160" cy="270" r="28" />
+                <text class="d-letter" x="160" y="270">D</text>
+              </g>
+              <g>
+                <circle class="d-node" cx="50" cy="160" r="28" />
+                <text class="d-letter" x="50" y="160">D</text>
+              </g>
+            </svg>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- VERTICALES -->
-    <section class="verticales-section" id="collectivites">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Nos formations</span>
-                <h2>Des programmes adaptés à votre réalité</h2>
-                <p>Chaque verticale dispose de formations conçues pour ses enjeux spécifiques.</p>
-            </div>
 
-            <div class="verticales-grid">
-                <div class="verticale-card collectivites fade-in">
-                    <div class="verticale-tag">🏛️ Service public</div>
-                    <h3>Collectivités territoriales</h3>
-                    <p>Modernisez vos services municipaux avec l'IA souveraine. Mistral, hébergement français, conformité RGPD.</p>
-
-                    <ul class="verticale-features">
-                        <li>IA souveraine (Mistral) — données hébergées en France</li>
-                        <li>Formations finançables sur le budget formation de votre collectivité</li>
-                        <li>Programmes par service : urbanisme, accueil, jeunesse, sport</li>
-                        <li>Sensibilisation élus et cadres dirigeants</li>
-                        <li>Process administratifs optimisés et automatisés</li>
-                    </ul>
-
-                    <div class="formations-count">7 formations disponibles — de 0,5 à 2 jours</div>
-
-                    <a href="collectivites.html" class="btn-verticale">Découvrir l'offre Collectivités →</a>
-                </div>
-
-                <div class="verticale-card pme fade-in" id="pme">
-                    <div class="verticale-tag">🏢 Entreprises</div>
-                    <h3>PME / TPE</h3>
-                    <p>Gagnez en productivité avec l'IA. Approche multi-outils (ChatGPT, Claude, Gemini), focus ROI, résultats dès le lendemain.</p>
-
-                    <ul class="verticale-features">
-                        <li>Approche multi-outils : ChatGPT, Claude, Gemini</li>
-                        <li>100% pris en charge par votre OPCO (entreprises &lt;50 sal.)</li>
-                        <li>Focus ROI : gains mesurables dès la fin de formation</li>
-                        <li>Management et pilotage d'équipe augmentés par l'IA</li>
-                        <li>Automatisations concrètes adaptées à votre métier</li>
-                    </ul>
-
-                    <div class="formations-count">3 formations disponibles — de 1 à 2 jours</div>
-
-                    <a href="pme.html" class="btn-verticale">Découvrir l'offre PME →</a>
-                </div>
-            </div>
+    <!-- SECTION 5 · PARCOURS EN 3 ÉTAPES -->
+    <section class="section section-paper" aria-labelledby="parcours-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">05 · PARCOURS</span>
+          <h2 id="parcours-title">De l'audit à l'autonomie, <span class="accent">en 3 temps.</span></h2>
+          <p class="lead">Un chemin clair, modulable, qui se branche sur votre réalité.</p>
         </div>
+
+        <div class="steps-grid">
+          <article class="step">
+            <div class="step-num">01 / 03</div>
+            <span class="step-entity">SY ACADEMY</span>
+            <h3 class="step-title">Audit &amp; diagnostic</h3>
+            <p>On part de vos vrais besoins. 12 questions, un rapport personnalisé en 24h.</p>
+            <a class="btn btn-ghost btn-arrow btn-sm" href="/diagnostic">Faire le diagnostic</a>
+          </article>
+          <article class="step">
+            <div class="step-num">02 / 03</div>
+            <span class="step-entity">SY ACADEMY</span>
+            <h3 class="step-title">Formation Penser avec l'IA</h3>
+            <p>2 jours (J1 + J+7). 6 à 12 stagiaires. 8 livrables réutilisables.</p>
+            <a class="btn btn-ghost btn-arrow btn-sm" href="/approche">Voir le programme</a>
+          </article>
+          <article class="step">
+            <div class="step-num">03 / 03</div>
+            <span class="step-entity">SOLE SOLUTION</span>
+            <h3 class="step-title">Déploiement opérationnel</h3>
+            <p>Si besoin, ma société Sole Solution intègre les outils dans votre organisation. Workflows, chatbots, automatisations.</p>
+            <a class="btn btn-ghost btn-arrow btn-sm" href="https://sole-solution.fr" rel="noopener" target="_blank">Voir Sole Solution</a>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <!-- CHIFFRES CLÉS -->
-    <section class="social-proof-section">
-        <div class="container">
-            <div class="social-proof-grid">
-                <div class="proof-item fade-in">
-                    <div class="proof-number">9</div>
-                    <div class="proof-label">Programmes de formation</div>
-                </div>
-                <div class="proof-item fade-in">
-                    <div class="proof-number">15+</div>
-                    <div class="proof-label">Années d'expertise terrain</div>
-                </div>
-                <div class="proof-item fade-in">
-                    <div class="proof-number">100%</div>
-                    <div class="proof-label">Finançable OPCO / collectivités</div>
-                </div>
-                <div class="proof-item fade-in">
-                    <div class="proof-number">70%</div>
-                    <div class="proof-label">De pratique en formation</div>
-                </div>
-            </div>
+    <!-- SECTION 6 · VERTICALES -->
+    <section class="section section-bone" aria-labelledby="verticales-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">06 · POUR QUI</span>
+          <h2 id="verticales-title">Adapté à votre <span class="accent">contexte.</span></h2>
         </div>
+
+        <div class="split-grid">
+          <article class="split-card is-primary">
+            <div class="split-card-head">
+              <span class="eyebrow on-dark">COL · TERRITORIALE</span>
+              <h3>Collectivités territoriales</h3>
+            </div>
+            <p>Pour les agents, les élus, les cadres territoriaux qui veulent utiliser l'IA sans renoncer à la souveraineté ni à l'AI Act.</p>
+            <ul class="feature-list">
+              <li>IA souveraine (Mistral) ou modèles européens</li>
+              <li>AI Act art. 4 traité concrètement</li>
+              <li>Cas d'usage métier territorial (délibérations, courriers, marchés)</li>
+            </ul>
+            <div class="split-card-foot">
+              <a class="btn btn-light btn-arrow" href="/collectivites">Découvrir</a>
+            </div>
+          </article>
+
+          <article class="split-card">
+            <div class="split-card-head">
+              <span class="eyebrow">PME · TPE</span>
+              <h3>PME / TPE</h3>
+            </div>
+            <p>Pour les dirigeants et leurs équipes qui veulent gagner en autonomie sans dépendre d'un prestataire externe.</p>
+            <ul class="feature-list">
+              <li>Multi-outils (ChatGPT, Claude, Gemini, Mistral)</li>
+              <li>100% finançable OPCO PME &lt; 50 sal.</li>
+              <li>Programme intra adapté à vos métiers</li>
+            </ul>
+            <div class="split-card-foot">
+              <a class="btn btn-ghost btn-arrow" href="/pme">Découvrir</a>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <!-- TÉMOIGNAGES -->
-    <section class="testimonials-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Retours terrain</span>
-                <h2>Ce qu'en disent nos participants</h2>
-            </div>
 
-            <div class="testimonials-grid">
-                <div class="testimonial-card fade-in">
-                    <p class="testimonial-text">
-                        "En deux jours, nos responsables de service ont compris comment utiliser Mistral 
-                        pour leurs tâches quotidiennes. Le gain de temps est impressionnant, 
-                        surtout sur les courriers et les comptes rendus."
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">MC</div>
-                        <div class="testimonial-author-info">
-                            <strong>Marie C.</strong>
-                            <span>DGA — Commune de 25 000 hab.</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card fade-in">
-                    <p class="testimonial-text">
-                        "Ce n'est pas une formation 'ChatGPT pour les nuls'. On a travaillé sur nos vrais process, 
-                        avec nos vrais documents. Mon équipe a gagné en autonomie immédiatement."
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">PD</div>
-                        <div class="testimonial-author-info">
-                            <strong>Philippe D.</strong>
-                            <span>Dirigeant PME — 22 salariés</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card fade-in">
-                    <p class="testimonial-text">
-                        "La formation a été un déclic pour nos élus. Ils ont enfin compris les enjeux concrets de l'IA 
-                        pour notre commune, sans le jargon technique."
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">SL</div>
-                        <div class="testimonial-author-info">
-                            <strong>Sophie L.</strong>
-                            <span>Responsable formation — Interco IDF</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- SECTION 7 · CTA FINAL -->
+    <section class="section section-ink" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="section-head section-head-center">
+          <span class="eyebrow on-dark">07 · COMMENCER</span>
+          <h2 id="cta-title">Prêt à <span class="accent">émanciper</span> vos équipes ?</h2>
+          <p class="lead">Commencez par un diagnostic. 12 questions, un rapport en 24h. Sans engagement.</p>
+          <div class="hero-ctas hero-ctas-center">
+            <a class="btn btn-cta btn-arrow" href="/diagnostic">Faire le diagnostic</a>
+            <a class="btn btn-outline-light btn-arrow" href="/contact">Demander un devis</a>
+          </div>
         </div>
+      </div>
     </section>
+  </main>
 
-    <!-- ESPACE APPRENANT -->
-    <section class="espace-apprenant-section">
-        <div class="container">
-            <div class="espace-apprenant-inner">
-                <div class="espace-apprenant-text">
-                    <span class="section-label">Inclus dans toutes nos formations</span>
-                    <h2>Un espace numérique dédié à chaque apprenant</h2>
-                    <p>Après votre formation, accédez à votre espace personnel SY Academy : supports, documents, évaluations et assistant IA pédagogique — disponibles 24h/24, depuis n'importe quel appareil.</p>
-                    <ul class="espace-features">
-                        <li><span class="espace-icon">📁</span> Vos supports et documents disponibles à tout moment</li>
-                        <li><span class="espace-icon">🤖</span> Un assistant IA pédagogique pour continuer à progresser</li>
-                        <li><span class="espace-icon">✅</span> Vos attestations et évaluations en ligne</li>
-                        <li><span class="espace-icon">📊</span> Le suivi personnalisé de votre parcours</li>
-                    </ul>
-                    <a href="https://sy-academy-app.vercel.app/" target="_blank" class="btn-espace-apprenant">
-                        Accéder à mon espace apprenant →
-                    </a>
-                </div>
-                <div class="espace-apprenant-visual">
-                    <div class="espace-card">
-                        <div class="espace-card-header">
-                            <div class="espace-card-dot red"></div>
-                            <div class="espace-card-dot yellow"></div>
-                            <div class="espace-card-dot green"></div>
-                            <span>Espace apprenant SY Academy</span>
-                        </div>
-                        <div class="espace-card-body">
-                            <div class="espace-card-item active">
-                                <span class="espace-card-icon">🎓</span>
-                                <div>
-                                    <strong>Mes formations</strong>
-                                    <p>COL-01 · Manager avec l'IA</p>
-                                </div>
-                                <span class="espace-badge">En cours</span>
-                            </div>
-                            <div class="espace-card-item">
-                                <span class="espace-card-icon">📄</span>
-                                <div>
-                                    <strong>Mes documents</strong>
-                                    <p>Convention · Attestation · Supports</p>
-                                </div>
-                                <span class="espace-badge green">Disponible</span>
-                            </div>
-                            <div class="espace-card-item">
-                                <span class="espace-card-icon">🤖</span>
-                                <div>
-                                    <strong>Assistant IA</strong>
-                                    <p>Posez vos questions formation</p>
-                                </div>
-                                <span class="espace-badge blue">Actif</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+
+      <!-- Bandeau signature Brand.SYS -->
+      <div class="footer-meta">
+        <span>// SY-ACADEMY · BRAND.SYS</span>
+        <span>v1.0 · 2026 · syacademy.fr</span>
+      </div>
+
+      <!-- Grille principale 5 colonnes -->
+      <div class="footer-grid">
+
+        <!-- COL 1 : Logo + tagline + adresse -->
+        <div class="footer-brand">
+          <img src="/assets/img/logo-sy-academy.png"
+               alt="SY Academy"
+               width="60" height="60">
+          <p class="footer-tagline">
+            Penser avec l'IA. Décider sans elle.
+          </p>
+          <p class="footer-desc">
+            Organisme de formation Qualiopi spécialisé en management,
+            organisation et IA.
+          </p>
+          <div class="footer-contact">
+            <span>📍 SDCL Center, Maurepas (78)</span>
+            <span>✉️ contact@syacademy.fr</span>
+            <span>NDA 11788770478</span>
+            <span>SIRET 84193712100024</span>
+          </div>
         </div>
-    </section>
 
-    <!-- CTA FINAL -->
-    <section class="cta-section" id="contact">
-        <div class="container">
-            <h2>Évaluez le potentiel IA<br>de votre organisation</h2>
-            <p>
-                Demandez votre audit gratuit. En 1 à 2 jours, nous identifions 
-                les leviers de performance concrets pour votre structure.
-            </p>
-
-            <div class="cta-buttons">
-                <a href="contact.html" class="btn-cta-light">
-                    Demander un audit gratuit →
-                </a>
-                <a href="contact.html" class="btn-cta-outline">
-                    📞 Nous contacter directement
-                </a>
-            </div>
+        <!-- COL 2 : Formations -->
+        <div>
+          <h3>// FORMATIONS</h3>
+          <ul class="footer-links">
+            <li><a href="/collectivites">Collectivités</a></li>
+            <li><a href="/pme">PME / TPE</a></li>
+            <li><a href="/diagnostic">Diagnostic 12 questions</a></li>
+            <li><a href="/approche">Notre approche</a></li>
+          </ul>
         </div>
-    </section>
 
-    <!-- FOOTER -->
-    <footer class="footer" id="financement">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <img src="logo-sy-academy.png" alt="SY Academy">
-                    <p>
-                        SY Academy améliore la performance des organisations 
-                        en combinant management structuré, organisation des process 
-                        et intégration concrète de l'intelligence artificielle.
-                    </p>
-                    <div class="footer-contact-info">
-                        <span>🏢 Centre de formation : SDCL CENTER, Maurepas (78)</span>
-                        <span>📧 contact@syacademy.fr</span>
-                    </div>
-                </div>
-
-                <div>
-                    <h4>Formations</h4>
-                    <ul class="footer-links">
-                        <li><a href="collectivites.html">Collectivités territoriales</a></li>
-                        <li><a href="pme.html">PME / TPE</a></li>
-                        <li><a href="contact.html">Audit Performance & IA</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4>Financement</h4>
-                    <ul class="footer-links">
-                        <li><a href="financement.html">OPCO — PME &lt;50 salariés</a></li>
-                        <li><a href="financement.html">Budget formation — Collectivités</a></li>
-                        <li><a href="financement.html">Plan de formation</a></li>
-                        <li><a href="financement.html">DIF Élus</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4>SY Academy</h4>
-                    <ul class="footer-links">
-                        <li><a href="approche.html">Notre approche</a></li>
-                        <li><a href="contact.html">Contact / Devis</a></li>
-                        <li><a href="mentions-legales.html">Mentions légales</a></li>
-                        <li><a href="politique-confidentialite.html">Politique de confidentialité</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4>SOLE SOLUTION</h4>
-                    <p style="font-size:0.85rem;color:var(--gray-500);margin-bottom:12px;">Automatisation & outils IA</p>
-                    <ul class="footer-links">
-                        <li><a href="https://sole-solution.fr/">sole-solution.fr</a></li>
-                        <li><a href="https://sole-solution.fr/">Chatbots municipaux</a></li>
-                        <li><a href="https://sole-solution.fr/">SOLE SOLUTION URBA</a></li>
-                        <li><a href="https://sole-solution.fr/">Workflows automatisés</a></li>
-                        <li><a href="https://sole-solution.fr/">Tableaux de bord IA</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <span>© 2026 SY Academy — Tous droits réservés</span>
-                <div class="qualiopi-footer-block">
-                    <img src="logo-qualiopi.jpg" alt="Qualiopi processus certifié - République Française" class="qualiopi-logo-footer">
-                    <p class="qualiopi-mention">La certification qualité a été délivrée au titre de la catégorie d'action suivante : actions de formation</p>
-                </div>
-            </div>
+        <!-- COL 3 : Financement -->
+        <div>
+          <h3>// FINANCEMENT</h3>
+          <ul class="footer-links">
+            <li><a href="/financement">OPCO PME / TPE</a></li>
+            <li><a href="/financement#collectivite">Budget collectivité</a></li>
+            <li><a href="/financement#plan">Plan de formation</a></li>
+            <li><a href="/financement#dif">DIF Élus</a></li>
+            <li><a href="/contact">Devis sur mesure</a></li>
+          </ul>
         </div>
-    </footer>
 
-    <!-- SCRIPTS -->
-    <script>
-        // Navbar scroll effect
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            navbar.classList.toggle('scrolled', window.scrollY > 20);
-        });
+        <!-- COL 4 : SY Academy -->
+        <div>
+          <h3>// SY ACADEMY</h3>
+          <ul class="footer-links">
+            <li><a href="/approche">Notre approche</a></li>
+            <li><a href="/contact">Contact / Devis</a></li>
+            <li><a href="/article/5-criteres-formation-ia">Article 5 critères</a></li>
+            <li><a href="/grille-audit-formation-ia">Grille audit (PDF)</a></li>
+            <li><a href="/mentions-legales">Mentions légales</a></li>
+            <li><a href="/politique-confidentialite">Confidentialité</a></li>
+          </ul>
+        </div>
 
-        // Mobile menu
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const navLinks = document.getElementById('navLinks');
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
+        <!-- COL 5 : Sole Solution -->
+        <div>
+          <h3>// SOLE SOLUTION</h3>
+          <ul class="footer-links">
+            <li><a href="https://sole-solution.fr" rel="noopener" target="_blank">sole-solution.fr</a></li>
+            <li><a href="https://sole-solution.fr" rel="noopener" target="_blank">Chatbots municipaux</a></li>
+            <li><a href="https://sole-solution.fr" rel="noopener" target="_blank">SOLE SOLUTION URBA</a></li>
+            <li><a href="https://sole-solution.fr" rel="noopener" target="_blank">Workflows automatisés</a></li>
+            <li><a href="https://sole-solution.fr" rel="noopener" target="_blank">Tableaux de bord IA</a></li>
+          </ul>
+        </div>
 
-        // Close mobile menu on link click
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => navLinks.classList.remove('active'));
-        });
+      </div>
 
-        // Scroll animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      <!-- Bottom bar : copyright + Qualiopi -->
+      <div class="footer-bottom">
+        <span class="footer-copyright">© 2026 SY Academy · Tous droits réservés</span>
+        <div class="qualiopi-block">
+          <img src="/assets/img/logo-qualiopi.jpg"
+               alt="Qualiopi - Processus certifié"
+               class="qualiopi-logo">
+          <p class="qualiopi-mention">
+            La certification qualité a été délivrée au titre de la catégorie
+            d'action suivante : <strong>actions de formation</strong>.
+          </p>
+        </div>
+      </div>
 
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </div>
+  </footer>
 
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-    </script>
-
-<script>
-(function(){
-  var target=new Date('2026-05-23T09:00:00+02:00').getTime();
-  function pad(n){return String(n).padStart(2,'0');}
-  function update(){
-    var diff=target-Date.now();
-    if(diff<=0){document.querySelectorAll('.countdown-text').forEach(function(el){el.textContent='\u{1F680} SY Academy \u00B7 Session d\u00E9couverte IA \u00B7 23 Mai \u00B7 C\u2019est maintenant !';});return;}
-    var d=Math.floor(diff/86400000),h=Math.floor((diff%86400000)/3600000),m=Math.floor((diff%3600000)/60000),s=Math.floor((diff%60000)/1000);
-    var txt='\u{1F680} Lancement SY Academy \u00B7 Session d\u00E9couverte IA \u00B7 23 Mai \u00B7 '+pad(d)+'j '+pad(h)+'h '+pad(m)+'m '+pad(s)+'s';
-    document.querySelectorAll('.countdown-text').forEach(function(el){el.textContent=txt;});
-  }
-  update();setInterval(update,1000);
-})();
-</script>
+  <script src="/assets/js/nav.js" defer></script>
 </body>
 </html>
