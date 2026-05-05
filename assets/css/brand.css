@@ -3239,6 +3239,23 @@ section.section-ink ul.checklist li::before {
   display: block;
 }
 
+/* === Mention légale en section ink === */
+section.section-ink .legal-note {
+  margin-top: var(--s-6);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 720px;
+  font-size: 0.8125rem;
+  color: rgba(216, 218, 229, 0.7);
+  line-height: 1.6;
+  text-align: center;
+}
+
+section.section-ink .legal-note em {
+  font-style: italic;
+  color: rgba(216, 218, 229, 0.65);
+}
+
 /* =============================================================================
  * FIN · BRAND.SYS v1.0
  * ========================================================================== */
