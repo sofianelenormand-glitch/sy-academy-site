@@ -3194,5 +3194,51 @@ p {
  * ========================================================================== */
 
 /* =============================================================================
+ * 22 / OVERRIDES — Spécificité renforcée pour cas conflits cascade
+ * ========================================================================== */
+
+/* === FINANCEMENT — Section accompagnement override ===
+   Ces règles sont volontairement à la fin du fichier pour
+   surclasser tous les styles précédents par cascade.
+   Sélecteur section.section-ink ul.checklist li : spécificité 0,2,3
+   (vs 0,2,1 pour les règles scopées plus haut), + !important
+   garantit que ces propriétés ne sont jamais override. */
+
+section.section-ink ul.checklist {
+  list-style: none;
+  padding: 0;
+  margin: var(--s-6) 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--s-4);
+}
+
+section.section-ink ul.checklist li {
+  color: #D8DAE5 !important;
+  background: rgba(255, 255, 255, 0.08);
+  padding: var(--s-4) var(--s-4) var(--s-4) var(--s-7);
+  margin-bottom: 0;
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--cyan);
+  line-height: 1.5;
+  font-size: 0.9375rem;
+  position: relative;
+  list-style: none;
+}
+
+section.section-ink ul.checklist li::before {
+  content: "›" !important;
+  position: absolute;
+  left: var(--s-4);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--cyan);
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1;
+  display: block;
+}
+
+/* =============================================================================
  * FIN · BRAND.SYS v1.0
  * ========================================================================== */
