@@ -3581,5 +3581,146 @@ section.section-ink .legal-note em {
 }
 
 /* =============================================================================
+ * PAGES LÉGALES (mentions-legales, politique-confidentialite)
+ * ========================================================================== */
+
+.legal-meta {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--graphite);
+  margin-top: var(--s-4);
+}
+
+.section.legal-toc {
+  padding-block: var(--s-7);
+}
+
+.legal-toc h2 {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--blue-deep);
+  margin-bottom: var(--s-4);
+}
+
+.legal-toc nav ol {
+  list-style: decimal;
+  padding-left: var(--s-5);
+  margin: 0;
+  column-count: 2;
+  column-gap: var(--s-7);
+}
+
+.legal-toc nav li {
+  break-inside: avoid;
+  margin-bottom: var(--s-2);
+  font-size: 0.9375rem;
+  color: var(--graphite);
+}
+
+.legal-toc nav a {
+  color: var(--blue-mid);
+  text-decoration: none;
+  line-height: 1.8;
+  transition: color var(--transition-base);
+}
+
+.legal-toc nav a:hover {
+  color: var(--blue-deep);
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .legal-toc nav ol {
+    column-count: 1;
+  }
+}
+
+.legal-content article {
+  scroll-margin-top: 100px;
+  padding-bottom: var(--s-7);
+  margin-bottom: var(--s-7);
+  border-bottom: 1px solid var(--fog);
+}
+
+.legal-content article:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: 0;
+}
+
+.legal-content article h2 {
+  font-family: var(--font-display);
+  font-size: 1.625rem;
+  line-height: 1.2;
+  color: var(--ink);
+  margin-bottom: var(--s-5);
+  padding-bottom: var(--s-3);
+  border-bottom: 2px solid var(--cyan);
+}
+
+.legal-content article h3 {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  color: var(--ink);
+  margin-top: var(--s-5);
+  margin-bottom: var(--s-3);
+}
+
+.legal-content article p,
+.legal-content article li {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--ink-soft);
+}
+
+.legal-content article p {
+  margin-bottom: var(--s-3);
+}
+
+.legal-content article ul {
+  margin: var(--s-3) 0 var(--s-4);
+  padding-left: var(--s-5);
+}
+
+.legal-content article ul li {
+  margin-bottom: var(--s-2);
+}
+
+.legal-content article strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.legal-content article a {
+  color: var(--blue-mid);
+  text-decoration: underline;
+  transition: color var(--transition-base);
+}
+
+.legal-content article a:hover {
+  color: var(--blue-deep);
+}
+
+.legal-content article address {
+  font-style: normal;
+  padding: var(--s-4);
+  background-color: var(--paper);
+  border-left: 3px solid var(--cyan);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin: var(--s-4) 0;
+  font-size: 0.9375rem;
+  line-height: 1.8;
+  color: var(--ink);
+}
+
+.legal-content article address a {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+}
+
+/* =============================================================================
  * FIN · BRAND.SYS v1.0
  * ========================================================================== */
