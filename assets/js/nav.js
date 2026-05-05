@@ -93,38 +93,7 @@
   }
 
   /* ---------------------------------------------------------------------------
-   * 4 / COUNTDOWN — Session découverte 23 mai 2026
-   * ------------------------------------------------------------------------ */
-  const countdownEl = document.querySelector('[data-countdown]');
-
-  if (countdownEl) {
-    const targetIso = countdownEl.getAttribute('data-countdown');
-    const target = targetIso ? new Date(targetIso).getTime() : new Date('2026-05-23T09:00:00+02:00').getTime();
-
-    const tick = () => {
-      const now = Date.now();
-      const diff = target - now;
-
-      if (diff <= 0) {
-        countdownEl.textContent = 'Session en cours';
-        return false;
-      }
-
-      const days = Math.floor(diff / 86400000);
-      const hours = Math.floor((diff % 86400000) / 3600000);
-      const minutes = Math.floor((diff % 3600000) / 60000);
-
-      countdownEl.textContent = `J-${days} · ${String(hours).padStart(2, '0')}h${String(minutes).padStart(2, '0')}`;
-      return true;
-    };
-
-    if (tick()) {
-      setInterval(tick, 60000);
-    }
-  }
-
-  /* ---------------------------------------------------------------------------
-   * 5 / FADE-IN — IntersectionObserver pour les .fade-in
+   * 4 / FADE-IN — IntersectionObserver pour les .fade-in
    * ------------------------------------------------------------------------ */
   const fadeEls = document.querySelectorAll('.fade-in');
 

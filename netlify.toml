@@ -44,7 +44,13 @@
 
 [[redirects]]
   from = "/session-decouverte.html"
-  to = "/session-decouverte"
+  to = "/contact"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/session-decouverte"
+  to = "/contact"
   status = 301
   force = true
 
@@ -93,7 +99,13 @@
 # Anciennes URLs / variations
 [[redirects]]
   from = "/analyse-besoins.html"
-  to = "/diagnostic"
+  to = "/contact"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/analyse-besoins"
+  to = "/contact"
   status = 301
   force = true
 
