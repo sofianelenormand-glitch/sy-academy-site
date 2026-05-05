@@ -842,6 +842,129 @@ p {
   color: rgba(251, 250, 246, 0.65);
 }
 
+.hero-trust-center {
+  justify-content: center;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-6);
+  margin-top: var(--s-7);
+}
+
+@media (min-width: 1024px) {
+  .contact-grid {
+    grid-template-columns: 2fr 1fr;
+    gap: var(--s-8);
+    align-items: start;
+  }
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-rgpd {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s-3);
+  margin-bottom: var(--s-5);
+}
+
+.form-rgpd input[type="checkbox"] {
+  margin-top: 4px;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  accent-color: var(--blue-deep);
+}
+
+.form-rgpd label {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: var(--graphite);
+  line-height: 1.5;
+}
+
+.form-rgpd label a {
+  color: var(--blue-deep);
+  text-decoration: underline;
+}
+
+.form-rgpd label a:hover {
+  color: var(--cyan);
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+}
+
+.info-card {
+  background-color: var(--bone);
+  padding: var(--s-5);
+  border: var(--border-medium);
+  border-radius: var(--radius-md);
+}
+
+.info-card .eyebrow {
+  display: block;
+  margin-bottom: var(--s-3);
+}
+
+.info-card-accent {
+  background-color: rgba(38, 168, 232, 0.06);
+  border-color: rgba(38, 168, 232, 0.2);
+}
+
+.info-card p {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin-bottom: var(--s-3);
+}
+
+.info-card p:last-child {
+  margin-bottom: 0;
+}
+
+.info-card p strong {
+  color: var(--ink);
+}
+
+.info-card a {
+  color: var(--blue-deep);
+}
+
+.info-card a:hover {
+  color: var(--cyan);
+}
+
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+}
+
+.info-list li {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  display: flex;
+  gap: var(--s-2);
+}
+
+.info-list li::before {
+  content: "→";
+  color: var(--cyan);
+  flex-shrink: 0;
+}
+
 .program-cta {
   margin-top: var(--s-6);
   padding: var(--s-5);
