@@ -788,12 +788,20 @@ section.section-ink .accent {
   background-color: rgba(38, 168, 232, 0.05);
 }
 
+/* Card-num contextuel (WCAG AA) :
+   - Par défaut blue-mid sur fonds clairs (ratio 6.5-6.8:1)
+   - Cyan préservé sur fonds sombres section-ink (ratio 7.2:1) */
 .card-num {
   font-family: var(--font-mono);
   font-size: 0.75rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.04em;
+  color: var(--blue-mid);
+}
+
+.section-ink .card-num,
+section.section-ink .card-num {
   color: var(--cyan);
 }
 
@@ -1823,6 +1831,7 @@ section.section-ink .accent {
   color: var(--cyan);
 }
 
+.footer h3,
 .footer h4 {
   font-family: var(--font-mono);
   font-size: 0.75rem;
