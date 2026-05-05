@@ -3439,6 +3439,59 @@ section.section-ink .legal-note em {
   margin: 0;
 }
 
+/* === CTA dans la nav === */
+
+.btn-cta-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+  background-color: var(--cyan);
+  color: white;
+  padding: var(--s-2) var(--s-4);
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  text-decoration: none;
+  border: 1px solid var(--cyan);
+  line-height: 1.2;
+  white-space: nowrap;
+  transition: background-color var(--transition-base),
+              border-color var(--transition-base),
+              transform var(--transition-base),
+              color var(--transition-base);
+}
+
+.btn-cta-nav:hover {
+  background-color: var(--blue-mid);
+  border-color: var(--blue-mid);
+  color: white;
+  transform: translateY(-1px);
+}
+
+.btn-cta-nav.btn-arrow::after {
+  content: "→";
+  margin-left: var(--s-1);
+  transition: transform var(--transition-base);
+}
+
+.btn-cta-nav.btn-arrow:hover::after {
+  transform: translateX(2px);
+}
+
+@media (max-width: 768px) {
+  .btn-cta-nav {
+    padding: var(--s-2) var(--s-3);
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-cta-nav.hide-on-mobile {
+    display: none;
+  }
+}
+
 /* =============================================================================
  * FIN · BRAND.SYS v1.0
  * ========================================================================== */
