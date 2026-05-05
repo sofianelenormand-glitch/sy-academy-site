@@ -263,6 +263,7 @@
               <select id="besoin" name="besoin" class="form-select" required>
                 <option value="">— Sélectionnez —</option>
                 <option value="programme">Demande de programme détaillé « Penser avec l'IA »</option>
+                <option value="grille">Demande de grille d'audit formation IA</option>
                 <option value="formation-col">Formation — Collectivités</option>
                 <option value="formation-pme">Formation — PME / TPE</option>
                 <option value="sur-mesure">Formation sur mesure (parcours complet : audit + formation + suivi post-formation)</option>
@@ -449,7 +450,7 @@
       const select = document.getElementById('besoin');
       if (!select) return;
 
-      const validValues = ['programme', 'formation-col', 'formation-pme', 'sur-mesure', 'info'];
+      const validValues = ['programme', 'grille', 'formation-col', 'formation-pme', 'sur-mesure', 'info'];
       if (!validValues.includes(sujet)) return;
 
       select.value = sujet;
